@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+        .footer a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .play-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>3 Minutes News</h1>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news1" target="_blank">News Title 1 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news2" target="_blank">News Title 2 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news3" target="_blank">News Title 3 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news4" target="_blank">News Title 4 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news5" target="_blank">News Title 5 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news6" target="_blank">News Title 6 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news7" target="_blank">News Title 7 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news8" target="_blank">News Title 8 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news9" target="_blank">News Title 9 - This is a short description of the news content.</a></h2>
+        </div>
+        
+        <div class="news-item">
+            <h2><a href="https://example.com/news10" target="_blank">News Title 10 - This is a short description of the news content.</a></h2>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="play-button" onclick="playNews()">&#9658;</div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function playNews() {
+            const newsItems = document.querySelectorAll('.news-item');
+            const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+            const utterance = new SpeechSynthesisUtterance(newsText);
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>

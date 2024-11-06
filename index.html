@@ -12,17 +12,26 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
         .container {
             max-width: 600px;
-            margin: 0 auto;
+            width: 100%;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            overflow-y: auto;
         }
         h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 20px;
         }
         .news-item {
             margin-bottom: 20px;
@@ -36,12 +45,17 @@
             margin: 0;
             font-size: 18px;
             color: #333;
+            text-align: left;
         }
         .footer {
             margin-top: 20px;
             text-align: center;
             font-size: 12px;
             color: #999;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         }
         .footer a {
             color: #999;
@@ -51,10 +65,15 @@
         .footer a:hover {
             text-decoration: underline;
         }
-        .play-button {
+        .action-buttons {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
             width: 50px;
             height: 50px;
             background-color: #333;
@@ -65,12 +84,23 @@
             color: #fff;
             font-size: 24px;
             cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>3 Minutes News</h1>
+        <h1>2023-10-05 News</h1>
         
         <div class="news-item">
             <h2><a href="https://example.com/news1" target="_blank">News Title 1 - This is a short description of the news content.</a></h2>
@@ -119,7 +149,16 @@
         <a href="privacy.html">Privacy Policy</a>
     </div>
 
-    <div class="play-button" onclick="playNews()">&#9658;</div>
+    <div class="action-buttons">
+        <div class="action-button" onclick="toggleShareOptions()">&#x1F4E2;</div>
+        <div class="action-button" onclick="playNews()">&#9658;</div>
+        <div class="share-options" id="shareOptions">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank">Facebook</a>
+            <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://example.com" target="_blank">WhatsApp</a>
+            <a href="https://t.me/share/url?url=https://example.com&text=Check%20out%20this%20news%20site" target="_blank">Telegram</a>
+            <a href="#" onclick="copyLink()">Copy Link</a>
+        </div>
+    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -132,6 +171,25 @@
             const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
             const utterance = new SpeechSynthesisUtterance(newsText);
             speechSynthesis.speak(utterance);
+        }
+
+        function toggleShareOptions() {
+            const shareOptions = document.getElementById('shareOptions');
+            if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+                shareOptions.style.display = 'flex';
+            } else {
+                shareOptions.style.display = 'none';
+            }
+        }
+
+        function copyLink() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            alert('Link copied to clipboard!');
         }
     </script>
 </body>

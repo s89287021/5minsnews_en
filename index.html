@@ -8,10 +8,13 @@
     <title>3 Minutes News</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #fff;
+            color: #333;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -24,7 +27,6 @@
             width: 100%;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             flex: 1;
             overflow-y: auto;
         }
@@ -46,19 +48,45 @@
             font-size: 18px;
             color: #333;
             text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
         }
         .footer {
             margin-top: 20px;
             text-align: center;
             font-size: 12px;
-            color: #999;
+            color: #666;
             width: 100%;
             padding: 10px 0;
             background-color: #fff;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         }
         .footer a {
-            color: #999;
+            color: #666;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -90,12 +118,33 @@
             display: none;
             flex-direction: column;
             align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
         }
         .share-options a {
             margin: 5px 0;
             color: #333;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; } /* Facebook */
+        .share-options a:nth-child(2) i { color: #25D366; } /* WhatsApp */
+        .share-options a:nth-child(3) i { color: #0088cc; } /* Telegram */
+        .share-options a:nth-child(4) i { color: #333; } /* Copy Link */
     </style>
 </head>
 <body>
@@ -103,43 +152,113 @@
         <h1>2023-10-05 News</h1>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news1" target="_blank">News Title 1 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 1 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 1">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news1" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news2" target="_blank">News Title 2 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 2 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 2">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news2" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news3" target="_blank">News Title 3 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 3 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 3">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news3" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news4" target="_blank">News Title 4 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 4 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 4">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news4" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news5" target="_blank">News Title 5 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 5 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 5">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news5" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news6" target="_blank">News Title 6 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 6 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 6">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news6" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news7" target="_blank">News Title 7 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 7 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 7">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news7" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news8" target="_blank">News Title 8 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 8 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 8">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news8" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news9" target="_blank">News Title 9 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 9 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 9">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news9" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
         
         <div class="news-item">
-            <h2><a href="https://example.com/news10" target="_blank">News Title 10 - This is a short description of the news content.</a></h2>
+            <h2 onclick="toggleDetails(this)">News Title 10 - This is a short description of the news content.</h2>
+            <div class="news-details">
+                <img src="https://via.placeholder.com/600x400" alt="News Image 10">
+                <p>This is the detailed content of the news. This is the detailed content of the news. This is the detailed content of the news.</p>
+                <div class="read-more">
+                    <a href="https://example.com/news10" target="_blank">Read More</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -150,13 +269,25 @@
     </div>
 
     <div class="action-buttons">
-        <div class="action-button" onclick="toggleShareOptions()">&#x1F4E2;</div>
-        <div class="action-button" onclick="playNews()">&#9658;</div>
+        <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+            <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="action-button" onclick="playNews()">
+            <i class="fas fa-play"></i>
+        </div>
         <div class="share-options" id="shareOptions">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank">Facebook</a>
-            <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://example.com" target="_blank">WhatsApp</a>
-            <a href="https://t.me/share/url?url=https://example.com&text=Check%20out%20this%20news%20site" target="_blank">Telegram</a>
-            <a href="#" onclick="copyLink()">Copy Link</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank">
+                <i class="fab fa-facebook-f"></i><span>Facebook</span>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://example.com" target="_blank">
+                <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/share/url?url=https://example.com&text=Check%20out%20this%20news%20site" target="_blank">
+                <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+            </a>
+            <a href="#" onclick="copyLink()">
+                <i class="fas fa-link"></i><span>Copy Link</span>
+            </a>
         </div>
     </div>
 
@@ -175,10 +306,13 @@
 
         function toggleShareOptions() {
             const shareOptions = document.getElementById('shareOptions');
+            const shareButton = document.getElementById('shareButton');
             if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
                 shareOptions.style.display = 'flex';
+                shareButton.style.display = 'none';
             } else {
                 shareOptions.style.display = 'none';
+                shareButton.style.display = 'flex';
             }
         }
 
@@ -191,6 +325,33 @@
             document.body.removeChild(dummy);
             alert('Link copied to clipboard!');
         }
+
+        function toggleDetails(element) {
+            const newsDetails = element.nextElementSibling;
+            const allNewsDetails = document.querySelectorAll('.news-details');
+
+            allNewsDetails.forEach(detail => {
+                if (detail !== newsDetails) {
+                    detail.style.display = 'none';
+                }
+            });
+
+            if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+                newsDetails.style.display = 'block';
+            } else {
+                newsDetails.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            const shareOptions = document.getElementById('shareOptions');
+            const shareButton = document.getElementById('shareButton');
+            const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+            if (!isClickInside && shareOptions.style.display === 'flex') {
+                shareOptions.style.display = 'none';
+                shareButton.style.display = 'flex';
+            }
+        });
     </script>
 </body>
 </html>

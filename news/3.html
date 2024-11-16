@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/2.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/4.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">As Firefox turns 20, Mozilla ponders how to restore it to its former glory - TechCrunch</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOaGhwYV81VUVDZFUyY2pGaDlON2JRRFFhVEtpc1RuQ1A0Rzh4ZDNKMzBabS1NUzlUejJCZzhLcnJfQUJmNFFhWTNEUEtpVnFZV2JOUVd0NXBpcUtLMjBOSWZobVNpeE9BWjMxNFVIeklzVVB5U210aEhKVGxUX0dLb1Q4ZC1sY3EzeXdxVVhPZUlldUQ0Ym9TXzBBalRkc2tCOVVlLVJEWlBxT3R3?oc=5" target="_blank">As Firefox turns 20, Mozilla ponders how to restore it to its former glory</a>&nbsp;&nbsp;<font color="#6f6f6f">TechCrunch</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPZXN4eUFsT1pjLW42c0hyWF84ZS0xdkxkRmtSNmxWUDBZZ29RV0w1LS1jNUhZZDdHdWJpQ1p5eTQ4Sk82a25QSmp2WDhpdGFnUzR4X29DM0tqOWFVVzVvay11c2FUZmthTGllcEl0QURoQnNRTUlfTUNyNkpKc0NJNTNYdkdtakdyQXhXQjhrQ3lCaVE4cWY4a3ZIWUNNdw?oc=5" target="_blank">Firefox turns 20: Can Mozilla return to its previous heights? (NASDAQ:GOOG)</a>&nbsp;&nbsp;<font color="#6f6f6f">Seeking Alpha</font></li><li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxPTUs2MFFJd3FtaWxuWEVZd0pERzhVck5ZVDlMdGVOOWczT05aeHk3UjlhaG96VFByVDFVeUFGb1FMMXRmWFhzRkRBeG1SVXVWcXRMUzM4bjdyeE5hTzhzY2NpaXJ5U3gwbU1mYXRzaEZjT2tiZkVwR3I2S3htbmZIc0pNZ0pwVDZLa1NNZFlZVWJYMnV1eno1WWpEZFJOR2hibDlHQ2RxRzdDbnpVUVVXMUcteDViYlNwSVlVQjJIQjhFa2NBZ090Qy1nc21nX2JaUXdZVl9n?oc=5" target="_blank">I’ve been a Firefox power user since it launched 20 years ago – here’s why it still beats Chrome and Safari</a>&nbsp;&nbsp;<font color="#6f6f6f">TechRadar</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOaW8zNDExbnFpa1lGMDNmZVlqd0VGN1BWYjJkUnVnODVXRjJFbzF0clhFVXZKT3VWVDBWckxYdjl6cTNHakp3d0NLUlRXTDc1ek5zaGMxZmF0Yjd5NnpDRF9oMXJIaW9xcjNOZnkwMFJ2RlhOS2VqMWpzcHZzN0ZEZ2lnMkRBUEJMLUkxUFRmRnZya3BF?oc=5" target="_blank">Firefox 1.0 Released 20 Years Ago</a>&nbsp;&nbsp;<font color="#6f6f6f">iProgrammer</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNemFrdGFrN0k5MHVDMmNZTDNmUWxUbnFaMnoyTml0WWplMWtPR1NZdkV5cGsxa1ZYNzRQbzBCcXpRU1dzc0EzbkRtLWJBaVNMWmkzZHFobUxaNTk3eXZaZTFuN3pkTTFGYjZrdXhfUldUd2U1Q3dDWGpSQ0ZMOUcwdk85UllmUjJnb0lmY0xjSXRGR3h0?oc=5" target="_blank">20 years of Firefox: Happy birthday, little panda!</a>&nbsp;&nbsp;<font color="#6f6f6f">heise online</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=6nSeSEzKEwjKBxNz4b9NjRwZ5BTDJsmgZ9nQ7fEJxK3fem8AAzHXmfxaSscta3P5msEwSu5oDmuQyW6qS7AcQSNWrEHLav4nCechqLCck96H9NJrpjU22bKxcrAdHYTY1DEHiFt61z6kGjng1QMunGGTm1xpmHfJtx9iyVzyWGJNLXnegbqim5iD2aaH4NFUR9GpbgTjeBbFjtBxP7abThoBuYTsePBi7NpE414pdJBTeatiuR6NRBNTeKWhti1i99hVUhfgtTvDSQBjM4jRK3gCx8jWu65t4Wrbdc7JUcwHUBA8yapbkQZTKmaEyHpp1Foa7jHbpYr2ma8fWQ83mbtzovpmzT8SUj4Cb6kKWSng39GgCKt72K6dWLtL" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">The next Nintendo Direct is all about Super Nintendo World’s Donkey Kong Country - The Verge</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdHFlMU83UWlPWWhWeDhvLWtWd1RnTFZzYmdpRVdUYlRYckpPQ0F4WnlPQVBaQUR3Unc1SVBQa1FQenR6ZzRONkRVV1BLcDR1Ml9jNDZfWFpFYUUzaHZUVllsM0JtQ1JoVEdBYVhMNlh2TVF5b0xTcVZIa1otdDVHNjlzTmg0RkJXUjVaUVFvUWkxbkJCRTdGMkxKeHdiaXpxUXlUdmtIejhXN3FyMUNGZExfSFc1XzZX?oc=5" target="_blank">The next Nintendo Direct is all about Super Nintendo World’s Donkey Kong Country</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li><li><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFA2M2JtcWFOTXBDUElSNW1MX1NOOTZhWUlsLWFGMTl1a1poamUtVG5oaVpoVlhhOE1ZcTg1Q1duWEdxZkZ3WUdvTF8tOFFkdUdtMXRXT01jbFZjRE45cjRWMEprSEkyZw?oc=5" target="_blank">SUPER NINTENDO WORLD Direct (Donkey Kong Country) 11.11.2024</a>&nbsp;&nbsp;<font color="#6f6f6f">Nintendo</font></li><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPamNaTkFpU0IxVE5OUFpoVWk4NThtLVY2bk5ENkVaNV9icWtleF82aE94Rm5SUUpfcFRxZEY3Zkhma3RxSlIwbUF5Q0ZOelFzTm1sdWpIc29TajA2c1BJVEpoVVFuUFI2TEd1eXFEOVZCNm9KdkQ0bDJRdThBODZMTXNPeTZGZw?oc=5" target="_blank">Super Nintendo World Direct set for November 11</a>&nbsp;&nbsp;<font color="#6f6f6f">Gematsu</font></li><li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQUEpWMXRySWVzSU1ka0JOMGFWMUtkY0tnTkZ2SHBKemV1TnpOX2tqREI0WENtREJsdjZYbGp6YlBNNVpPWWdLQXZTMTVQT2dTQ1c3LV85eEs3RGdtNE1TVmxZNUJkMk9YeXFkZ2dORlZpb2pvS1N1ZzU2bWRjZFBVa1FMYWFlNmdZblV4azBONFJhNEozRmtOTlpVSTNla2RiR0FFNGFwWTFyTS1Ja2FibmhkY2FHZ1FFUGozWWlaRkwwcUdObXZxM2hJRTA?oc=5" target="_blank">Special Super Nintendo World Direct Livestream to Showcase Donkey Kong Country at Universal Studios Japan</a>&nbsp;&nbsp;<font color="#6f6f6f">WDW News Today</font></li><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPcXVmSEhScWV2bllQS1hhSTZRaVFuWDRGNDFsZlBMSXBEc3lPQ0lCQml2WHI3cEpmRDB2RWw3bDlTcVlaQm9oeS0tR19HaWVZbjc2Skd0WEFCNjh1MkFuM1B4Ym9ncnp3cDAySlZ1QlltSTVUSlloVUdXdUQwN1ZYREJVMllFaXdqay04NWU0c0FUSnotV3p3bF9jejJqcEVNeFBHeWRUTDgtYnFLZkNadTdxbGI1YTdMN0hoVjAzdFd4YzhXR2Vr?oc=5" target="_blank">Donkey Kong Country of Super Nintendo World at Universal Studios Japan Is Getting a Direct Tomorrow</a>&nbsp;&nbsp;<font color="#6f6f6f">IGN</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=49pzJo19ZKY2G4yxaVjtSnECup5jsuVJBChkWsh5mPcTk5PyPAVynAUSQ26Poe5dHcP2mDtnkv7uNc2nRXhWmreDN1tya1zWTruGqVx5zxQLSZLHKvdjvpoqfBcjpmiuQ2XtT3Gx2cHt94y4ZNBgri6F8eswStyoqrxA58PK19ACd8n7fJJY2KpRTZ4MvyZkjxy1hcgXgRAdqYHM4poFxPPopTXXF8WY2YefA8sPZY1tUEj3zxECbn5Wxqiekinh1sSGs219VszJu9Wf7Avpt5FhuxxawEcEouxxrPUTysJmzAhxaEtqy3s4dEZMkF4QA4yDXHjVJ8ZixF4XZMPyXNVKjAzP2bnybemAbtMHZzUjJTvRR1JtHFC9d87nkfTFxJKSXdKtMynhRyF5ik" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">‘Yellowstone’ Back With Kevin Costner Exit As Dutton Family Civil War Reaches Fevered Pitch - Deadline</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUUN1am5ndmh0Q3c4TjZ3RWc4Mlc4dEZ6MjByM1djdEhyZFFlMHdjVGdYMW5GOE9FVmNGMktZS1AwWG1vUjBmUE5jRG5pRFZIVC1DZUdDMVJoc3doX21wdHg1SmhSZjFMdHNLcGpaaURsdmZfLWpKXzVUY0RqUXNYekZnTVU3WldqLXpidGIwZHAxTGpoRUV3bkNBaVpDemZ2NmlBcFE5TnhPdw?oc=5" target="_blank">‘Yellowstone’ Back With Kevin Costner Exit As Dutton Family Civil War Reaches Fevered Pitch</a>&nbsp;&nbsp;<font color="#6f6f6f">Deadline</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPelFyV1N5Y2ZnV2xXUEhtR3NJeFB4cGhZbHg5SE96bzltVEJaVDRwUnkwNkpLUDFvaHlCb3J4aEZkNTI5RURJbW9HT1VDdFg1UkM0ejRBVzZCRnZoRkZJMjlEQUoxS3BzNkdIdWRPZzl4ckFfa2h5Si03cXFUYV96MVJnaFdiSDEyYU1IU0RlUGJEaDZoTi0wSWhjaFRLSmQ1?oc=5" target="_blank">'Yellowstone' Season 5, Part 2 release date, time, where to watch</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxORk93cDd4MEE1OEdCVjBiNkVmRV9jTG9mQ19PLUNTM0ZVUkhxWVd3ak5ETERGdG9kQWRFTk1KdjZlaHpZRUllbDFYUWdpX0Y4OC1hUVd2bWZnZ3ZPRXFyQzZ0ZnJjVkZmQzJQNE13d0o1NkVtN3NaRE9odldFUHFFQ2NRRWpybEItQUNmRzBaOXU2cmdOZEV6MEJUQjYwTVBJZFNWRTRUYlQtejZWaHFyWnJnU2VTZ2dlNzZrWmM1U2o?oc=5" target="_blank">Why Is Kevin Costner Not In ‘Yellowstone’ Season 5B? His Exit Explained</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQNDVaUzJVdXJZWHpQcFNiRTZtZmV5Qlh5UExyOWlOS2U1N2M0M3hwM0h3Z2pIQ2RnUVNtc1lzUlFyMXlQb29Ba1AtZXBhd1dvWnNnbzNsZU92dVNya1ZKWUJmbmhMYWVZS2Y0ZFJiMXhRa1ROQzVoLXdwWC1pNURqNTI3d1FGcERjdHpuRTRMRElzT1cwS1NycC1NT1Y1amJSc2tnZDZOdmRpcXNuX093TjFLMTFsSlBiVENXVjRRQmo?oc=5" target="_blank">‘Yellowstone’ Premiere Quickly Reveals Fate of Kevin Costner’s Character: “We Let the Cat Out of the Bag”</a>&nbsp;&nbsp;<font color="#6f6f6f">Hollywood Reporter</font></li><li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNTjd4N01oZ1NVWXpXeU8tN0lzMEg3bkJna0wzOWkxRmc3aWVqR3hITHJQVFIwNUJBVFBPWV9hY0tqbFpTU1poWkxGZVlFbGNKdXNWZHlNNUxjUlFWcUdWTTFKNHExMkZNVk1jczVmZE5LVHN4YlhSQjhyLThiZkk0OWljWTY0dFd6Z25mSDByeTk5aFhwSXkySTZXbVZDdnYwMlhTaEV2Yld3Y3Y5aVBWN0xIWWE3MU93SWpFWkZmVExqMWN50gHYAUFVX3lxTE43Vk8wMTlubFhtVWJrSnhQMVZxUDd4czhlR1NfeXFVZXhieTNta2Jvb0EyWDcxaGxGSkVPcGZCRk4yVEFMbnFzSGJFYmlDODIzVmtEOG81TTFjdERGM3Y3Vll0djk2SnhwQ0sxN2xPOFVWY2lyWTVEcEExSnA3NWkzaDhEMEtMM0xCVWtqYkZ4QkNkazRnSGUxQ0hoV3E1NFNIZE5SeV9mbldZRGJ2YXBXUUROdUJlRldZX1JwWktLZ3ZDeGlWbVpTMlVLem93SEkxZjRBU3kweQ?oc=5" target="_blank">What TV channel is Paramount Network on? Where to watch the Yellowstone premiere streaming free tonight</a>&nbsp;&nbsp;<font color="#6f6f6f">OregonLive</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=JDfpXT9XK1PVZiPAoxQzuJMhXezwp3ZdZpCpozWsNXubmaaePAerLjEsrYh9Kijx5ZCHhcwzJwVwEeYC5xYSz9uwe2tdKhqwvB9sp5fACHmVVsVB4yNij4sTYfzo1SkDpLjGQfxjzjjK4L4kt2Y4ytzcyJCY9AEduJ84zazGPZGy56jK2u9wpEepBLDTuH4MPBiFRy2XAzjjb7yGdvjbF9fDnNarYjQ8XjkopHQSRigou8arx7PYJMwWhM3iWnDDjXH6vsKcAEPtgb227N4xzzkdtA3oY4f1esXcdDBQnpfgL166aQpfDupMBTaXETtjhAHDKiTU4F3gxsXrbPk1ccMRCzn6vXZYbUA7UpeNUXZjnSyFc6kswUsYG" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Brianna LaPaglia Reacts to Rumors Dave Portnoy Paid Her $10 Million for a Zach Bryan Tell-All - E! NEWS</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxNRTJpcFkwRTk0aExyeGF3dVc4RGZpRlV1cGFVSXU0UVdHTEpOM3lET29KeUhxZlhTeDY4Wm1pS0lhSEdScEpUaGhoeFpvQ3lkYUNyVTlmMUYxOUNrZFhPWnNPMzZ3U2pBVzVmZDBYX004S0djNXNsdzliYm9HemoyRDFkSFBscFhYX3pWM0ROSmozRkFWNnJQSUFoOHFfOTA2ajF6WW9EZlVyQnluUVBjZWh2bnFwRWdpbDJ6ZFBOQ09TOWtXMk1HMWV3?oc=5" target="_blank">Brianna LaPaglia Reacts to Rumors Dave Portnoy Paid Her $10 Million for a Zach Bryan Tell-All</a>&nbsp;&nbsp;<font color="#6f6f6f">E! NEWS</font></li><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUHM1c3BvLW4yZWREcU9aeUNWa3VEZ01iOGJONV9YZEE3MnJYd21FYUpMSkZad2NBeVlUblc0TUh4aDd4aVB2WnFyR2JkdlczLXQzQTZHYlduODJSczJXNlhrSWlBcURFTHduMEZqa1ZUZlY2V1d5b2hYQVc2c0xkczFfOVdwdWl2eFZnNjVubjhMeG1SVFB4ZFlQaGxLNzFMdlV1MFVwcHNZV0dXVWlyR3FkYVV2VGR5MFY4Zy1pemd6TlREWGhPQ29jRkJzVTNwT3Fj?oc=5" target="_blank">Zach Bryan, Brianna 'Chickenfry' LaPaglia controversy: From Golden Globes to breakup</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPbldHN01EUjhfSnR6RWRtby1DcjZmZWxCNUUxQ0Z5MzlpSFJCY2pwNUVrQWt0ZHBsR0k2VktrX1lQZDJ5QTU5cUlaWWh4ZTdpZ2tSUm50VHgyX01sZlZIYzY4YllDTDZuZm95azNYZmpaWlYxdnE3dFdpdlVSUXF0QUFncUFOQWVYR3RkN0FWYWJMdVYwbENLamE0bjJrSU9yVllUTG02ZWFyUzdHMmkyYnZxRF84OTlCeEpaOGZFcF8ydHVlN1A2dm5IMmItM1BReTJ0UlRDQWlhNklIY2EzOVZB0gH2AUFVX3lxTE1LNVJBeVlMQVUyZkE1dl9lc3lTWlVrMzk5Tk1qOFZZa0lkTDFkOW9YZkllUDdSeHNjcGVQUmxhMlpPRW5VLTBkVWRzWUpBbWV2dWhSUTd2T3RkY3hMVG9qMkdWSW0tY2RoNUhOQU16dGlPU2VxNkZOQnVQVDVfUlJPdkZQSVFiNGFPRFBsVVpiYTFiUnA2WkFOdWd0SWNuR2FhOTZHanVwcWZNY2QwanVrUWpWdFRXRnJWWmlfMHRjcWlJUndfRjJDbm1QUzE1TzlQSmd0UU1hVkhNSzJfMGlGY3kzMGtUd2pteXhXNmRLRXFGVWVZUQ?oc=5" target="_blank">Country music star was abusive, offered $12 million to keep relationship details private, ex claims</a>&nbsp;&nbsp;<font color="#6f6f6f">PennLive</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPVDQ5WUtUT0VPVTBURmhKSmFLLXVVWjVyYmFiVDBleG5OcWJDeXNIbzNiVE5Eal9kSlY2VWRPR3JTOGpkZVZqTnZqdTBTU3M2WjRmX2MtekFhaEprNk9PQjVCV21zUXBJQm8wSnhtMnhGeFJaZzRwVTcyV3RQakJGNkUxX1lVN3NRTDhURjRKRlVmU2g5LVJF?oc=5" target="_blank">What’s Going On With Brianna Chickenfry and Zach Bryan?</a>&nbsp;&nbsp;<font color="#6f6f6f">The Cut</font></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxORHhBb1ZfbTY1SXN4eHlwdE5wd09GZGZxY2NTWXB3S183TGJpcV90dHNVWHRpNnRTSmhPNGNJOF8zaHBwYzVQQVE5WExoRGlPYWFMYUs2UzRqcnFiZURjQU5qTjN4SGk1X1pQaEE4U1M2QXdYRnB0OFJFcXdoaGtqenpOajdvblZJNGI1alNlRkRKQmtjMUdQbjVtb0FnN2lucV9EWmpTSEtuNkFYVV9YZA?oc=5" target="_blank">Dave Portnoy Slams Zach Bryan, Releases ‘Country Diddy’ Diss Track</a>&nbsp;&nbsp;<font color="#6f6f6f">Us Weekly</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2GZpiygLZbne4r3AoNxvPGfTkJm8q6AAyYXp7JbEWBkvQSpyXnBnkcFNzucMxRSEc7YqZRDoC6D6C1YYoTwYBoPsjTNhh5DsMpzTVKbMVgZM5cZR7LFqtuMHQusvn3pYNtN3hb4qfi1M8bpdLZn9FZN88njaRBhRTdzuECWSmpPmCeyKFtfWoZcpFMMCYd4mPXRgXgBQst4rQfm4FdM7QiccCCzDTEU5PJeCr7v3nUXTsMDVFNLJ4PhdPLUSJ6AfSc3QCTBqzVbgUoEbfSPuzFHTnjLan7WTyH6LMUqpgGSEJfTFyexi1q9V27ZMB4Zm5msr11HCnwPeLWrFCPJJJCsdQhHsHBsEurEqouDFEFWtktv7esc77yrP1g2TDCj3SHdBCzrjaAoGxuZLcFjCgkLSWyVZCTUWD1FqPVhxrLmqtWtHktC" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Diddy&#39;s Baby Mother Dana Tran, Son Christian Support Twins at Football Game - TMZ</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQQ3I4YkJUZWk4Qnd4VnhMLXE2NVlRYWpfYlV6eHlhRmJDdW9PNzdadWZHZzVJRzRFczFfdTA1TWc1Wi1YSU9MVVZYY0drdE1PUXBVUXlBNEdrWXhhTk9jSGFSMGRWT25PRGhkN1JSM0dlTmJKNUZTWE1meExzSU5uaFZMLWwtaWc5TUHSAYoBQVVfeXFMUExBZ0t6YmUxTm51ZHZoZDNKWmRxM3lsNURoLXJtMHdqbzhUU0RERWJDQXRfeUdRUnM0SldPbk9xX013dmgtZk1tNldtQ1ZIcHJudmdsSUFhQkljeVhnZGRMNEtxMWZpQ1lKSzk3OE12dFVTNkpncmpKN2xES2NxWVlJeGFJSjlTNDRB?oc=5" target="_blank">Diddy's Baby Mother Dana Tran, Son Christian Support Twins at Football Game</a>&nbsp;&nbsp;<font color="#6f6f6f">TMZ</font></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQSm9kTEtDbFJYdkdUbmtVQ3RMb29vUk9iLTM2Qm9lMGNrb2FSOHd5Ui1Sd2ZOWUFqb0RBcFZZdkdyOFlEWVB0Sy0tQlRwaXAtanktSS1LRWRTcjJ4MWZJUEFzN2ZWYjlkVEpiaXBtUEVZbEt1ajZldjdVbXRJZlVRVWVFamJIcWNzY1cxaVNjZjZXYjNGal9FQVZzeUZuczRVNW1VSEVuUTdad2c?oc=5" target="_blank">Diddy’s Birthday Meal Revealed as the Rapper Turns 55 in Prison While Awaiting Trial</a>&nbsp;&nbsp;<font color="#6f6f6f">Us Weekly</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNV1lENnFXZ0JESDhrRW80X09JSk1jVU9VUlZWaEE5UW56d2RJWFB0djVWdk9OR0NYMjBha2JpQWJlNVNZVmltaURfcnN0RUgxUTQ0Rkp4Y3QzbURVS3ZjdUNiWWItejdVaVVJV1gtWjA5RGJzQWN3ZHYtbUtBeWxUaDE5NzAzZVpUaExOY0JqY2hKNkU?oc=5" target="_blank">Jamie Foxx Said Diddy Was Behind His Health Scare, Quincy Jones' Brutal Opinion of Diddy Resurfaced, What Diddy's Birthday Looked like Behind Bars and More Diddy News From the Week</a>&nbsp;&nbsp;<font color="#6f6f6f">The Root</font></li><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPUWRfdzAyMktYa1NGZ3JDNnYxS2g2VEVGOWlBUlo3NFZtbVNxaTRzWE56MExHc2N4Z1ZvREtrMkdzOFQ1VnV3VkZRLVg0ZmhyMDdpcEh0YnlYTnpNNUg0QU9uVzRtdG1RQ19XT3ZXcjlscmxDTlhoTWg0N0FUZGFHdlNvUml3cDBFUl9MOG1uSG93U0Y2RjlUd0I3WXM1MlRvZHYwU04zYUlpUjFxZjZPMENENEF0SnpBbUJaaFZn?oc=5" target="_blank">Exclusive | Sean ‘Diddy’ Combs’ birthday meal in prison revealed as disgraced mogul turns 55 behind bars</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Post </font></li><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNZENWV1JHV3pmTm92elZSN29QekpwRVBudzhZUDVCYURqajNXMEJycTZZSldMQ21jVHZjSEZ0V2hsWGZFemx5blZpV0RhM2dxbXdsdm1MY1hkRjNxXy1ydjFaSUVnWDVnaGJka1l1TWYwX2JpOFVGWFpfTndtdjREOEotOUI2U05LTDcyRHRsRElHaUZ1cnVyLVJwLTI?oc=5" target="_blank">Diddy's Kids Sing Happy Birthday to Their Dad Over the Phone While He's in Jail Awaiting Sex Trafficking Trial</a>&nbsp;&nbsp;<font color="#6f6f6f">PEOPLE</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2RaTGu79vERox5fSxXKXrPX4bk1EvWNsy8TThT7dcstLNAXvq2fbvf7H2dedk9Nhqr7oGav9HbunHc582QCy5C6AZJwE4ZDdz7iVLH66htcM2W3b7yzDCP3w3m3mzcKNN2k6nkSXDXVjrV8AZm3hTMiFpFMbdcYVLQSsmEUBFu1kEmDsKmyH4oCmXJjxSUqN4TMVbcjJfNZJ1da9UkEmhaSpgSMpqF8438GqoA1ZhftDUrXaPcjDdEGAJRvGdSzhJKPNPBxigyc2pNn9vAGE3QSvJcyvz1X25X9nWUpkWGdhdcN9a9KAS2hQ5DDieVpfrybKkc6ZYuaoMSu6ibMuvGVKQg23PoKMLBPPTk6b4rbbgKkqphBxMDxxn4WxxxFp9hAh5yZoP88arsBEjAo3k7VLLx6smFeMmDPn8oayXoNFLjD1ssQdWKSpYhuEz9BYNsrh4CrC1AWQeS6tE38FrvLCePgAkNDmm1xMgTbTTWtMeW1sUj6RiTBGCQEwVJGGENN5Tvz6bgZBaB5E9iVE6hRkcvVHfD6NA47KPcBSqx58biGuNTM4cr1NTbVQCSDek" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">‘The Penguin’ Season Finale Twists Explained by Creator Lauren LeFranc - Hollywood Reporter</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQZEpOSmtyTnctajJBMnlvbXprZEZsYWtXNW1WbGVnWmhpRWd1YVc0bG9hM1BBdmN4dGw4SnBudUNVelRMVUs5d3h3MWZvdGNTNmFWX045TE56dXNPZWxFcnZCVkV1ZnNPazdsSW9xMXZMR093a2l2NVFTVDRzUHo4MXVYal9Ba0V6ZG9Kb1IyTmc4SHh1N3F4Qk0tNA?oc=5" target="_blank">‘The Penguin’ Season Finale Twists Explained by Creator Lauren LeFranc</a>&nbsp;&nbsp;<font color="#6f6f6f">Hollywood Reporter</font></li><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPbm5tbnlXSHh5amZLS2JUV0dJZnpyN1F6U0x1LTd6MkZabENSMTFqQ1JxeGd1bU1OZ1ZyZnRkdjJLUTRUbmtBN3lDV3BZZVdiQW5SUW4wUU9wUGxrVjFmOW5fQTcxR2ZiX3RjbUQ0NnpaNUJOVm50NG5MaDhmNXpXbDRrRUJkdWM4NmFLNE9rOHNfdGZQWHZNWmN3U2M?oc=5" target="_blank">The Penguin’s Showrunner Explains Why the Show Had to End With That Brutal Twist</a>&nbsp;&nbsp;<font color="#6f6f6f">Slate</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQcHZfcUZYekFZXzlQSUE1WDZXRU9FY3RrV3pkQldsdGdDMFE0TkxGTDVqeHM0WDAyUlZ4MlUtb1VBSTJ5MXpTVk9zNTRmZkJLSlM3TkxNOWVKUkpIX3NveTNaRzFmYVdLRDdZN0hnR0M2di1CMEM0OURrZWF5U0h4LS0wVkV2OWpHbEtUb1hRWjNlcTZpWWJFYkFYQzBBNXVJ?oc=5" target="_blank">Colin Farrell Open to ‘The Penguin’ Season 2: “Of Course I Would Do It”</a>&nbsp;&nbsp;<font color="#6f6f6f">Hollywood Reporter</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxONlhCQ2ZteVAxRUZMSVAyNUtkOFJnb1Y0ZVFXVnBZb21DZkM4eC01ZTZIMUVoSDdpSjY1cDVJX2JQTF9kNFNXb3R4QkdXWG1LR3c3eHhDVjhNaDFWTURYM0NZNURrOUNpUEdXbFdlTURENGlkLWVtNjBiLWpaQ2gyOTVLOTVmU0lUVm5vME0zT3c5cnpTUXlQdTBJRQ?oc=5" target="_blank">The Penguin Finale Recap: Man of the People</a>&nbsp;&nbsp;<font color="#6f6f6f">Vulture</font></li><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOUhISE5YeFdEZ0dza2NMMThRT1kyckhKNGJheEk5RTYybW01RUFBVzBTbnpVNDBhMmJBT1dvR0Y5QWVsNGFNblFEaWROS2dBYXQ4MnM2VTczUEMwdm02Q2F1azhTSmhlaHd3ZWFFb0JTbjdKeE83M0hjUXN2UlVfWFdrSnd6WXpleHlqNENWYk9OTzQ4Y3JOVVhzYlY5eGRlNGhnVlFONHlGdw?oc=5" target="_blank">'The Penguin' spoilers! Colin Farrell spills on that 'dark' finale episode</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=5q1knatRafuzqVRqfxCCN9zSm3YHQvYwocEeHMQFVQdD7cWBredovuJmfsf6rmE9Jq5t8yfzPt14MKwxQMh2CqbKVzNaG2j5krB2F3yBsmDFbCpj9kVg1sqrsnb2vMeXiy1UZHDxVQbk6qw7jWXvPY8HU6o1MZ1NTkpaUEZW3EMTsNWVNYzNcJBJsz41Gad4Vk1znWQAUqS618YmZABj4uM7HkLc6nxc7yiEKvvtw9aMjYRL9N8qRdj8t38Lv4WjECwBZRBnKCiiJ1oPw2yzsvULZiG1SjyDiqV1sZXBBDmwKFAdxmXZbfSwtSLQifmTmR4G8FrqXZXT6N4xwVVohixJXz2ch2" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Sunday Night Football: Jared Goff throws five picks, but Lions win 26-23 on last-play FG - NBC Sports</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPbXBrWW5yNWtaUXVtNUl6c1VLZnhVV2o5MXBCQ3BMa3ctWUZodjAwQXZ6TU5Dem5LTjcxemNfNHQ4UWRXSFRZWkFBc2Zvdy10eGY0TnkzX3NXd25VLWJVODBNZmUyQllHYm5GYnAzcHpTSFgtSC1BbWVNQXVveHpNU0J2R1NqaXNDV3I5Y1BxRmd4QVpoR2Exemc2VmN0elZxSE9hc1NjMVRieVVxRUhZTHRwMzBpa0VpeWJpam1ad2loci1Tc0RIWjNJNTdnOTltdGZSX2VlSGJleU1fVG1PX0Rn?oc=5" target="_blank">Sunday Night Football: Jared Goff throws five picks, but Lions win 26-23 on last-play FG</a>&nbsp;&nbsp;<font color="#6f6f6f">NBC Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBYQ3gtQlAycFNlMHNJbjNhamE4LUVEQXJ5dzB4ejRPYmpIeG4zZnZHZzktUlptYS0xN09fQTlRMWNmVU52dWU1WGoycGJ0aFZ3bERfZm9IUUsyQnM?oc=5" target="_blank">Lions 26-23 Texans (Nov 10, 2024) Game Recap</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQbEVSNUY1cGJjVHM3Y0Z1N2NPYnE4Q0hyaGNPRElMc1puS2I2UGpFOG9Od0lfRlRtZ1dWcEZhdlpQeU1Fc2ZMYzdqS1RLZVd2MVczM1lPVTVUSjF1eGE1MXBYY1VLTm9vZFl2ZDdPRkZtbWlONnhXaGlhUV9FeHB3UUtDSHF2dF9PRDFQeEMzTEFybXd6cTRCVGs1R1NxeVZQczNhM1pkLUZ0Q0pneE5SYlhwM0ZEb2xJb2lYVTdyVQ?oc=5" target="_blank">Lions-Texans: Detroit overcomes Jared Goff's 5 INTs, rally to stun Houston 26-23</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHpIWjQ5ZEpONDVPeXlreldXV2YwSjVWTEFCUDZCVVJvQ2hPZDJtVnRRaE04SE5QT1AyYnBLUS1KVHpWTkdyWkNUUFN3dFNDS0Etb2NBNkI3eExNVnQwek11UGV0LVVBRVduczRNTkpkRkR4amd4Yi13QUNEeDdVdWUzWXpEcExhSGctbVdSaktsSmRWYkVaNXpNLW4?oc=5" target="_blank">HIGHLIGHT: Bates has ice in his veins on game-tying 58-yard FG</a>&nbsp;&nbsp;<font color="#6f6f6f">detroitlions.com</font></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNS3lyenFPN2JWLUhCU3VnVUdnLThZZ1o5aEprbGZLbmtlMDBSaU9iTWZnVkdTTjRtcGk4QzFfcl95UzVnS2hKNFpyUWZsLXJFdWktTW9MMV90dWtfWU1iVWZPbWU3eHJ6Rmh5bVljWnU4aTdhbHg0TUJSV1VPY3AxaXZzYTFGREhRc2VRbDBnbDhCckhjUDRLY1RvMmhQZmoxMUdTQzd0OXpXLW1LTGJaS0lVSHN6Zw?oc=5" target="_blank">Can't-Miss Play: Jake Bates' buzzer-beating 52-yard FG beats Texans by slimmest of margins</a>&nbsp;&nbsp;<font color="#6f6f6f">NFL.com</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=NrWeTER9RmwWjjPxSjeJtXY6YsdTyiu9QWfaapJTsNApg42Sx97Upbmrd8aXtSdkPxLEYX4Hx95bc3QBCgeqJH4jTSuHkLsqG9gfrRsBvAjnftekzZ9mszT8cKYmGxcVgaqRYA5J446J9RVMTd8QPyv3Hh4PNu5SJVzXLvv6kXVDMqQ87f5DBJUGKdyss5NvqGoiRWmGV2cmzgCGUPbcuLgvtf1Uhw9s2MYNAvqQatJf19x5Frd4ust1L1s4s4LHtxbETwtE9chxmac4T5jj74cvJK7F3c8PpAY1N3WqDUGfifmFdMLmYmm4s2vKDgqg791FXTuKJHUZNwqZXPHGZHr3P9YzbBjCcBNUvChW5zrGfVf4pX74jTSsGemnEEf3L1exfFZSX2iQrMaYhKZWaj5KJLV3Pi3AeYV8AGoc51ue7U6XHuqrUfWs2e8NjEpBiG6qBzdFaS1wYAeiK24X7ecAyq6tRJ" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">What we learned in NFL Week 10: We answered big questions and sized up every matchup - ESPN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxONTFlaDhXV0Y5ZFpTSTBnVldaTU8wa3lXOU01Y1FSbGQ4VVY1OW5WbzBUMjdqeHlCaHlNWUZERjRvY0V4R2wzVWtwY0tBcWhHVmJKYlBSUXZEOTZTT2JBelRQTnBSaml5TXpQZnZ5dGZRdnVHSkNDREFUVW1ZNTEzVERwZXFlNDVYY3pPTkx1R210OU9sb3RLNWxQVFlPOHdMVHl6cF9wdnRVUDdpWkJFLVJB?oc=5" target="_blank">What we learned in NFL Week 10: We answered big questions and sized up every matchup</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQY0lLSDBWOVBKLTA1TE9xUTFFYm1CSTg1WmdrRjJYb1VmMGE3QTlMZURNWnRYNGUtSXo3bEdYS3poWlpNa0VtVjZrdHMzdmM1Rm4yRnhLUkZsSTlLOUliOHlEb3pBWFZvQXh2OGtmQndMX005VDVGSVpGcklOWlQyQXhxWVpSc1h2YXF5TzZvOE11NXlx?oc=5" target="_blank">NFL Week 10: What We Learned from each Sunday game</a>&nbsp;&nbsp;<font color="#6f6f6f">NFL.com</font></li><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNMWhHVkpvd0M0SmtDY09NNVhIaEhud1VlT2RzWjJqYmptanduTU82Q3VDZzA4LUNUQUNvb2FoQ2lWNEE1Nlo0dDJBUGUzajBVblVwM1k1bUxqS2o3VTc1MFhRbHozNnJ1VUYzZU9RUHBzSUR6TElMS0lKZjBESTVocGhDWjU5Nm45eUVEQ2c4Rjl6T1YyVHpTbnllZHU4MUhjWW1kY2ZoQWJpZ3VLd0VKNE50OEtTUjRiekxiWA?oc=5" target="_blank">NFL Week 10 Recap: Immediate fantasy football takeaways from Sunday's games</a>&nbsp;&nbsp;<font color="#6f6f6f">Pro Football Focus</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxORzZmMjhabWN5b2ZtdFZWdXZBWXlZb3BNaW9JS2ZMR3RTbTA5Z29MVnRtc1dLczRid1Y2TkxZMFdOcGtONXhnQ25hQ1Q0S1d6UEg2MHpmdE1aUThDVF9NV3NzSzQyM0w3LVpHZkNPdGEzOXNIWWk5M2hLNGxLYXR0amhMOTJUUW1aaVVpeFFNX3BieEtvS0JZckZUV1FWUQ?oc=5" target="_blank">NFL Week 10 takeaways: Who’s more disappointing, Jets or Cowboys? Are Steelers Super Bowl worthy? - The Athletic</a>&nbsp;&nbsp;<font color="#6f6f6f">The Athletic</font></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQUFVxNVhGY0tNbHQ0VUFuMUl0RFZzRl9wQUxUa3N0QUZhRGlQZjk2MkZpVGJEOTdZWkZDMmVmN3VPSThOc3NHeU1FZ1ZLb3BSWE54ckpRSVJUeWVXbWZ0N29iSWFVTEVPblhFX3daanl1T0V5aVlIYk8ycmxiSkRIOVBKTTk3azg5TmZQdmpIb0Z5QjZZWC1FU3NvREJmdXZNcWJaMHJQeENXRUQ3Vkg0SdIBtgFBVV95cUxQakk5Sk54T2NjQVdHOHN4eVlCdTRGcF9fWGszT05falRHSk16LThJZC1XV1RhUUFuQjRwcS0yT2l0S2FiZG1DSzFBMldsNG5ESUFIZjIteDJuVEVQVXZxbEN1QndnZ2tVN0Rsd0JVMTIyUDFhU29laUhjY1BGUFNaSEtoQXJNYUZEdDdvMVgwWXFPQ2hqM1dRZjhzelVrNk81VW1FQ3Z3emtybDB0Y05zUFZFd29Ldw?oc=5" target="_blank">Leo Chenal describes moments leading up to game-winning field goal block</a>&nbsp;&nbsp;<font color="#6f6f6f">WDAF FOX4 Kansas City</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=5GeQYkdkTVXgxgVHsSEHZxbqkG67iHrSFZKPg36ToFmhWthgxxkB4R7cGJnhDmkfj4WzE6Jaf5qYoNUGPPWs12RWyoHTKz5Kcnn92Fg4ZWQvepA1ZRi63Pz2NSSh9wjyRefqMsMrTcq9GaZQeBTZD928bkYEfk47tHM1iwMNVJ5kYwDbw29yv4NJCjTFtfua4fzMLdvCxfyZttvPEp5XYyuL89Xn1Ziu1gwjDgnRkfxYrT3P1mBZzzDPZLdLWfX68kiEr2wnhR4nvHMTnnBezev9mqrvUetfKa8c7snD2hAQ24tEgyR9nQ9N25gw2Cec7pMch1AEbQQ4GdYc7SDvbjsWZUMLypvejTgs15CiGngXfhMR9MersuF2QY5cEPy1EUnTpW8" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Celtics&#39; Jaylen Brown calls Giannis Antetokounmpo &#39;a child&#39; after offensive foul and fake handshake - Yahoo Sports</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVzcwVU02eXNKUmtkZ21rRzA5cHA5ZVpHZnY1a0YydlZhOE50ZXE3a2FoSklkVEFQTm5Uczc2bDNzZUdJN2xJd1NQRVlDcmoxd3I3R0VhczRmQnlOQktWOGdJNmpYSlRjQ0VOT1BGYkhRUjYtd3dFZXVDSW5jc241UV95V21nWkJNNWFKbHJXcWxiSkRDNWE3QW5DQzVpNExlakw1b0NNTExaLTZGY0ZaR01PTGtIMG04WkpMdFhoM3JpUDdHRHEwWTgtMFFPNDJDa2c?oc=5" target="_blank">Celtics' Jaylen Brown calls Giannis Antetokounmpo 'a child' after offensive foul and fake handshake</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQQ0dIZ1FfcE5hVzNJdUFsdEtLYVJtcTZkU3J2dWN4SE1oTzZKM0dMMlZ4VHRvbUN4NFZvMEJrNl9YTVVBU29DVkNNNmY3TFFiOFF0WE1zMS1fdUhFckFKNDFSVndRbWJUTWlQSEpUcHBsS1lGVlQwTUZBZ3RSbTJEaXNDTkp1U0M0WTllUE5kbnJfSWtyTlNRVmlpVkRodmNFTXF3?oc=5" target="_blank">C's Brown calls Giannis 'child' after fake gesture</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPRkpCaUNDYm9nZDdKT0JMQkdFaUFEOW10TTlOSzFyaXZpaUdBMjFaVGdkUEtMVEJSX2VCMzRwaWVKSXpUTUdsNXBNREZ4Qks3OFBDaXc3bGkzODI0TGpYaDIxNzV4NWVnbGY4ZWVETFhSMXpjWFd6SFVqaC16QVFGS2w3NUlFdHhiczRORVp5RnBuYjTSAZgBQVVfeXFMUGlTNDRxLUluOXJndGJGSVc2TExRcTJRd0xscTU1NWFaazJaaFMxc1RNLU55WXoza2hYRVBodWRVR0NDRTZlcjFENXFxSlQ1aU1GYjM3b2xWclJqSjJUUk9JYThlb3dKZWhpS2pQQWlzdC1oRDBzZkVFVG1fZ3g5NU5ZV2RETXl3blVNSlh1bkNXQWdESy05S04?oc=5" target="_blank">Giannis Antetokounmpo Trolls Jaylen Brown In Celtics-Bucks Game</a>&nbsp;&nbsp;<font color="#6f6f6f">NESN</font></li><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOdUhFZDFvTGVxVkdfcDBwM0c0Mnd0ME4xMXhIeHdHdVVMd1hiSEMxOVpDaXRyYnFYNkpVLTJVcG1YeW9OY1JPRjhFT29wVG1FVEdUNHBkUEhxVXB0a3RvbFY2aWxDZnp2ZkVxSVVYS0prenRCQlFWOGxJclpKczlFdkV2SGRSZkotRVhxQVRsUXdsWEhNbGhHT3ZZcHM?oc=5" target="_blank">Jaylen Brown calls Giannis Antetokounmpo a ‘child’ after high-five fake-out - The Athletic</a>&nbsp;&nbsp;<font color="#6f6f6f">The Athletic</font></li><li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeEJROXJxQzA2bGFwR3R1YmgySzdpbEstN1dYUENIVlI4ZHd4dGRyTlh1NEo4LUx5SE5DdldUeEQ0OTB1VFNfb0RoQk1hNFdhbGd1bUVWMFZwbjAxOHdZdWtrNHVJV2wyNEtsRzh6cndsV2ZZb1o2YnBEMEVHS3haNDhkOVVmQjFMa0Q4Zi14SF9NMEU1MGNKNGFXbk96WXhEelc4MEdqaHlIcldQay1hdkh4MjZlX01FaTU1b29pSWx3Z9IBxwFBVV95cUxON2NrZVNfSmZzeTROR3RaVEhjaXJGa2hYWjVKaU5FVGQ1NE9fMDJSdWVxSFFjSHVNNTBxb0ZCVk9mY2VCTjQxald0dG1EUEswU0tXNEMtM19ZUDhVdzJpWEhvX2EtTzI3TF9oT1BiakVnQjVkNUtFMDF2VFNNQ0xsUF9FeVBLNVBnMnJSTWswelpnVGt6NDZ0d1Rwd3h0UHlJUTB5NmZzZXZBLVVfdTJUMk5ZT2JCd2p1Yy11WFo3OVAyNUt4V1pj?oc=5" target="_blank">Jaylen Brown returns to score 14, hit Giannis with a hard foul in Celtics win over Bucks</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS Boston</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2PX5eGo98LWYh5o2M8VniZqiGKVmp4E9WxQ8UoZSJmpKkCLdrqYmCfHC4FWrVSvpMwMLjD9veH11fFsxHMTT2JrsoEmzZPDgCkamcJWozPFbJEBAM7v9xiw6wxxkkxSJMaCkxK6ozCeieKHys6N57yRKHUwaM9UBzMTKVEyHwtndYXpj5SdForexotpjseTq83DpbmvWMCSB5ty8HDAbbs9j9D2sXTRHthywzfkTEeRQ6nyBbPBL8XBZxXjDt6qDSRuaZ6KnPCdofqxaoQasLFeKbFsTJXtg79PyzHdAn15oAFtpNvAkYQLgL4wvusKEohVCH9jiUeGu43cC47N8XzrL8rhy6PtjDzZ17H5WxGVawJcDBVUx6AZsnrRAHYfNfp9zBYRJNcqwEyWAxuRNvwjNmQ3CYuk8wejWeVFbcYCE3hosejqppQKCoctjp3eS7E" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Niners WR Deebo Samuel &#39;frustrated&#39; when he went after teammates after missed kick: &#39;We&#39;ll get past it&#39; - NFL.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNEZtNC1xUFNHZ0hTUXd4NnhETDRqM1hHLXpldHdlUHMyOVZEdjF6WWVKdFFsMmFPNlVxeGFJeWlRb0RRNmVFOXQ2ZFBpeE1LTXpUcEJOYnAtMVhzM04zWVZTSHJuTGlQRUJMSW9fZFZrc181X2RtNFh4WXk3Q0RQTnlVMmlWMHZQV3h0eExwNFBqeTF2U1JTZzlMeHp0QzNURHVxdGxkWXc?oc=5" target="_blank">Niners WR Deebo Samuel 'frustrated' when he went after teammates after missed kick: 'We'll get past it'</a>&nbsp;&nbsp;<font color="#6f6f6f">NFL.com</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPM3hRX0UxSk5TZ0xtaUxuRElHTkRqUlRxWEdGU3B2M3hyUGp6bnY0YkNVdFpiVGZXeTBKOEhYaG44Q0UxcnpFZnF3M0xVVWNJZ0xfS0dHZDFoSUN1Z1NFTDJFLWtjckhKUDgyeUpqeGFxeU5UcWFlUWNfTVIzOHJiZDJwZHdBa3BKaVlTUzNaS2tzd2tUYkNMMzdKdw?oc=5" target="_blank">Samuel cites frustration for 49ers sideline dispute</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOTjlpZHFyR2NDWmZGeGgwSEhnelZiRnJZUm1VSmdpVExubHlqUmlESTd3VlN0dFpJZlJTTFJoREJlX3h5bUMtTnp6dXhtcTA1bXZ0LTBWb1E0Z01hWUVKZUtfczFvSENDTDhvYTF5UjFmTVlGVFZLZnFLRjB2MXZsYzBDamJHMVQ4SVF2eUVSNHJDSlpJMGctQWI2aHU4NEln?oc=5" target="_blank">49ers explain what happened in sideline scuffle during Week 10 victory</a>&nbsp;&nbsp;<font color="#6f6f6f">Niners Wire</font></li><li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQZzVmdnpZZmhQQV9ZQUs2c3h2TFh2OW1YSW5lZHVyeDVUNmNNTll5NXBnVzhIZU5EdHpoY2JLdmdvak84ejRMV3ZUTVNsXzFaN1hlVWdmWnUzYmc2M0xtcXg4T0hKZXBZc1B0R2hZLTJXd1RxZnBlSE1qS012aUdZcjdiRF9GeXNGRGNFRU52bHFhZWRRLTkxNnlVQWR2OGRzZFF1TU1HSWMyMnZtbmxBMDg0RDE?oc=5" target="_blank">49ers survive 3 missed field goals, sideline fight to win ugly against Bucs</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPWXVmVmhIaktBNkJVYktMNEcxdlo0ekE3SFZQXzEyeDJ2SVZUb2NIRWJGNlVEanRFc2hiSnJKWVJHNGZfSFJYVnV5cnpyYnFwYkI1ZWw4T2lndHNiYUZyTkZhRTlqa2NzU1J3emZ6V0drNzk0d1VGbEcxbmpJUGFFaEdVMUxzT1dVSHd1azVXSjRFS1d2ZEwyWFBlY0tzQkZMeVFj?oc=5" target="_blank">Game Day: 49ers escape Tampa Bay with last-second win</a>&nbsp;&nbsp;<font color="#6f6f6f">MSN</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=CccrSiY65BM5TmJYUEbJmpUfkNvx87fHpNhgvG6rCAng7w4VRKEFwf6boA6kr4ajHbLxazM19h6RzA2DSLJXuETg7Cc3RqY2WvxCxbYi7hWvY5SfWnR3WqJhQtzuVzcYT75rFZf28E9HXUfCDkcJropuF77d73PBSBRpzAoyLkZYq8QfiiF7gASFR9Keq6Hna436sPVBtTjHTje5JJniRJM2qUtRs62cBVcQBcMFDNq9QdrnfhWQHfBKoF6MJ1pGNrHUeMwXv77hyQY2YKn62itr2oXxndvzoPmZDbJEViixFLMXMwemaho1DtuNikHnbbhPnMjD1xn1QunR1PX36gjsUS9ukJVgxB37vpGZxiZuX8PQcbngk" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

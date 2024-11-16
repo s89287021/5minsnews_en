@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/1.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/3.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Haitian Prime Minister Garry Conille Is Fired - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYUlkcUZOQVhmaGMwYUZ2MzNEVWJhbE5JdVdIYnBxREgwOHZMUjFLempLSjdRNllpYTZiYXRPY3kwQzVlNFpVTHFkWmtyU0JWUDlibTZ4MExndWpNSlVEZ1AxQ0VEZFl1R1N1Slh2Xy1FYXBPLUZDRGlHcEZLVkpUNWRhY3h3Q1YxalVZ?oc=5" target="_blank">Haitian Prime Minister Garry Conille Is Fired</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNUHkwT0VPaXR0T1N0U0x2NlRJdGd1T1MwRlN5YUJEeXM0WllwQjAxN2xrT05nTkw1MkNFTS1Wem4tT1NJdkdXTE5uNXN6d2ViMmJVR3R3VjdjV0xxVk9kZkJrUkRDeHZVMFJOdVQweUN6XzhCdnF5U3QtS3QxOVpZdDBQbTM4bHROWF9ocExwaWhZeWpDTEZTZ09NV2swWlhVMWh0eGJsZTBjcXI3aGfSAbMBQVVfeXFMUDlWSmJJQ3VDNXNXQTVoOXNqTXFueTg3QV94d0dIMDdxSURVYnNYMUt2VXh0MWwxeFNTdWY0Q0VET29INXFIUHpfclI5VHhiWE5BTjFFeEVlNVFNQUhMdVdVNDZWOUJzY2gyMC1WdDh5TUY3SFNmbGdmQWJMV1VxWGZUdWNvck1FeGpsck1GOG1IR3NnY2RERHUxOUtjVGc4YjY1WkZsOXpTMFl5VkowbzR5TGM?oc=5" target="_blank">Haiti’s transitional council moves to replace PM in contentious move</a>&nbsp;&nbsp;<font color="#6f6f6f">Al Jazeera English</font></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNcW93ZVUxSTZ1Yzk5QWI3cXRDUE8wWENfOWk2NXJ5TEtEeW5uWUxtbngtVnVTbkRJRkM0NkNBSTFoN0NOWm1tTGtVWGVZOFUzNlpsR183VjZpZW1wMUMxTkZRZnBVRlNTNGVtRWtZc2NJN3BEMkRiSlcyazN5Nnh1cTJqM1VNaDUzY3RkTTdDYVc5OXBJYzJxbkUwd2ptUTJnZ0pTRGZsazI4ZjhNLW9sZFNuRDkzdw?oc=5" target="_blank">Haiti to replace prime minister as security crisis mounts</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters Canada</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNS0xiWUNvQmEybHcxNlR1UDh3a3pSbkhmNVJuRnZQWGJlbUt1TDlpV29hdG40cXJnRjlpVjZMcW5haG9semRUSUU1U0JsbXZiRmtEcjZnNVp6d1hTRmc5MThKUjF5R04xQkpyMV9qUjdaSUV4TWc2QngyWFVFeXpMMUFzVHVYY3g0d0tWM002bjlvdw?oc=5" target="_blank">Haiti’s presidential council fires prime minister, names businessman in controversial move</a>&nbsp;&nbsp;<font color="#6f6f6f">Miami Herald</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=52k6mffrchQiSPzS2FD2ptJZYZR9vRs1eKVufRKj94aY6M6RD93mJRiNh4Lx48qYvgzR8RwxNL58YSr4tnrqS7gELWU8qb5NhAbWSWnVzFQ9dMmEC6694jveScnTL319s2eJ585yin3toctccEX7imq2WDsvjFJQhD9wHg7MSxPYXaWSrEEran1Wka9iFTqc3RT7JQVoK1HotivYvYJBA4tkUCF1u1FtMp1sXfPSCDrS6G1sL2AKmnnz5bUidfwai7q6A2FmR3LCJ9j1UVcxPefQr2aYLfjy4bw1ruN5Hd2UgwpB1bsLHTyH2tkGA4Fe" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">6.8 magnitude earthquake strikes off coast of eastern Cuba - CNN</h2>
+        <div class="news-details">
+            
+            <p><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQNTh2cjB6UEpibHFKSUQ1NXl5cVF5ZXB2bWdXVmZqU2I1ZzJ5TEtreFJTT19IQjVuXy1ia2pfMzVNUkgwQ25BeEY5b1ctQ3l0VWF1OTRQZnB4Rk5kQ1pRSXZhcnJSRGFMdE5TaFk5Mm5WSHNCbzFwSmxqdVBWbTZpeWo3OA?oc=5" target="_blank">6.8 magnitude earthquake strikes off coast of eastern Cuba</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font><strong><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lDMW8zYURCSEsyTWt1U2lKYVdpZ0FQAQ?hl=en-US&gl=US&ceid=US:en&oc=5" target="_blank">View Full Coverage on Google News</a></strong></p>
+            <div class="read-more">
+                <a href="/redr.html?target=HFcFmHBiAeR57tWRm5CRnQtfiWRMMQSpeyueYq5X922JoVe64VTJXhjNyo3ZDr2YxZoiCfY2GkfvaXQg71uEbPSYM3urMVi1wKQdu8f1ZGaYWZz7ZWBjWoKcvejNEcr5JPGmxMUFC5HB7JBrqEwQmCcDTfVgmaXpY7rKioE9oWC4VdgGTfkiZKHt2wiPPkPLgeHkWaetkxhvJZMx9zaCc2ugsBoGysPArHMnSTUA3FUNDTA5s1fmeMJwfCMthX19Ls9koAibsFNZ6hb3Ud4XrWWVXCVjd2wAksNHcSNjQuBLDq6NUU" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Dutch police detain 50 protesters at pro-Palestinian rally after soccer unrest - Reuters</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQOXBDLTV0b3RsVzNHM1pCRV9lNnRTdU1mTXlIbkg0U0VObnpnbHpWVGM0QkZoblF0NkhTaGtnWU1naG5hQVhVT2w5bDJpd3l0X21qOFNpSXo1dVdsbThwTk5JVld3YmI2OFJOb0t5bGlpdE9kY2p0aTI2bGd6Y2RlOXZUbzVMc0pLbU5FV2xQaENSUVFISjZtc3FvWlZVTVJYZ1VQVFpqdmdKaXZIRU84?oc=5" target="_blank">Dutch police detain 50 protesters at pro-Palestinian rally after soccer unrest</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQMVFSNTRkd0xVQkZmem94VXVxUURSbTBDcmhmTjJVQWVrMm1kaGs0STAtbHk0ODl2UXdKRWNmTDVybzNuSXhaSzUxdWQ5dlJHQXVseUtuWUNzUHQ2V2ZlNmpnVkpnM1pneHpIUWpyV3RTTkgyS25lN3dnajYxMG9TNlp2cHhwbHQ4eFpETVRVbTBuaFU?oc=5" target="_blank">How Attacks on Israeli Soccer Fans in Amsterdam Unfolded</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMimAJBVV95cUxPSXJIdU84aGxWM0ROWEt5SVN3c1pOTTczTkc2V3FFeTM3UUc3Z1B0NDJjNlhvTFJVQjR1UTVMNWZUVnBEdkxWVUIwVjlyNHJYZkVOdlFrUC1HZ0hjWENqVTFjYmJ5d2NpemczNVE4eUxiTVV2ZlJqLWdTaHlDN0l4V1daTHJOSnFBQXZtT1FZTzV2SHZtMm9rR21WMEFuc2FFeXBlVlltTnN3RUZJZWJfenhZelc5ZUl4WVNTSXpiWWhETnZHUU50a1RDUm9BZ3JBT2RlZDlacjRTZU5wdFRwUjRtSTBybEVhVjU0cGhfSjRBWUtNSkFtUGJ1STdfa1lDeXk4ZVd5Nm9BaWdRbVhOWVMxTVJmc1hF?oc=5" target="_blank">Pogrom in Amsterdam: The Real Reason Israelis Aren't Safe Travelling Abroad</a>&nbsp;&nbsp;<font color="#6f6f6f">Haaretz</font></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1IM05vTXl3V2F1SmpoaE1zQVc0UFBuSTMwSEVMeDN4U3h5emVHclkzc091dHA4TXJETUs3bmZTb3drS3ZKcTF5WGZwcmRKa3k0Y3FveVJtQlBqTnZKbldJ?oc=5" target="_blank">Did a former UNRWA teacher help organize the Amsterdam pogrom?</a>&nbsp;&nbsp;<font color="#6f6f6f">The Jerusalem Post</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=er1tKPWtDshfzQXYbpWHq8UoHCQd4TgxTTvb984y8qmgThBv2SF9wAE6C8pejJrZCJ69Zs5ZgWi6aQbn5BmosSn714LqMKRCuB11BzoSxsn4YQdG6Abu7rPzsJbYf64PbUpWxDz1GVVEfshtF9dTGLoPHKwkjMHXbGPZyd8tft9emTPqfsLcz95ETjpHreMfLqbyf2zhuTeRjG9c4sARdQBxvLHtp142834D2vyK5cyDiRRrrhqY65hikn6day6MjbrbGTfHFM5Pwg58qvDGt8GvUtpAajq1HsQHL3EiDJBnkCayj6edaDuzDRkpj7e6e6J4VePmegPkqkPDVYoh1YBBzeAegBuWo1McKd6dPT4a5KsDBaSzeUWW5d61ud85r" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Qatar suspends Gaza mediation efforts - Al Jazeera English</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOb1pUYjNRM3dTWEFHbUdjYlppbjUtXzMxMFVncldha0V5UGM3T1d5WXpiaHRPWVZkV1B0eVpUOV81Z1J2MDJhU1lEbVpaeEhEYUltMUlKMWN1R1JnUE1FcTRCaWZURmhuUnpNMlB6TWw1TkRIWWpHRmtDZEZFUjlPbGRfVTM0TVM3LXFHbVJNUUh5TllYQlHSAZsBQVVfeXFMT3E4czdIY2ZwZDhRZmRGeHh4WW5UZVhZNmhtVmtYSi1ZTkNtbkZEOW9mWm9QTjRxckFDQmExUGwwdWFVRC1meW80djBwSjZjYWJGeklFaFFPRnM5R3VQRGs1Q0pKTGRHM3d4MWZBMkl5Y3JoVmh6a0JkTHhTX21ITEJFSkZZWGlnTGRLTWRwaUdxN3ZKb3d6OExqamc?oc=5" target="_blank">Qatar suspends Gaza mediation efforts</a>&nbsp;&nbsp;<font color="#6f6f6f">Al Jazeera English</font></li><li><a href="https://news.google.com/rss/articles/CBMinwJBVV95cUxPcDhoZC1zSWw4d1ZzVUdJWUt0Si1DRW5kcFdvcFpsWktwNTFhaEJRR1hUbmIxWjlJS2ZkNm1CVEIxeFRlRF9OTkJuNUVkc1U5bG81V0pqRXhLY3ViVktMLWQxelRlTThIRzFOcW1xQjRtclBnWGxuTWExZFNqX1FMSFJDa1J1QXBsVjlpMHpGTE9ReENRNVBKajJnbXhBY1FUVW1kWDdPeHVoeFB6QWJTUFppTkxoUDFLVjlTbFZ1eC1IUkdDNTRPUno2QUZWMkhSY3JfM196ZFAzVnhqa01JcVNLQWhvMWMtTmdPdXZVWjVnQjNuQmFDcnd1Sk91SnZVa0VRX1Z0NlVYdHItLUJqTFloZlJFNEcwdy1HUkp3Yw?oc=5" target="_blank">With Time Running Out, Israel's Hostage Families Just Got Some Horrific News</a>&nbsp;&nbsp;<font color="#6f6f6f">Haaretz</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVTgwTl9SZUpTRFhwTU94RzJuZjNUdFFIX1c1UE5hWkwweFBYWjJOVkplLUNXQ3FhRlRMY2EzM2dVVG9Fc2U1S3gwNE1zbUdsLWV0NW5TRENLRkdKbm1YOHNlN2l1TlpEdzlwZnJwVE1xck51azQxTTFkbEFGU3E2SHV0VTVWX2hlaThfbVJDYjU1Vk9UTmxSejdGQnRuRUFROElQZzJSYXo?oc=5" target="_blank">Qatar stalls its Gaza ceasefire mediation</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBPaFpZb3pOVG9wdS1ZQ0xUa3JydlQxTXlwUG81UWFHTlYya3lVRGkxWktZRm11SlJTYXhITnNpUElzdmlxR0FSVHNzM05oRDRCNzVCXzgxd1dZRmFrakdr?oc=5" target="_blank">Qatar tells Israel not to target senior Hamas officials in Qatar - report</a>&nbsp;&nbsp;<font color="#6f6f6f">The Jerusalem Post</font></li><li><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTFB4MjV4aUMyN3hrc3N6aHBoZTNQdXFaTktEWnJPUXNSVHF1Rll4UDB5T0lnbXN5dkVFeDR1MlIwd0g1cFRnYWpJMVhTVnlNcEU2WHd3QS1Va0RfQm4xTUJod0N6LTB6MWdxTFZ6WVpDVVU1NTRmZnE0dkxlWmw5dw?oc=5" target="_blank">Qatar halts role as cease-fire broker while panel warns of famine in Gaza</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=56ybocYfvgRjtYQqDFZFL77UwGLApyRmVaA3vsZMsqE7QtZgY9sh8NfreVjmwRUrpAK9nLvTjxMZGabxuKMSJG7UASVVHAraKBwEEkaAnVNZubin8r7FSZGyKai4KigAbNG1sdydte5qLj8i2ZpRRgXk2wEeY7z7Y2Nm3qKdasRHRfUjFrUuxN3HXYCAZP7tgMrSCQNSrRu6HYa2nEhqBrSTUiajY7jgw3dqCTV1tHYQQgurFs9HfPnLa5uECfWGEb2q4DaPvSr2yvdRpumfFNvWT9VUM8xSgth2MZc7ujKHDFNeXUXpEwKUb8XYntdLGfaQ95RuScT7M3oQ9nxSXTCZ4NoPPpETt9WQcPfzEMYBkHM6Bqw1d7apYMMgnY2pJ2uSU5eD1rK4E4RBfQhZxrh9bGtMPwTmch7wYYP4ZJtFg6PjkMD8C2kdRAKJKDJa3zkF8qMkRoRUgWoWHMfdes4txQ54hLAs8S4DxjXykaZZsR9uufnsfSR7ACPDwkuoa5TNf1ZA1oF1J3yFojjVp8jcr9e9MZVqBTJwSD4MDfCCfxuP31otEcJZhwp3rkKGnyhrZ4Bwq2ss2aY7R1FbNFyrhDU9gDvaaC512scFGGdFpVppHDpYLt" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Bitcoin tops record $80,000 as Trump nears sweep of US Congress - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1uenhGLXY1Wm9jLVl2UHVSZTBoWnRYUjVITGtTcFVCV0hEU2NZeUNETnl1NDZiR3RFMTdYeUR4UURFUUdVX19ibmhmX3h5MUE3MTZuNnBSSTdKUdIBX0FVX3lxTE9wMkIwMF9RTEVTZW1QTXRQV3Q2QjhGUk9GdFl0UTNpQ1BTRkdUMF81VkpBSUMyMk1iVXNKZ250a1BobURwVjhBOHRnNXBjSFB2WnhfTFVZVW1VajNESG8w?oc=5" target="_blank">Bitcoin tops record $80,000 as Trump nears sweep of US Congress</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPbkEwcExMYUVwWWhCVldfWHRBSmZUNnVOLUpQMEsxcUhMc1FSVTg5b2F3QTMwN1paZlN2OVRab2FGQzNvemtrTWItdm04bUFELVhrVjdPUGdKUVFUZUM1SU1hZG5UWnpSYUdkV3BGa1UtT0FQSEg2Znc1NTVFa09qRU15Vy1jWGdDXzZWRVlHWURFb1ZzLVMzRnZVSlpEXzd6MXphY3pzUXZMbzJWTHZQbtIBtgFBVV95cUxOdk5Hdms1cFAyWS1ZcHRyTGxfTlRDakphc2Fqa3ZzN3pXU2duTE5hYlFtQS1DMzJFQ2dmODluMVA2bi1oeHhtZjY2OGduM1pQYzFIOUl4dHdMeXYzVzZZZ1lGbVFmWTlxVi1yWFE4YzhNV19HdXoyUno2elZlWVhqQlR4UXJSdWtjUUxvLWZUaHB3ZFhVbmsxamJ1M1pBWEh5eE9wRXpBS2IwanJRRjFJalJPSDJQZw?oc=5" target="_blank">Over $2.8 billion bet on bitcoin topping $90,000 as it hits all-time high</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE91aTAyV3h5b1BPdnVDWXoxeUlNQWUxRHAxQ3hPZUNNMDMyU1JtQkRLVVlfN2xTcXBHOFNzX1ZtaUpKbU1KOFRXS2VmbFNOT0p2RVpIY1pjNVhWSktHc3dmUUZHYy1zZV94NWRGT3JZQmR5djhSMWN5ZTctdlPSAXNBVV95cUxPR1ctemZ3cHBBaF84UUgyYzV5V0laLVZlVFA5OUhHenBvR21hcHVqNmIxWlBtQmhVUjFGNVdFMmJCVHBMRUpLVEpSY0lJNC1NVU56ZzNhcWJpaG4yQzFMclBtVU1GcC1ETGRzSWtqRE9OOUJr?oc=5" target="_blank">Bitcoin hits $80,000. Why Trump is boosting crypto</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQMkpGVjROeGxiZ24wTV90SHViWnY2SWJjV2MtTFI0NC0xSEd4RDdMWU00SkVUamk0V21pUE1BZmlEaGlLanpJNFJqU1l2QklrVXQyNzZTby0xMkVRb3VRcEkzN01rQ09KM1hnT2xaZ1dESHFMUlV4eGdGSG1LczBkZGJJV0x5VHlCTlhKRE9qNDA1NERrcUlaOWVRTW5tRklsSmp0MWtLVEY3SkdlcW9PeWNRWW0tYndDemc?oc=5" target="_blank">Bitcoin Breaks $80,000 for First Time on Optimism Over Trump</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQcEtlc2otNzgzTklHYkdOZHRKYy1GQS1PQXdaYXR2Mm9JZl9BQ1lRR0Zld2xoSFZTM1UwRlcweVlPcll3SlEwYUxRRVFEYUt3MVhULVc0NlItS1I3a2dFQzE1ajh5cmJhRUdnaFpUUGRqRUFsdmlFUU1ud29FWHNsZ0lPU0pCUVZlN0g4LQ?oc=5" target="_blank">Bitcoin breaks $81,000 as Trump's election turbocharges cryptocurrencies</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdHjMrP8WxVnZkUARvLgfuvrM7oF8XNwW34FYYkBtEkBMXXvxaBD89ZAMGTx7MUMPtWTe6gvsU7XG7DrjVZ98is6JC5HbosyYFWQK6rrbMsWTqsYxN9Lc5juNJEkVvntzNUrnxt6A8CgMUmti5iybDrFi4Mj3cnVoGQcvAfMqHwcbdVW7aCaNo1NyZxab4qsGTdyvqsRJ7FY7HBfZhUznc184y1vYdPfR3uUxgt2LxTCA3dGuohofBzTm6YLBmMLY5y1ShQwtwPnsoy82WaHsfG8k4DBSWFvVUDNvFMtpn6NsqDnpa5AHdEzdVGPszng1FTAw1X4wTyKbVNUjSU" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Fate of postelection stock-market rally may be in the hands of bond traders - MarketWatch</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQelBoS0hrZkNZaEZaSllSZkpvb1pqdFdMZjJvX3lDZUJ1UUc0TE1aVzRJTTFrMS1xam8xcGpIN1J0V2JTWUNmdDRoa21TRHh6S19aUHpHVHNXLTNfbHZUc1BvXzFuQWFfdFVJNk5Ca0FjejZUQUZTVmxxd0w4ZEswRkhUWkRQSDRaejVpNVg1ZWxvZUo0U0xzVTh5aE5LNFoxanJ1VlF4dEhDaVNuN1RaM3IybDI2dkRXUnfSAb8BQVVfeXFMTjdGU29ZMldGZE9CWm5nUTBzWXNtTkdkMEF3dDJQWUlGb0xDSVZYaFNCdXhka2Jpbk5iZDE1ejZoMm9zc3FBeGdXSWhhb2Z0XzQ2Q3FVSEdkRmhTVk9nNWJMbXNpOXpMM3VYRlEwVGY4LW9scUh2WEVoRDlMLUJLalRFdW9MbEdvS3RvX3RjUXZVel85c3BfeUFOSkJraEw3aWx5Q0dwSnVGRUJnbVZXM1B5NnQyQW5oaW1uRk9iTlk?oc=5" target="_blank">Fate of postelection stock-market rally may be in the hands of bond traders</a>&nbsp;&nbsp;<font color="#6f6f6f">MarketWatch</font></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPcVZpVnMtNXRUZkl3Y1cyYjR5NTRvYzdkd1ZVWFJsRkN5UC03dUZKaEl3YXpBU1hoNEtFNXZJVDBERjVrMGxWLUo0RlVxcTZWNFZwQXp6NmtiaEw1NFlidzB0MGt4Y0tKNGNSQWh5TjhJZGJLSmRRZXdSQk9jMnZGRXdxdTdzQ1FGZDh0LVVsdjVkSVlfWHU1VnJlVUd1ZU1GUWNqdWFHSUlxbDRnSVUyWDdwcS1yZw?oc=5" target="_blank">Bond Market on Risky Path as Traders Regroup From Wild Week</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPblZfRTZ2dDNPZjRkdXRIUVo2RkZoLXEySXJSdVl2enBrTk5SeHZ4NTlmM3NwTVQ1RER3bUEwcU1rSVljcHQtbk1YUmVBWWJZSEtOMXBkbGF0WGgxVlRyenY2dzJZVm5qNXdESWUxNWN5SkRKQlIzeU5xWi1JcFV0dzY3MA?oc=5" target="_blank">Could the Bond Market Stymie Trump’s Economic Plans?</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=7Eq36kG6wbEn5FpcQYNFG4wmVpC38EX9acSHzuhAS1EgrLPNLauTuvJd73ymKvsSUtSekrLGT2y5CrntmNEykNfRk3BbK9p5wZJtBf3obvoPeE3Xk1pTe8nmwDoUmiJjNZc4Ksm7FpNuNykNYNpRGxs3kbS8772KTUWVGkofGEFx5d2vS2DKxjhorZNiRc7JocYAGLadjVYQqUEuDJgemKf2cn1A4owYgzV9NQxmoSqZ4vj3nJmxG8yv1QZyevDkkYoKiHNWL9YKDu8TJXNqHGz2pJgw9bkEigJ3WktBfHih42Y5PSKyeaMDRxpokqscxj3A1zHpuBs9r1wMmvpEmSpucrtbkUyPxdpkoV8GuumDABHpd2aAZp34724pTT2W3a8rB7Hacg5G76EV5x8ku9ks8q2RCDf7Pir1x8KcRsGUQVxig5uHKz3z3qdVeGdybRDF77C22GTSXzuK3NmZey6e6rJ6KuLji2fdMheyYVhuRW1JL5LqdytT8FSf8owsVHM1M4TVDpYT9H58iTVkFSEoUmY66p57uZmYiYFtsyCNZ88BkAkRMxsoh51AwX58ob7LghzcUZvmB9KZwu6JwHgXaQcGxYntgHD2ctYzws2C9RVs1L23GSfHvyro8WTq5R2yKNns6iLqxTdDuxFH5VwkRiQxG518swFcTcmKQi45c8GzLmKq8D2GrpG1m6ouWXRB25tBU9qpV5p8prAmmtw9PnyMiYfo5ZwdQGetHHfkZbVcUwY4YP6Lt" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Asian stocks slide as China stimulus disappoints; bitcoin extends record rally - Reuters</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBhaDUtQ1pDTXF5Q05wUnF2TnlzdXdFZTdZOE5YZUY0Yi1hVE4xNHEwUlkzTWw2OUt3VmVOZmpNMjNMQWprZ0ZSZVJrRjFweDJGcl9CNk51UFVJTkZGbW5tS0FTdzd2NXdFNXlXbmVXY3RZb1BWUnc?oc=5" target="_blank">Asian stocks slide as China stimulus disappoints; bitcoin extends record rally</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxON3NoV1VFZ3JHY2NPeFM4dVBoLWQzanc5RUFfbDhrTTYxQ1FwYW9xUXE0SXdrWEFNWkpkZm5fZzNHLUE4eFF0Ylc4Q2oxbG5aV3gwRTBULV8yaFRhZjBTN1VJbUVYZFRWQmNCYk5LV05USjNwRWtJT2U5ZU1DZmxjVA?oc=5" target="_blank">Asian Stocks Fall as China Support Disappoints: Markets Wrap</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9rQy1kUXdIcE1rclJpQjVWVzFMNFR0Vlc1cjZzSl82bjMtNUFXbXI3YUl6QjhTMnFGU0l3Z0N3UFVIYlBENHdUcXdQZ1VMTFdwS0E3R1BmN0dqNjJzbFNRaTZUSmp1ZGFMd3R3Vnp1QnQ?oc=5" target="_blank">Chinese markets fall after Beijing’s stimulus package disappoints investors</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOMXZpNWQ0THM1SEpxTXl4SU9wcTYtSFlBTXgxY0UyUGFMRC1XR1BfUDVQaWYyN3ZYS01DRE5UdVF6WjJzM2s3eHhOcUo5SXV5U1FRSXIwZHk5VDVsZWcyaG5ONnRnRGRoR1ozU0Y5M19VU3ctSnRGUG5sQzBONlpGTk1B0gGHAUFVX3lxTE5tUUk5bVJYX2tGVGZaWE9OODZHLUxpOUUta0Nib2JHREw0c0ZIR2x5MkhNdC1iV3Z5UVZMdnQzT0d4RGRxaEd3WW9JcGtXczFtdTVxSU15cGxoSnFjR3JWWW5zelZLQTZOWDhBRFh4OEF6R2VoVjI3RzFPUVJUSFF1Q3NnRHFSaw?oc=5" target="_blank">Asia-Pacific markets slip as China data and stimulus fall short of expectations</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQYkRTU0gzckdWbTFFNkQtSmdTOVNZNFdEdUlyWUJldnBIUnZuQ1BpSjd1UW1UMmtpbGh0ZjN6LWRsbnFuTkNTcFVFUjQ0MHhJVFhoWnBJTmNERHlkVm4wZy15UHZCY3d1a2tjUUNLczJ5dUpnX19vRTlvc0REUmlqcV8xWVo0S25lMHpvTkZn?oc=5" target="_blank">Morning Bid: China caution cools sizzling US optimism</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters.com</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=M7YJgYmt9DyVFSP9H7XmKMwX7CRohiKuWpLAM8S3heChDtLEDfPySAqP4gcP5ex5FmzxTkefEhiqo7ZMvRZEgTCJMv8E3a9tn5JcJu8FqWTPJ1JB371K2AkqwshhTe62qhQBZZHTzjPoWL1TJhXGnUGsQJ4Pu8uUByr4GSzMnE2m9QKQdzCYvSoD83W3pkpDiewP2hFjgU5x5d9BfehksdxeGmrp3JVHvUrbrZFt1i7YPANpAF25hDevChx4iYw5CVTaddyYCXcjqQaB5LTApWn8" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Elon Musk reposts call to end the Federal Reserve Bank - Cointelegraph</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxQa3RqQmdnbGdvMkFNekhsVkpxTGhOdldJaHQ2dUd0eVVmSmVrQ2NEYlpIWFZEcDhhcFZncl90U0ExRlN0ZzJyYVNPZWV3eFNiVkk4b05KV0EwQnZZWWNCMnk2T20yd1M2M1QyWFJrMUhTM2gyRHluS1ctVlBmY3ZMMUNnQjg?oc=5" target="_blank">Elon Musk reposts call to end the Federal Reserve Bank</a>&nbsp;&nbsp;<font color="#6f6f6f">Cointelegraph</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPcE5oYUh0cFdNUkkxdnQ2SGxZWGY4OEJvMFJzVjljSHNpTDJGUV9jOC1tcmpzWnVGbWVzenZkTFdqNGU3TUlDWkh1aHFMLUVPRWpMR3Y1eHgwM05kSXpUeGxDQVl0MUNlLUphVU1PSUtyU0VuQ3NZSXEtOVNZaThJbmV2UGFMaXdtR0VOa2E2Q0zSAZYBQVVfeXFMTTBOdVdoR3BCTGNXa3VpOGUwWGVmeUI0N1B3eVVDNndPcEZ4NE94cVNQeFU1V1FxVDJEd1BDbTlXcF9yTUpWNDdJS1Zub2xPYlFCelBxbnNsVVZLM2hIV0lGanZ2Zi1XSE9fRUtOLUZTV014Ym9MU3FkVG1HdjlrN3RBU2FKdXhnSjdtdVZYejB4cHAzdXNR?oc=5" target="_blank">'#EndtheFed': Elon Musk endorses plan to let presidents meddle with Federal Reserve after Trump election win</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaDJZSzVTalFNZjJ5MjA3dFhPcDZiQzl6bHFQd2RrQVZCYkE0TlFFRVRGQ0JNV1hoS1dHSWhURm1qZHhHRmE5QnZPTmpnT2RxbjIwUzRvQkNBNEIxMFZmbE14VDhqOEI4THg5UTR2R09sYnpaWS1TcS1EZUJUUXY4T1phUFFDSjBOWnhnZWpXUTNZV19ZVTdJZGJ4eUIwV0lIWWlDWGhhUUhKdw?oc=5" target="_blank">Elon Musk backs call to ‘#EndTheFed’ after Jerome Powell says he won’t resign early</a>&nbsp;&nbsp;<font color="#6f6f6f">Fortune</font></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE02SEptYmY1OGxSM3RMUUl5bmdFdzAyVUxEaXl6TktsbUlUTjZyNjFDczdfYXc0T0QtSldsZnFmYTZRQWlCbjNUelZDVlZQLWdSa3A5Z213TTkyNnV4ZW1rVEZQUTY2dTFmSWU5V1EwMVV5VUoxS2IyRWpGUGV0TFE?oc=5" target="_blank">Trump Allies Prove They’re Idiots With Plan for the Federal Reserve</a>&nbsp;&nbsp;<font color="#6f6f6f">The New Republic</font></li><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQaHNrRFYwSEJUU19sOVQ1WTIxbHFPaElON2hGcTJNR1lIdnhDcS1XSEVqZ1l1WlpBaEtrazU3cG5ILTR6LVVYZ212aWFYQmFURno4WnE0QlozTzYzTm9kamhUODNiNlIyTXF4cnZEd3VRUXVyT3ZyV0pXcFVobUVsd3EwS2NDTHYtbTlMTEQtOVFuNk05Y0FKSTdiVVZLODlKc1HSAacBQVVfeXFMUGdUT0owMThVM0I5LU50ZmVEajVMcDQ0ZXhXTm52V1psWWRDU3c2RUVFSDZRMzRJQzc5LTNIN3B4SGU5SG5VV3htSzNKa2c5b3FzUDBMb1RQdXBKamxDUXdsQ3Z5VmdnZVc1bFRNV0xmVl9qWDA3SHFEOEVFVlRXZzYzZ3V6OEJTaEdXYVd2aHp4UThfaTF6cmRSSU1rMUlPaTJFWjRMMEk?oc=5" target="_blank">Musk supports Trump’s push to weaken Fed independence</a>&nbsp;&nbsp;<font color="#6f6f6f">WION</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2EjUcASSGha9FBQLtHXXSPST3tCrUq4UyLeBNjVCx2PWmaDQhLQb6NWn42EhRMJVRPUWH46gkeW4JgZ4XSKJzUgaSy45jHc6Byr3DFGx1msXMqkmrNHni4K5CnJzS8QpBL82kok6pC6Gj5B62fPCB3kvsEWrcyd81Y6gZMTjt45zyJQFM9XbTHmZm2HGbgE2jcyFdLgrVYU3nAe5eoPSWfTUSJXMgEAJRYVH7ZN4vSv3UeVJrWC9WrsaMgKg88rFp2rjng7QZtXoAzeM5SNxD9qdvVrXdU8UY4AsjMk2Gz82KiFWjbmN" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">AMD Ryzen 7 9800X3D vs. Ryzen 7 7800X3D: a close call - Digital Trends</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQV1lwanlPOFVaZURLNnpBOFdIRlZpSmNWaXB1SVl3LVVBZzdBTktLR3BrUlc4Y2ZtLVJQZ3lLbG9zUVduUU1rNGtjc24tejR4c2VPQlNWQkNnZGt5eWNMR2VUS3lWLWVTWnZnVTUyM0xhd1JveFJTdDFRdWNPc2NvR0QwLTFUQQ?oc=5" target="_blank">AMD Ryzen 7 9800X3D vs. Ryzen 7 7800X3D: a close call</a>&nbsp;&nbsp;<font color="#6f6f6f">Digital Trends</font></li><li><a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxQdTFiTndSS0pXN0xFaUlPbVcyRHdvUUVoNTNZa2hlNFpRYjEtM3RrRjRzT05hTlRHOGpoTmdyZ1B3NVEyOC1hODJlRkpKNVRRbGVMaUtNNUd5MU1IRTl6RTlLWDJOeC1EWG85OXZzQUwwSzRhMzJQcjdMZ19kUER6cVJac1M3R1l1N3RWdVUwRlN6REswb2hWMEJFZ3Y1QThkUC1fSzkzTlRwUFdSbnowVmM0d25aQ0k4N29WRVJidFFTSFA5ZDFzSmVobnVMTFlldGNiTXpTUC1DT2pQa3NscFNyM1c3WW94eTJmOXBPRWJvMElvb002aTRWcUNFT1JWZk1BTUdKcWZva1ZWc2M5bDhKcl9kVWhOQkdIeUxMN25UMEpiT09R?oc=5" target="_blank">UserBenchmark suggests you buy the i5-13600K over the Ryzen 7 9800X3D — says AMD drives sales with 'aggressive marketing' rather than 'real-world performance'</a>&nbsp;&nbsp;<font color="#6f6f6f">Tom's Hardware</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQNVBEUDFTZ1lJdzdDUFdNdUtSZW11Tk15UkJudko1QzRfZGhZV1ZDMU1WcmlPRzJGRk5XZDRUeThZUjN5Z1ZJam5UNGVINU1TRG0wUzFKM010MWhvNlRmbV9jck1Gcm9ybWZoVFg0UWZwMEZDS2t3eHFPSzlaSEY2NWZWYThrVVNfRXBrcnhweTNXcXFp?oc=5" target="_blank">Why AMD's new gaming CPU spells disaster for Intel's Arrow Lake</a>&nbsp;&nbsp;<font color="#6f6f6f">Laptop Mag</font></li><li><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxNSWczVW1CRWFfTjlNRUxlM2lqM1RCOXQtTE5MaXh1Z3NBNGVuaHppQ0tqQVVScFlaazVsS19LWHBSOFFYTnM5enJ1cmEzVVJUbUVBR1pzaGNSaHNhWGVfRlBob3E4MmE1X3prMk5Celc3UFNBaVZpTVVFYWlMWGFjampmVzE2NnBGS3h2b2h6Q2FGUm9GcVNHVHhfdjRvZHdfNTdja19qaXZYX0FXU0VKSUlUQmJ4Vl9rNEp4LVh3TFAxblpJcTF3am4yVjdSZGZWZUlOTVVrQmE4ck1yLVJXR0UtNDdxRi1zbTBQRnctMVJBTVFmWENaSQ?oc=5" target="_blank">The top AMD Ryzen 7 9800X3D overclock just hit 7.24 GHz on HWBOT, but also a stable 6.9 GHz that delivers literally thousands of in-game fps</a>&nbsp;&nbsp;<font color="#6f6f6f">PC Gamer</font></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE14S2xNdEVrWGsxTW9tT0JPdEJSYllOT1BzdjRsaWZqUHVfNVNxTDV0LXMxMXdWNUMyYkdCVldydmdPMGxzTHhCeTZabjFxeTRGMGtnLVhKTkRQdHJXMjJfQ3pzVm9mVFp0ajJqOGtvTnRuTlR5RTJrU1pPUXnSAYIBQVVfeXFMUF9iTndaemcwX1lmLWVBb1ZqVy1wZlpyRHdQMmtDUmc1d0FfSlMtZlZPX0hRNkppUnd0dzk1dS03aURRYVpYRlQwZXd2SmR6RGd2MHlHSXZoQ0dsVkk5RTQwYUh2Z2FCR04yZC1oRHhqdGNUQU1HdTdlYmowZ1VJdFZSdw?oc=5" target="_blank">AMD Ryzen 7 9800X3D 3D V-Cache CPU Review – Incredible Gaming Performance At Incredible Efficiency</a>&nbsp;&nbsp;<font color="#6f6f6f">Wccftech</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2qM6R7emm7dVG1tBqj9yrEkr8aqUHLX5Gb4yb5JfSp8f7GTPTGtwQaM25LdiH5ZZc7NCc6ieHW1fVq4FBaXqwA9JzTfdX5LQCtuovnKFVQrJ62qdtXrEcPoVZoHnQ8N27zgEyH9Hx4RcTGZhb2XmJ7Rgd21JkTKG1yeXgEoCzfsCz6tDTLEcNm58GGTgG3iBhdj6MhiirYbnmNmgYU5gk32MWDxKepkPPT8CQtPMJBBoJhgFXtD7NjKai93ARNgCSCoYCYkqankqpURD2j3aeuBhMn1CvPo2QNC7Z9NrbDvcgGXXt8kXiuVe" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Android 15 just made 2024&#39;s best phone even better - Android Central</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxQRWpIemdaNURhRGRKOW90MnFUX1dVUE53SG9LT3U5aVBnejdjVkxiTng2aHZWYWdoVE45X2FZY2xsRWFWcm42S3FCMVNPRHFQS1F0YnpjbjlXbjZnM0hZNVk4TG5jaTdKWWZuanRlc0tWdjJOWGVnNmJqel9aRXdyN2xqYTNRUGVLRjhYMDRTOW0?oc=5" target="_blank">Android 15 just made 2024's best phone even better</a>&nbsp;&nbsp;<font color="#6f6f6f">Android Central</font></li><li><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxNMlpScV80QktsQTh4OVBsbURDTXAtbHVJbGJhQ0NybDJFOVY2bXI1RkhaRXlRWHhjMTUxWktKaGtUWl9aNWJXRlZGNW56M2JUZXJ4NkNyNUtBZmNXelF0cEVpVDFBRzZGUXFCVk9CaUZDd1llTEFoMnFtdFhCRGNNc1YwV3Y1aDEwcEZZMUVmY01VUG1TLXBhZHV1SHRzQjROb25idnB3VXlRc3FackdzT1RuTDIwNEEteTBhZi1tZ3NqdVJSWm9rN3Z3a3p5VGxpRGgtcGRoVF9Rc2JlMnNfR1hwTWN6d3YwSjdkMElqZ05QUGh2eWJnck1n?oc=5" target="_blank">OnePlus 12R gets Android 15-powered OxygenOS 15 update in India: How to download, top new features and more</a>&nbsp;&nbsp;<font color="#6f6f6f">Mint</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQMjhLM3VZampabFhrRTYyVWhXcEZZUV9TUEV0WXJYS3htZ2VPMDd5VFgyWDhTMU5WeUE1R1JHdWZETEdxTUdfZHJwNVczTUVqdHM4cmxaazRZdUZOYXFha1pIcE9QbWl5Q1EwY0tQaklEc3g2d05wanZsMW1MSWxvWTdkcmljeENJMlNvV2N3T1Z1dw?oc=5" target="_blank">OxygenOS 15: Some of the top features you’ll love [Video]</a>&nbsp;&nbsp;<font color="#6f6f6f">9to5Google</font></li><li><a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5TaTZpSkNMTjdZaHBSZVVYLXVSWlV0TXF1aEVkM0sxbFhwXzNNREtzVXZ1bzJFUTZ3UmJvUGRmQnp5Rkc5RngzQjZGeWE5WWJGTmhBeXk2ejFRT0VfMDZKSXpkOUV6Rnc3a01tZXFuOVRpMGUt?oc=5" target="_blank">The OnePlus 13 will leave more space free for your apps — Here's how</a>&nbsp;&nbsp;<font color="#6f6f6f">Android Authority</font></li><li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQdWlFNlhOcV9PaDFUYk54NzdTbnhBN2RuOVBuTFFFRjhXZVVqRTlEUVh4eVRPNkJsODB1ZS1CbkpjRmtIaHJHZXZqeVlvakJIOG1ydEdPWVhnMG1yejZ4YnpPbHk5TmQ1SC1yVWNkbWRESWc0VzJLRS1JcjBsVDRLNW5IV1JSSm9ndzhNd1U4a01UUFpRSU9JSkpTYmdmYk13cnNpSQ?oc=5" target="_blank">OnePlus is increasing available storage space in a creative way</a>&nbsp;&nbsp;<font color="#6f6f6f">T3</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=g6br9NKHvSoCcRd1WvyveJoeFdWErLD9geLdR9dV9q2TFtY1tWb6ZnAAaZKjyKRJbHLEQcTb4f7GTUnYUh33E6SWXJ8fss7MLQ4vMbTEhuAAjD8Ft6SM87aAiyj546ZvWdqgTN79mVGHQASZtU6LbPnNcVD8sSkz9jDDQMrmZ2Yx78JiFursu4PbgR59DqmNZXPHBVnyw4c8MTavYatMnVbvpWH37MKqLfCFkTk7QgCbDVYjNKdSd4nSvU1iYtLF6HQmFS63RkWJ41rwNVU9b5TgZCoGDYJv3MWo3Y4dsbq1NbJfsCbLyn3N7ZCN7MTfxk8JNhfZn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

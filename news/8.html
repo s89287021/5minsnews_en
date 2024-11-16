@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/7.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/9.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Ten newborns killed in hospital fire in Jhansi northern India - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SSjZJRTlxM2wyc0R1d29qZDdiVDlWT29MQWMxNWh3ZW5ESU9qLVJldnVqX3dKMnZ0N2d5Q01aM2lrM2tkMzI1N2xDemJXS3pvWlZFMFZ2UHo2Z9IBX0FVX3lxTE1OSC1UR3lDNXREbEw2VVprX015NEpvdHN2SUItdF9zbGR1b3dQT0ZRLXdjc1lFeXRBeHAwakplcjUtckVod04xc2NQNGtTWE9rdnQtVC0tUEg0MGh2aE4w?oc=5" target="_blank">Ten newborns killed in hospital fire in Jhansi northern India</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOTXBFTVhfV3l1WkNTZXZCRTVYT2t5TjlQcm04LUcwZlVFSlIyczNZSlc3bjNuZHc0NGI0dnJSQTBTVDdaM2RZWUVVMTNPR1pHUDlJT1JQR3NiZkN2R0xoOWc3SzA1SmlaWWx0cWNUYXZUdlV4elFoOHl5MXdMNmpRZEE2RHpncU5yYjZ1Xw?oc=5" target="_blank">Ten Newborns Die in India Hospital Fire</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNTS1uUGFtMHlpSFpRNGpsTkstNi1xN0p0cGFiSkVIc3g1aFVIUzRMcDQzX21SQmVYY1dfZWQyTTdncWhMR0RRMTJuTWxlR1ZwYklHMEkwaVROTTU5c1dNWFFjSEd4LXpwWFJoNGpocG5CdzQxMTdDR2FMYUQ4cjBKUW5kRzBWZmUtMVJnY1U1Y2c?oc=5" target="_blank">India: Fire in neonatal ward kills 10 newborn babies</a>&nbsp;&nbsp;<font color="#6f6f6f">Sky News</font></li><li><a href="https://news.google.com/rss/articles/CBMikgJBVV95cUxQV2ktQ0d3TDJpYkJtWHY0TU9jYV9LWkxiRldRdDlaZjBzOVNVQlBiOVRFU0d6dVVXUUJiV0o1dFc0THNEeFhfTjdhLUFKck12UERqYjMtTVA5TG5xMENnS2RkVXlocWtDdjFOVWIzc2R4NTExSkxsb3RnZlR2Y1RQcElSSDRTVnNFQTNnOUl3cGUxRUREWWNoYlk1c2s1cDV2Z0FQcmRxTzFSaUdJcVhHc0ZNTmN2V2NRRjNfam5nX0V5ekw4N2dITHhsLVRfU09BdkFDTEtiWmNCOUhTTE9oeDNsY1hMcDQxSEtjNF8xNC10VlhDbVJJT2xSM1RUUXFkeTRxaXBwd1RDSzFIS21Eb0xR0gGYAkFVX3lxTE9SdGtuWXVQQ1JLZThxUE1fTHFzeVlpQWQwVnROblMtZmV4STlUSFoyN2Mxc2tiR3BuOFFlS0twbEl3aXh1VXBSQjVUc0Z5YU0zQ3c5WDlod1NoU01QcmM4TkhBY3RNTEtRRklhZk5Sd0ppMUpSZ1pweWs5TUdpRlNuY3NOS3F4dldmSl9qWXFFVWY3THBXMkZ1QXFNeHBoMXV1TUVGUU5hcWs3U3RDa2R1a3F1QzVmaWpwTFJSWjc0VzdkR1BRZkJTcEE3S2kwVTl4LVU5dHQ3NWF6cDB0QktsRzN6dDFseUhhVkZPZHNLNWtjd3RLVmlEZjUtRGxtZkFGcWYtTWpfQjVFU29RM3JnMWg2bUJaZWc?oc=5" target="_blank">Jhansi hospital fire: Sprinkling of lime, cleaning premises to welcome U.P. Deputy CM Brajesh Pathak spark outrage</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hindu</font></li><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPZ2RDNlFjMC1pSXZ4UVdfdHZNeVEzMjhaaldPZHY1RlEyZV9ITVN6RW9FSFBTcE90azlZOGtLNERjWExGWmlFSHpHeGZSNk1ERUtuTm90SXRYYzZBcVFKYTFaaUlfUnFfUS1YWHVWbnQ4bnc1S0hGUkNfNFZZZjNFWEExalRYY1FWQ3oyVS1HbkU4YWZDbDI3cjMtRXFZbzFZc296cmtTbFdFNW0wbWZv?oc=5" target="_blank">Ten newborns killed in fire at hospital in Uttar Pradesh, India</a>&nbsp;&nbsp;<font color="#6f6f6f">The Telegraph</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdQCjENjLBnsRzYW7Lsi4kyvBx6idA298emgTQBxQGPegFisZo9dY39LK6LQ8odBkxDMX3sseozAxyEidWT7rgyeEjHiBA1vS2ofGcWP4T6bbUXADQD2v3MAkC4jBrKyYwaKRgGfuiRM3e8zhCpxir6t2zdW3JoSr6x3tkWYfHoystL9e8ZjcXoCCSHwE1YZMdZX1Uxq7YYpcV3kyYqEssVEoUzA6UxktdhQJdYvceabmRgKKuo9y4D67E42onroTcVRCu7SpkRnDMf7peqpW9tpS8U94HxtcGCJ1WRq6u9YV7AAYLFhqF2mmMZez8XfjyTgeR46iqPeT4XTucg" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Trump looms over Biden’s final meeting with Xi in Peru - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOQ2xIM01NNjBJUkw0SlVfMGN2blplMHZQOXlacDJrZlpxcW5KZmVkbzhNaWdCYlZRRFZYbGh5QU1ucVVPQWlPWmM2TURtNFM2MVpCem9sOWN3X2FEZGFISFZtd0NvWFFwMklPRTNwdGpGc1plVmV6UnJUM0taSE50UWF0T0d5ejZnRXpwa9IBgwFBVV95cUxQTGl3b1dLM2xXazdod1YyOFlxVkxaYzh3c0x2Y2IzM3lGemVIRi1EN1hpUTFndUdfM1BRYzkwa0h2NmlrdEJxa3F3QTRSbmxhZDhMdTNqaGdXd3dncmZDVUVycnloYTVqOTl5dVh5dm5LM0hIaVZ5NG5rcG1NMEJ2bU9waw?oc=5" target="_blank">Trump looms over Biden’s final meeting with Xi in Peru</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBHR0VUeUVsZHc5WUhRRG5yQjFFSDl2Zl9jTFllQnRwNkNVSzc0N2FVM3NMQmtWQ1p0d3BKc1puSmR4bVlDX2t6eWwtWWtWeEhxUm1VekNFLUNmNUh4X1J0MVdHX1ZoVVFlNUZKLXhIdmZ6YVk5QUUybUlYaw?oc=5" target="_blank">As Xi and Biden Meet, Trump and Uncertainty Loom Large</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOekdhcHAzU0swYTd6MldDNzBBajdvTVRwLWJYMXRHZGc2MmVWeHE5Z0pwMHlfUjhITGVoNk1MeC11d21vUElST3ZLb1lOYVZqVmN2bDNtWTh6TVFnMURVMHdSV0NWVENtZUNleWlXblZPc0pRaEhydTB5blNaMmNpdU85Q2lYeHhsWnJfb1lmWmNpMXpWLVV2X053Wk8xNmtmUXpIc3RsNnN5VGo2LWhSbjVB0gG3AUFVX3lxTE5UTmlsTXAtSV9vT1BDdEZiY2xROWdseDVqS083VXI4MUFwMkdDa3dsN045azhvLVV5VmxWbWFCd3JPSDYtRkI3dXhObnNYbG9RRHlqWC0xYTRqV2VwQ3ZSem5BMUhpR09GVWYzNjNEdFUwQWp0SXNTU1EyNGhxbms1Umw4Z1k5NS14UHpPUUpsN0otYWVENGY3ZlFqcjhiQXJKZUpBVjNFMnJqZWFZdzRtbXNSX3gzVQ?oc=5" target="_blank">Xi-Biden meet: Tariffs to Taiwan, what ails US-China ties as Trump looms</a>&nbsp;&nbsp;<font color="#6f6f6f">Al Jazeera English</font></li><li><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5BMkNyZXNGdXFCRFVjNDF4UWs5RVk0UzZJVkVSUU5zQk1teFY0R2VTallVdmZHb3RLZlpGSEV3UUZPbkRsVFQ3QzF2T2lYWDVsQkplbzVxd2NKR053RW56Q0Q0dDRHbExyQTB3LXkzUVdQZkFSVzZCcXZmbWNudw?oc=5" target="_blank">Biden’s off to his final global summits. Other leaders are already moving on.</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQV3gybFo2LUNXanVydWE5OXZORl9hUURGbnl0TUt1dFZMem9GRHZrdE5yS3hySmxNdm9RWDk1MEJDLXNHUzREVWQ3Z3pfSTZxci1Vb1VSWkkxTzdITEl3ekZYNE0tWFc1SGFVeXFzNnFTYTJNTE9uTnRENDQtblFBd2ZMZE5TM0NkNWIwam9QMnRDemM2LUMwMWV1WkJ6NXZmdGxR0gGoAUFVX3lxTE9aZkRvR1NWVWl5bXBFYktTaFd5eVVOUDVWRUVuY1JMeDlfTTlMNk1PaWR3ZlhYQTRRc0ZoUWhHc1hDUFdDYllkVlNiZVQ0WmlwX2xRLUUzWXMzOFhya3VZVzJQOFVZSXJMMWNPVjFhbmsydjRzZkY0UTg2ejZtU1RtX2hKa0RoT2tjMFF6MkN5ZFlCcWpOMWZ1eVRXQW5kbzRFbEtjdzl2VQ?oc=5" target="_blank">Trump looms large as Biden set to meet China's Xi during Latin America summits</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=ea4jm6PbpAKmQ4ea6JqmzC9CAmK6vxVUGY87pZEzdER1ufMSzety3EtrdVWmZaovj3YfL4tX1JBox5LvwLgshPGqDDxNNSpCtyddTWpBRiDi3MCYQZ7ZzeJUjGfAV7BMT7g3eq9WJp9Gx5yDhqMjrQPX2LQoe4ajXWB6CkWWckDQxZGCZCka8njaxujkcUwu8ruQgu9hJ9QYqYgcwxZmHFb95H1UHkZqRStPfMgmBYRnokucjfFSCUNqRYqbawwLEnJJ4d8UEMnSBTbL4xURbHYnR8JW5DmiK2HYryAAmRTErahxfUvcifi6vpy6zAyv8AGAzJCnE2Sxs9SJ7f6mJutotUDLs1zuVwHQcXTezcXgWtHsGyGWpocTEbZRMFPJMTmM9CftexPQ6q2MuossX1UPVSnSToNU8u9te997Dz8XTPCnCqiRpKnWYUBHj6gFfG5E1NWp3uzE6CJ1UvJMaBR3WaWsesPxZWzAejJkBKUdmMD66UVfqiULUKCnYEFF7bMAvWHQUUfAjBtCchLcfNw9XjJtXZDGMLRvtt3vxh7Re8qLD9udAQ92" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Zelensky accuses German chancellor of opening ‘Pandora’s box’ with Putin - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQcHFzdHltcmt3WnJOQlpiU3FGOEVFWk1teWp5bEptOXpySmpNbWFzeExZSmhEV2lUN0dZOE9GNGgxOWNlMTB4N2Y5SWRPTTRyUnZnSi1qNjE3S2NtbV9idURNNUNPUmhRbVJjZkJxU2ltTHhUT25OSlp6Nk45ZzIydGFHMTJMOVpnamEycWJ3NDlnVjhoMldOZHVWN2tFT1NraXfSAZgBQVVfeXFMUEFjdTFqOHFOcVJHU2ZRTXo4THJMUEVnMDgxYlZkbjNwS296OWMwdDRIR1JiNlR4OXF4VXFjSk5kWFMzVElwMW1UUi10aU1fczNtU0w4VGNHZzN1NUZodEtyR1pNSjdGS1Z0UHIxVWF0Tk01UVVqanNuaGNsV1FwUkpOVGFoY21nUGVwR3MtLWhlZ3dZaHpxYnI?oc=5" target="_blank">Zelensky accuses German chancellor of opening ‘Pandora’s box’ with Putin</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQbl9jQlVtd3paUERoYkZIOG4xbzV5NDNkZnRmSVphOHllYUVqbEJPN2RBdm9aOU5PdU00Nmk0aWJfZ1g0V0t4dTl0NHB3Snk3ckFYOWpOYjhLa2xPTEdxNURwdy1TRU1YSmdsWUVYYWVxLXZqN2RvMXZValQyeTk1V2NXRW1YeFVPbVpabVlIU3kwUU1NUmduVzNQZGVMYkdtVllybw?oc=5" target="_blank">Scholz call with Putin opens a ‘Pandora’s box,’ Ukraine’s Zelenskyy complains</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO Europe</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxONHVaLWplMlZOa2NMNzBGcVRBb2hkYWZwTkdTQzMzVzJvNm5TN3h6N3BCYVRINXVVb21qVE5yMW1OUExsTHcxYXBMWFRJSnR1Tkd4Zkw0SW9VWlZVai0xQnlGR2FJYmxERUZ5RTdPVk5HeHRBa1M1NnBkNmpIZWdOM0xaVFI3Y3Uwc1VwTVRB?oc=5" target="_blank">Putin Talks With German Chancellor, Breaking Ice With the West</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPQjl3bVVoRE01MktacjhqdmRPN0l3bWhNcERyYlU2cEF1aGlPSjJfVzlOSUozTHkxTC1BdGdLTW5aNVRpcTNmVjZvd3JyakF5QW1tTGJvRDRNM19iS0w5QkJRWHhOMThHOExxNXZqeWVxLXJlWVVzQl96RWNfV3F0bDNR?oc=5" target="_blank">Putin Issues Ultimatum to NATO Leader</a>&nbsp;&nbsp;<font color="#6f6f6f">Newsweek</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=LpeYHSphtA3dkVTVGWsbLWmCjzwxhgKxFRi2o5mV9r62Ssq2H7BhsXD1K3mwcRU94fHp5CVTnXSB1Zbs5ue9YkzQq8n5x6ZyJpGPJZ3W3QmkrboZ4Y5uXUFmpPW9urYXwegPt6NsLrrtrSFeQYdJM7TgnJpFNd4jSefKfVcnMmCmVg8ccpaooTNDk14cCdihfipLn2yiFpWmerKGvVc3oxuaeGeqCwZkWtX4wXmYe5BD5u3G2uzeQe1ZHZY3upts1N6QjiShm3LE46oxAj7veDsQoFs6PxqdLNi6k2UXBe1hmTTMhuD73p49zeveDMRcCiuqMNkVfSPN8Hf7y79rLNc2MRBo2NV8knRTnWZzzhgeavwD4h3SgZfUgGRqZMSsz6DsYR746SXNPe2SoLDqadA8GLRYXVNssxkcMbNGcgWWWb2bDcEShGuPhBtqwZHEg9gBPD1aE5MCMNRgabHnForuy2aLPUnmHH5PwLKDMfirNdnWnU8qkt9XEfLd1gVKTU6MGKqmrqzYceQiBzMcNpJKP7NuohupcTzJVUFmXQCN17QchozxrhTd5A9TpifwGk7mKXFFiyk5Xe3KC6dazuBG9CpyjtouEMZ2Z3bM4j9P881Sj9eNEdr2PqMNTb6MbMSLRr" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Israel drops massive bomb in Beirut strike, as Lebanon mulls cease-fire - The Washington Post</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOV1JoT1NVQjJrUE5ySnhLQkpFY0Y4U2VKYkh6X3BNd21PSkdpTHBSWk43cTdtYTBRWGdVdjY4U1NHQktFVnRrcVd3NlJwN3JqdzNSMjUxUnBKVjFoVnIxeVJFakF2ZktVenRYay1mdVhzT1RnX2pJY0x0bkpKUzdwRVZmb1BsWHpMSXB2QXlZNVU?oc=5" target="_blank">Israel drops massive bomb in Beirut strike, as Lebanon mulls cease-fire</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPbDl3cHdFaGw0YUpad3B5NjF0WVQ1Q0VMSXpsQVJRTGlBMWktTXRGd0ZYS29fbjEyWnFmeGh2d0diUGFIMGQzN1Vsdk4yTGxVejViSlVGV1RFcExoUTNKaTcxUVlwQzg3ak94aEVBSkxDZ3lZajd3VGYzMURwNlBiUWFLa2YzdTZTVW5jOUhvQ1dWYmZ2YV82a3FQMnhoQdIBlAFBVV95cUxPVmlFZldEamk4Wmd5OUEySzduQUJEUjZMTWJGY1BBWkc5N0NsVjdlVWFVN1BzU2dmbnlMVldpNEtsQWZteEw1VWxuQ0pLMzY4VlZON3JHZngwd3J4X180dFdJR1kxQ2h0NVF1UkxFWGFFdFhja0g1VjB1TWdIR2tyZGY1VlNhNkV4bUttNDdiQU9fODZi?oc=5" target="_blank">Israel pounds southern Beirut as Hezbollah considers fresh ceasefire proposal</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOeVhld1JlS1FCQWRIZUdTUERKTUtrcnpTQk5rSWR5TVNxWG5OTWtGMWVnYV9NYmFySDllMnhjdi1rWm1ndnFBdWJIYjF5UTdlTWdESTNHSXdTeTJfd1hiel9ITFVzRWdTLXZGckZqTHVsNzNCZlBrMkNRYWNnYjdzeVdHbEhvX19Tc1VPVEp5QXhJMFB1?oc=5" target="_blank">Israel Strikes Near Beirut as Two Medics Killed in South Lebanon</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOYng0cVNlcHZLZ3lvZzZOOVZORVJ1U044MmUzQlFoa0JRV1NxeTFBT3pLbmg4cnhUa3ozY1JTTnF1cmt0ODZVcXdDVW1zSG1fZVdfUmpmYVZiNWNwRmdVVFBmc0JoZ1ZBc1JiTFBCWXlfMWRtTVlHcjB0anVsSi1tUTJ2WmI0OU9mckpoXzVKZl9wcm50bnh6NnBoNC1BLUViWXhZbUtJVjliQ1FKdVNYOEl5MGRfMDRuWHV0LTZBRdIBxAFBVV95cUxNVGwwb0lzLW00TDZZeTZWcHZhaVl6SmdiRTIyWVhicGF0LW5BUDd0OXd3QTJlOXNLWTZOY1RkRzM4c0o1V0x0NFhjajYteDlWYjJnX1loOXJzUGZIR1kzRi1vNkhpR0J6eklKSHQ2TlVELXFZc09fWHM0V2xLYWs3MnN4UV93Z0dUeng4RTJyLU9uUERLYkprUTQyX2owNkpWNl84UktUdjJFbXhablpXRjFTOHlBR3R5ejdIemtjLU1rT2hW?oc=5" target="_blank">LIVE: Israel pounds Lebanon and Gaza with 160 strikes</a>&nbsp;&nbsp;<font color="#6f6f6f">Al Jazeera English</font></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1tbkNuOFZkamJsdDhYQ0RldU1vMFpiU3FneTBrMFNXczIxd3hHc3REUVV5cFZUNzZ6TXEyTTQyRHFuMllhMUxaNUhBNTlkYmxWemVDcmhEa1pSYXJxbkNEZXBHaWdrNHPSAWxBVV95cUxQYU1QTlBESWt6Q0FFODJyTE5uVDZGYW9jMmVPRWRiMUl3dDJlVUdFamUyS0xFdUdsbHBsRHpkUlROYkh3bzJwNGFieTdXSHB0X0RiMFFxMDBGM0JwY1A3X3NqLW1aYTVrMWtqZEQ?oc=5" target="_blank">IDF launches 2 rounds of Beirut strikes; part of downed drone hits Nahariya building</a>&nbsp;&nbsp;<font color="#6f6f6f">The Times of Israel</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=g6br9NKHvSoCcRd1WvyveJoeFdWErLD9geLdR9dV9q2TFtY1tWb6ZnAAaZKjyKRJbHLEQcTaMz7oV1cza1b9oSr4kaQVndsMiZ2MUjeJzQv4Zkw3H34hNRzkHEqa1iPMvtwn9V15EqD5ivrGtpxgVLCdZ12XmDQ9H4ARxqoFKA6wRoCyZrdR81WjdbsPw97YoCVJZjvLQgWJxWXmim2GefNiTvrco3kbKcEv4K2rAfKv3fqackBUCrLVKjZ36ZDWjTa5ZkDfSBhModiV5RctT1qmBwYQEjNQR3MrX5keEuo7bYEajkmi1gGsrNRzLLHATBVYnLFTr" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Austria says Russia to cut off gas supplies on Saturday - POLITICO Europe</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOLXB2NFd4eWc2RUp3NEE1cHRrNTNLZ0VhU0lmNXB1dGxfSW5OZWNhTmZZV2x4OEd0Vl9ra1FVNU9lN1A5c3V0TGtNclptWE1qS1lkZUZaS3hrQzlETkRKdndjeTI2MEdYaV9pSlJHZENFTmRkcGkycTJIZEJ1a0RTU1BBYTNRRjBGTGJYV0ptMA?oc=5" target="_blank">Austria says Russia to cut off gas supplies on Saturday</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO Europe</font></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQejU3MFF5akZrU21lUVZFN3FkNHI4dHJ4MDQ3aTh5cW82eF9oT2pvOVlMbDhNRjJWVGlRLUdYTXNySC1qa293Rm1yTjFCSTdLQXBfYlZvZXl3V1UxMnNQMEJyVkRDdExFLWtRWnl3dGlHVTRNYklCUExBOEYxZDMtUW9pSkJ6R1U0bWhuTFhfQko3UVVGcmk1LTVqZllwMmEwX2JrNWsteDF1N2pTR1dOdUFiaTdkdENpUFE?oc=5" target="_blank">Russia cuts gas supplies to Austria</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPLTg2MEdBcWM2cG53T3ZtY0F0M1VKZXpWT1FjY0tsWm1NazV1OF9rVTJZdzZlcVJNM1lLRDV0Q2JMSWZXbkRhbnI4NzdGTHdkQ251ME1mZEt2dGpLR0NCbU1aZzlfaExMbVdyNHNSdzNMZ29hdGxVSVFPbTRadWJTSlFMeHhPNzJaSVU4TnVVU3VXMi1iLWNWUUxrSQ?oc=5" target="_blank">Russia’s Gazprom stops flow of natural gas to Austria, OMV utility says</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQWHVVVW95YXJvYVdCMHA1YUVVcnRjaEF5Vlg0M3dIVGJkbkZMY3UyQ0EtenBySmV3S0tsLXo4akFQT2llbFQ2S1VOeTR6dlA0Tk9LZ3c2S1Z6MHFfUU1JaVVMNFdHS0ZRektzc1JpbUpvbTZBdzZOZndlUDBnWXB0QTRON0c3N3ZlMWNPTTZpaDJYR2VYYVBJc1VRSjN3MDZmOGZjejltMFluaVdFZ0E?oc=5" target="_blank">Russia cutting off gas sent to Austria via Ukraine, Austrian gas supplier says.</a>&nbsp;&nbsp;<font color="#6f6f6f">Kyiv Independent</font></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxOR0NkMVUyQ2w2dExMMmFyTG1OUGEzV3R1X2tsSEZrMnFndTluWjQ2eXVsdGNfNWpzLUZnbk01YlBJcXU2Tjl6c0dlbDZGZHlhTk1XbGlBZGtsSXlFb2dMTV9FbGlEdURDLWQ2WV9oM3VDVl96M1p1ZHhWNFlJaHVZbGVlTEZzVW1IenVReVRtTlBzYUhyRXowR2tkb1I2cEJKdGJF0gGmAUFVX3lxTE5JNTBORmxPN2Z5eDZ2QTUyTXRSNDRqVFAxdFVXTHMtMFF2ZktOSlFSdi1JaldCMHA5TzJLXzlwMDlZNW9MX0NMVzY0MVNYSmdQcUlwMFpPalUyTzJVU3NWYU0zZTVieWd5N01CaGJORW5sRlZMbU5nUHJRX3hST01UTEZOZkVwWS1KRlJnUXZGanVKbG9lTDVrU3RyUnpHSkE5U0p6dkE?oc=5" target="_blank">Is Europe ready for year-end cutoff of Russian gas via Ukraine?</a>&nbsp;&nbsp;<font color="#6f6f6f">VOA Asia</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=9rkh8ncQmjYmKSyBzXot86PoW9Ggqnb24YZzeC21wZdabBmduTBu1dWibGYoVRH7Srf8Rx5vyK2cG78sPboVxTFmAzEYDdibuuaX5tSKVPwmQNRH21btSvARueoA1CRsFzv1Vgt6J5fG7ZtBftgfZ4YT51mg4i6jcrBsFwWDrDYs2wF5MPRJEiVXVqG67hRcp4hDSfPSLeuF8neeQjKtBJ8htYuEcjVPJhg2QJ9mgrmH8hWxYRs1AivpyevSA86teJUpZaDVBToUzeBQoo7M7BsRZak1xaiDfdoTNPCNNcoG4FmJJAfDXjo74W1c5x5HAzNhb6pk" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">The Fed interrupted the stock market’s Trump rally. What comes next. - MarketWatch</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQM2JvVjd0NGt5UFlvQ1JiTXBpZHdSaWVPQmMyQTdRXy1iaWxGbEtFSUFaSVU0c1p5ekxGZTNGZHRzdjhRcnZ0U2paSGpBWlVWS3AwUHNXWURNU2luU1h5MGNXMkxYbE5Ja1J0Q3dSM28wckpiQU4yLUpzc2pLVzJiMVZITU5PaDRjdEJfMTJibHQwcUNVZkRWaXN4VVpzZ0lURHUyUGI5T0ZGclZD0gGyAUFVX3lxTE1oM0hiTFphaEVPcVVkM2Z3bm1YYy12eE9uemxpNWFzTF9ka2hnMXl2SEcyQWNxVmFjRl92VFNLU1V6WDNlLUdyZUF4dldXb2tSVDZJZWFOdkgzUkx0SzBpaHN3XzZFZjJWTHFSYk5XNVBnSVBxdXVBd0dZU3VkZzdLSkZiUUhCRVlKWWVMQVdJZDFITU9WT2VDNU83UkxaMzFHN3d1blU1bW1Yam5Pd3p6YUE?oc=5" target="_blank">The Fed interrupted the stock market’s Trump rally. What comes next.</a>&nbsp;&nbsp;<font color="#6f6f6f">MarketWatch</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR1dnSVkyeTVROWpwbHpHTmhJVTVHWlI2SWwxQjd5TUdobS1tSEpYMlVFZ0cxeG1BT3N4NVAzMXZqZHUta245YXo3cy00N3hIZTVvRnNiR3BhXzJ2WnFua2IwbzlPd2J4dS1GN3YwWmV5RDYtTVZGMmJRNG5hNW1qMnd4WWJRZkpWdlpGbDNGUHVzZWNGdzNPRG44dC03cExQd3YzSnBHaEs?oc=5" target="_blank">Investors are pumping money into the Trump trade. Here's how it did last time</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQSTFEWHA1N1Fwd1BIZG5TSFRIY0I2X3QycHlhTHlvYjViR2NPRGFmaGJIeXdXSXVOQ21Ka2F6T2Q1STJrbDc1SVl2MmVMaERhcWVWUndiaFNacDkxSEFEV2hNODllaF9QUi1TRm5OZ05rcDVsRmNzNzZ4b2g3djZ4MHctUXpUSkxWZ05YV1NXZTRFN0VoSnB3aHkyMjl3c2c?oc=5" target="_blank">Investors circle the Trump trade's global market victims</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBSeGViazh3bm9ZQlVyb0FrZmpwRENGd1F5SFVrVGRxSnQ3SHdELTlfYURzUzQzLTRVZkctNElrXzhwQzNLcVlBblloT2FZdEQ0NU9qbzdLNHFKNjV0dFBNOXVQRC05NVpmVlVyNEpxUTh1QQ?oc=5" target="_blank">3 Reasons the ‘Trump Trade’ May Falter</a>&nbsp;&nbsp;<font color="#6f6f6f">Morgan Stanley</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=4D91gicassY29ZXqUUWKWVAzhDeprenpdVLva4XAUx3SCXQzSXXcy633aumnLbwGjYvnjyG1UK8a3LVyGwKUHJUFjsGvx6MPzT3iHBfkpa2nn5qz2BCP8MTv7dHPvz847seTgp2dXvK72HphXDVZbausKWeKGTUFS85H7zbpgvRE6vgTmwdYfeX9y9kER1SKtUyzSoxfcqKm1UuHKBgvWyBM6dwBYzQzUnb9DDjRtresr6pH1nXroHw5iRKG5sQVJ7BS6ZqAYq4hA6XtXVBn3wznvdaGFcBumb196VzZfGTK42E9ba66v4Wie8Da2Xtgpjx4yEkRdSy3Zc4WPN51P3wbQCfmHzeeVmE6cKJZFPTmBH8XPaJeANWSPKJY8NdU3yCvQivaRYAtaBtGE6TxN6utcpRVYYSrGJGf7m9YqUxNSSuvyEAZgwoFM6GUhU6uQfLuTRx4sizZvtrBF6q8LAbcFrV3UBnknqjZBS9KGEWS7VYE1Ti1PFN95mP9agAXAEXPuvccC3w12UPG8tSiNt3ZbsHVUpSxqBdjWGp6aQ8EVNd9uMFxT7ycXpWLLYrcZ8LTSCf7sNGLRkpJAxR1iyci9mUgweCFDPy3m53aWfjgu1JAy75929DkLctQtXgwTRCANSuPrmNtxL2P6Xm6No6k7u1bmKWt6rxWmWmzQB2HiqPHHc9BekiZEtxywJH2Axrwrtzx" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Elon Musk&#39;s X collapses: hundreds of artists and media flee to a booming social network - Marca.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUXVLbk9MZ2h2M1J2S2hBZ1FITDlYU0pqZm12cFBWb1QzWl9FYnhzcjhUOENIREszb0x0dUVnS0I2cWE4MHFtSlRYZEpyeG9USC1qN1dSaXRoUXBCSjhUa2xaVGkwT0g0U256NlhjTnFjTkxjT0RicG9ocmJaNDQ5RXd5akR1RjAyUDN30gGLAUFVX3lxTFBza256MDVDb3NNUHJWcGc1S0d5UUU2cC1RS09BdGItRXozNWhRZ0tzUEduUHhHZWk5dXpSSXRKSG5XZzV2aFhoeWhkdEpXZ0VFbHV3REJMVTk5VmY3ZFpKY2dWQzJWMmdvZVRsYkFtTlNmUmRkcTZtRlVoYnhtOVdiUHVNSlVQOHVzT0U?oc=5" target="_blank">Elon Musk's X collapses: hundreds of artists and media flee to a booming social network</a>&nbsp;&nbsp;<font color="#6f6f6f">Marca.com</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOSHdqOENia2lkUGYtaXJuRUxfU1k4eHpiV2dTblZyVFhkbHlVZEZYbl9uLXNWdUhMNzFqSl9GbGVKZ09oNmZoeXRtWmVSNGxyU010MXlwdG5lTUhZd04wMldBQ3hVdDg1dHo4NGx6Mm5WRUJBMld4TU90TE5tZUpVWEtvSQ?oc=5" target="_blank">What is Bluesky, the fast-growing social platform welcoming fleeing X users?</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPaFFRV043RDRiSWIxTk5ucGp4TG4tZWVJYTJfb0I3TkxKWGJzRVZBQk4wdEEwYnB5TnJXR3ZTUTdXYjJyMnp0UWoxWERkSlBnVXMzd0lSbDZiUlFxWWNQN1hNQUNybnZuRUU4SnNoOTdZMVgtaUo1Y0xKWHJQdDJBVHl5QmpjaFBnT2I5RDNZdjNfaERNRjUxXy02TVJLUQ?oc=5" target="_blank">The Bluesky Bubble</a>&nbsp;&nbsp;<font color="#6f6f6f">The Atlantic</font></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE94dHdvcHU4RHZycU56ZUpzblVOb2p2NWVRNTZIZ0VDQU44bE91bTlZQnZ4RGZlTVV1Sk1rSGV5dl9LWVRpYldaa0hObXhrelhONUhoUjcxUlB2YUZnbWpSOThhRWZlVVczTk81SnhpLXFBZnhQZ0lj?oc=5" target="_blank">With Surge in New Users, Bluesky Emerges as X Alternative</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=37RaepmfySaKFLUK76RDwGST4WXSUzZVkWhAYPWkLQDmEkpDD7A29BXVg1yY5F8wAJSZhqdU4s819HZb1GXeSbD9CJEsyKcGnz8xHSNUFPfU53SuHbPCQQzWMryiN3c3kQhSEZByBrofoEqNustFdqVxnygAmHfmQ16P18KBrA7aceL8dzNPwqJZ2NnY2Wm3dBvqQshCYNhsV1Zvhmn6iQpU3kVu3V692hwZWepEdQ9AJVXRw98KaJdZHyyr1kaQoBcczwJBP1cBsR2Z5ZGXurRmRHkVBqHbZB6okHSa2yWL7JdZ5YwiZnDg4p37c1B69EAf8BX39pM8NXyvTSFRtPvp4bA38MWqkKAHwoLHMHdGw3ExH5L8DMZ1wsxqEKyDA9LGs9uyzMZePEHxtWniteQZZoR9wf8ouESCicrEurC9Y86bQehCk7F3PFtbCEZuMo7ZiyCFTEzR92X4XDiQPLuGLs6LQDkDM55zVDUZCvhYjAHFf954e4Ed1FwvNzrguvaxqYfUz6VbS8FWHV42YT9KTKKbVg7uZ2NZ9SdyukLHfiB34S2NRs1Mw4UG9TdiAtk9r" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Bullet Hits Southwest Plane at Dallas Love Field Airport - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1CZ284VnE3b0lxOWhIWGgtMmNsc2hrVGNIZnI3YzFqVDRTYnZVSFQtaXFsdWc0OVBLQkNsOENrU2xpbkMxOXdGczVBQXNxczgwbEh2dlpONlRFYWJOYnVCT0RFZ3lJSnpQZlEzVWJjZ2dfWTRDV1ZtNV9fZE8?oc=5" target="_blank">Bullet Hits Southwest Plane at Dallas Love Field Airport</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQUmNGWktlaUpZc2JHZ3dteTJpeG5aak9GdXo5ZXZJOGFSQmdhWnc1d2ZJaEp0M09EbFZNdEUzeWZKWHpQeXlMbzR5MXhGWVBwbVl1LXdwaEt6eTM2aUFwbzQyZFgwTkZzd0ZRcU00U29fbFpOYndNM21QSVZIYmVLWHBpSFh1bDRrT19RRlZ1LTRuVGJ2MEFRYlBfbHc5dk0wcDBQVDQ0VTFzc1dlOU9lbk9n0gHGAUFVX3lxTFBFTlVQQmhZTHBKOGRUdHpsb0ZYWVltQ0dIUUVYdXBTV29RWUxSalhTNkNGTmZjb3NEeEhVb3luZ3ZxY2NfYVdfWm0yRXZVZVJ6ZThlbmZ0UTFsdVZSWjlQNHMxQUlQalFybWpNY0VMRzBXR3F2T3JZQ3JhMjFHVm93d2M5enh1ODV2b2J2VVA4NUVnY1dfM1hERGNHRS1uejJtdEhsLWJfYWpmUFF2VDdLRkVZT2szWnoyMmdZSTRRdk1fc1VpUQ?oc=5" target="_blank">Southwest plane hit by gunfire at Dallas Love Field</a>&nbsp;&nbsp;<font color="#6f6f6f">The Dallas Morning News</font></li><li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQTVB2MktfcFBOa2VmcEJUS2FHcV9BZUlDa0xPY2RhVFNUU0hWVWVqdUtPOXg0NmpCNGJhUVlFNUxyLUlkcmQySE92NjhIVVRZRTIyU2YxY05xRHZsRGFxYjlPc1lNMmhfT19nXzNXRGRQRzIxNk1nYm9DanV3MmFOZWQwOWtsSlk2eHFfQ2VNc3FKZWpHZ3BfdTQ2QjUtaHFELXhsYtIBrAFBVV95cUxPTGRyVU5CdTN2Y0swYks4T25URDJTU1RxNVg4RXpKQnRYYnRRYkppMzRFU0pVVURuUlpRUTFQbXcxd25mejZ0WWQ1YnNDa0xWT2wyQmdLN3l1ajN1QXNmNTItZE02aUphVHlsRUtkRHhlbWRCdzV6NlowdzFZWkNWODd0VXdIRXAxUVhQTDV0b3Z2d29xZDBnVVJjdnJ5TXF0TktiVFJpUi1MTWdx?oc=5" target="_blank">Gun shots fired near Dallas Love Field Airport, Southwest Airlines plane struck</a>&nbsp;&nbsp;<font color="#6f6f6f">NBC DFW</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPUkc3U2pIb2VHNTI4MUd4VHVTRDhRRUdZSF9OelBLNVo5eWJBSThWTXUyc0lJVWRJb01GeDEtekNkR0lWQ1o4eGlCdXpRZnBXUWljZDVyWUVMWGJ3N2hES3FpXzNCZEhNb2VoazRjSHhyR3R3cmdkQ3U2b3QyeTdoYjZVc9IBiAFBVV95cUxOLS1tOWd0OVVvRlNlWE8zRW5Nelh1TV9qRVJwZ3N0cWY2RGhNeWJwYWFrdnhKLVplSE9fdDZmcU5hNHlPTEMzS1ZsNW4teU5XeXJUaGJjUnJ5Nk1XSDJGbFlIN2ZtM0tyemtCblNtSk9hUTllRzVpRzI1dTRYRUpMR25jMklONXlx?oc=5" target="_blank">Southwest Airlines flight hit by gunfire at Dallas Love Field</a>&nbsp;&nbsp;<font color="#6f6f6f">FOX 4 News Dallas-Fort Worth</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOaXBhU2I5TDYxMDBzenFwOWFtS19QZ0haRUxQTlNwajlpZmZjd0YxemdtOUduNmVGanFyOXAzNjV2TW9CMklqT3BHbEJWOGYwaGlPVWZ2emtYendySjJrczFTTDFEZ3FocHJLN25iYVd3dUZwbW4zaUFGQU9CaTNSNHlwMEdzSURINnRnS2RqTDI?oc=5" target="_blank">Video Southwest Airlines plane struck by gunfire</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=FrDSZio5ZCzWhfPJvhFpnJqNCxRQjMk8SXJ5wtqP1trMoGhFLWBztSzt8RDWxYdkpLXR8SVSAW4yhzGFh2ah885QB1zfheiJsTicZp9LsUsDtATgGa5E8NptoxRip5kihtVnj3tGYFjzQu8ATQmGjnJYuDzHkMeAWMKA9PpnDco6BFJVdxU5ttpB929g97VtPE5VLctXbkMBZfDhxKQ3iAjXUPyjPhP3JUe9pS9dwDttYESo8rTuj4zxmU59v193Lv9rriKpbbHJgwEy1q74DpvAn9QoUY3ccVz" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Half-Life 2 20th Anniversary Update Includes Developer Commentary, Improved Graphics, and a 2-Hour Documentary - IGN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPQ3h3b0VXXzdXdVNvbXNUN0FKWkZldmNKWGpZdE5UQno2cERZcWk5UmRsNmszWm5YSk9mMHh0UHRJTm1IcW5kWVNWanZBZHBIWV9OQUZRdHlQVUt2el94YkdaNXR1VDRWeTNIekcwYUIyc2IzYmpmYjhRSmF1emh1NUxaR3JKaE1YZ1lKMVhrMTNSeWtrQWc3el92VS1va0dUNHhpNkVtajVwamtzSy0yRUthVUlrT05yZzFNS3pvT0lhRzExbnhDcU04LUNHY1FIbVo4?oc=5" target="_blank">Half-Life 2 20th Anniversary Update Includes Developer Commentary, Improved Graphics, and a 2-Hour Documentary</a>&nbsp;&nbsp;<font color="#6f6f6f">IGN</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNZzJyNnBxRWljWUt5dUhneVFiRTVjMVc4b1BfakFvaDZMSGpqcUhwRlJSQkZZZmZOak1KTUowSEhzaHFyZmVsRnRpRTcxT2E4RWhmdkVkaFl0cExTMmRUU1ZGSlVDZWw3dXRrazVJTkVTMVFrZmlKMnEtcHVFeTI3b1RhUWRKUnU5VWRaTHVGOHJKTW9Jd0lR?oc=5" target="_blank">Half-Life 2 is getting a huge 20th anniversary update</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVzg4OEVoM0g5R0VsOFpKUWppejM3REUzYUZSWU1LVExpcHdLc01odXNiemJLQk5NeUM0UUVzS2s1S0ctVzRwaE5SNWZJc0dEZ0R0SUt5RXJuVmljV1dyU3dIaWRiYVpmTEVsSVNVeHFyMGcxcllKSlpXN00zZjAzTTdPV2tReW1YVnVnOFp6MkplTXpiYWZtRTNNbGlHRHdBXy1XbDE2MWFzV21LY3M4bWFpSy0wNmVnOFlheW9mSm5scmM?oc=5" target="_blank">Never-Before-Seen Half-Life 2: Episode 3 Gameplay Footage and Ice Gun Revealed in New Documentary</a>&nbsp;&nbsp;<font color="#6f6f6f">IGN</font></li><li><a href="https://news.google.com/rss/articles/CBMirAJBVV95cUxQMmpld1BwUzhLV3hxRzQ0eTN4WDhMdDhBRUYzWm9NOVplOGxGN212RFRkY1VvTFBoRlVNY0JQLTJhSldTbkJGaXZDbXVJaVUzMlBFODRBeVk2eUJGMnBGRDg3VUNIVnRCNkRHR2hLQzdiMmFQam9zS2RDM2lEb3RXRWZLRzl0QlY3U204U1lsLWNwSnVCYU5aZk9udXEzRTlsMG83UEdnQU9FM2VDUl93M19DcWg1Zm5QbTJENERnaDVRcFp6ckhHTks4eDJKREJHYXRaaWdpTE9zcThvcS1Oc0V2YVExbm9FX3BPdFpJeEtlWm00LXNRczE3cU5uaHB1MDQ0VTRrUWdNTHpyclVMTlRSWmY4N3gyX3RwcldpQkx3UGduS1FrVWZ1Q0o?oc=5" target="_blank">'My personal failure was being stumped': Gabe Newell says finishing Half-Life 2: Episode 3 just to conclude the story would've been 'copping out of [Valve's] obligation to gamers'</a>&nbsp;&nbsp;<font color="#6f6f6f">PC Gamer</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQbjdtQWVHQTBXMjk3WnZEb2V6OFRyTjhsUTdUajRiNUlyb1dwanEtbFd2Wmt4c2tvald3bXBDdjNybDhyaGRaZThoNGpDUmNvd2hrS2R3VFNRanNBbTU5akdMYTRzYTZnbVRZV1dMa0VZY2Q2ajV1RXFSY0w0aldZd3UzYjh3VldrTm9MS2Z3?oc=5" target="_blank">Valve Reveals Early Gameplay Of Canceled Half-Life 2 Episode 3 And Why It Never Got Finished</a>&nbsp;&nbsp;<font color="#6f6f6f">Kotaku</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=78PmVWiesP7QsvA8wr64nTx18cdznhF2bDX61iWAhSosjf3fgyHC6TxToMHWSa3cXuMbwdHrNFQFk3MutxWaaWPKND2uJiFdodbpuuHF1Jc6Xuodb8c6VEMtuStZX1eYB9DAfFQZpFxtBzs1ZmfcYk3wytq7VKgKmRhigjBHuDP6APqpW51SN21UNKqZU5EawDygjijiBpaGSbvucpELZV5rxgNyj6BRbAuy2AyPUT8fhwFZur8TrL3wqvQwxKxnSzrmPphPzKqW3QR1qUY14Vm2V9qH14GmLDNjEdKcpGtson5jq81zDqJmactrMkhzwSaHw2kuniru9TvZgmNdT7YKdXt8YCGdwJeT3go7bTj8hQ5dcaTd5QAyyEaKhkB3AZ7gfehcZwt78yZrQsrVtr2WWJnpoXQWVKiYmRJThAD2zn8C3RGSfFdFiU1YjVqR5VE" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Best Apple Deals of the Week: Early Black Friday Prices Arrive for Apple Watch Series 10, MacBook Air, and More - MacRumors</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxONTROeXpLeU51dW5kZVpPREhGT2J6ekhyNjBnSGFkaFloYjJUamVYYlVPZG5ZM3dJU0ZhY2VabDN3d1dOS040OWViTGJ4S3NkUVRrVDNnQ0VnYlNOUENxQUw2bi1RRDNkUFozS3N6NVZkaEIxbE45MlNQQmtJRVNxTg?oc=5" target="_blank">Best Apple Deals of the Week: Early Black Friday Prices Arrive for Apple Watch Series 10, MacBook Air, and More</a>&nbsp;&nbsp;<font color="#6f6f6f">MacRumors</font></li><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPTEZ3bkNWbmdlWkRTSGg5ZnZBYUtWbkxQMTd1TVlfWFkxdkQ0aWJUQWpIYzViQW5hT19laHBqSTcyMHZmbWdqOGttRUdVX0VlSFBXZnQ3M0JLWnNvSHFyREIzbWJyeWVnNTVtTXkwZXlvd0RyYlJsNklQcE9DQnVybGdWNEtSN0xDd3VsbjdINGNtQ0xaUkdPNjUzZXFuZ3p3ZFE?oc=5" target="_blank">Everything to know about Black Friday 2024: Where and when to shop sales</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPN0R2bkpvTk9kQkV4d2d5c2RPblBOSF9wRTZQbE1lQk9JVE93XzVDZXI5dU1QNXN2NVNiMFFXd0p4UWRsdVNFbUtGOHIyTEZzNDd0UG1rZzFrZmNZTE9IcHZ5Zl9tb2tzQzZFcXZLVHNYTk9JSllJdFg3ak5zVnd6UUxhNHFFRm9IY3RCSXRYZDlyTi1rY21seC1NdXQwRUR2dm5ja2hJMVMxR1RuZVd3?oc=5" target="_blank">Amazon Discounts Oura Ring And Apple Watch In New Black Friday Sale</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQeG9qS1lqNGVsNXNWNF95c3ZhS3B4TUQ5ejZLeDNCNkZUaWVYMGh3eEN4VTQtSzRsRndzeXl5QVRuRzFwMjBDaHEzRjJ1amZLN2w5OW54VGFXbUZRWXVtV0NnVkhUY1B1a0p4S2Qxcld0VEJoTTFKUmY2a3lORTlTQ1Y3dFBQZ1Q3OURGX2tvV1oyMnFXUEd3aXJGUGsyN0lzTllUSE5XSkVFaldSWVk5Z0hSNlFjVUVQUmJKZWUxcDVzekpuT2plUEY3OA?oc=5" target="_blank">This Apple Black Friday deal drops the Apple Watch Series 10 to a new low price on Amazon</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1IbjQwMjNaUkZYeUVVSUgtY0tPcWxpMGdTdFpDX3lQcXVreFZVMHAwQkNwMU42cmpybTdyTlRvSWQyME13QWFkRHMzcEg5T3NybmZva0l4dXZpTGgyR2dOTkV0TGxxNVdnNFhJSWtOTkNTbjhKcUFJ?oc=5" target="_blank">Here’s how much thinner Apple Watch Series 10 is compared to Series 9 and earlier</a>&nbsp;&nbsp;<font color="#6f6f6f">9to5Mac</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3V3rr4S3jU4AFrKSNhXbVsf1ZGADmZW3vCnU7FpxfNny4eoPKGG4b1bUYTBewfZDYTX7FfFe8CaFWpVkpbVDnhg8wZPubWZ47MEXXrTgEoCvoQdpbyrSCtBcuoM1uY1QBukLkjDQb2RRNBokeDePExujDxKyKboLfohAgz89YSyRPh1pbhfqwGozqtgUZRzAeFVRYqtiSFQYdtLvSeUgEXZ5RtvTDvmu28D42v75PvUCX4aUq7csY6GuFXj3Uvi9FKjJfCkHgoJLBzKCHRyrYBsbWRTS87zBS9Fy3oWRYTZBr" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

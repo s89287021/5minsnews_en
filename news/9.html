@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/8.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/10.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">`Please die`, `you are a stain on the universe,` AI chatbot tells girl seeking help for homework - WION</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOcERJa3VhNXUyMFFIbUdZeEkyMURMTlloelhtMGRtb0F1YzB5TVZHOTN5a2dWYnlGbGR0ZTlzT0VLZkY1cno2WnpUMWRpMlZNWXdoNGZWN05icXJxWExkLWZJR0Z6RThxellhWVZkaHl4bmtBTndVbjNXUzlYMWMyV2dQVjNYdk5keUFnWFpZNDdQeUZkTm9DU2FnTThXZVc3MExEdDVzR2tuN0lObkwtVHpLX3YtMzdjZW9NSlNjY2xoNk5Xcmc?oc=5" target="_blank">`Please die`, `you are a stain on the universe,` AI chatbot tells girl seeking help for homework</a>&nbsp;&nbsp;<font color="#6f6f6f">WION</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQM01mYlJsZFBmWEJZTnhFNTNXT3RaeVJPYl93d1pvYmdfTENWY2d1NkRKWkRkUDZLVzlpcHJmYzRjeEZhSDcyR0VKNFdPQ21MUHNxVjBrdjdfNklQcEJsOVZxUnJUZWxzUUVjeGNRUUdTcUtjRThOMm9rdnNhTkxobGd6NHpqVEpmdV9MTdIBkgFBVV95cUxPTTZMQ3c2VmVFX3M1NGJZZWNLaFRJRkRfWFdyWFBXU0ZKZnN0cDBMUUFUYk41cWV3Q1lrNmUwa2tvRVRrSGhDclBtMkhteDc1anU4blBoZ1VndlJaS01zSzVmWlVDYkswV01lcTR1OHJuTjFEeXNxbXo5RkV5dnI2ZVhXc2RBSWNrbmIwZFlCc1lHdw?oc=5" target="_blank">Google AI chatbot responds with a threatening message: "Human … Please die."</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS News</font></li><li><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE4yMFRGXzZRaHlXcEhzNXFlZ2dyMG1ub3lNZnc4dXh6dVAzTFZEemJiNllYb1AxeWpPRTdVNXJkYVN1ZWhiQzhHdWc1UVp6bDVyX0hRNkdmYWhwckdCSVBJZFNPOUlXSXNGbXZTcktlSVY3bE4xcGpxNU1EWUVzQdIBgwFBVV95cUxNXzQxMkQ3Q1l0UEhveFRYY0tSeTZoRWl4cThJbHRMd0MtNHVNX293d3czS3k5aWdQcVNGWEhzNmRabVdsVVQzX3hEOUhKNUpKTjJXdEhLUzV3c1d2U1hTbXdNanlaNFA0SURQTE82NDFFVXpfLUw3TXRzd2lKTHdyYjh6OA?oc=5" target="_blank">Google Gemini tells grad student to 'please die' while helping with his homework</a>&nbsp;&nbsp;<font color="#6f6f6f">The Register</font></li><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPNEdQbTM5SDhCenc5VlB5aHdBYjFjRnBWTjZkQkVkaHRvOG5WemlDQzY5WjhHZnlyWXlWSWlFM1JEcVVIQ0pSODJTd1BfMF90NkZObThhWm9xamVvSGQzZHd1QTBwZ2l6YU1zLXZxcHRvM01OaVlvTUc5elRLSkx2cW1wcUxFSm9pckdFempibHRhVTFrT1ExZ3pXd2Y2aDQ2MlA1VEh6bFdiY0pwcVBncGI5Qk9DQzJncDA1Y19R?oc=5" target="_blank">Why it Matters That Google’s AI Gemini Chatbot Made Death Threats to a Grad Student</a>&nbsp;&nbsp;<font color="#6f6f6f">Inc.</font></li><li><a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxQcXFNOGVyM2ZYcG1zZG9VUk14VWFUZnA0UlJRdmFwQUFHZ0djLXdtLTljUlo5b0lLblc5ZEd2YkxNRjdSYTUyNS1OSy1acWUxVUlLa1M0MkdwWWpid0dDVjlfVUQ1S0ppSUFXUTM0b1R5M1dkbnRkQko5ZDRRVTBWc1N3a19KbzhjYzlheU1WSzZNUTVZdUU5STZjaHB6QmJzdG91QzA1V2kyS29ZZDBVLWFyS2ZTVkd0RTJPZk9YUHE4ZnVPam0xaDRJUnhOZGxVSWJZX3ctaWFXTHFwVFBWcGtJUXFncUlsVFlqbERZWkkxUjRPQWFv?oc=5" target="_blank">‘You are a burden. Please die’: AI chatbot threatens student who sought help with homework</a>&nbsp;&nbsp;<font color="#6f6f6f">The Indian Express</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3YjRMKgsieLstoC69UK1kUZKY2ejNv66rampikTDDySDnnjbmCn6pvamA8YPSMvqmpotR9L2iQ4GjP2aWgrQ8JAoEfQt7pN5xuBW9zYGD1rB4TYjdpyZr63wg9Ez28PmWfYjSHuzYoUf6JrJx9zmsRKKrDvXY9CGbu8A4ohKpmP2wLNQmrMFX1c4jqbYwSepAZ8CJtwUhahhF9uYEh9JKnR5APT1doHAZtxdzyE92ZznTSb2NP9h1dCpBUiHqnWgACMa4LnBkbFqmgAAseKdLVixZ48F8QmGV9wV6m51pXouZaawfNt8NLV6Cgrus7uUerv8dDpfwFootDnjTcG2mSQ6EbMtjnXgGjLCcCMYMwwzqKNhSYEDJoYuaAMJD28kQNhEGDzrDz7uo1w8u2JJu7hdnDMFsqKuwz1iszrHv76L" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Fans praying for Jim Carrey’s family after heartbreaking news - PennLive</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNMkd6THJmZFJZa3dfbnNNcEttb0pKOUdNaTB0Znl1LTFrN19aVWdGUGtBQ1FsUUo0TGNDamp5NmFldnhpbVlreWxLVTNCQkdCOEpIM2tvNmdJR1l1UGdkUFVOSEZHcmNMSVkxdk0tajQxcUpkYk1YMEtuT1FxRXg3OHhTclZ0YzhmZXdKcVpmR0ZpSHR5cDBWRGlBa2hzOGdqT1ZibUY0Y0VFUFczcTFUTVBn0gHGAUFVX3lxTE50SnA5NXloamliSUwxMnVKcWxsY3RaZGQtYzhFeXVTbkU4bnZLMHJNQnhrenJOOVF5Z1ZCbzFpaHBKX1JjY1lta0E4UXZoY3VYbi1NWDBVZ0hhZFh0NWliV3JPRHhGTUtoSjkyNmVIWVE0d1VEMXNNLXV0MG1tR0V1RUhROVhBMldrYkt1Y3N6MjRuNFdMbjlJcWZtRjBzclBLSVVtdTdCY3FQLTlJSHZKektxc0NsUjhXeEJkckN6R3pCSkc2UQ?oc=5" target="_blank">Fans praying for Jim Carrey’s family after heartbreaking news</a>&nbsp;&nbsp;<font color="#6f6f6f">PennLive</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWkpMS1kyOFdILUJxZlFqYjBwWGpfYk42VkpJNzhYbE5kVkdzVVphZlFjenNzbUlOX1pwbFIyOUw3YU84cm96Y2NQVzdXbzFkQ3JnT0JtNlpSRF9Fa0hORF90MlFTSmxBb3gzaWF0VzZTa2I2NHpZa0VSTUlzWnNDMnYtdFp0dG5R?oc=5" target="_blank">Jim Carrey's Sister Rita Carrey Dead</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Entertainment</font></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNNUQtYmV5NkpOcWtvenBqZFR3QkFqVmltdHZPcGw0OGpwTk9YRklKZGgtT1pvWC1LTm1uSUpXd3pwYVNnbVpFMnB6Z2Z4a0FhQm0ybTRlY0ZlT3B6X3VYYTVwU2ZITjJtZmNBa2xFWS1WY2xadlViVGM2RVNTaG9fWTVPdVpyUlRfQ0E?oc=5" target="_blank">Jim Carrey's Sister Rita Carrey Dies: 'She Filled Everyone's Heart with Joy,' Says Husband</a>&nbsp;&nbsp;<font color="#6f6f6f">PEOPLE</font></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9wZzhiVElNTF9saXcxRnRxX0ZBaDdZLWNaYTBqTDBabUNVVFZLeW1LdFQwTW1xYmRhLWNQZFMzRFRLN2I0cTNWVmFWRFJiNG1QSnlIOW5IVnZwZERVMGE0ckNQNjlSX1NGRzNscDgzSjQ?oc=5" target="_blank">Jim Carrey's sister Rita has died. Read her husband's touching tribute</a>&nbsp;&nbsp;<font color="#6f6f6f">AOL</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNMm1rVHF1WUtMekdiVmd3QmhYOHRCMWd1Sjl0NlFheFRhSlU1YnhDWGZvQUxfSVBNRURyblNjcGpGXzRBQ1k5UDJiYkI2QnhnLVlDcGlPTkpldTI5Z19Zc1NXdElVd2hDZTFRLUpQS2F2Si1NOHlSb0FRamo2X1M0cnFvWmVzUVJucXBUZURELVM2UQ?oc=5" target="_blank">Conan O’Brien Announced as Oscars Host</a>&nbsp;&nbsp;<font color="#6f6f6f">The Daily Beast</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2QyedeSdEjCH6x1pSizq6E8RaiWEd5RW8cfou69CCZE53ZwTatdosxaSrNiA5mvXdWDoCLQRV29TAFTkTi6WpnLWqWKvSKbxAGoL9p6BJ7vyS2qKXom2nuAWVZKy6mwUfESBXf3ntFT89U1TJUs2gTY13MzsMfyPkqfAjTsB2TzW1Gw9ovXbwWJmccsQNLgXj8a4Nb1T77kwagXeTqpxiqESuQ7mZ8RsLU8B6FKMu86zEt1HgLpAtA1ic9FqrfPi4YkGxQ2RXgmMLRWkt7cWdGuKz5YA2Ckf89xHEAs2wHSTpjeuVtDRmK9JqemV8xK6YX9reoUGJCf6YpWBsCQDHRsZXq9CwEEBWi1XUpqZ5MHdB2XirRGsNM9BK7pp6fBYCPBTTm2JB4mzPK1REUzZAb1hgdd5gJMJbNXrsj2VvUup4ks6xjcinjzUvUVp5BKA18vzG8ZnSSZEAgvoJLFHEVCn5LD3ebvp1V63d8wvyBWzAtcB8zoAPVhV1wqEWXkJZiUBSGUu8mmSLW8eoZNFXLcYvksdBpHSTkFQZeJCgAdiH2PzNnTK3HtsHbnYWtM2n8iJnxeX5KrcZujt78cQDujFhbEkBViLdwk7rUm6ErdeTXgSqSGHQYeqFtceNi4TdpjCyY11rmGr6jNuLQhjqivWSfk1Hi1XzZeYAVsJVUJPbUY11WcXF6HfzP5EBEupk8DLzqxSjP2B8x6tUE7HL1LJrvLoBuEQmejN1AEEBjrSKQsdiDcgz1oJ" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Joan Vassos and Chock Chapple Tell All on Their ‘Golden Bachelorette’ Engagement, Wedding Plans and Who the Next ‘Golden Bachelor’ Should Be - Variety</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQbHMtOFVlZmxoczFxS1NsWk40OVZDd3lUUFBFaDdDQmlibEtUalhaQnpRRWZhZnBGZWx0ckJiXy1YYTQwM1RoMXNlNlRzZEUxd0Q0QkhXUGpGdXRVRnhBb09TRENfQ2swWnh2eExTSk5aSEdmWTBkTkRBbkxicUY5M2VlRWhQRVNWa3ZlV1FPcmxmaGNDWkpUOXJmeW9VTnlUNGNV?oc=5" target="_blank">Joan Vassos and Chock Chapple Tell All on Their ‘Golden Bachelorette’ Engagement, Wedding Plans and Who the Next ‘Golden Bachelor’ Should Be</a>&nbsp;&nbsp;<font color="#6f6f6f">Variety</font></li><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMi1NS2RZUGRlZnFCaDZtR2Zsa2FwSmo0cmh4OENNRFdvQV9UeFdlMmVyendsa3kxZUhiREJrS3FCcl9DQ2N6djlyeGdZRTR1U3V6WE84aktGbVpuS1U1UzdsdG9wM3hCcE1QY3Y0OWd5MkZoekpzb0Y0RkFPYmdIX2lOczd2Z2lzeF94OGEtRDhwUHRKOE9VWnVFeGNGODBrN2dXM3YxZmNLS2N3ejB5TWxyb3lzRDJjQ1dB?oc=5" target="_blank">'Golden Bachelorette' couple Joan and Chock on reality-TV love, jealousy and wedding plans</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNbi1uWnV5d1RtOF9XVFU3eTY4WTNpSnE3UnotQXBacU9oQ2lVQWYzNVlobTE5VDhCMjk2bnBIU2E1QlZ0b0E5a2U4OTlWcXB6YWxudlYyMUpSeTR2Zzl2U2k2WUNoNVpkZmhvN19KVXVnNlo1NEkwMFZvN0lzSzU1aDNfTQ?oc=5" target="_blank">It Wasn’t a Reality TV Sensation Like Its Predecessor. Maybe That’s Exactly Why It Was So Fun to Watch.</a>&nbsp;&nbsp;<font color="#6f6f6f">Slate</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPYnVsVlM0SEdTVjlMQXZZVGxZbl9JQTZyc1FSZlNxd3lMZVUxTFRfNFdBemNtR19hc0RSTElLeFY3cEdWamg3RjBWN1JmR2Nab0REM3pnOFJOVFhYcUxaS2U1SG1uN0tMQlplakcxVlpacEd5OHJtT1p0YWE0Z1pWMlJ6WFg5RldGM05mODhFNFE4Zw?oc=5" target="_blank">Golden Bachelorette 's Joan & Chock Are Taking a Big Relationship Step</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Entertainment</font></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPanppQWVvTXNpaV9hUmRhZVh2N25mSGQwQTNxWkltbWZOR3NLbkRFd1NocXkzeDJydGV4Nm9YdXBQWDlNcjZCM2xBU0Z1NVFvYUZPYVZnd25hUzFOOGktX2RtOUN5WUo5SVZsa015UDNZNHNiUVFuYlBLaWpDODM0SDI4SXZKSjhwQVB0R2t4SHhYOGJLRkpvakRRTl9tX1hqX0pza0p4YWVzTU1BelZlNFUxNVRUTExtb2ZORDFvONIBxAFBVV95cUxOTGtha2JYdy1jTElPVGpTVWlKLTJ6QzdDenBvS2d4VU5zWF9aYmxZcWhDbDNlcmU5YmIxbmFWVXllclBvTVhNTkNwSGxpbmZYdDRLbFJ3ODVVZzNBZGdLSDNpWEpLQXRYa1lpQjI0RU5ZR2pVUUxoZXBhNTl4V2hnLUhUR1l2N1hzNFNXNlFvRjhGeUFOV0YtWU1yMFdza25mT0xybWN1RkhVN2oxQTZHM2NjbjE4b3NrYjh4cEdzVFpLaGRB?oc=5" target="_blank">'Golden Bachelorette' Joan Vassos and fiancé share keys to blending families without conflict</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2CSJPPmCMrkXJP3thBc2JQ5oN1AQEjgMVfxNt3mapnHBkqG4HWHunu3WReyBFwhFKoYuaWQyspBkGWi3AkcAudAjwYUUnpSfRwSnmn1miyKiHnGxUeCUWcY51bsKKvemRvj9MtResmLcE5KsNfj2UCtCXHwgZyCCh1wFnx7RfCkpcmMPxXxZEsbvjsmeeHpHLosNmCyKWTquqLuidHBVzeJ4r9HfS2GSgfiWzj8tNCUjnhvrYh5rWcBUizEcjeUeiZYZ1vRtoXujrmaUkBPXngKHzF7grf4ivcJnpnyi11hehset1dfmeK7b5yymHDhM9F8aTZaboVA1QibNc7r9rYEfGv2Aw6HxxzVtFHBxn2BN" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Horoscope for Saturday, November 16, 2024 - Chicago Sun-Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNMWxnaEZYajNjcXB1TnA2OXFCbGpQMEtXeGVJOUdVOUJITTdKOXdVRndVWFQ4OFI3bnAxc21nYTVoSE1VX1pSYjF5Rk1kd3BDMjk4UTBhQXMtQlY4WVJfWFYxNk9VSV9jVjI0X0lWa1ViYXhHMVZTY0o3ZHRNSUozM3B1NEJvMVpyX1MzM0J4ZEo1b3dRSDBSSQ?oc=5" target="_blank">Horoscope for Saturday, November 16, 2024</a>&nbsp;&nbsp;<font color="#6f6f6f">Chicago Sun-Times</font></li><li><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNUXVDUjh6YmdHWW8yRk1qazl5MDBiTWZtNHkzY01TV2JsaEFkSDNKODNDaloyU3VFS0FycGFJUmV0WHdhLVZ2dW1TRDE1ZG5jZ1M4blRQdWMwM3FjV3NSM25ISGtLWEhJRFkwNE5VRE9Xb0JhUEdQbnNzOEZiUFY0WEYxNndETXZKdWpBeUZBMktRUUhjcjVIUU8xY2w4eWV4cHFleA?oc=5" target="_blank">Horoscope for Saturday, 11/16/24 by Christopher Renstrom</a>&nbsp;&nbsp;<font color="#6f6f6f">SFGATE</font></li><li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQWJ4YUl2M280NzB4UGlWMjZjclVxazFLMHRtUzd1UERFV1lVa0tNWUl6R0hVR0w1c0RUa0daVk5IZHVpWHViMEpJOTE1d2RWUUlFUkprY3VjbmY4a1ZpYWV1YVlZNmxpaVh6SEE5QjdLVEdMaWJkOG5pcW9aeVpXZWd2Qy03ZnZQWHRBclBoS3BsdFd3N2hGT3A4NnNoSTRWUUNydE1ZVDJBdDhxWTJSLWdYeXpTODR4VFE1dXNaZ3hGaTQzTFVaTF8zOVV5d0pnOUVtN1F3?oc=5" target="_blank">When to watch tonight's full moon - followed by Leonids meteor shower this weekend</a>&nbsp;&nbsp;<font color="#6f6f6f">NorthJersey.com</font></li><li><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxPM0lJbTBHSEtqUHEtb1R1ZHFZb0tKbUI1cTdzNG4yTVJHd1RzYzdOTWZsb3JXQ3hTZjZzQmJDV0tVUWxWMW5CZzVNcUdZVmt3MGRqQlF1aGIxY1hoNVNSc3BqUTBZMXQ5RUVzQWFqdy1hWThaM191aHh1LVBCMVBFNlFiTndnVWJXclZ1M1NUSFRxbEEwbE1ub0JzREFjR2NhR2xqWFlUX3JQRWFFb3Z1al95TDF6Ti1FM2hkLXhYSXdwRFZ3a0dhM21ua2xXTEZJX002NjRQREoyWWJxNzdfRkFFNUFKenJTZjd2UTZ2QmZsRnZCUmNjVw?oc=5" target="_blank">Stars predict abundant luck for these zodiac signs with the November full moon on November 16</a>&nbsp;&nbsp;<font color="#6f6f6f">Hindustan Times</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNUE4zR0V2OG9WNC02aWVDY0tDN3l0bzNnbVJua2tTOVFyZklhOHFHQVI1YTJTdGxlX0paOUVQUHN2S0wzbGNZZWxUbFExalNoSTI3d05WdXJCUF8wT1hVM1dld0lGd3laaEtpSVFUY0dONUlyM0s1ZUZYaC1PODVTV2ZSeTRGWnR5VjB6Q1FSTms0QQ?oc=5" target="_blank">Your Daily Horoscope by Madame Clairevoyant: November 15, 2024</a>&nbsp;&nbsp;<font color="#6f6f6f">The Cut</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=jnusq1Poy5a6oMrDS9vy1BaHmowQtmyzG9SXC4w33VGLoNFvdrVpTvQ9hxPHU9cJ1b1dwDbSEqL267NhsapKDerjnfhSoLg8XRLg95ig6p9wi31sGtGmqBP9WDuYdboEeWtgYYRbhxzVt66Bq8EV2yaSfe2fjqN5eV1umbdbCC1mJUKa8wfmdMKBjTpBNLrRxhNhxtiPjxacgBowjwdyXYQFAquhNw1w4QB5FqxF1qsrpUSgnjSfoLShcwVVVbY9NQaiUt3NngD2iuGQ2i8RKg7czCCfcAULpwCkPe17saKgEABNQ5hjMGaornxNGctGs9gkzkCVjtL64vjZnWdd5De4" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Netflix’s Best New Movie Is A Surefire Oscar Contender - Forbes</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQcl9kNzF0SF9RUUt4cWZEdTRIbnFqZ2RpZTVxODhabmRWTFBoS2tEckVRejlCRWJlUVhrbUgwRXhyY0hEbzF1c0x4VU83dGs5c2ZCN2dTVXBJRzhWeEJBTVBQTGFUNlZ5SXl6eUJMcW1IYjB5cEVBbDVLcjZ1SFEyZXo3N2JrVWxnM3lYaVRaeU40ODlzZ2lnOGtDa2F3dGkwMnJIYjhmYw?oc=5" target="_blank">Netflix’s Best New Movie Is A Surefire Oscar Contender</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPZVczQ0RrWFQ3d0FFek55N0ZUQ2ljVmhsa2xFZTBSMEdNMkJrV3JCLWthSHdjNENXYk9SbHdIc3hLZC1pYUFGemlqRWdGUDNtRmw4WXRjc25UcUNCUEl2SklyWmxSdXFpV1dHZHhKWnFTTnFoYjZEaVRZOTRPc2ZZdVFnVVhIU3RuUGRZd203M05zaW1zUjRRRDIzWDV1dG0z?oc=5" target="_blank">A Film Impossible to Have Mild Feelings About</a>&nbsp;&nbsp;<font color="#6f6f6f">The Atlantic</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPbWFuWmFTZXNFYnNEUmtLSmxPQW5ld0JoTjR2NnAtNVBnN1FyZ2V0Y3MtZE1sekpUaU1iWTVNNkVFckxNS21qTlV3NHNjYVRqZVo2VUFwMzBid1ZNMk9hRGNXVmR2MFU1QmRPTTRGUklXOGpnUUNuTzFDTk9VejBnUmk4T05GMzAxZ21jWFRQT3NlQ01xTTZB?oc=5" target="_blank">Netflix’s Big Oscar Contender Is One of the Wildest Movies of the Year. It’s Also One of the Best.</a>&nbsp;&nbsp;<font color="#6f6f6f">Slate</font></li><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPeXFNNnA0M2FfLWFENXA4RjM4ak5aUi1xd2JlLTRPbFl6RVBRWElaWGNXeTl4cDJKYi12RVhFaExYaFVsb05FbmQtQ2x6VVNPRDRwU293NE9TYVFIaVJjUFZXdlRQQktyTDk5Q1pod1hfaXlHSUptb2hfUUs3OERwTzk4WHUxaVQtbW9tN2JNOWEtczhuTHlKYWRjZlRjRVo1Q1JB?oc=5" target="_blank">Why Karla Sofia Gascón insisted on playing Emilia Pérez before and after her transition</a>&nbsp;&nbsp;<font color="#6f6f6f">Entertainment Weekly News</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPaFR2cUFMUlNoZzB6aDRhX0NqbkhjS2h4a2E5NXZIQTRma0FQT2tHV1NwODVEM2VoOGRXTG9RZUNwVXFCd2tPVUdlNWVqd3l0UkNoTW5qWlJLWmtGZlFURWRUWXFYUTBpcmF1VDY5clgxdjJEM3hBQk5RVDFkdmpKWkpB?oc=5" target="_blank">Watch Zoe Saldaña Confront Corrupt Politicians in ‘Emilia Pérez’</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3dcmHFPuMS121dKUXBnP9o6pJ5WtupGvevQGPVLuP1rmfGsdoHpQn1UYu8DRsxp1yiLRNnqH87NLPpBHUZJDfjrqXAzYqgNrhuTvqwqUT5xrJxEsEzmqVLE82j4m88N2wV9UWzzSa3H2opgXoyDyzePCu28MbSg8cXgUQ7k85SEZRDWbQ7VREm5vroFwjma1rh6nXQgB4i45wfunQnYQdqhsa2sifsv66i4jxMg5S1MDojtWggwDAwWtEVoAGybZTJNtLL4H4JPZ2jXbnXiXRshnAswwGcWtNhb2vWDybpM7Y56s9wCsw53gybz4vpAiSFCAqEWaAC6HiYMwRUsif9MxDYgkfoqZD8EHwMwZnVFdNo4Fr8Hr" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Back at 58, Tyson drops 1-sided decision to Paul - ESPN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPNkwzLVd2alN2Q21KQ0paZ3pfeTYyVFZHMHUzdTVhUmF5aF8yZ3phRVdYZy0wVTVoM1FTRjZRdFZEYmY0WVhfTlNfMG10U1dSeEVyLWNpLVA1Vmk1TVNReTRvaXpmQ3lQTDRIV0JkZ0djYXlqakFhaERpV01EaWVNc2pUenVQdGtlTGtXTC1STHZYQkpTTTROZHJqRQ?oc=5" target="_blank">Back at 58, Tyson drops 1-sided decision to Paul</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdnJhdEs4SlRWNDc1M25QNzY4RFFCd3NsTllNazFKZkc3SlRkcmhyQ2hNbm1mVTVzTzJDUV9sRzVvZ3VEanpDZFRvajV3aGlRaUNEMk80N08xbXlnd1VmQ2szc21rNFQ2XzRDanBFVGEyeXlNYmZUVHFsbHUxR1pRQ203QmFUMGFsR0twcFc0YXIzUmZ2MUsyVHdZLTNlZm15ejNMN3Z5UWxjNDk1OEUySlpld215TmpicFozRWtrQ2xTNlkxZlRiclI5NFlnbDZvZVFiajVn?oc=5" target="_blank">Jake Paul, Mike Tyson fight shows Netflix, NFL have work to do before Christmas</a>&nbsp;&nbsp;<font color="#6f6f6f">NBC Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPZkJfbzBwTmFzczhVVkpDQ0RuaDMyN1RISzA5OXB5aVFqZ0FvcDFmSWNGQkNkNHp1b3g0V2VybUlWOGNaZGFKT0V2T0c2SjRnRndUWjlZdU9qTVpQV3pUeUluZlVNUUR4WkZ3dW1HQnZHTWRSNFdZUXlhWnF1V2FEaF9ZS19taUI1djRrT1VRWjYzWkY3bFlpdWhjYUlUU0XSAaQBQVVfeXFMT0VFaUEtV2g5eWlmeGRCNUg5dy1wY2FyVUNyMnJweHdvMnM1cVJoSm9UUmFNSFFvbm5rVzBhd2NMS21ic0dVRVY0bkhhVzdPV2ZBYmszZm9ZeGFkME5fenpyYkNmYVpPQ0ZyWTh4T1Npa3Y1am9wUkNEZld2T0NDMG1aeUF0eHhjU1RrYmpGMldvS1lmWlp6YWEzQVdHakZneTV4ZnA?oc=5" target="_blank">Jake Paul-Mike Tyson snoozer draws harsh criticism: 'Not great for boxing'</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPNEg4OU1OLTdlWXJWMUIxT3I5VHpPam5WZU1TYWNUaWp3ZXRJTjVYcmlMLXI2SkhXZmUyOWRzMHAtVGhwUTRLTU1LNS1zU3M2Sk5lZFhHY0ttaXQxZHJZMWhWcWI1Mjl6YTJqaFpHdkZmZTlja0dqMklNN3RGb0ZXRDhqMi03YzUtWmNkX0l4cWhsQkdQbi1OWFNsZEF4TFlTeHY4SzZhV0VlM2cxRU9KQWM1OXhVckpjZlJhVDcyeC14WTdWVnpN?oc=5" target="_blank">Mike Tyson didn't lose to an elite boxer in Jake Paul. He lost because he's 58.</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=5q1knatRafuzqVRqfxCCN9zSm3YHQvYwocEeHMQFVQdD7cWBredovuJmfsf6rmE9Jq5t8yfzMETLudvHMVFdziEdRbeWp5qs5VmRqyHFGm9eoNy3Gq42CxVtKKe1n2divWpvdW8fWEXkmL7UJGBmxdFvai2d3UFqGKbhkJoi92yFdhUF9FGMYT1uCQx1ZG1PjWGwysi9tw83gPd3WpGPgq5nt1okZLpgjecCZgScxrjLHATPRpBxzch7DmMGW15MqmqFWdyrxYXbw88UNF2ZpXCHnnLJG3RVgDWcFwxmcdrnvTJpVtmcUKScTLwi6jazA7RPvgUxbDBKU9CHGnrHYLcEQQdiQC" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Michael Irvin will pitch Deion Sanders as Cowboys coach - NBC Sports</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY19ZV1kwWmJza0xJZS16VlQtdWpPY3JjMWw0T1MtSk5sb09PNVJKNWhoVzRyMU0tZWFsbkJEZUtlQXdZUzhISmVWRTltbjd5ZnVQVFk3dlA4Ui1tOTRlcG53RnRULTdqdnE5RmlHZFZPWXpRMHVfamMwSHAybzNEcmNuMnFyQXJvTGo0cW4zU2R4c1otNTJsWkJGNlNFdm5qLVdBUjA3bC1MOEF3RzY1akllcEY1NUd3?oc=5" target="_blank">Michael Irvin will pitch Deion Sanders as Cowboys coach</a>&nbsp;&nbsp;<font color="#6f6f6f">NBC Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPN1ZrLVpWUzVFNTFEZGpIdThxTU1OWWxkeURrdHFEZmlGTmMyZlpQTUlPd0tJelVkRE9mMkdReW9jM2xKcDdvTUIxcmdwUWFXNmw0OTJDTUNNLW1PcmM5UXB4VC1aY2pjT1gtSEsxbGs0ZnFEVkdHYk8zSkNUTlA1aFpuY0szYUtuMlc2V2NsSGpXM3J6MFBIMTdGVVlWN2Rpa1puUk9zMTVGUjZxdjhWSk1DbGxsUWNEX0U4aF85Wm3SAdYBQVVfeXFMUHBjSXdHb3hMUDdYSjdoTnRveXVQNmpCNWpDQlVXMGU1ajk0WGlyY29sQkxNRzlPbTg3OTJnbTl4dHFHT1BuRDhEalUtemNtVVdIZXdnanotSl9WQU9ZUk9OS1B4WWF6XzQ5SjZTWERwVW56Y2xTakcxUU9YQm1fc2hwUGdBNjQ2TUZod3pjbmY1Y1pWQW1YNWpoSXZTTzhkc2Z3TGIyOXhwTURKUlNYQ2pRVEUtMUQ0MmNBcW5JUXR2VndVeVNTeFk2dXZLeGtqLWZTZ28wQQ?oc=5" target="_blank">Report: Deion Sanders Wants to Stay in College, NFL HC Rumors 'All Just Chit-Chat'</a>&nbsp;&nbsp;<font color="#6f6f6f">Bleacher Report</font></li><li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE91RGlUQ3RCdXdpcFVUUEk2a1FwZW0wemF3Y191Y2dWcTN6Ry01azRtcWZhNGNnejNKYkhyZjltTXkta1J5MGxsd3hZX0VuOHptNXl4eXgtSjdkSm9CTEFPX3F3?oc=5" target="_blank">Michael Irvin asked Deion Sanders about coaching the Cowboys | Speak</a>&nbsp;&nbsp;<font color="#6f6f6f">FOX Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQejkxeGlMR28tNF9udXRoS09vSGhKeWxjaHFhSXlxdEhKejU2UHl1ZUlDeUJVVTIzWllCVy1qakZsNktBMm5hcHVlTjY4V05BdTFkNTh5UWFwX1d0NUNWNTdtUENBbjc0M2tSZWVfSVdHUGNZVU9zSGQ1dzBoOVVnMXpyVXVfMWw4Z21VTVZEX0Jjd0h5WFhKUWlDUlZRNHZLc2doTUhmN2Z5R1EwSTFvZy1pa1ptaHRDeVRxd1pmR2dya3hZcE9uSHk4eEdKX0c2ZXZaVENpeVd0RG5sRXfSAeMBQVVfeXFMT21qTjlNVWlJUXRFTWJPVDVzcWlmczZlSkJRVk5mN3A4SXV4ZlFmX0MwZEN3amMzUUhPVFBuV2JxdThGdVpadGlMNmQ1eUhyWGJ2QVpHOHF3Y2I2SVNPNThLM1E3dkE0R2ZLdVZCSVFGc2NKN2lFTllOODJIdE1keWdleGZfUUhGV2NVSmhLdHQxTVhiQUl6THJlaGkzdmxVX2RST0NaOWE1dVV6Yi1Xd2VRQlkwNTVfbU9RQjlEdTc1RExqOEpzR3FNejFZNThQWUhkYXRWMm5MSjFTZndEVXRfaEE?oc=5" target="_blank">Which ex-NFL players could return as coaches of their old teams? Deion Sanders to Cowboys among 2025 scenarios</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOZWp1S2k5aWJPS3B4TzNEUmhfNVlLMmtjcDhpOWRaemdYclFweFBHRDM3dHVZNlZTTnJETl9PdXJPekVfdjF6MlN6eHVDQnpOU2c1bHo3N3hzWWp0OGM1Tkg2c0x6cGVINWpZdjdoRjZEXzJTSGVZQUw1bFhEb2U5RF9PdERIdjIyYWRFTXdfcWx6VXVINU5rd000QU5Fc2c?oc=5" target="_blank">Michael Irvin Admits He Has Plan to Push Cowboys to Hire Deion Sanders</a>&nbsp;&nbsp;<font color="#6f6f6f">Athlon Sports</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=49pzJo19ZKY2G4yxaVjtSnECup5jsuVJBChkWsh5mPcTk5PyPAVynAUSQ26Poe5dHcP2mDtnp9c7AB46UuTj3SAmcBaMSgyqmWYXwpFiDRFqN9gFkB9GbByyN2gEybpFfu84NoNCpSx43iteMpfyprBtNRL8ZZetGYQupeCDi3RTQSLXzZGLgtvunRwoKUwxTXThSrvv3zesovLh2s8rYLnQcVjBa5JXzNzS8DdPLkB9KptbKbNqRqBydoHB6RFYA5kujcJ425ZxWaezrPz2A9Q2dC5CayWm1Gwnom6evJafJjPaiuqNNMH1hSjBYH7Ekmj1cBV6TrPDswF1uLFs62vquiNnt5jg5TebqPNyHL8sGF7UtPx9gVWx462quDHX5Uzh6ETxxyjHdCsdYY" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">5 things to watch for in Bills vs. Chiefs | Week 11 - BuffaloBills.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQbUJQSFlnVV9VRFFSTWdzSFA2WWZfY0xNTGhFcGZGYUl2aTFyTXhmclpLOUwzRWVoaFBhWFZXLVZFTE1ES0ZkamN6RUxqeE1wWkEtWjU1OEJoc01TSU9OQnZBb3gwdWc4NmZGUVRBcjloM2RRaENaOTBoNWdEODZUWWprZHpRaXJVU2c?oc=5" target="_blank">5 things to watch for in Bills vs. Chiefs | Week 11</a>&nbsp;&nbsp;<font color="#6f6f6f">BuffaloBills.com</font></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOaWVBcDFJNTUtbWxrZFhtZjJxem5IUV9Gd2k5d2ZvYnFKc2MzVjE2Vnk4Rlk0Q0dvNmlEYVNiNTNuRjZuVnl1bXdzaXlicjZreTJBTEdSVVpELS1ZaFM2eTJ4Tll6Sl93T3liZlQ4LUdZVVhsdG56U1lYSWFyQTRYZjhoYXY?oc=5" target="_blank">Chiefs-Bills prediction: Two factors I can’t ignore when making KC-Buffalo pick</a>&nbsp;&nbsp;<font color="#6f6f6f">Kansas City Star</font></li><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPU1pFbzVBMG81ZjhITS1Uc05yZmpVbjhHOXFwbDRQb1pneXE5c1U0bDF5R0hNTm84dHBZaFJUeVR5OUtQNWxOZmR5QXQyMzE1ZnNoTk5aQmZ4RWRLUENEQU95UDJIbFhKNVVHLWpOX1RSUzd1LUhrNjc0a3NkTkZydFlPWXpwVHd3N2VuTlpCRTNqZEZ1cS1tOU9PN1RJOUhkT08yRW5PMzVHcFNOcjdGLUJDYkJjWkctUnU2Mm11Vmc5Y2xTbUJZ?oc=5" target="_blank">Chiefs’ Steve Spagnuolo and Matt Nagy expect tough test against Bills on Sunday</a>&nbsp;&nbsp;<font color="#6f6f6f">Arrowhead Pride</font></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcVR4ODdHa3hBUV82LWhHY0lMVGZvQllENUZMeno0aGgyZTkwZTNpNUNKSEQ3c2ExdmY5VjZ3cnBQWk12ZFJ6cm05VEV2ZGRyd19tcnpQSW5JdVQzTDQ3UUs1MEkzOGFKbXk4aFVmdHppV3B1WHUybmNuNjdyUWxuMFM3ZGVwRDhTSVRmMVFJUTFUT1hES1Z3TjBjRUd1bHJJQ3lOZWJiUlVEREE?oc=5" target="_blank">Buffalo Bills injury report vs. Chiefs | Week 11</a>&nbsp;&nbsp;<font color="#6f6f6f">BuffaloBills.com</font></li><li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcXdwNVJtcm5DbV9sNmVQa2hqOHZtMzlqZzduTnBDZXBJeE1CaHVXTkJndEtGTHAtSUptQVNiRVZjRUxadlhmSXBLcU1ISC1YcTBWUkRJTVZTOG5ydy1TbTJrZmw1S1R2azFDUUZJUHRnQjFqanhxVkZ4MGRsQWFhdHUyM3NxOVF2RTNKazJxdXoyVUUyNUduZUhmMjlhOVc5SzNLeWtOc3dXX1ZTOGZsTktjMXd5cGlNUURDUEdDYmhxZS1KS3EtMXdab255MlRC?oc=5" target="_blank">Biggest game of NFL season? Bills know revenge vs. Chiefs can't come until NFL playoffs</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=uxXm73TeYMnBjpT4TL3E7e4J7th5razEtmcVeEJho89QR38kXpkZwzQVZSjNSMbgaWZfsAMWsTRD5b4yKa38LVPgvDbG6k6iPLscdehBw8WV8gdtoHnVEssPMqRdPJYezTAwG8YXutZWCacPbqGDekSKDyUqBUft68AoYddpLcX4ZU2WNiwhCmaS5qhjCs348oC6qF1iS78S7jteAaAtUuhjR6x5V2p2x4Tgd29cDEUeTxuTttwThYhzLiSfrVHWxi1vTUTEAy83pauGdeDSwgHeNgX7tGyVz59fKpddk7JAbZzVosqTRaLPvcdDME" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Huge stakes with Dawgs-Vols! Top 4 teams hit the road! Connelly breaks it down - ESPN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQVjNWRl9kR1BYdU9FWkUxaU9SVWtoVGF6dVpWaU1qZHlRc3ZPcUUwMGVzU1VpZmJ1T3V5YUhBcTA0STB4X3hsLTlrZXFwTHQ1aTB1NERYZHBzemlZMy0wZXNCbXpnbmFyOERMQUthaDZ5UlI0Szk1cEZ0YmtzZjRYUVhyZGtYUTZuOE1nbG5zOVJyN2pLbFl2cVNEUHRFTUllMVFxY25yZlBMaGdRUU5FdnlTUnNxay1ER216SzdZUXZULUJYQjJN?oc=5" target="_blank">Huge stakes with Dawgs-Vols! Top 4 teams hit the road! Connelly breaks it down</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQdjdtSUFrX09ONGFoaXNSS0swbkNqaVB4OVF1TERmSGgtWXhsOGlPRkowaGVpbldCdktXVzNXRzFYU2JQdDlJcFVwazZhZ1ZaVFB3aVFnTGdheW5UOFU1QVFZenBadExodGwyc3E1cWZOTVZab1ZJNkhYUTllbUdXTEtCVkpDcTAtTmRrTDE0SmxVNUNxR1lJTzlFTWlVazA2?oc=5" target="_blank">Top Picks from the CFB Betting Splits for Saturday November 16th</a>&nbsp;&nbsp;<font color="#6f6f6f">VSiN</font></li><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNb3hlNEJsbWNKY2dIWXoyYzd0aHJOUHU5ODhWR1d4WEFyNm9kcG9RWko1YnJnTElIYlFmZ1phdlZib3BZZ0RpeFZnYzI1cVA0dXNXUXo1V19oRjdHcnowclc0bFdHbGtfSkloTFRWQWRZTVBwZEtaU0tLY1ZIVDAyYlBBNFczZld3UVhXUjNSRUlLcnNkXzBUQ2xHVE1uYlVjT0JiaEhjT1I2Nldrd2FkTnFPMEo0UEJM?oc=5" target="_blank">BYU, LSU upset victims? Our experts give bold predictions for college football Week 12</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNZWo0VE05RlJwOWJlRXg0RW5pbnFXN2FsdU9KN3V4WGFjdjBSaXVhb2RTUjdjRDlyRHM3YzZLVlJGZElZSnNZUk9ES0lKeFg2SnIyRnNnTEZLRlh1cUZmV3hlblZEeXIwLWhlZHo1UGMzN1psZmtUVjBIME9Wc3UzVFdZUXpaMFhGZ3RMZEgzNHdESFM0czVj?oc=5" target="_blank">What to watch: Week 12 college football viewing guide</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Sports</font></li><li><a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxNbU95R2hzWkhyb2o3ek5hNDhmaEd2eWdPNFZ1LWRGeVJhcWZIUHlFWmdGQXZwTVBvaV9DS2xTdlNHZXFpNnhqSWNFcDdLUWFVcjFrck04UWlINVVNVFpKU2ZLV0lRRXUwd2drWWRjTkh6ZzBkMDNTelRnTUhSRzk4SjJEMXVjRFNiVS1DN3FMcWhFTC10X1ZYMDJNeW5TOUtSWE5pTmdjLW5pd1hRazdXWmtySUY4ZUNyMnhDNFFJSEJvMVlCRV96ejFvU19MdFdZdXQ4ZllCQThaZ3ZqalpIZnVobU1relHSAewBQVVfeXFMUDRtM3k0TWlKSWVMOWRjLTZoTWZCSVBXa0h6dUs1YjNwUEMwX1RDSVZ2YUNuTmpZdVVKdmQwektxUnlqXzQ2ODlIQnNnNklKUlZZNTNHb01lUW5EVVdLRWlzeEQ0VDBtMy1nTllkdDFRQlk3WVZEQ1habzY3d09oeUdVcTVWX2RzWHlneTFzWUVLX2twUDJtZUxTem1QWlNtZEZNamQ1VTltbU0wb3lFZjhfeUdQVjV4Q01CR25XVkc2R2hOdDJlVVl4TnMyQWVMWUp4RTd6WTJndEQzcnBqMWxBLWprYnZuMTBfcy0?oc=5" target="_blank">College football scores, schedule, NCAA top 25 rankings, games today: Texas, Colorado, Clemson in action</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS Sports</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=CF4EUhUzropjdcswiPYWJtdeoxHY3jKWqr4qdGngxG6KT6s2S6z4iXW1uJguuva8td45uSWWq48JND2WY8HsQsydqDVh5xFPuRwzHBsL5aGt4dPu8oR8shanbrDmAMdRhnCYLBN1dFBT2pjqykaT186f6zT2EdnYREEGptcUjdmJLGiVZRXXZwedrwZqJbmD8mY3UifoPYdXyCMWTrJ2Nji2PeYL5npFeAtJcbxikQuueYbhvpY15sy1vMp7uyEDZpSaZ1RSkUb2qb82vX8i4cevzjTrSpDeWT49zxZVVuAp66YKcTT9Vn1DCA8UXbEwrL7LWRvMDTYdHzkpSJNQN7q9Q9mtw5TwsphzZBdxnXgmoBaQrXpR46qH3FUVUXLxHQG3nguhw5gKJ2JrD5GrX87vBSUxVLHV1Hz6rnwGFQya4" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Moon&#39;s far side once had erupting volcanoes, scientists find - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rbjM0ZXlfdTNEbjNsS0I4eC1iNnd1cnlSOFNTRmxXRHl5NENLanNJZi1BQ3lTbkt5emZpTWI2eU1rc1JoUDJNcDhneHFKa2FmNEhSRDlvVE1Hd9IBX0FVX3lxTE1mUUhSd2hzaGszb0hIRjJObkhDem9CY1NVZ0RaMFhVYzhfWXQwQTM0eFB6RXk1REVVZkQwcTdKc1VfeFY5b0g4d09ULVVHb05ZbzF3UmU3RmVhNU5WMTU4?oc=5" target="_blank">Moon's far side once had erupting volcanoes, scientists find</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOY0M2aS1CUmxaUjRyQlplcXlSMnIybExHaF9uWno5WlE5ZTBqUGdVRWZsbnVNeFYwM3J4UnFiQVI3R19JazRzRHo0dDNSZXIxUy1OczNjMXU5STVXWkxwNkRSZGVFUzlUZUY4X21ERFZKdUtrMEg0N0hDbHJUM1MyTFhBR2VtSVhH0gF_QVVfeXFMUDFiSklKUEczOTc0VjRiXzlnVGNwbmpEQUUwSUlCVEpIVk9VV1BVSTFfQXgzcEFIQW9JYXJzY2xaampNcXNaYzFxN2ZINnhTTkZCT3pGZ0o1bUxMdWZIbnRoOVRRYmxIMW9FVzRCRnRJbEVWRjNqaUF0YVJLYTU3NA?oc=5" target="_blank">Findings from the first lunar far side samples raise new questions about the moon’s history</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPV2JIZjlFOURkR2E4UG03cWQyUDhJMmMwZnBqODJySzNxZ2VUcFhNQlJxSEhoNmlXcVI4cGlveTVrdjN2a3BfeTlnQUtYM1pFankwOUV5TV9UamlKTmczXzU1bVJvZmVHVFRvd3NIQmVTd3pmSkNaeDlnOHdVTWZRalUyREdEMVNHNUpIZUkyLUNvRGFOdTQ40gGcAUFVX3lxTE5JZ3pmZnNWLVROQmJfT0dhNVhMMm13eWl3RHBoVHlDV0NYX29VUndBZmJMb1pZWmFTdlRHY2pjcTdOME02bHJ1X2FPS21KYlNhVW9jZm80dmxMQXFNeVQ0R2U4eDdpTXhZM0RrbmpwWHp2clV1dVlBa3RZbjI3TTRnTHE1eUl3LS1sdFB4UU1ac1k5SkhzTHJQYkc0cg?oc=5" target="_blank">Mysterious far side of the moon once had erupting volcanoes, lunar soil retrieved by Chinese spacecraft confirms</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS News</font></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9PTjh3bzRNTG9USkQ0TWMzNUNyYmItX3YzOGVmcTl6RGxONlA0bVdHUnFvZTk5cXkwaHMtS0V0OVZFZ0hvbmE4MTVmRkFoZVpaRFI1S3poWW5WSnhiT01SeWliZmt1UkQzVHpNZGl3OGtGS2vSAUdBVV95cUxPM3plTmtMUEZmM3ZiQTE5TE1xcnJWNGRKM0I2SE1ZTzBxMk5PX3pyc0otX3lnSDd2MlNNMHByejFSQU85Zm1GRQ?oc=5" target="_blank">Samples from far side of the moon show history of ancient volcanoes</a>&nbsp;&nbsp;<font color="#6f6f6f">CBC News</font></li><li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE9rM2NrWTlLdmVOMzYxSDNOclgyWk5KUVlTa2tBTzc1UVVwQTZ3OWowcW9lbW9lWUhtZllQQlB4eGVCTlZWQWMzOUdzR2JqT2N5alotOTQtWFpnRzZ2TkZLV3VB?oc=5" target="_blank">Chang’e-6 lunar samples reveal 2.8-billion-year-old basalt with depleted mantle source: latest study</a>&nbsp;&nbsp;<font color="#6f6f6f">Global Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdHioHzA5gEsF8dnXBqznu2aJTr6U2TqveWfGaGHMpuputUjNNGTgeku52bjivHeJ5hQr81nLCf9r3RAeNsS8B9mWQZYe8RaTKGdgkLuh66Ao3g9LLEYwiEM2KHQuDEsF2Uv4XP7RsfbcYKVoMp6PNEz2jWNuWK4kbuZLebhFq3aijtBVKnviiYWtvda56KcADCm2UfytFhXeTs4UmxzTXFNoJpkV4ZE3v4VRSMs22gtmTspUp3kLQZsMdMEVha8sJsfm72Fy7XdAPp7gXYySppRaJ9AuViiV9yfcs6Gngf2M4DLoSw7M2fugyDabmStMgwXkbQ9DtXoPCipGya" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

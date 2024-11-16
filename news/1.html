@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        3 Minutes News
+        <a href="/news/2.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Trump talked to Putin, told Russian leader not to escalate in Ukraine - The Washington Post</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOT3NGUll0a3RrTTczNXN5U1RlYzFOajlZRXdmS2I0OGFRTmdaV1R6aGNkNGRpWTJ4RFRBam05VzFXZmJ0VC1oOVJNbXV1Tk5kZDl6ZG1RdDRqZ1owTF81WDlleDVTTEhUWmMtZGdzR0FlSzduTDU1TmR2QXVVLXJZbnRPY3NOb3FWVTdNa0JfZXEzazRvSGc?oc=5" target="_blank">Trump talked to Putin, told Russian leader not to escalate in Ukraine</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxORjRTNy11S0hDNWVRUTR6LWlhbGV5c2J0azVVbVJ2ZWtRdTlfeEtFbmRDY3p0UFdaZ2FpSFI2WXJiaFFnRHlfTnFCUnA3QURZUWViSDNJTTIzRENkZDE0eHN1LV9rUG1EaDRMZGJaenhHMzhib0N2Q1B0MlRjeXBoYUZQdjdwRXJVLXJfcEV2Z3lPMmZoY3BzUDZmdFFScTZzMEhhU29ZSF9qNXZER0N4WTlNSXo2blV1Q0dHSlEtSjhRRnZSZkZ1YWl5WEJzY29n?oc=5" target="_blank">Trump and Putin 'discuss Ukraine in call' - as Biden to urge president-elect 'not to walk away' from Kyiv</a>&nbsp;&nbsp;<font color="#6f6f6f">Sky News</font></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUm85S2g2MTlCVFdWWUZveHM5SnlZNWpzaHM4ZklxSXFPZHh0Szl5UHVZRUduZVpJMmxKQVRoZ3BJOTFTLUMtRW1TV1FqSm5RODZ6R2JJdHVfVnhqUkU1dGhIa2Y5cnc0RDFIV2pvV1duS3Rma3hUN0lNcldFWXUyMDQ3QmxsWUwteTJUVTZodERubThwQ0hNVGVJR2VBTnF1Uk5WTFQ2YUM3Q3c?oc=5" target="_blank">‘Distrustful’ Trump Bypasses State Department Procedures to Call World Leaders</a>&nbsp;&nbsp;<font color="#6f6f6f">The Daily Beast</font></li><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUXNGWkQ1c1d5bFhYM2RzWDZWSDhOZU1lNXVzbmhCTXMwdThJVFdHaWo5UkI1Ujlkc3JjNnJrWXpqRWRCeXBCRUhLVHBBUjQ0NER3blNGS3czckxkWEt4MGtseEhIQm4xWGQ2Sk1Ua294WWNnYWlBc0dRWk8tekZYUUlnRzR5dF9tcWE2b2kyN3VIY2JPaTBibF9yUllwMll0WWt5OHFORktpRER1dGVrNTNjakJ2ZlQx0gG-AUFVX3lxTE9OaE5QaVFqblVmRXl0emZYUXdUSHpocHNTWjBZOHZhVUI1eWd6cmU0a0RtS0Rlem5LcDdwdXBtTzJIS2xubUxKTFdvRzh3eVdySk9lTEtmTkNub1JQUXRQeUJwY0sxN0tOWGY4OUVzY3hYclFWREM2VV8tMGFOemdJSDBCeklHb25YMzVULWxsalpJOVFoYVNyUnd1TTdPSi15MmdSZjl3Y3B3bzIyMHU1SXR6U3FqTE5pMzQzUEE?oc=5" target="_blank">Trump team reacts to report president-elect told Russia's Putin not to escalate war with Ukraine</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=Vs68WyhR4ueX4dCnTSUwrfDN895FMH8ETBacdFvxYJTCu9fAPbVHd6BVLA2NK8KahF3mFqavmLjC8dQKvdWWYYASeYwtEnZkCPcSFA9BQpttTT4D7N2G5RG1NS59ytqiSG462ZoezxnSmSd6bvqAsHaEq2tncecYPDUQgPMyhKKMB2VXQpViaVZkzKLp3uVoQbZ2E31qcvQLd6GcVKUgQqGMXaf2TGKvjiVMXmApUUE6Ycx7Ry82VDiznWd3rnnNn1iHASjHFkjLzFfhu5Q6BHhBBbFuEwWDYnK7sZSZMu2pTSCiMU7wS5RhhnUCKb6TvZRApdSn1SnBQEynunKW" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Trump calls on GOP senators vying to be majority leader to agree to recess appointments - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQVkRLQTh6UklpTHY2M2dYX0F2ZGNNQW9OR2ZRSjNMS1p1QWtDNXFFUnJldGRxTzUzU3p6S1FONHRRLWktNl8tWDRQR010RHBwRjlLYWxnZW5BU0QyekI0TlM3VmVwR1BtYl8tckFnSVd4NkRDbTd5S09OaUlNdmt2VTNHdm9NMHJFZ3NSTVFTSDZOLVJ2enRXV1hn0gGQAUFVX3lxTE9ZWG5kajJpeDFTWHhrdWFsdG5XSDljMEJhSTg1WmhYTzJ0aHljeVdmMWowaGJWNXhoN3BqQzJQNmVpYzJyZEhHQ1BkcXNVbFdGRkFqQ0RfVndlM1AtM0FLX01SRkFfWDRzZEdaaXN1U1lidVQwZlhyOFNGaGw0TVVXXzJiYk5PT05QbFFnVDl6Vg?oc=5" target="_blank">Trump calls on GOP senators vying to be majority leader to agree to recess appointments</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOb1BQNWFKNnBUVnE0WWlSeTcwVGlKNXdWaWRwSFFQY1NXTHQ5d1lNWWVzUnoxRmozMjFSSlFpa3hCQk94WE5rY0wwVFFEWmRiQ3hodjR5YTRCR0xQUE9BcW9lbzhQTXhxb1ZQSTBGd3ZjTHpYSkswWXNRemVGMVhWTmt3eXhYU001Wno4S2owV1pfUlNwN1VTZGhXTFNUaExsVWRMUWhKTUktQUpoNW1XMWRmYTNOUHQ3VmfSAb8BQVVfeXFMTU1aWVVfWkc5bHZ0RnJKdXBNYjM4WUxPTmw1WVFSa20wV1hjNGs1MGdWSTEyaEthalVMdXpuUG1GZmV6S2RtT2F6dGphMEdPVF82RUVZYlRtUV83Wm1yTzN4a29fOVM4SlVmN1U3WDN4OWZQWkZuLVJQUnJXbUg4cnZ6LVljQVRsa3Z4cHNQTHA4bkpzUVcxN2d1ZlZZSEdlZzJ6eXJIWlJ3U2tIVVhiUVhiQ0VscG81R3M3U3pNY3c?oc=5" target="_blank">Trump says Senate GOP leader candidates must agree to recess appointments</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQUEFxNjdnTFJNZHdtYlBObEZwUFBlTHhTeHo2T2lSQmtOMU5NRXdzSUdUSVJ2R1JZa1NLXzN1cVlyd2g5Y05FMU5nTFl3bEZscVFwSjVGNG4zUGd3ZjNLYnAtelZEZWdhc2FMd2JlekxYMXNkVjdwSi0xcGJDQ3o5SzM3TFFRTWJHWTdLblpxejZfQlVSOG4zMGxjRWlaLUE?oc=5" target="_blank">Trump, allies signal they will try to call the shots for Republican-led Senate</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNaFRROFRyeENVWWVSUE1zamYyU0xCRFlBdTh3UmZBdU5FY0QtQkhUQ0NMWTJ2eUtyX3pTMko5dVd6SGpTODRhOVhUbWNiaE8xVEdGT3R3djdpYVZXZ3RTTUNGVnBXWGZTSHMwNjhSdVA2bzFNNHR0UnY5Y2c3ZUxlRGl1X3NtUHk1Vk42ajF4aU9RX01HZnRmUmpmSGI?oc=5" target="_blank">Senators Vying to Be G.O.P. Leader Vow to Quickly Confirm Trump Nominees</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2G2pMkmL5wjdF29mNMZc8zp47GRpzSQwQS28LQ7Kgeqs9Lh5Q95Y2mT7oywzw6zb5R1CnTsWqTKynSeqNCY5tRkSsc9nsq2D65FfehhhSErHJB2bS6XhSpxqruccaDbRSaMF16iUokJJ47sGX8bNvJbrkRMEc5RXJH585Lt7NJsGngN93ZhCXgLstyyFWV1VrpXo41bcx3jmGA4YLLyy4XLJHnCqZktzSNv4FUNZocsSxQhaLwFwLnM6RBu6kvGHW8wWaDfcTioz6Q6EWLLYo5pkTTegvVaXejeD4LTaWKq4yZmmD6YczEqdMTmDBp15xo9Zz7XKssA1ZGftR2Zgw19bFbrcRfUzEWHnX9vgF7q9RJkUa7i5Wp7YgcVYvyZysni3ocHp7jksDnp9sChKrAx8hRw4emY5Z2HVPrNyP5CR8vwmgxY8USpfSARb3mHkEeteYBvaN5bVRFkuSbUZmcnz8ykk3QKzQ9J7ayn3QptHi4dm6X6eVKyMDPjCjJLRTAEGeTSWV9XqFPLkEXXwJS26mZaoktjBs42McAnxBjheMPVhpUFzvfeyJHXvzGji2vPcp6haD1zh1EHtQJXbpBAy8JZugtHFRiUorWb1ik" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Supreme Court Justice Sotomayor ignores pressure to retire - reports - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBDZzlhd2cwZnFxTzA4QXhYNzVCekk3OWQxbExpdFJNMURTVjYtUkpNdjFaV2hmSEtMYmgzNUZzSV9HOUNOMlFMeGZ6aFJBVm83VmVQWlM2cGw5Z9IBX0FVX3lxTE82NWhJbVlheU4yWE9rTlJqcW9HRE02Q0wxVS1GbjF0WndteXpHQUFnVldwZFhqN05CdXZjblBkeDJJdDN3Y2Q1QXdYU1pnbFZqWFU4T1hvMkFBUkU3Q2ZJ?oc=5" target="_blank">Supreme Court Justice Sotomayor ignores pressure to retire - reports</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNYVlsb3ZsY2VGclZQbGp0NXN5MnZQTXAwMFE5aVNQVHNEbjJpSzBaM1dMOHRJWG5kYlgzUDVqRHA1WWRHVkRsUS1yeVRNOFd2NWdJbFpScGtDY3FRXzJPNVZqcC1zVlFrLU1qS1hUTnZQUUNNdG0yRm9BeG80WHZUdWpXRk44WHVJajdyT20yQkRDZTJnZTZZN0ZuWDBqVjdqelJsSE5IT0RFRGR6WEZYdNIBtgFBVV95cUxOS3ZVOHE1UlJPYkh4b3lyX05LWDFIMm5KNHVxTmdyOGlab1pMOERIVE9kdGE2T2J1RURydTJzbTkzenFkb0ZoazlXMlhaU0JsOE5ZaklVdVJxVzkxTzQ4Q1VEVXhCLS1zUjZDaHB6dy1jTTZsbk9zYURmT1VTNWpXOEp1Wm1Oc1RZX1pVWTBXSzM4WkVTWWJXejdhM3l4aS1ZaXFTdlVqcnNCY2pTVjhBeElrQVFPZw?oc=5" target="_blank">Sanders: Sotomayor stepping down not ‘the sensible approach’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPMUNaTXVEZTU4NGhjSG9XZGhHTDJzeTZkUjBDQlVNb3EtMEJ2Z3B0aDNxR2o3Q3RWWExEaGVETDcyUG5XTnBRRlh5R1g2dnVXTUp2SlNGaU9icll5Rkg5aXZiWXVSeFZiUlQ4SUt3T1JxRVpEbl9qRDBjLUU4azVKb2U3LWpnbnh5YXE2WmVqaTg5NU9fTmc5ZQ?oc=5" target="_blank">Playbook: Dems agonize over Sotomayor</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJghAANii8ddf2Gik7MXSweYb6mCedsvJZ51UUw2y7un5YsoSi8HXpqqLwDXADgULe2fmRBwvvTNP23w2KJqL7jC4aE5H9D7gtgbUYE7TtXzAn8A9DEiSSnZJPNwHMianwa2Qe6iSCVznW4uHHNvDp3bgEHpYFiogviFVCu5C2AZW2eV5d6EV21zD29ZTRnjfBuXKrgndj1dtzWH3VJwKoonanKJUWzggWxsLS2DRp4zv6NPzXuLPhzuBiDBFgmGB8dAz5a8o9H7SNzaw73jwdCSMQBzprzxutr7eRHXDe5c7xpbG3MVV3ZiCZLrDSSTnd2PtHToa29u7m5BSVxB6" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Firefighters make progress, but Southern California wildfire rages on - USA TODAY</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQU0xxQTRXTlRDRzVEVWRwblNnXy0tTGNkZ2U3WDd1b21YdWdocU5PTXdVdEl6bFQwTE00TXJOQzFHelVKN3llb010X1hsaThCUkZoM0tjNU8wRkF1bGs0dEx2OGEwSXpnUXJBOHJyWS13dXlEOElqc0huQ0Q5aGk0TUdIU09adlUzRUoxOFBQSldMZ2xXQzNwaDZUVGlzMEVUUlZFcVljSDZkVTV3YU1ZSkNDQU93ckU?oc=5" target="_blank">Firefighters make progress, but Southern California wildfire rages on</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNcEliZ0lxcGlyaGY0bF9DMXpfSTM5MjVpcmIzLUljWjZTUTVhTUJWZ3hheDRQRVdUaGJBVkN1UGJaOFVmNUFrcHBUVEdlaGlKdG5VbHRiUzZIRkFZUzlSdnY3YmRwWWJVYzNGZ000ZnYtQ2VKX1A4OS1CbXpMa0RUNHNwY0lvMXdUdjRWNnlwVEg3SE5VN2JnLVFoWjNYTmF5eEV5T1pWVzRDdTlNZTFIZg?oc=5" target="_blank">Fire officials describe harrowing conditions as Southern California wildfire exploded</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWtSakJ6SVc3NXZCUkdudG5ScnlmbmdHVUNBQ1NJMGthZzBMZ3BlSmtXNkJmSTZ2UnZhTTYxMXJPZlZnSHphdUhNaU9oTUZwRmJPZ2hoUnYwSnhoTFNPUXhtY01nRkNBQk5XR08wdnFnNFRxM2VKOHFhX2wyLXVqSEZuT3dDQQ?oc=5" target="_blank">Mountain Fire Update: California Fire Threatens Critical Infrastructure</a>&nbsp;&nbsp;<font color="#6f6f6f">Newsweek</font></li><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE82SkJIYlNIb1l4dWphaDZYck01N0Z5bkVoS09hVUlqTzMwQW45OU0zeGl2Y1d0aDdpNnNRRXhJbExiT2JLa0NEelFDT1puWEZyRll1RnViS2wyeTN6NEtUQWJGUzlWaDE2QTNnNE5HWTlLS2VUQ0E?oc=5" target="_blank">Firefighters Gain More Control of Southern California Blaze That Spread Rapidly</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=iRU2mQbZhT4TXMcFPNVshcAVjPNVkcQq5TuTFf5hsSFfm3VBTd25o6mGddPvLBjzUfXQMEZsYE1JouCkvn7c9pzJ4TdupTyXkKEgF4Bi2AfdG9TsrBFzgonHFz4Ga8FHrmK8AmrbVbF4juzMgd2BhdmSAx8mdCtF8p4nVdxCX99WHxeCTx14r2F3iu4Qn7F5wKQHRPDLbYKtzV46jVG9PyyKeyh1insTnTSVKdtpBaf63A8oQ3FiFaQyd5EV46ficxLXdu4VuyMQ35KQqqWyY5Ro1BmCgNKxiKpzccBn4MbBWh9rKZGC3JD2HEWThA9vEQdFY1e8jdPkZPe2csCLr5oxuvUUPrcbiUxVZseWp8T5UF3MybUj9MF1anUUqBZWNmWdFQADYgVyf6QU" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Inside Mar-a-Lago, the chaotic Trump epicenter: patio pitches, transition meetings and rogue guests - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNlIyVC1PLVpVOHdPZE9SWnlqMnNRUGYxalpJNE9OMzR4dVlVYkFjUzBSNmIzVjY0WUV1Qy1DemRqTkZQeG9mM19nT2lkQ2lkOE1tUndtTkV2TzdROENOaUxFUXpLSy1TYS1xQ1NGWUo5aHl6RHVCNnVQb1pTQ0Q0czdiQnk3aUpwMkZtOFhRd0Qyd9IBiAFBVV95cUxQVjRRRmhINEZEWVBPaThxNGpwTUM5ZjcwOTNGekNBT1RWYTU0SDlfbmFKbnhRWUVjbzhKVnpNMndrNGJIZ1JWZWVlaWRYUkI2QkVXaFJfTDBXVkRKZU91aFIyUXFGX25fNmhEblVzSG9BalVUMTlrUFhxSzY0RVFObXR3cGZaOTdE?oc=5" target="_blank">Inside Mar-a-Lago, the chaotic Trump epicenter: patio pitches, transition meetings and rogue guests</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQMWNobGdLeGJuWURrQ1gzMlppRUEyeFNFZnZ0aFczZnZ2T3RRcFpOd1hpZlRVWE01NFI4SGE4VmxUNEozSDkxN09SSDRWd3hUcTFJSWNyWlpCMmZjOU80MzEwTi1XWm9QMUVUNlFrd0RmZ3ZJZ2VvaGsxZlZrdmd2T01PZ21MUnZ1MXhRSQ?oc=5" target="_blank">MAGA Elite Patio Warfare Breaks Out at Mar-a-Lago</a>&nbsp;&nbsp;<font color="#6f6f6f">The Daily Beast</font></li><li><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxNZnhnLVhLSWFtMThvSzRpMkJQcDdIM2REZXo5MkpzUFE2aTdCaW9nU3lONE92UEJyUnNzWU5mbzQ0Q2gwLXJMNVJFT3otYmc3TVVlTTdpR2ZlV1RYQ1gzd1ZsTm5jdEpKYWx5Z2pwS2tBc1JfaWRxYm1ZbVQwTVV0TkpXSGEyUlY3LXlkMXZway1vcFhMWlZKa0tnM3F4UDk1czB0ZV9hZVpWcDJ6Tm5KNTRuVFMzQkNRTjJOM0IzOGJhRVVFWWhrNGlvc1ZjbHVZaTlNaDRTdW9YUnRXd3hrQmloSDhRd3Rk?oc=5" target="_blank">Trump presidency redux: Expect Mar-a-Lago to become a bigger MAGA magnet</a>&nbsp;&nbsp;<font color="#6f6f6f">Palm Beach Post</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPbjBobG5JSzFHaFhWUEd0eG9HR0ZNbDc3MG9hM1p1a0YwRmtzZkVLb2diNlpOMHRHWnJfLU9VYTZrUTlCbE52MjJlYV9VZVhEclNfeFBBNUVnRnZIN1kycExlaUd6YW9mVDZpT2d6b2tZZmlZYVVQd1A4SE4wdzI2aXdtYVlTWmFBYVEzT1dFMEFxeUhtZWlDVy11RURTaUk?oc=5" target="_blank">Live like a president in Trump’s palace</a>&nbsp;&nbsp;<font color="#6f6f6f">Travel Weekly Asia</font></li><li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOek9lRFViS3hJekVPeGVoaGZfcDIwbjB0dWVmNG9nTElqUng5blNqWkZhSVNMdzFidVdFV2UwWThERW1ZMkFSU1o4ZlBweTFJdDVqR2x1NVotNHIyM2FlbndhdGhnM3hZakpfN0RvUXh2R3NobFNFQzhXVjI3Qldoa0pLbWZCUTdfMDhUNUFwbDZEaDFFcjk0WERuY3FrQ0Rka3hxMVN6VGpEVzRLdHpJTnJfTXA?oc=5" target="_blank">Election 2024 Live Updates: Republicans jostle for cabinet picks</a>&nbsp;&nbsp;<font color="#6f6f6f">AllSides</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=23xt8a2utSHjycBP1x7urP5PVz91jB92gSspTZZywApQCatxHBhgtPuX5C1rViJzCcaDWcZ6Jvx5DFiV2H7MWvwi7aPMe2hU8EuCTD55Abfa8KypiEDAzYVfN4fHvzoeD1qGqZJEoVkmPpwD5gPWaQ8JPzzE8DEeQ4Z5hxAtHHbi8CkiWyGHe54mT3byTwHsyrwPVUfJcBvTz8E4LbS8BpxGeCdhA6gWVKdQX6vEYq2UA9vpWxdyGjwr7jwAoLy8gS34nj4GCtdwHvZoZJFzYgjie4of4i19Yg5yXBcZciTArJ7oxR6Xnnjxi5ETCH7P5TMcFau7HxZzd9XyGpps1X135c2L4urQ8VPNtE8x6iuQxRo72nvHPGMe4NckkjPDk6BKpJR7eDmAefSoYAxLg3Qmc8VikJcSoFDc9jtWgkyaoSPoEewCZkWKonwo7pLnGFDV7VwNZTjLP132U1YU5nsPyHz2DHe4N74ezKtWci1hSNNYoCNytzvwALuaCXhEHNMDbvjEdHDQAF64MjEzJTFe1UyVF4KDegjbfvR2CJnxAEufcvsMnY1WimGDjxAbMhZ6DyNfeLKn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Will Trump Prosecute His Foes? Allies and Adversaries Expect a Wave of Revenge. - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPNkZ6dzVDelFPVnpvTnk2dklGYlBiMm1tZk43UnVzYnVibnNVR3c3cU1jY2hSOTNzaHV1ZHI5d3pnampTZVdveTVuWk9RamYzN2ZXay0wNlhhYXRGTVExWmJFWk5NRjR3Rk5za1dkQ2tHcEk0WW9aNG5hZjdVRzVaWnpqcw?oc=5" target="_blank">Will Trump Prosecute His Foes? Allies and Adversaries Expect a Wave of Revenge.</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOM1dsVmgwNXBvZ3NpdnVIX1BNbGtRdDExa2dmWjl1RWY0WHYtUDBIOEJzSlNhUGdfTzhzaERWREVLV0oxNjdCVzZzZlJYMFdBbFdyZVVkMTl0RG9xZFhkaXZ2Vmo2aUc5SUV3cWdaaDd4bEhNYUh3Qk5EUnNhbEc1UGN5SDJhNzVYYVlWZ2xhdjd5eXZ1SzRYR0dGeUlpaUpxS3B4OWF0aWFOVXBkS0lRemFqS1JEOFlEc0tpZFdIUHJIak55SUtzc25vUUpRQ2dYdmc?oc=5" target="_blank">Trump Vowed To Go After Political Rivals If Re Elected—Here’s Who Could Be Targeted</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNUjZRRkpZQ3RRU0E0WVNRdGFWTXFfWHp1TXZBdHdWMUdLT29uWDVIcVFXQklDTW1xZE1XVEd0blgxVVRYLXRLcTViZmJkU0VlTENiS0V3OTRGNmZsV2lyR2pIYmh5cW9yNkZRRExxdTQxb1dSSXJBbUlTRWllTmlXbUlnb2RJZVhQWU5Ua2pkV3huZ0I1Skg0ams4bkwwSkgwY0tSSENfOEQ2ZTlDZzdYcVJsLWt3UllweDBaTGJn?oc=5" target="_blank">Trump’s enemies list: The political rivals and organizations he threatened to go after</a>&nbsp;&nbsp;<font color="#6f6f6f">The Independent</font></li><li><a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNakRlUmVVTTdHbGxxWUJ1M2liM0h5WG1wSlVOc2FnakFrMkVoVDRmZGwxQ2stcFlUZmdKX1hpZzBsb2xCeFdpYU9GOTdoUll3LTJWSE5IbTAtTEV6OHd1WVEwaThDd20yVVBuR3VHNzctazB6bHEtYTVjT3E3QXBnNzF1aExhWUZwQzJINTI0MkVmRlJFM0xmRTJwMzlsdnlvRmlJc1Y3VHdiMlBSRzQtdWJLZmo2dVVvaEYwZFJEMWk3UWJzd05tWmRtb2o1cTdJdjJfRVhRNl9tQQ?oc=5" target="_blank">Trump has threatened to prosecute hundreds: Here's what you need to know</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=HFcFmHBiAeR57tWRm5CRnQtfiWRMMQSpeyueYq5X922JoVe64VTJXhjNyo3ZDr2YxZoiCfY28Eq8AXyNofrn8X4CSMwFMRzCcuFFkXZRGS2D9JiR16BK4FKp5SHpE93erUfccQePd3oAL3jzaLuJNE9Yo3fGwvrYQtWEvSbEeQ4BVGhFJsDPARY6r35SpyqPdPSzWfxPRdtPz5XbKFxm3KQcjcSFJCaX1MTyJ2WwtpN8CrxkBfh28aoNRpahzHrs311fKsA93Rdg3FZVTjpRLehNqwYuTjxJo27UaByU7KSUkQcC8C" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Teenage park ranger dies as wildfires burn in New York State - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBZM1NOQlhYWnFZYTBaTGtHT05MVHFoejRBR0RTQkZXRTFqcTdFd1dZWVdaTEdHdXlkLVZNT1Q2eHhSZHRXRGFjbkk1TGNsOUExZjc3aE1TTVZxZ9IBX0FVX3lxTE5BZlZOeGxRMG9hZGxELS1XMVJTcDNJU3hzYmVFWTlxTmM3bng5MVJHQ2plVlVQbGppMDEwSUhqR1l3T3I5cC03TEtKVGw4czhxQms5MzJmQVZ6Vko0WFpZ?oc=5" target="_blank">Teenage park ranger dies as wildfires burn in New York State</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxOelBSai0wQTRjQVVqQkR1NWV1SW13TWZ0ZVlfS0hpOXdjOUxJNjdZSmhyeXl2TVFEakxPYVZUOTBxQTk4ZEtWNFhzX21mdC1yQnNaSzQzbzhNYTdqVEl3MUxfMW5PZHJyUEF4dUdaZVZHZ25nUFBpak1tbkNXMjBuXzM4NjJfVTRoYUZYc1ctNzFVTklROENzdUhILXZSdml5VUlTWUJ5M28zWkJ1eW9QQUpuZUgtY21TS0s3QXhLQnJmbU44YTN6ZnRPZlI5ZHhQNTJBVkNIWWlsODJKZF9Cb01xNjFwRF81Z19kNjNhdXg4M2pO?oc=5" target="_blank">Dariel Vasquez, Ramapo HS baseball star, killed fighting forest fire in Sterling Forest</a>&nbsp;&nbsp;<font color="#6f6f6f">The Journal News</font></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZ3BIc2RYMmNGYUthZmxTYnVFTlA1NHV1U3JZQmkxdVRVcnR2QnFCcGVaRHVoakFRbWJybFRJUnY3UGRkeVkyLUhqVDRNY0EwX2FiUDhuWHlBdUFTUUhVRVRKYllZUFRIa3RseXBEQ1VSTHdOTUJZcGRvemlabTR4cnFGbmlBS2hrTGxqbXJ3T1NQRnhMRUhqYVpBY1FzTDR4Tzl2OE01TmJXVUE?oc=5" target="_blank">NY Parks Dept. teen worker dies battling wildfire in Hudson Valley</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Daily News</font></li><li><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5sb3NmWTlQSFFkTHdxcUFJbkJGclhZWmNnSTEzdHhsdWNFWHNSdGpybi1CbFBRaVgtVzk5VmtFczVSTjdHTGQxY21iQW0td2pXeTRNRl8yd2hXY3FXdm1zUWlhNEJVZWJaTzNQX3Bmc3dweEluWkdPZWhwaGJ0Z9IBdEFVX3lxTFBJYzBmMGxaMks2RzRyU3hURVlRUmpSU2FaaEwxNDdaMzNNY2NLNDUtNjN5TWJEeXlFaE1YaVBEcGk5NkltY042SWZCQXYzc3Mzd3dubHQ2dFpIMDdlQ1ZDMUpqclJvZjNJblhOdkx5WV91b2dv?oc=5" target="_blank">A man has been charged with arson in connection to a New Jersey wildfire sparked by a shotgun round, officials say</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOZVA0UEhmblBiVVZHS08xX3BscFctQjhwck51YzJZcXdWcFg5bHV4NlZ4dnNIVkRjVzVtUXFBV2dwUU1kTmd6Z1MtS0ZtSk5hS25saUJoZFlydDd0Zm9KTW5qcldzb1dXVWF2UTdocWJIcjZDUXgwVlU1SDNlaE1odFJFdG5ER0ZjWlZ1dy1R?oc=5" target="_blank">Fire crews on both US coasts battle wildfires; 1 death in New York-New Jersey fire</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJghAETzEiT7b4UBPJ8RXnLox58SN4SoHSmUsexAT8Bq4bsZa32Zo1hxpKLmhApakrVhqzPaG4CvUCr3WXNmvNcmXAJ3V6cSsetDvcoVroUnkzV8Ms6wGVvZrsEwgjYEUcvuuS37bHc2jAASALkaMeVtNLiBBffk9UJMjR4MtDwbd3ug6TbUw629MySmNZgkxmUzNC2cFUk9FLYKPqT4AvoXuZfXsFPaGDenpFp73BU5ChhHktdU6XU9uF6e9no9UpnzB2yWhA4Ea3emmYf9Kk5Wb8XhRR2ACqhBUyE8kmvmULCYPnQSFsWjzqVcLChepomJTYzGys8kjbGRweHJt" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Immigration advocates brace for Trump: ‘Buckle up’ - The Hill</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNMk1mSmRCc3I3THFoY0FiY1JyZmJEQURGTmFHRjAxSXhXTFNJbWxZYjV0dVZJNUtYbDRRWTJBbU1lOWVmT1lpczZUaDA5ejI1a2NFbGRYbnE1UWVUcldaRFdpNE54NV9odlQ2YWUteFR1ZXZralo5U3dpVnFDcFBkS2RqY1ZxdnBldTFqZ18tX0rSAZYBQVVfeXFMUHdDb2xjaFNnMmdScjMzV2xKQzRQQU41ZEJQQTdjXzhwS0dYTEZ2ZzZqdWY0LW04WC04a1RESXpYZzVvUzNZbXVrME53bnBkM2RaeEJVYjM4MmlhT1VVdWxPdFM0T0F3d19oQ0pRVFRrbE9maUxRMFk2X192N2hUY2Q3TDFBRDFwZ2tBWkliMFk5ZzhFNmF3?oc=5" target="_blank">Immigration advocates brace for Trump: ‘Buckle up’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOMmwxdEdEeWFEV0U4VEN6SUN2UzNzUzNJTl9OZ0hUSW90YkMyVm1CSXU1aGR0YldVWVlTR2dtYU9TRFVaeEowaHZvc0x4b2pTZEN4a1VnQ2ZobFRvd0lka1ltZ0R0SThqVzk2bE1ra3dKM2E5Z3pzMXRfbG1MdEd1Rzl3aEZkUHV1MFRoZmZ3VFZvREJTSDc3RFl5Y9IBoAFBVV95cUxOS19oUFNHcnYzX3d1S253UkRIQk1IMkNTd1I5aFhRY3lsTlJBN3FuNHlsZnpIUE5KVWtxeld1SVJzVV9reFZNR2pSRVVfQ2tTRmpPYXNKZUgxN012Vm9TeldVelp6TklWLXpreGVFV295aDlBSW10Ynd5MkNmaUtldHdmNnRzZjBSTURMelBIMVhIZ0ZENFEyQU5iUms2b3E1?oc=5" target="_blank">What Trump's mass deportation plan would mean for immigrant workers and the economy</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBmQ0c2RkNZWlRhNFNuQ1ltNElvYXltaks1M2stYmFibGdrZDFlY21KVUNQVW4xdnVxNGkwQ1REY0g0a0lIR3FQcGJDODBQRkpFZU1KMGppc3VPaGJ2c1Vya213UHhYakw1a0hzR3M0VEc?oc=5" target="_blank">Transcript: What does a Trump presidency mean for immigration? With Michael Clemens</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNMm1OSHNXZmp6Zm14WXlrXy04LW1rWW5IOXdPSW9vTnRCanRodXdsNzJTUmZueUNVUUVMd05KSEZWUFl2bUtsNnZIRk1ZYktNemRvamtVR0pkTkxzQ3BnbURGUWFqQjY5MEJta2wzV0hMV0NjUWtPNS1kWURVRjNkUHNQS1BOc1JGLTBPdVM5LW5pbW44bmow?oc=5" target="_blank">Ramaswamy backs Trump’s mass deportations as ‘pragmatic’ approach</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQQ0RNSUZKWVh6Vy0zbk1ZZDBIMVAta1pXNFdIdV9vTzFIdGdUNTVXOS1rLVlmc2djWWRKUUtqNGNZS1AyLXdZQlJLeks2RHhzTXZwMWM0WXVQNWJpTWh2ZG9iN19GUG9RT3N0WkstaFBXNGx3b21LNVRPMEcxSWZIaS1wVQ?oc=5" target="_blank">Trump could house migrants in military bases under mass deportation plan</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=aEBBq7j33t79WG3QXKVMdfKgnB3MBhZPqvumRtHBR7aSF4cCg7guHWSDwUKWedjntMbDg44DjYsycSsTgGyGuPWwwE4MtfgmUBHNN5JxVQZNXQQHz3hLRAPRn6JmD2pjN1WnXbyc3vqxQikgFhuaLzfeKX5wdFMUHXG3hNVE7TJk7bpGKYkVdEZEDkeyF1G1vJetN69LGHaeCwAcRJNoCWnXJXVCBVnnzYFPerRj9rFHsyGi8Tpw15J3HfZMLbzFo2ynXZqd1erK1AeAkUoNEjKBp1sH22FJkLQjtwzsB3bpzor7maNy8q92fVMMM89aRpTaaoy3TvQmXeRL4r21EZfpvvpfv1TQy4BKXtFq5S4oCsyNkfkThMCvbrbFueYFfrFvUjfbWR2zX7nnA33TWLf81cXgHT5VesLuSX9UzpZowLBaBXMTyjs48qgVsVMnjeTqcBBdAybDmJBttckRW3jiaWWsMjJ3SutbzYHLnBFnnNNnadPNUjapjYzN1Vhn5XX3s2A2jfcnwNJaHsWCukF9dqDa7Jnf9p5BENSwSk6KUkE9xk92Ajnya21qWSKNW4Ua97N3BemrPS2hCVXN1jUU8qFdbB3UY" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Why Trump’s 2nd withdrawal from the Paris Agreement will be different - POLITICO Europe</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQVHBFVEU0THRTR2puMkhYUGV3bVdGMmdnekZxVjd6X0J2TlltcTd0Z0NfaHMyWG16WmtnZGxYc0FiUnNEb2VKbHRlLTRkbEdiOTdWYkp2RlZXdXQwXzhveC1KWE1PWVRkWmtmbjBYUk5ROEkxTFJjNUp3OW1xT05oVGRINktMVGJVTXhGWkRSQzk2YzdlX0R2VGY3Y3FxZFloWDR4STk5RUN0WTlBbUtZ?oc=5" target="_blank">Why Trump’s 2nd withdrawal from the Paris Agreement will be different</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO Europe</font></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPcDBLamRFSE9sS3dJdmJGSy1uTzlPVmdvLThnSEV5MzhrWDRJTmc5ZUVqMUJVVEhRUXk2N0xoendxN0V5SVBpU0tRNE1oQV9BM0swc1U1M3VhVm1nTXRicUF6X0xQVTc3b1NmUUhJejdNMTRzLXpFVVktLXc5bklWR9IBd0FVX3lxTE5DSE93MjB5dzNfNlI2YzdJUk9RRFB4NXo4OTRWc2h2ZEt4Q2hvNzIwWU44NzU4LW1xWFdDTy05Y1kzWFRWZHloVndYRGpEYkI1RFh6MUN4akJlQjRudVFvaTdqT3kxeGxIOThwNG1JdG9SOHFPU3gw?oc=5" target="_blank">As Trump’s win tests the world order, diplomats are fretting over what it means for the planet</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbGFkdl9HTUJvUGZwRDBCRVFzdlZzZ2c0MmJSTl9IdWJJOG83Y05GRkhodVB6NkhhUTU3ZDFvemc3ZUxPbWFaODI5ei1qOEUwNHZEekRiTmQ3Z2FYMXQwek9ObjloVHh2YU5xdjFWNW9UdEVhX3dvZU1EWE5PazY4Y3Z2ZTh5X0JhUGFhQ0hNOFNlajREcWNUNkF3eDJfVTJhRVFtbnFmV3VlaUkzRGd5MlpncEplWEl0UVM0?oc=5" target="_blank">Trump prepares to withdraw from Paris climate agreement, NYT reports</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQbGdhRlVVR3JKdUFSdXNpMS0yaXFMQlRFLW1XZWcxTGZJNDFweFBfX2xDcE1VdWRhWWRMdnpVdnFIdFdnTXNGSFcwTTVwZUg5XzdWd1Z2VlJDbnFFTERhVzFyazEwQUxBaHRzbE9ob0NPRVlkTG9IbXNISUhRZG4wRGdVQ21fV2dyNUtXSlNrOTR0TVFsZThhRTEzQUxwQVNwU0MyWlB3?oc=5" target="_blank">Climate Advocacy Groups Say They’re Ready for Trump 2.0</a>&nbsp;&nbsp;<font color="#6f6f6f">InsideClimate News</font></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5nbm50ZzgzMmhfM0hNNFRJUThTYV9tYzRRN1dWSWFYZThXV3hpbzhWWTQyWVo3QXJIcm1zZ0FWTHFFa3lLM2tkaGJDYVUwZlpHZ0hPRHZDUDRxOXBiYTcta2R3elBVZFUyM1J5YWFiQWI?oc=5" target="_blank">How Trump election win threatens future of Biden’s climate law</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=er1tKPWtDshfzQXYbpWHq8UoHCQd4TgxTTvb984y8qmgThBv2SF9wAE6C8pejJrZCJ69Zs5Zh3tFuubKLyLwJFQ9cYyhWcwrE5Hwp8RgMkWs5XJsjEUHUPXWM7pF1P24uTMLSE3j7S4RYd8YMCANN9HuZafboyaeZySUX1xJ4qTE1xeBBLi2wecymrWKAGZRmqDrnu48dMdDCEvbBSkVJ4j8h59yWSQ598emTSBLVGmeFzdFL2PkzE9R9f5qX2c2dSdFXtgNUwhePb7eptjHBRjBtfKXt6VeN9mctm7bLdBx1wHkAqnQKArtkfaAeA3n1PAvNE3Lb9NuHjkhhNsKXjbirnZ16rVQS4LpFd3E9Vf4ruSQ5RozN7CnPaFYG6eua" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">House Oversight calls on FEMA director to testify after official tells workers to avoid homes with Trump signs - Fox News</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTjI3bUNiRUlEZjhZdVhaUmdUVDdJSUVBUG9BU3pkZWh0SUVXUDZXdjVRN3BMMTRBZG1yTkM1TTMxRWdJSjM0cmJfNjNoNUJmdHVxYmljeWxzcUU3aUJRM04tZGw3OE9DdWI1Q2U4cDR5elZ3cm9fN3lJUi1IdkJPQVZXdTNrYjVfRVN5aktfVlhyUERpeTFubXVJVTUySVVjNkdjZjBva2dIMnBmbWVlNXFwZ2tkeTF3ME1JV05hX3JleEFlVTUybNIBzgFBVV95cUxOTHIxVGx5aWoxU3Q4UnkteE5jRENsZHlUcjlONF93SE1tT1lFOEZKSnBMckZpQk1XcVFkakhWd2puM0FMc1FVbW94UEg3U0J0Vl9JSzc0SEZOSDVOdzVjOHZRNVhEYmh4d19QZlhRa2dPQW9fSkU3aFlVSXNPNWl2YnBVWlJ6cU9TOWNWaGxnLV9pc2F6OUpPcGhpVl9JMzRJSi1Mb3pSNG5KWjdfclNGQ0xiYXk0RlpXZWhWeGxobjhrWEt3MnMwRlFBQVZpZw?oc=5" target="_blank">House Oversight calls on FEMA director to testify after official tells workers to avoid homes with Trump signs</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPTExyVm5zVlBIeUdwQm96ckk1LTlfVjhSYlFVZUoxd0xUVTI4QmlPOTVDb2gtcWNZT1BzeU1ZVUk2M1pRS1VON2JTdzlPQnBRbDEwMnZwbTkxWXhUd3pLTWlhQ3l6VDhHRF9qYS1oV1RoSF9JeVFZbzU0MkozeEtsMWs2ZmZPWUZ2VjRERGR0WlVINnQ4TEJnTWktcmtyNWptMHJQX0RxXzFUbGFpZHplMzdxNHgtU1nSAbwBQVVfeXFMUEdBalEtQ255ZWpaVmlWbVFOcnZkYjlkOEc3M19ZamdKMjl5NVItX3dyNzdTM3BSZjZrakFYbnZFcWIwc2l4OGpIcmxXQ2hHYWoxb01ZeDZBeFlJdEpidWZweTk1bWd0Sm9lWEE5TjhOQ2dDUHRJUTNFS053ajJOYWZQb2dTaU9CcENkYmQwT1NRMElLYV8zRWdNZVNZbkdNRWd0OUVnejc5dEk2MWVYUDZtdFBocE15eTBGcDM?oc=5" target="_blank">FEMA official fired for directing workers to avoid homes with Trump signs, Lake Placid mayor reacts</a>&nbsp;&nbsp;<font color="#6f6f6f">FOX 13 Tampa</font></li><li><a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxOVFB6SFhDTVI1bVpoUGROcVVhVk9jc1ZVaC1ORWRtQ1l3V0VLWFh4N1g1WlhqaDZ5SHFNQnlpdlNGTk1rellramdqdEJ0TlZWdU83alN0OHNNd1JpNTlmSUZPRjkzUTc4NnBzal9QSDU2NzU3OFZGQzA2M2xTRFA0SHhOZllyRHp4eXVPX1FjZXl2Q1pqenNDdlhPMy1STXpFeGpnblFxcEVvVzdCNnE0NWJRNU5Hd3NFSWYtbE5oZFBGaEZhT3BvT2toV3V2S3lfWWxQV3Q5NjNVNThObFZWTQ?oc=5" target="_blank">NYT has yet to issue correction for wrongly claiming Trump 'falsely' accused FEMA of avoiding supporters' homes</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Post </font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=Jyk7VitDSvXkn6muNVDDrWjAwJyW13cJtoPY3xKtQSdsNrGLjmik2tWjt5W8cdQxtXCWDMxiULikiGzg2f6ug4rHNhx6X12ast2EmZJg4E7YN55kjGNcQwoEUbCwaJbhEAbYa7rR4kecbBHTMatg3w5MBATU9VkoaNQt6xorm6LrUhE1Mmc6m3U8yv6j7jkg9FtqUCksKrKoWWykrATgyPAtAKWyjJmXqjpVXLdsTu8PLedVwyfConLm55oUkLc462svYDHujVCx7iB4jn5kwCj3dzZDBmNBDTFuBLoUDAJvQ2f1YTnzPEsshdvpryvjVAMwaxmF5AuiJdzcR5FpCovUtnj5npkX3J2famnNZpz91AnQ458pZJfwKcWa3HXvhoBFVSfVYMgVJkxU92A8cuBRLWimwx5CLnTEDtTB9WKBoTGyMhHGiDyvA9frhxoBcN93qfXjX11ETNv9jXZzdY5uJSumHq7Hv4dzACbbU31JK1CzB78mm5cLJRwvsc5hrKtngqH2uxQnSnaX2xxFTvEvgcFb6pHmWK4fnqDyHfigCwszGdsdB4XFZPrRVmjK8Uwd1goEuW4fFEme52ph41UhMHHEbUkiQ9cbDs6TDEECDnp3xdvTPAB3xrrSpumDZipQHedwseLPp2H2qGPqTX3NXt5tQ2GLABUhSXe9ySHMKvnXja2NVixkzGX6TNJoyLgySjTuFnFSQPH6Jq2rH9syhwE4RB7fY4tfeY8nfSqfSzdvmEHrSVgbBtogr7Qb9RwhVMmCtFFK2pxrg78qMDPttUF74erEJ8G5GDXdV4LLbn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/6.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/8.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Washington’s lobbyists are stunned Trump chose RFK Jr. - POLITICO</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQeGM4Rmh5ZTR0elZaeG9VWEFfUFBlc0oyc1ZPTXVrZTVvZ283R0hGSHFBNFdwVk0tTW5LVUlEMGtyRk8yMzZHWGdQbGlKbGtBbEN1NjFUek5RSVIwclpxSFpCdU5oQWFLVHdyVi1hU0NVdVdiQVU4NjVuTGZmUzlWUGJ1MUxYQQ?oc=5" target="_blank">Washington’s lobbyists are stunned Trump chose RFK Jr.</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNeGxTYmgxbmIyM3F0OXBMcFZ3WEdoVlgxNGFrd2dPdG9lR1FzOGpKU0dGNXNUbFEtSzhEOTljd0ZJa3MxSDFWR2dxWm13Mk0xVjYxZjJZR2dZbW5GNmV1aXhtcnR0R1RvTUVkY2s3SVFUOERmbVlpc0RWeTl0SXBxeFNlRQ?oc=5" target="_blank">Opinion | How Robert F. Kennedy Jr. Could Destroy One of Civilization’s Best Achievements</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxNM29Xd3hub0RYM0xrRmZjY1lQT3BldXdzemw0a1o5YjRNc3JXMHJTNFhYdGxMVlNweGhWTWppQktfRGRkNmRoQTUxVnY4TmVHamdrWmJJUVNKajhNMXlpZE1VMlFzRkJRVFdiZ3VnODZsTXJ2bXBvMmF0OWpiR3ZVM3l2S21zN21LTl81bFIyLWQtYzhrSGFj?oc=5" target="_blank">Breaking Down RFK Jr.’s Vaccine Doublespeak</a>&nbsp;&nbsp;<font color="#6f6f6f">Rolling Stone</font></li><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPT19YM3JMZVMyUHhIMzQ3c1RGd1B3Q2gtdXRLQkJoZ3FsRzRQbW9JRzh2VkpYZnB2UDA4eGNGUVQxVFJJU0hEemhHeXNrU0Uwc29yd1A0ZHRWR25ObzdNd2N3WTBIOWNvOE92RGVyRU5RMFYzSFRQUVFCXzBmY2wtcWFuallCdjd6SE9v?oc=5" target="_blank">Global health experts sound alarm over RFK Jr., citing Samoa outbreak</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOc3lrUE1QaFNiU1ZlTnJ5R3Jsb1Mtb1MtTUthMm1HQzBZdXVER29Ca2h0VzN3OFhjTlQwYU9uWmlvRVRNeWFjY25TS08td19fNy00N2hBTksyUENuRFFVcG5BVmhMREhrOGRKUTF4LWpGYTJMUC1vR0hKNUtvZ1VpVjc0d2Z0SXpTUDRhR2xBMDdxSW95X1lUbWZtR1FEVk55bU4yNlBwWldnNWNTUlF1RGpfU2g5WlBBdktrTUIxaVFNdzhLUS11WjBOZGJNUVJKYlE?oc=5" target="_blank">Trump’s Cabinet: Pence Speaks Against RFK Jr Nomination To HHS</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2qM6R7emm7dVG1tBqj9yrEkr8aqUHLX5Gb4yb5JfSp8f7GTPTGtwQaM25LdiH5ZZc7NCc6ieHZJA4s7CWrXCAZCVvpaCgi4LjyGhWQwXLfqsQNNYUZCGirGsF3qfkidercUf81qooRsUZs2vJijsZcxhSQtm9j6UmBKUF19r9oDimoyarroBVRZjSUEYMGVLeLmXnHpiqxiGdbu6YqytrpxLnBpNJTQDkVywskop9kdGEZk2ucuGb8V5dmjS7ZpsWjFMb3VQ1FeiVzroFtwJBfAkmiQFAdYLiZ6ad9xybUxBrR16QemXNVDe" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Woman told House Ethics Committee she saw Gaetz have sex with a minor, lawyer says - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPOTktTkVlSkhIREFiRlo4ejhxTVhoS1FjYWVhZElEQ0RNbDRxUHhIa1R6SmdiRFFlZU9VcW51ZzRpU0gyV3g5ajIyWFpmNTFQWHFfUHdjMW5abEUtZzFEaDJNaFgtcjh4dlVmcHZ4T0dwc0FqY0FhZk1rcHdqbko0UWFZVUPSAXtBVV95cUxNNjkweFFOdmtfR2w1aDBtVVlHRTJDeS16U085bnp5d2NOTmtuZzE5d2h1S1VobkZOM3c1cG5UX3hBUmpGMms5OFV5REJOb1dBM1FNN3NZcWRSeTNiWE5vWThSWlFZcXR6NEJEX0lCcVZ0eHJJTXBhcG1GM28?oc=5" target="_blank">Woman told House Ethics Committee she saw Gaetz have sex with a minor, lawyer says</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcWdiV0NxUjc2bE1CaHB6SkVjTy1yZnBqRWtjbUhMTDhfMS0tMWhxbXF3T3lCUmNqU3c3bXhrZkdFVkdTS2ZwT09SUmswWkUzeC1aeVBsb1ZhYkpvZEF5UHdZRUFUNXdCc1NfWTZpNkR6QklxQmhTQk96UWVUcW0xRWpaUmx6aDZ2M2s5T1NxajExQ1B3VnBmOXFETFZUSUY1dDdnN2JlRXZoQUk?oc=5" target="_blank">Anxiety and dismay inside the Justice Department after Trump taps Gaetz as attorney general</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOclB2WVluWUc1TTNXRUZtLXRxem5hWVdNblVOeG1yMjVkN1J2SXMtNDkwMF9KVzdWdTRiVW5ydDhzdGcxS2I2alFHN3V0b2ZuN0twdGdoOVhJMlpPcXREa0pkdG5UaGVTN0R5emQ2LXFQY0ZIbHY5TE11ZzFURlFxYlF2Ym9wdXI50gGOAUFVX3lxTE9UOWxWZXVqWVdxZUJ0VzQ1Q1dUS2JnWG5DUWFZVjFYOXZFNndFQ05Kb20tMDVUcjlDWXJPVW45dEUyNGFvS3RCQldzZTBzenVFNlcwU0VXVExjaGVOQm5OUXdYY09WcWVJQmdBMkxfa3g4SDRVNWY0NDZheUFfZVowU1RxczZwTWVZRFJqdXc?oc=5" target="_blank">Former House Republican says Gaetz nomination is ‘a bridge too far’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=877gewXiyGXQZYJB5724TMpoCUCNRuKHZ8DHi9NxPzpYTGDVkj5p9pmrcAyaiyTaU3awUoQr5YpHy4GJoCCkcTjDX2DDS1y4V7m8jDLmCWNVwUQrVCJs2VeUD158DSQsMUvaCUh9eGZqbxdQoYGRDQy5Rj3cugvsxeg4UFN5djv5h87s16VWv4d2ti3tDULPue44yf3ypGwxJnHjftEaJpFZtkqFf7xXSDhDBKYpdPQucFCKoqi3uHmdRosXnFt5K78yHXbdeSFoyTfLe6t5ec1rTULGfF2EhVj9XnvyDjoJKNVd8mNhjn6NepMhKU1ZQPx51WXroMSXhBu6mcnHWUCHxvzYFQuwtMpj3k16q3HiVXraY3wAxMznvMejQQdYT1rKcLMsYuECju8vbBjEWcV1RPx6Czc7yad2BQvo4S3ZyJWqYgZaxFLPzpyj4Q3y1DfpifoH5WUbnr5wAnQ73CZwn4ZPiXSFALFo4jQey31Q2VoxFSBuXsgQgJecZDkg7TyHaYrFALvBbP2hNXsmCZ8eg" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Mass detention and returning migrants to Mexico: Donald Trump’s plans on immigration are coming into focus - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQQmM1anAxYTFmaVhoSmpva3czUGR3dHc5X05UenJSczJqbDdPd0RQNlJ0R3REN0tQTlZRMmxEVVRsaUhYTkVRUWoyeGFjTUJ5NHpvai1kU3VuVDBFTkVUbmhYdjhVY1hrSFI4N1ZrWjRJRzJlYVhFQ3l1REZVMGtjRlA2VVdmLUE50gF_QVVfeXFMTzl4U1lXVlFTdy1JN2ZXVkxPLVgzX2JZQU0ya0ZId3NYU2FWRGNJd0oxVXlaZ0xKU0RZX2lrOFdzbS1tUDhQdUxaZWVQekF2dkc0cW52Sy1DSkdGa29JTk1MMUhzM1h1Q3RSdTNJZEtyajhFYlhTS2l4SGppck5oTQ?oc=5" target="_blank">Mass detention and returning migrants to Mexico: Donald Trump’s plans on immigration are coming into focus</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPN2EycEwwcGxGcnVFQ184ckF3UXlaazYzLWUwSEpBT1JCeElUcWpQWEQxRUZFVTJlTGZFQkJ1eXJjQnlLeDFKRkdab3dheU5PUm1BUUt0cUUyOEhtcVl3ZjNaeDRHREhQcVM3LUw1SEhyampqdGFRLTAzMDBIdk1kNTN4Y2tCS1Atc283SA?oc=5" target="_blank">Nevada unprepared for Trump’s mass deportations</a>&nbsp;&nbsp;<font color="#6f6f6f">Nevada Current</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOMmwxdEdEeWFEV0U4VEN6SUN2UzNzUzNJTl9OZ0hUSW90YkMyVm1CSXU1aGR0YldVWVlTR2dtYU9TRFVaeEowaHZvc0x4b2pTZEN4a1VnQ2ZobFRvd0lka1ltZ0R0SThqVzk2bE1ra3dKM2E5Z3pzMXRfbG1MdEd1Rzl3aEZkUHV1MFRoZmZ3VFZvREJTSDc3RFl5Y9IBoAFBVV95cUxOS19oUFNHcnYzX3d1S253UkRIQk1IMkNTd1I5aFhRY3lsTlJBN3FuNHlsZnpIUE5KVWtxeld1SVJzVV9reFZNR2pSRVVfQ2tTRmpPYXNKZUgxN012Vm9TeldVelp6TklWLXpreGVFV295aDlBSW10Ynd5MkNmaUtldHdmNnRzZjBSTURMelBIMVhIZ0ZENFEyQU5iUms2b3E1?oc=5" target="_blank">What Trump's mass deportation plan would mean for immigrant workers and the economy</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE50ZjNqanhBc2djSGlaQXpSU0w1emRPVm5DeWJ2cTFvWHRoSVpGem05R2RvdExsblJyUDlBZWhacGFELXpvdFY5ZmRVa1IyczBCNEtSQ29OMV9CWjFaV196bnVubFJPbXV1QjlYMnNNSmsyRXNvWW40cm9JNVVKQQ?oc=5" target="_blank">‘It’s Going to Take Everyone’: How Immigrant Advocates Are Preparing for Trump’s Return</a>&nbsp;&nbsp;<font color="#6f6f6f">TIME</font></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNbDhPQnhFTGhjN1pqa0NFLXM4Tk1SbkJSdG9BOUNISWh6eWdLYzRLVDVFNDlTNFFyYWdlMGNsOG14blpXQ3dKVGhfTXB2TmNUa00tOVAwYWw4amYyZ3lpeFpJTVE1M2xjSHV5RFNxNWJmeWMwYWY1bzhIX2thNjVpWU95eTNkWkpud2ZfMUstUVNvNVhoX3c?oc=5" target="_blank">Trump’s Immigration Plans Could Bring an Economic Toll</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=8n4j4YUUWiCYuE7wPBzXFF4rctejxA3V1JLNJgWuqWzrMv5ggdtSKMA3HxURnd8oobpZYQfpyjDSb5KD74if2QLULEqt7hHomGLpbYmSLqTvZjigiUQuzSsqYbjQMR6sps42FvTEnJToc7G1fn1LBSdBwffdzC77PDcNuGdqypshKXTSWd5hgmkS6um3eLxtbcL9H6rh4ucpLpFwpCToNzvpUMwdBAHzqJ78nkbJoAuv6BcZMvap5UqUD8qPQX2yeyQm3wKuCHYLn9z5Rsi5r6Zewuoz6JJSZJztQqUabm36mxryYxz4vrtQjst851M7csApDPe99K52yxNV7zpyYnZEnLakhcr9LVXwnhVXjmngfYEMksLuJ8joNyZ9WX7moZud9uBJgsEXauZBQZvWqE6oD27X7Wwv5P6KQtYJSLmh7QT4X9Yx7XkjTCV3iVig2dUTQFe6mXYjmjqH7kjCXHYivkiGHb7FDSbPjTB65fR9pUV6QfAjXxieXLbBBqmMoTW4JvmZZTuhLwByr9zFac1rnkLq9tUDpj6Dv5si" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Dem Rep. Says Tulsi Gabbard Is ‘Likely a Russian Asset’ - The Daily Beast</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxNdmJPRTBrUG1MOGNuWmkxY3FIMlR2WVJzcWVpQTdqYkl4alZvUk1nRlliQ2diRlc2OFlRc1BiVmZRdW5qMThIRFdpZG8zVFVOU2tlRV9KWUF5cVE4SVR2V1ZOWndyMVI2LUVZUmxmMUs4c1lqRC1TRnBpRGI4YzlWc05rRlV2TUM5UDctOHRPTmhHS0hGUzcweG1jRktlQjZXdzhxZEpGcHVRM0pJZ2M5dDhB?oc=5" target="_blank">Dem Rep. Says Tulsi Gabbard Is ‘Likely a Russian Asset’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Daily Beast</font></li><li><a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxObnZCRkVGOF9DbFhVMzhkVXM1V0FQT1A5cHJBUlhKN3hhR0lGWEhZc2dvM3l0d0lMb2lyYmxQYzZOMUF5TUVUbmdNd29NQXlXa1pzS1FWdVRXWlpLUGJRckFaMkNxSF9HYjdTMVZXVVc4bGE2bDM3TnZhUkFrSFQ1Q3c3c3k1b3U3N0EyLUd6SWY5NmJSS3RGVUNuRXdJRmplaUhVaUk1QVlnZmRsN1pJWlpFbWZHRElmUGYzRlRxa2tmU3h0R1pWbjYtOGlRamtQbE5V?oc=5" target="_blank">‘Extraordinarily dangerous’: Intelligence community insiders warn against Trump’s DNI pick</a>&nbsp;&nbsp;<font color="#6f6f6f">Defense One</font></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxPbmlCeERvT01Kc3NGRzVvcXZ1Y0hIY1prWDFUbGFaanNSbjVsMXAtSGdlTGlOaV8xN2lRd3JnMFVZUm10ZjNPTTVZLXliWG5xN3V2Rmk1cHdfdGI1MWs0R0g1T1lwTW5BR3B1dE9PQlZNbVd0eWFoaTFlejZZSzNJM0N4YjU2SFBtTGJiWl80Q25BcElHOWNNU1BuX3BEWFhZdVpuT0lR0gGrAUFVX3lxTFBjZHJUTmZuVDRkNjFrckthV0VmQ0IyUjEtZXREb0c2Z0VoMzBrMjJqNHp3ajZpX3JFeThBZ0RRcjdZWm04a1RKNG52MEMtZjQwb3FLNUFtM1VFa3dNYlRiZzZ5SFVOVTN1LVhDbkU1b3FfaFQ2T3Npc2kwVjZCbV8xblJDWngwVXVpNGNiSTk0SV82LS1CZ3hGUktSNEtiZmc1alJPU1lTWnNZNA?oc=5" target="_blank">Wasserman Schultz sparks backlash for claiming Tulsi Gabbard is a Russian asset</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOOUNvUUx1NTducTYycEFDa0JvcEdQN2I0VmpEOEJHZmE3OVB5OUp6OFVTaW1OaDRnZE1BUV9BMDdneTZ4cVZDSkFPeWpRRHA5RmhHZU5TaEtia1ZvOHduaUdhNmdqcHFDc1pUei1OT09IU0c5X1NpQkRLSDNxalhDdXc5TWZrR2VpSVQ3SGxiQzZxcXhyUHhFQUllVUR2U19V?oc=5" target="_blank">Why critics say Gabbard is a controversial choice for spy chief</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdnRTcjNHbl91SU80ZFg0dTVyMXZEX2lKOHdocXpfcjNMVFMwQ1BBeEFKLWhDTXQ2eFRNLUZkdXhrbmcyakpvMkRDeVNCYXN5RjMzMnFaMHZSeUdmSGxVM0N0bElERGdiSWlCTUhKM1BDX0VnVzUxZ2dUTTZ2ek9VaHJyMnMxYmNyZzlmMUtoUnhsNllpbnpLbDNkeDBaMXdRMkhVYm5ETkM?oc=5" target="_blank">Opinion | Gabbard’s lack of judgment and flights from reality are disqualifying</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=5GeQYkdkTVXgxgVHsSEHZxbqkG67iHrSFZKPg36ToFmhWthgxxkB4R7cGJnhDmkfj4WzE6Jad3FaP6Y5M4uTPe8XjJQGhWUGyyJsmwodGpwMqdySYR7EvaTXoWZKbhztZJGZ3GoMRdRTyFr63Um6owF3TBfUu9XNGizzUapBpNScSryWsZxFVQZtPJEBMB4WoubkN4t4NQRF4Ju3BRe6D8BHS3UKqfuMA4CrzHkkbTXUZkEFgZG8aSYNWVZjVfTnEUEaceYkyrv1se6QGGuSYPksokFH8f8LrSJaE87ZgYZ4oQV877yK9pJN5LCLBADWZbDzmHCzbutJ8dBr5E9wTpRaVi3cxzukSME8JcBmoM6kwMEb4g8ccGvr8wfCwxWyvzQHvqJ" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Trump Pentagon pick Pete Hegseth was investigated for alleged sexual assault - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TdnNMZ1NqQnppdjFBakIteFNmWEduTS11b3pnUkgydzk5MmRLR0lKSGFtb21hX0JDMEQ5cmhYZ1BDUkFOSlhEaHQyM0FKTUdvWTNLRkZwamw5QdIBX0FVX3lxTE01dS1vcjJadXJxbml6dk11TGlRcDVkQm1fcjFTZTdWdWF5ZTU2M1p0dmRTT0RaMzA2UWlnZkFLOENyN3g0UVlVMTA5LW5uTnllWEwxNkxxdk9idHNrMmVV?oc=5" target="_blank">Trump Pentagon pick Pete Hegseth was investigated for alleged sexual assault</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNQVFKak5rS19iODFqTWw1anl1V3ZLZHJfSnRVdXZGNjEzUEZLNXpSTElQVzlPcmc4T2JnWFNiX1FHNDVpeDNiNTVFVzlIVnRZSks3V0dabXlza0pWeUMyUDNkSVpTUlZUS2NBT2Q5cUcxUWxxaUhJcGU2RXlOWl9UTmNyZHVENC1VMXdvYjhLY1nSAYcBQVVfeXFMTTlqRTk2NENQZTNvbnZVV1F0aC10M2J4T3dUOUZkUTJBbm9oQUMtaTVEZV9LRUMzZDlFOXRXVlNHcVVobWdZd0FKLUhnTzVkUnRmU2tWbExyVjl5RnBrNHdWVzl1ZUxtV1pHVWNKM09YZW15OG5xZDM4S0JMYk1xVHljbFNrRTVR?oc=5" target="_blank">Trump’s transition team caught off guard by Hegseth allegation</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdHdD4qCp3FpExpPXRaruWvFfUxQosDeQ88HFjtqE2bRpyVUzE4JBt9ZLNy4uoPubjNJHY49BcJ3aDQZHfAbEeeYQgvmhHgv3QmwgN7E4KnDD3eYC2GLQSPdXWnNHScATAjYcLwztPHqxUwvEGyGMfk1nPErA1xNBWVyk3BdKeVtPvASCRi4wiGCYYgdghn34bpSACxWMceWUpFrb66kZmuQgsyhfNhPfJqNqnw5dt1H9TS9nxfe2ZeCH6Bi8y9v15EZvwYZLs5Jq2P87MB4UaxKEEiU8neZmQdAjko4s8WJffUJT5n2j5MgqR1ANdfHqTAkoHwMn2eBsm8m2k4" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">After Trump win, Illinois providers report a spike in demand for abortion pills, birth control and sterilizations - Chicago Tribune</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPLTVKU0laTUVCZFJ1QUVmakNiUXJJMHpzN3pYRlBiQ2tOdTBPb2QzXzFGTHNNTVU4bkFJLUd2VTJUZE1hYlR3UWdIMDVtVTZYcVUzSHkwNnRUZzlJdm55S2NNbTRrNGhudHlvWUtFem16cnMzN29VOWc5YzZWYWpoc2JfY1g1LXIwY2t1bzFCWktmWXIyMDB0Tg?oc=5" target="_blank">After Trump win, Illinois providers report a spike in demand for abortion pills, birth control and sterilizations</a>&nbsp;&nbsp;<font color="#6f6f6f">Chicago Tribune</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNVFRoOGpwSmliZmlrLVppRmt2azNNRXh5TExtRnZOZFE2TEtwR2JJOVVpcnZuUFBTOXZzai1mUHlyREZ5RjBnc0stRmFpT2l6N0hKbUNKSE9vVWMwSmlFaXV3d2hmcW9TLTd4WHFEQkIwcjVIaTFMckVYSzRrRFc2UE9WdU1EOEsxTXhzRnhfdng4NGc?oc=5" target="_blank">Morning-after pills and IUD appointments spike after Trump win</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS News</font></li><li><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQY3VPQ2JYU0JNbFVYRUJabHB3UGRuQVNTY3YyS1o4NFlZd2REdjY3S1R6WTNsOHZxMEJCT1NHVnptMEdKY1BHN2RfTWNGRjdjSFAyOVQ3LUdtMFJSdU1IdnFFZ3dnR3hISi0xQXM0ZV82TVlmN1BCWmtvMmxGdk1BSnRWVWVRa3NpWk9xWnRXSkR2eE9HSEdJbFVhY0tKUHp3NlNKaTZsaUtXUTBO0gGyAUFVX3lxTE9xcU1YcnZORWRUbi1kdmFOZi1VMTJYdDR2ZTJmRGRIek9tSHVKdkpMM3F5UkNwM2JxRkdRRVliNWMwWnR5T1J3d29wX0VWOHlfVHhURGI4UHJDYlVIbmJpcEx2bl9LeXZHTUo1OGQ2ME56UlpaMk1TdENUU2x3c1o2Z0NZRHN5akRJUGI1RmNHdk9CNm5zekFnZFJzQ1BnMUlTMU1xUUlBWWtZM05mZHZVblE?oc=5" target="_blank">Patients are stockpiling birth control over fears Trump could limit access to contraception</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNcWJNS25ZRHNuMF8walFhUjVzbmQySDk5LU1mS00yUlhZRTdCdkFxOVg0bm1TSW9MdzloRl9zYklKM2lzNEowUWpQS2doS3NiRE1YRWlKbGxaNGdYMHdzS0o1WEY5SmhRMzZPN0kxN0JMRzk0VFZUYlY2cDE1RkdESjBPV01oS2IyQWlvenRtRkpkVS1m?oc=5" target="_blank">Women stockpile abortion pills before Trump term</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=jnusq1Poy5a6oMrDS9vy1BaHmowQtmyzG9SXC4w33VGLoNFvdrVpTvQ9hxPHU9cJ1b1dwDbT1bh4LKsK4SP1uLKpmNVBJRZNyR4TtGPRJdMu5nRc7N3bQe2pYcgZsvACXLoc55tDk7LJfFLaCr4shmJzBuBUg31rxwSpy1LNxB4FutvmmeVTDDnVsCZ41HhRTTypYLvtrDwkPkaMfN5D9vzxREvQ7bwNx3uwfSf7VymRsQm4rJv5NDeP5SnJEqV6WK4ARNMGxL8oV9uvfEwUr1hzpVq2qtraV6rbLV3QzppMAhGha7AM96YXSnPo2vVS9L6YRnyiJh8DxMbQ6P5gU7Yp" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Rudy Giuliani turns over his 1980 Mercedes-Benz convertible, luxury watch collection and a diamond ring to women he defamed - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPVGpRZVF3RUU4MkJDTjlTRk1jYTB3cmh2V2pzRjJqQ1Z4VEF3UzlVeGN2NF9uOGtEQUZtb1V6YVNJZEpvWFZEazVwdTR1bTJMZGtOejVTc2hfMUl2S255S3ZfV1NGSGI0MF9zSVZ6WXdfczRnN053dGxFcFkzWWJDa2pKTXZEX3hZb0wyS3lMZUJwWnRtYk9PbVRGb0d4YUdpcE9VUUhtOE9sQXPSAaIBQVVfeXFMT0ZESnU3QThSZkhEQlZ6V2pkMFQyZWFZSGc3WHN3enVLeDhUaUxUU2J6UXBHTk9sdXkwSXhuandndWJCTllLTUF3dzdHYS04MTBjX0xkUlFBVzNkVU5qTnhCY2stZEJGQ2xmYVZ5Q0xneGE1Sk5tV3lVQndLV2pYRkhILXFzLVB5YlBOSzhaSnhLLVNhMFd1LVc2cFFWbVBaMHZ3?oc=5" target="_blank">Rudy Giuliani turns over his 1980 Mercedes-Benz convertible, luxury watch collection and a diamond ring to women he defamed</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxPRGFyRDA2NmRTMXhGRURsaEJVYmdVQThJU0pqYVBhUHR2R2FOVWlBcWNZcnlmcGtiSG1keGRsd3dreFBycE9yNkI5RmdIaDZaQXVFRkhJbVFyRS01Qk81cWwtMFc5Z0ppUlJmMnJ4OHA4eTZWT2FTTW12WUlCUHdiSU5GVXRjcFpDMnBFSzNraw?oc=5" target="_blank">Georgia Poll Workers Defamed by Giuliani Receive Some of His Assets</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOS0owN3lUV2xxMmFYT2NXMHlRYVluVDBBVGhIcEVETU5CcHFEOVdVT0Vuak9jZ2JoeUNCTGJkcFc2NEZ1YVRaWUtOQU1iNFh1bFlTYzBETVBzaWI2RExjTWFrNkxXMGZPb3VwcjRaV1FGekk5ZGlGeWp0MERJdzVMMFBldmZwakROQzVfd2VieXBlUk0yUS04VEdKWkxyZktqQy1tRHpCcVZ1WVlvNEVVbdIBtgFBVV95cUxQYlZUNjJqRjZvTFNfSGtYdkdSSWllTV93ckJUUFlvQ1R1ckVBUE9WZGRPRHFqZ0FaMktEZGhzVHFja1BHY29uWGd5TlpDNDJIUkpITUNteWdkUkg3elZLWVNEN19rZ25ITUpiR1RrVHZaSVVBckI2Z2xISy0wUDBPZkdudURQT01jT1FUbGtGSzBXQnZvaGpDVDNFS3V6d2JPaEZmR3BpYTdWOXJEaGtYWWdILWU1Zw?oc=5" target="_blank">Giuliani turns over Mercedes, watches to Georgia poll workers he defamed</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNMEY1cEYzMWFBMHdwRTdBSXpjRVQ4S1VqaWd1V3d5bE16U0N3S1libGhPMVZreE1lVlhzZ1hGS3JBLUduTmZKMnJZMF91ZTRTQUdUVzhVRXJUN2xrM3VIdVJKUTB3NWRWMmlwYUsxS18weDBvUG01NmhRUkhEMURnVG13?oc=5" target="_blank">Rudy Giuliani makes a down payment on $148M judgment</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=cCo4Rdry5J77XqLEKeBPnhr7RrtdxTZQfgbKYRpMkUFSNnTGzAfZaxqUhUfu3jGFfaHVheDk33btnjXCcP7yUKqhkEYBNjPeUfhqPbLvYp8x3w3JSt5udM24s6cBUahsQiUQf4YWA498HqxzAZbF4NF4pcqM5tQJM5Tr2fkGC713qT1XjLzmoFDbiLmstDpsYRSNTSFkJMnWHEhBVH2Doz6W7ewKh3xMj7iLv7JVErebs6dSsWLqMt6ZQKmt7DHAZ1DHHy9CYFUri7MN97Yi6CFs9p5Fo1QkdDHfLkhXGcAj3iMSzefCcUiaiAak71mLbFpzC3BfM27529ZV9AeNcD72tERChALeA4MvsYXo7uMay2hNY5ZWF2bNM6MAvT2ch77EBcodAXyA5UH6nqByPVttbpJvFU2yE2eq24Zm9Hcz3j2pEKXHJuzmbFT1CXQXTZEj3xJSKPukgLdswDwCL7csmtKsSBYHuU4LgCJoWhNu5UsHZicXWj8U2EYBPJ2jTcvhoNUwVHetvMQt6AG1XUhJZaC5P6ZLMXVcGKR5iskWLpZQHHYburLEMVn3pj1LFg9u4tzrUNxUgvcJ6GocpoNLWhBqwYdRCwpT2vDvsKpeCErz6WBBNAnUsgPfGjP31uJSTsf1a7DDmtF2rGRZYVAHmDvyGc2UWriw3aGU" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Prosecutors share how a smartwatch left clues in the killing of Laken Riley. Here are the key trial takeaways so far - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQVU5JRVNPbnBya3JjMEkwUnI4a09ncW9XTlJkdEdqTy1RSG1Md3ZRY3R0VVlrWFJCZkctenhIT3JUVk9wTFZ5MG5VWDFVeFo5LTVYYkJOZXg3M054NTlmM1Y3Q2FncmV4SlIzWC1wUWZSdmlIbXBsVWZoY1p5WWFpVW5rWXJqd9IBfEFVX3lxTE00WDFHVGlab19nNDVRbDFyaDg5dkE3anU0THpldUItVGtBdXpHbFJJWU12NVBPTVZDUm5SNWxDdHhGYVJ4MmVKd1lLUjhQSEllbndzQnhWMkpKd01LaUNKbngtYWVjTUxRTWtyZGppRUJCeWpwTWQyZUJQWnk?oc=5" target="_blank">Prosecutors share how a smartwatch left clues in the killing of Laken Riley. Here are the key trial takeaways so far</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RV1lqeXpIT0ZPNXFtVHQ4S0V5UEtCc2pjR1hSYy1kSTEydE1CVWhwVVZZalFYaEhGWG9RTHdNT3g5R3FUbVBra0lKY1FTOU94WTJVNkVR?oc=5" target="_blank">Laken Riley murder trial resumes on Monday</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxQX3RhM1VnOHNMOWtaZ0xTQWFHeXlYZlhjR3VUM2xzMkY4anBCOV9pTGlJZFRYRDh1NWx1d0JxQmE1WF96anUtdlJXdU5hbEtKWkM5MUZOQm0yMFZVWUpab1psY2Y4TjlqRHNIUWJ4UklnaDVBN1c4Z0dialBfYXZxQTMyZHluSWswT3haMjNfV09wRTRocUU0Q181UWZFanc0Smc4TUZvSHpHSW95WmIwTlBKckJUVHYwbGVZRkhSaThMX09GSWM4TV9QSjZfMmM?oc=5" target="_blank">Prosecution begins case against man charged in the killing of Laken Riley on UGA campus</a>&nbsp;&nbsp;<font color="#6f6f6f">Online Athens</font></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBZbXg4LV9aUE1YYVpmQmhQR1hPSDE5ZkJxbFRoM3NyekhieVNIbTNpRURlTGZoREJHQW5LNUFmZVBfMDRFaHpPekZ2ZkNtTU1aOWlVdmtXalUzODV6SEUtTmowOTVndVVkbDJCdV9zSVNueXJRODdickl1MXlKWjA?oc=5" target="_blank">Trial begins for suspect in Laken Riley’s killing. Here’s what to know.</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVkVPZkJPLVJtV0hLTng1VFJEMlhCdzVPT3lVaThfcUpMNmM2RUljMU1OQmNIeXNjWGhuazhIZlF1aHBaSmZNQ3l2WnlVRmx1aTZfODZfWHQ0Nk5xXzNsR2JXWVJfTnREdzVteWdzb2hxSDJFdGVzRzRQMUJuUmsyTTF0Mm91MFFhNmIyVk5NV2xDTzRnUG5pdHhjaHZVc1kzUlpHMEFFOHhDQmZWM3ptWFI1Q09FRnRuWjNXRTFSel9mbE1pX29zT1lkSEI0cmw3cVFkYmFjQkQ0Y0xYSHhqSXJ3?oc=5" target="_blank">Murdered nursing student Laken Riley's horrifying 911 call played in court — leaving her mom in a flood of tears</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Post </font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=oVjjemNgSoZYseJyaXnZSsNgRYDQk8YFGhPwWXYYZbuJRYYiFHKpPu2x7hkqQa9UD497CNJxMZvGPeod8Q6zi7MJg8pVr3zrRc75oSWVWiqTjahwYdb3Ve7V3wyKB8ZAxVJebVVbSNFGz5EyCJUsPL1W2PM9VYCVtoouFqJjoe7Kr7FPwScgEw64JKYuvugipAhLKKzMWecrL7osF5Jtsq8z26bmU52k62AwDQMLDUTVs22CFA5xAHxjA5BVvazbYtCAyDTmGBFw4iBBTx2BTEvvE83csAdY9XgX8xkVUzLV97r1FbDkbp2Tq68gQqiXBecgi9xh9UPDf6JadjsBvSATPrVR5SwgqUqMg42Dw1dHYoaFSV5eUsjvLyPZu7kyAirEx6FfvJ9ArYcimj9vkbDGpXqeACP1iwTMenRf3TjvcKe18aQ2x7jrtLgMsNnCr7cJMHzX9PWTmgp3ePZnJdVkw9wxaeRXbBrBhVhgxhj1jPZ3aKb4tEiX6UsgPAqJKNLuSMwtVU4xLnsPkf1cE9arNRmyvL" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Trump may start his second term with a stunning power grab - Vox.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOMENSRXZJbENIdU10Tkt2RlhrTlhPWEVoTkhWTUtQZDdZdjh5emFmWm1FTWNlQXF0QlBSQVVkQThFb3NEbTQ0NWdtRFpsNEloVm1mYWhYTFNQWTY2N25UMEF3ZnA5S3h4TWZ0b2tkbG4yc1k2dUVDU3MxMHYzV0hnR3FhOUlhbXlKYmJfZmhYY3diRTI0M1h5T2pB?oc=5" target="_blank">Trump may start his second term with a stunning power grab</a>&nbsp;&nbsp;<font color="#6f6f6f">Vox.com</font></li><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQM1NLaGE3MHd2bHhPdEZFZThSVF9xSENnNWh5THRGdUlseGpVQTlzbUZuX09yekhseHpQcXBObzcxX0cxLWg1dVRDLU83QUFVNWtRQUE2aFRlT2lwV1I4TXV6dTV5Ty1tUzdHblJpODF2TTVuR2I5ZTlUZ3VHUENXQnVnTXFQd9IBiwFBVV95cUxQdTNGWGpvZzU4bF9tN2FpZjU0UEVobFRDSXhNQ3VDWS0zWWJyYVI0WldZbDlfQ0xMcFlIUkZkMHJWd2gxdHZfblhDZDZocnBiaFRudFVQN1FVTUUtblUwaGk0YkVCNHNZdF91eE1iSkZJWktBWXZ2QlZ2Z1hoSHhubVdTanh6OFptSG5R?oc=5" target="_blank">The 6 Republican senators who could sink a Trump nomination</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQczBqaEV2UHRVQU84NnBZUHpmdnRUYURSc1RMUW4zeWN5TWwzUmRHVDRGdVVuNzJ4REhJckNMNFNnSXpsYlR3SWx5S2hMY2ZuWWxRZXhfYkNwa0ZJNHdOajQ1YjV5UWJ4dzN6T2hZNW1XVVJGelRON2M5TmhwQVpVQmd4UldtcUhVb29adnVRTkZkYVljaUVqbw?oc=5" target="_blank">The Disturbing Reason Senate Republicans Might Greenlight All of Trump’s Nominees</a>&nbsp;&nbsp;<font color="#6f6f6f">Slate</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQdXQ0eG42RkRDa2kza25jM3RwUVpIX29PUE9oRzI2OEFGSlBvUVZjbWhCYWpEWXBVd3lEVGxqcWlRRTE4ZkJFWVI2bHItYTNsZ3VoRzdFbUFHX3JVa1V0aXRqc3Fmejh6OGV5cGRiM1ZKa0FxN19ubHA3ZnJKS0dtZWxxUXFlb2p0d3dEd3Exak1JQ3M?oc=5" target="_blank">‘War on the verge of breaking out’: Trump allies fume over possible new Senate GOP hires</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=FNeY1coMNULBZhozPrDFnNgzqUrPrk5pAg8PdSYqV5KVwgyxJwJo3kDWM3YCLzuPtPn4ChrCLs4suJ4wCw6SGNzfeX8wiQCD7vTS6LgcLYYUBLN6QtpkNnj5rnvSD7njHLHRmiSJBzxKZyuC7VTgpQvNkBcHvVKLGFiGuuHJoSdf54rBqa3vftDWfnN7QmZGeDJS88b9TMYb1iHahr2rCtmiGtRtVYkAi4MsV1jWqS2tX5yqpL1dPik3sNLX3H3i5NUr1dCKGSzGPc1qqHt9AtoujwFsguEbryb3zdJsLFZ71xqXTRZ6gCLjja1MH2F12i9vBrQ2hjEHzXDMA9o1ZuhunMz" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">DOGE applicants will need to pay Elon Musk to send him their resume - Fortune</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPNF9INzRRYTJiazVGdEdZWmRxVk1uOGRfbmMtV2VKUzhOS20xR1p4T3RjMDZvNnczZzh2MVg2cVVZU3drNDVuTm4xREZhYnF2RDJKSzRBcm51MlpOcy1mdlhQU3pnR0V5cVhmMUUycXRGVkhjR3VmNnRnWDNtZkJ6Yk9yOXlhaFhDV2RQaTR2aWxDbjcz?oc=5" target="_blank">DOGE applicants will need to pay Elon Musk to send him their resume</a>&nbsp;&nbsp;<font color="#6f6f6f">Fortune</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQMFJiY24zcVcwWkFGbnRtckFtSFpITkxzVWZHeWpHVlp4azhtUDhvTjFRUjM5eUl5QXQ2dTN5U2tIb2s1T1RjSWdwY1dlSDh5Y2d1VkE3NHd1SFFkdEktNU9vZ2V1UTZKWXVpeWZPRGRySm5ENVZ3TFFvUXZjVXV4aENqSmFUZkRPQ25Pdjhnb3FHRWFiSDc2NmJwTHNwQQ?oc=5" target="_blank">Cathie Wood says Elon Musk will succeed in his audit of the federal government because he has 'more proprietary data' than anyone</a>&nbsp;&nbsp;<font color="#6f6f6f">Fortune</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeC1CSDlpaHU3aHMzQm9VRWEwTkYzSXEyMEkzT3BDbm9GeENHcHNvXzBPallpVDhTb1ZuZENnRTBjczBJU0NBY19UOXVwM2dfSno3bEw1R2FNcTV6ZnlCOElWWWc2Y1B6clZLbkV0RGx0R2tMRm9nWi1ZU2lEd25UTjJycE04N05y?oc=5" target="_blank">Behind the Curtain: Musk's bureaucracy-smashing plan will hit reality</a>&nbsp;&nbsp;<font color="#6f6f6f">Axios</font></li><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNMW1WXzg4cG9peXpFVnlnVTUyU1pGdWhYYlNqbWQ5QmQxejgzQXlRdkR1UVoxbXRabDZBWEtjX19DT2hMeUNEZVlxSGpuSy01Njdub1pKdXpycEN1SV9fRDVtWjJncE91d01acVR3bmE2QkpNdXZVV19fUEkzQUh6amVqN0ZGTVNnakJlTUNnS3N5SlRnY09XVHlpc0l6cHd6TjhkdlhLcDNPQ2JMaXc?oc=5" target="_blank">What Can the Department of Government Efficiency Do?</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeUhQWWJZNF9wN015OHJ1czB1S2t6cVVKcXVVbHhvN2FyY0h6SldLWkpNck5URFZpSUlwSEh1eXAyenoxQUVodTBGYk5Nc2YwV1VxZkR4Q3J0WjQ3Wl9rRWlsWEp0UkhWSlFXN2llQnVxclJENzJBdV94WnJDR0V6M0VmQ0xyYlAxWUU3bGIwZXZPS09NemtCa09kVHJ4bjVsaUI4eHNYbVJObGNCenpXRTNOQkdOOHhM?oc=5" target="_blank">Before Elon Musk, Trump tapped another billionaire to cut costs. It didn't end well</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=LUCYMssPjPkRDxpm7bNFUnSHVBKBrqNJ4KcAQoxGjaaTfJpgrDkHnDQuRNmnFYuZce7azKzKRrAhhV96wXsdrMgqmEWYRALLv9bEq9cKZ3VMqLuqmT5vaRFyCeKjkbDBpRBQdAKDtX2xbGup63SbcwyrcWxamuE9hFoyu4Ak5Y3bAabtJVPzJDhqbNNG833nzauPkfTWR8f3kggPpS7mfYJYDXUHcqFnzNWcxjREctEVTEDZCMpEFRqPQA4rwy69GHYp4HxeNDB9SozFsvBy38ELzyDij9jysovdLvXXF5RqKHavr7FRSjDLESBjZ7HRXh3xbiDHGNZfLi2Y" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

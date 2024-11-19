@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616641606962436"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/13.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/15.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Google Lens can now check prices and inventory when shopping in the real world - TechCrunch</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQSXZPOEhqdlN6dU5LX0tRRWdwb09fdmhaNlJJX3o3T3U2blAtQ2s0bU1xMG9oZGVqRm0yZnBaazVCT19Hcmo1MTZNWlRiRzlYSkxESFVPWU9ER0xqdnpNSnQyalcxSDY1anQzUjZlam0wTU5SS2RlMGU1b1Z4YWN5bUR5TGQzYkIzckNHMmtoOHlWTU1neGtFZ0FEdFZfV2JDc0E?oc=5" target="_blank">Google Lens can now check prices and inventory when shopping in the real world</a>&nbsp;&nbsp;<font color="#6f6f6f">TechCrunch</font></li><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQcGdCM1IydEZ5UkdoV2NCamV5MmVDNmlaWnFtb1J5UzJTTnlKMTc5YUdfNGlvWUhkZGh5ZjJBbjJwRWFET0NXdXo4ZlYzOERqU2VlZW01aEdxWWdGYVdtaHRKZkJpajVfZGRUTjZhVVFOcVdfR1RSc2hWcEpUS3RCekdxOUZjbF81OTVOcGNQWWZCcy0yYU5SLXB2bDN5c0huU3c?oc=5" target="_blank">Google Lens will now help you decide what to buy in-store</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPUmhpdE9iNUw0MkdXMlhTRmhubDJldE9YM1o2QnhmMzVNZGw2NEdxODFpa3IwQ2QyNDlZTS1GWjZQem9LWDA1TE5ZazJRaXZNcmNKLVNUZ0VIUUQybWFzV1VsUk1kSG9tc090NFNuWWRtcm8yVDAtWUFmVmhFY2E5c2lxY2pJSnNkZ3pDN0tLeEVIeVRnRWxwLTVpS1VneHM?oc=5" target="_blank">Google executive shows how new AI tools work to make holiday shopping easier</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQRmJEekxobXFnLXE4N1JyOG5UTVczMGMxNFRYQ0JyNnlVVHl2N0VXQUtTWHk2RW5PLUxfZ0lFdEZ5U2Qxb0NRSk5SOFJSeVJBODV2cDg2elhsb2p4TnI4eVpJajE3RDVPaUh5RTE4a2VRQllxNjJNTUIyNEFVUDlBb19kMlE2SDNUMks0aXdKMTZydEdybE04S2tSSEt4Ty0zOFJzRV9R?oc=5" target="_blank">This new Google Lens feature saves you time while shopping IRL - here's how</a>&nbsp;&nbsp;<font color="#6f6f6f">ZDNet</font></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQdFpTZzdkT0M3NGhqeWdEazhnQTRzUVljc1Z1d2l4cWF5MWhPdW1sQ1BNYXo4VEpGTzVlOHRUMXMzcWhiaTRaa0d3RHdwU1UtbHpiU3dIWkhheGlFTDdqMHdBNmVpMXZEejJERkZJX19QU09wdjNQbm1FWnFSYTZZYQ?oc=5" target="_blank">Google Lens can now tailor search results to the store you’re in</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=GjSEgbUx2JZhBtQVb82eviR6fZ36NuR8QKtdVGYE6GuHGvFnt3UNGsQtMNgPo5xkHyVYAtoJRRjeRtzmbvNZ5h6dmcDkaf1RQkBQ6nPCTuEzTBuxbi7etD5AfNRyeHmNRacEuzANrzDESYr3V81cpgCxCpE1oqPJtGbkLZvZWd2wCfStCBFhrh2YyG1dDc3oPKVNtiJrJdXreaGbMQDZCzUUp7fXpkxyaDDvEGNs8FcDBgD2afviGvRRh5tHh3f831fDpu96bm8UvAp986RLEiTPGuAcxKxvVwbLjJ7aZxi1USZTmhULY2NFsbXtpvK1KLDnLW3ef4uLxaWKjJ1P5JmUtnyqrrkyGwbL9zGWBv" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Samsung finally starts Wear OS 5 rollout for older Galaxy Watches - The Verge</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQTXVJUWgyS1NLalR6dTVHNG01OG02LVEtRV8zREZFNmN6VHBnRHZwVTk2VVI0ODd5d3pSVTFLYmh4X3ZvSURHQmdmVllESExMRl9uZzVpNzlDa3pOTnc1amNJbnR6M3hXZEtuNGE3LTNLby1LeHFrbVktdzBONzhGOE9aTWd6SUZELW1acVpTQklvbUJ5OUxkRjZNRFN4TDg?oc=5" target="_blank">Samsung finally starts Wear OS 5 rollout for older Galaxy Watches</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSG9qNHE4M3VVMDUzX0pYR0p6dFN6RnhiYjhodGdCcXY2cHJaRWs0c3NPNi0xLXR5YzllZ3VCS3BBQnpScE9pcWx2d3k5dHFEei1wWjdaak1KRExEX0ZLNXcwQmttd1RCUTFpNnNaZmFjZ1gwYnEtVjQ5UzZXTnZCQU1hZ2hTanRnT21RUzhWSkJSSlhMNEZkYnVNM1RMcFpSaTFxZ29RS1g?oc=5" target="_blank">Samsung Expands Availability of Latest Wearable Experiences to More Users</a>&nbsp;&nbsp;<font color="#6f6f6f">samsung.com</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNRDkwblgzZGpSQmUySkJzX2ViWEMtQk5ValpzMERsQWRvQXFYWkVjbTVHanZqYVoxLVZYY0lfM2xXOVNEcVFjZTBLYUpac1E4aE9Jc0FkcFJTTmY3UmxGNTZqUGd3eWpybUZYNHZkQV95SjVGYTJfNk5HYXNZbGNkNUxfWDVsMUcyRWJpU2JnSkJYZw?oc=5" target="_blank">It’s Official: Samsung One UI 6 Watch Update Rollout Starts Today</a>&nbsp;&nbsp;<font color="#6f6f6f">Sammy Fans</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNaDY1d0JXTWhPQUJoY0hoS3lhbHQ5Ry15VU0tRWQ3QXQ3WmZkQzRSc0NwWlF1bUVVZjNJNDJlU3BrakFFREVzVHhRNzJ6b0xIRjFRVjZ5S1JBa2luTXQ2NEw5dVV0MFRUZ2hpZjhIWkFvQmhueWNGSkVsUTNmeFdqZ1dITlhSY0NsMU01ZUpXVkjSAZYBQVVfeXFMUHl0dXpaXzVLZUNYQUoxNkw3TnduOU9oelF5ZWFIbHBmY3dQdUt6bFgxSjRDNExNbExJanI5LU5hdFBVaWZXTDdYbXkzdXZRY3IxR0FISE0wWWFMX21VUWRJQTJkM1ZqSzdVN3B0WnF2bnFoSmI4QVlLMjVBZGhma1dMZFVvdFNwajVsRG5HbGZGQkRScDBn?oc=5" target="_blank">Samsung Hits Galaxy Watch With Massive One UI 6 Watch Update</a>&nbsp;&nbsp;<font color="#6f6f6f">Droid Life</font></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9nUUxDbXpoMHJHSmdZaGlQQkhsN3dBMm15UEFMRFhxZWFFczVZaGFQS0RnLVhyaWxFaDJ5NkJ1VzhfLUtrRGRfOXZYa3Z2UzJhSXd1VkpvbHhYTkNzRGo0cFpOWDNEWDZjTWx4RHJoWmRpVkEybHgwUGRSR1c?oc=5" target="_blank">Samsung finally starts rolling out Wear OS 5 to Galaxy Watch – here’s the full list</a>&nbsp;&nbsp;<font color="#6f6f6f">9to5Google</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3QSRTKmhQCHx3ySx54hoXLgCVUhDdnsX7M4MW8jJ1Ww5QMdcivnjJvs9ytCo7n3Wps6rZCsfrvpf1AN9eWQmy9DAMiPgRfL41ANWFQAZewiDwrNbYm6vP5vLjzUohTcSWNFKFKx6PzuvRWmWpvmYEtqC8f5zBxCXPC7FKABszRSKbQXVvw5weM8xqD5XgPnsEpP5dvYxwTamA3WeWxTMZu5FVRxWCX82w1t36ikQEMnKF7kjTqL3LgAk5KteMS3FFbHjuQozVzshbcCeSnswdWNPdSEMLYVzpySZqUU3xVXzc4aok9QN2QTQKoBX4TUSZELsZ9A9DCoEi1babNwp3aahHAHvTA2PNBWHa" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Paul Teal, ‘One Tree Hill’ Actor, Dies At 35 - Forbes</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQUGV3bFVZNmE1R2FtOE9wUXV6bkszNGNtV3RLREVFb1FUWkZCYWFab3dXT215M1owNWs0UGlucFZVQjBCODNCTUxtUlFsTmdXbVdVYzNJSEdBSWRHQnJ4X21IWlNYdUd5T25zRS1YdnQ1Q0RTeVJWc2NYRkx5UkJMZTNDM1dtQzlOZ1lhcjIxMnZlVU5VbVNWdg?oc=5" target="_blank">Paul Teal, ‘One Tree Hill’ Actor, Dies At 35</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOejV3alZqUlRIUDU1MTJkNl9WMF9XNnV2aFRnR2U2UUx5YzRVTFdCQ20xUkczYzlZMnFUTkdPa1Jqc2NYbmxMTVhGYnZVWEpoSUloRlRHWDZaemtZbkxSMHJoNDlncVoyZ0NaNjNFQm9oYi0yNjBoeTVsc0IxUmtSb29aTjl0UE1pbzE5d0RPeTR1RWR4c0d6NGc5Z21pbFREcGZ2T0l0Z0dULS0wS2Y2X0w1YnZxdw?oc=5" target="_blank">Paul Teal’s Partner Emilia Torello Shares He Died of Pancreatic Cancer</a>&nbsp;&nbsp;<font color="#6f6f6f">Us Weekly</font></li><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOWnF3NmRFZjdYV0RkZk0zei0zSDVHTGp0bGE4blN4N2R3dllMZ2FndjAtRndaRTZLVlQwT01WRE9NVmtUd1ZyMjVKSldNckwxb0ZNclBhMUhJYkswWGUxYzF2Y09iRWxLR3dueDdQQW1ObGc1cTgyeGxLa2NhMm9JTFU2bDllOHBZM3VVbjFaczdUdjA0X0xaUmQ0T01pd2FteUhzUnpWd3hJUFhMQWpHMnhB?oc=5" target="_blank">One Tree Hill's Jana Kramer and Sophia Bush React to Costar Paul Teal’s Death - E! Online</a>&nbsp;&nbsp;<font color="#6f6f6f">E! NEWS</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=jnusq1Poy5a6oMrDS9vy1BaHmowQtmyzG9SXC4w33VGLoNFvdrVpTvQ9hxPHU9cJ1b1dwDbTQov5mT1zaivXEZSdWaUkwSadJdcEWTEDuonPpSkkX9JVVHPgbjBhpmyKHfB1sxhu5KQbAxrPFudj5fpWDSbVU3qdWoY2UT3BfptDr1HVLL7RjiHKBJX51mdHfkPoFHK3CJaiyF1vSHX83APo46vnhZwPvZPTvafXLQ3N2mLHREGzb586BFHJhnmjz2FomqAZa5rYeKfGFg5X9Gjs99vsoYpv5JuELN6tod2PitYLyyHT8PcmCj8Lm4jzsFwQSCbcv8eBbcwFdrTPejja" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Search of Sean &#39;Diddy&#39; Combs&#39; cell uncovers witness-tampering plot, prosecutors allege - Yahoo! Voices</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTFB1dlFSY2lTX2Z0U1VKT205UXk1MXhLaXNLNlFWd3pGTC14al9xS3o2U1JocEN0c09FNUpkdTJTMmNBM1d6NnFmN195ZUc5TWlnOU9obE53dmk5SzRYSmNoY1R1dHZtTk9pdUtjYU5YaXpxd2kydUhOdWdn?oc=5" target="_blank">Search of Sean 'Diddy' Combs' cell uncovers witness-tampering plot, prosecutors allege</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNUEFZRjJIRF9HUjQtMWlDa3dXSWVXbHlISHdIaTlpU2dOakZuUWRNcF96Rm9Sb3hsQi1td2NrdWk2MGx3Qi1QakQwUE16VERYemM1VmZJbTdXRm5hTDQ3ZDFjZFhvM3Q5ZjYxcmJKQkFYNnRBekpDV29qaV82RlRZc1ZkV3dNMEdSMHV4T0o2STlKX0U?oc=5" target="_blank">Diddy’s Lawyers Request Music Mogul Appear in Court Unshackled</a>&nbsp;&nbsp;<font color="#6f6f6f">PEOPLE</font></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQeERaN3I3RnJLVG83WEdMNmhvUjNLdmtmdElDZlRqTktFZG12WTE3TzhfbHFROGh5QmpqbEtEcXliNWJXcDN5dzNFNE9SRS16LU80MDd5c1dDbjJZVExCZV9CUm1OU0N2c0tDUzBKR2x1dVNGMzVwV2RGa2E5MnZGX19WZjJ6MUdzeDQ2MldGWjVuZWpLT0J0Z2VtTVZLVTFyRGZPd2V3VjhWdUxuZlhTRjRfYVozb0phdFRCMHJFSQ?oc=5" target="_blank">Sean ‘Diddy’ Combs intimidating witnesses from behind bars: Prosecutors</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9ZaUd4SzN6Qy1fUnlFVjI2RVJDNGd5UXpMQTFnc3p0M0lZbUhNNTI5NThTVTdqN0RNcWEwUzczZW9rSV9TUmVKT0RtcV9OY3lMYk5WYmtlZ3o4d1dWTTQ4eE9jcDVwN2Rfb3R0TWRveWVVUFU?oc=5" target="_blank">Diddy Accused of Witness Tampering in Sex-Crimes Case</a>&nbsp;&nbsp;<font color="#6f6f6f">Vulture</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=B1uMkP6d9YBGjiyXkGXitPeBiC2iVBvSNtRQMo5yoGgynjWXasgn8GV3au3MRHrCuqT7JGBmMv6QoARyidwgsqhDnLLjioQuyqzrQGe83ndfnuV1mfDcKR2SsewtKXFEyQqbTmTHgeXPB44XFS3XsFiTcALxvYL8rp6kYoyVmVv8K9Zb5e1JAmqD7UtKiGgfqeXNcNqmvpQXUQvJJXdGv22cRzE3xL8etscMZoB4qZTNYrDtb3J3RQiCMcFGMfnBwcnJBX1wbMxiAcbacxDpTd7v1FqrTja" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Kim Kardashian&#39;s New BFF: Tesla&#39;s Optimus Bot Steals the Spotlight - Yahoo Finance</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQTHR4UTVnMXlVUzN0SklMQWFTazhqZGwtY280bERwaDYxcEdpNDRrVXNZa2pYb01yVzJPMUhrQmVhbDljSW1rX1pKYnY3dEt4Z1E3bXVYUk9qWUEzTDFaZ05WTzVITVRnQ1R5MUxHUEc5MTFMWS10NHYwQVRvcDBOSEQ0c1FibjA?oc=5" target="_blank">Kim Kardashian's New BFF: Tesla's Optimus Bot Steals the Spotlight</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQenR6UzhfeVFmeXNOeDBjWlpUeTRlYjJTUzVBTUZHSDJ5SjBCQXltTW1tU0JFOXc3VmI4cmhLM1JrQ2s3c1k5Rm15c1k5elZKYkhUSlRVa240Q210dnNMM2tGT05adHlBRlp6UnVhcUM4bXdHamJvZUVueHg0Y3lFLVRqQzdaVjBKVEVF?oc=5" target="_blank">Kim Kardashian Shows Off Massive Diamond Rings With New Tesla Robot</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Entertainment</font></li><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVlJiNkdSUlBBOEdyUHRIYlR2TmdsSkducGNlejdIVVFUX0RUbmx5WDVzOFNpUDdmRXktOGZnOU9SQWtNQW0xSHYxZWRlRERYX01KZFlEWHBGUVd5a3F6U296ZWNnMDdFWjE1STliRHhTTl9XaHVRbDBtVktOTHZ6UGdkMk8tUTBtbEd4SDBqNmlaOFNERVBCSDdLZmNicGdsRllnSHN3RWhDTmM?oc=5" target="_blank">Elon Musk Predicts $20K Tesla Bots in Every Home as Kim Kardashian Shows off Robot on Instagram</a>&nbsp;&nbsp;<font color="#6f6f6f">CCN.com</font></li><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9Ldl9YWDQ4X3JwNTRDczdNc19SUkE4cUdrZVpIXzFkVGFrVExBTGViTThpVEdtUmgyLUhWR2stMjdiQnZ0V2djSXNSM19NbmRqNjVsSGZpUnZvSndvZ2EzS1NCLS1vNWxSbGEwdXZB?oc=5" target="_blank">Kim Kardashian Shows Off New Tesla Robot: 'Meet My New Friend'</a>&nbsp;&nbsp;<font color="#6f6f6f">PEOPLE</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=96PguSMiZiG3jGtvr54dvKiXrULwR79jqoNYmPzxgw2oCfDU6yAF94BMk9wsEkUoGZfKxt1otQ9Yd2Sj13AUy5KG7yV9xyuDQMKyN8n84JgY7yJWgp1yd2CtPYTZoouZqUonhvdG9LziL2WzbKZpMpT4hB6rSKtJo2HUNJVzQSYNZkhpsjLWYfVBoMCUaLHH85cqcRiGfocFrtfo9BqjbgPok6MdUtPABG3vBJ9fz1oWTawhy2mqPDBc9UWytTr3vv6pKYUyxChj9KprwrVDzWz8ewj37muQZDceh7wFQfxJx7nkKcqZXkTZv" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Cher’s memoir includes new details about her divorce from Sonny Bono - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPUXZKcElJVlVxdDE4RGw4dW54anY0TlB4UXVTRTAwTGlrYkVSTnhFUFFOTEN1bU9xZzVoYjFiSllyamNMRnRRNVlMTFBTekliN0pudUpEZ3NJRFB4WGt2M1JDYXBaMS11SWdQY2JWbzNhRmJtSUVnYm9RWVFIM2FNQUltVE3SAXtBVV95cUxNTmVPbkJrV2taRUg4RkJBcmxMYlBHSlRhMjcxcmZQSnNodTBiS2RUZHI0TVpmRWhIdG53Tkl6a2s4d09vOXJ2MkozQURSdDhnZVZqYVVneUdQd2lycTZtUzFndXB1R1FkTURCZWhJRm9JendrcURrNW1qNXc?oc=5" target="_blank">Cher’s memoir includes new details about her divorce from Sonny Bono</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOYm9uNmZVdWoxczd1VERfWEhBVjZsNWlpS0dWTjc1SmN4dWtMblNwcUozMEc1NjgzSW1jdVdCZVE4UnlxaTQwNHY5U2cydXRXQmZuSlFaTW1MT1dBZFl5RUFsTWlGaGM4OWRWakQ3NDU3UzhILTExdGRTZDBCWXEtcDRzdw?oc=5" target="_blank">Book Review: ‘Cher: The Memoir,’ by Cher</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNbnAwckZkQjhkLXFkSHBpLWRUZnJWWmZYNjU2MF96SjRsWXFmY1dfWk5WTmhfeEFxMF9YcVNHZ3B1VFI2OW40ZHBBOUxuYlNReUdLcjFTSl9oR1VpYW9VOGo1SEpYaGt6c3RtdHJVQlR0SEc5NFZ0UHFPZ1hmT2t5aVh5NHVjUXc0TTY1LUpTdkcxMVVpc0o0cVFPaFl4a2RtcjVHQVluTHZmX2cwY2lUZGR4VmFFNDNfY1hndlhwd9IBxAFBVV95cUxQa195VUxuQ2dpdkRLeTEyMk1xYUw5SlpNOU04T0VnN0NJSHdaUmNmTFFsS05wZWJnamtPM2VCWWg2SkpSOEtZWU9LYmVjc3BMWnZtMjlkVnJWdWs1ZklVN0NxdlVJUEZMQ3lpb3Y4TlYwYm1HN1drQVVpbDVKU0J0YjJYVFBlMTFwNnlhYkFWbVBOUlhvSmxwYmFZZTRmT3NrcHVCeTJKcFNkMERYcjBLXzdmbkhpNmY3UmJXeUtUODE5aGU4?oc=5" target="_blank">Cher confesses Sony Bono marriage drove them to thoughts of murder and suicide in darkest moments</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNb0hfcFl6RnVfWEk5MGItNVh5eVUybFNaWFBmdUUwRnBCNmd6cWZ6anozOXZRZ3FBbHRkRnVpY2gtWDk3bkR5V3BtYXM3bmQzZHNlYlVTU0VQYTlmRW0tcWU0LVZPaUtoY0hTRnl4RDlYamh5RVIxc01NWFQwNFgyM3o1RGk4WFNXQ0FVNkFOeXVDM0Izd3NRY0NWNS1MQQ?oc=5" target="_blank">Five things we learnt from Cher’s memoir</a>&nbsp;&nbsp;<font color="#6f6f6f">The Telegraph</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxONm81QkxlVWVIMExkaHNYbnJvaXViSXFPZno0aU81eXlZMnhTNzNrV254MVdaU2dlb21wb09HQ1FyWEtDTnh2bWQzUE1EUy1lUGgxc2ltZmlVQ1BaVURxMU9iaVBpTW10UDltRXc1bzN2WDlTeUlQT0psMWdpQnhPMktwM2xBTXNNTVpnYXEtSWdKbmZPZmxsNzcyVQ?oc=5" target="_blank">Inside Sonny and Cher’s secretly dark relationship — and how Lucille Ball encouraged her to leave him</a>&nbsp;&nbsp;<font color="#6f6f6f">Page Six</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=877gewXiyGXQZYJB5724TMpoCUCNRuKHZ8DHi9NxPzpYTGDVkj5p9pmrcAyaiyTaU3awUoQr5dtenA5pdboxEzGnBmVrCm7Uqtz3s2L2YobXx2A8KJxUTeFQrd1hMLxxGDSk2wJcBLGcAW83Yz5gFZCYad6W1Fq52pFoHQoV8mQthYSxLyryfcnphQNkX4dQCWmv9qobWNeamTuzKSsPd3MtSVXG8ZX6DUT4SnqpnLp5hwUHJxwa9PxFddkDEaKt3YiLvv44ekowUQ4VTH1pnAv6DpZBUsWfoBqtXcvNrjkjcyDTzochdjdUhwioHgFLEefoQwwEEVhjQr6VmvwGFDwzdprCJWkw98XiUNaf91DTxhTvfyg9kqPJc95qiYWXZGX3NfEyXYv8kDA35MSowc64bKVzJDLdub1x8n9TQw3ub2BrFHXAaqe2NvKVAd7LkSkwqz7XY2vHXPC8HoikHjJXhztT9AZfdsYZJJNfFYxrjZ83pyw7w5W9YEkshgZrRSjWof6Vq5SSjtWAzoxjQR8qi" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">NFL Week 11 Recap: Immediate fantasy football takeaways from Texans-Cowboys Monday Night Football - Pro Football Focus</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYjJfQXVuTFotRTBKRWZCbFVudDJYVXo3c3VEeVVxQzU3RGN4NF85MkNLUVp5SEhkbVd3akpuRUJJWXhsMnh3WG80OTRKTXA2ZnloblpzTl9QNUxoVTdqSGxmN2pLdDh1enlLWHAtRUoyLWVIRGVoZWVuSXpZY1JlemtvTktiSHFOUUxCTHdMTVZ0UEN2SkU0eE52M3JrTWUzWVdUZ1FYZC02SkdwdXFfSVpfbVdZUlRl?oc=5" target="_blank">NFL Week 11 Recap: Immediate fantasy football takeaways from Texans-Cowboys Monday Night Football</a>&nbsp;&nbsp;<font color="#6f6f6f">Pro Football Focus</font></li><li><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNdzRrdmZKOXRHd3NJVnFFS3RlbmZSWlBWdnJuV1NRc2ZMMUloWkpGNWZIMm85eURIc2NFbHg3YklyZWN2Yk1oWWxYRFR1RnZPRGNxbmF0eHpVN0Y5eEFEZmwtcDlBeEM5elItc1czTTNVQ0dFU2ZRMGk2Y093d2Vsem95MHN4ajBFQVpiTkJTQ21pRXY3Y0dBVUFiODBlY2pmWFVpTHYyZWZSZlR6NGs0UC1mSUhGRTBkSWs3WU5HYk9sZmJIMXdJNWdQWXJNdw?oc=5" target="_blank">Mixon 'a force' with 3 TDs as Texans O-line delivers</a>&nbsp;&nbsp;<font color="#6f6f6f">ESPN</font></li><li><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQZjN1MF9CdXNrRkItVWgyTTRsR2tjTVRqczlHZ21sTlNWa0FnYktmeVF3eFRqOTNTbjNMMnh5VngyLU9JVnNKRnpBQUt4RFRIR1doTHhJTlRhcVFtaWptX3hnYnRQbDhkMHdNMVdqLWFtb3BpcHRCVUx3TGZJRzlZQV9sY3pYYTBfNVF4aTVmSQ?oc=5" target="_blank">Texans star RB's 'too small taunt' was best moment of Cowboys blowout</a>&nbsp;&nbsp;<font color="#6f6f6f">Chron</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVXpJUk01VVlpN2RTSWRtTVRTenNYUGdjVUJFOXlVNU9PemhXTTlnMVdXYUdLOVhKMEoxblpKbHRYRXpqM2g2SEVHX08xdXhrYUZQUzBNd2tBX3l4S0pMcFNzRTBMQkJUeU1KamtWN2MyUjR0RmJGNlFvelc4NkxRWTF2Ujl5UDZNZ0FxWWpPbjJXZkNjVFZWajJIMW16TEtJQkM5WGVCX3k?oc=5" target="_blank">Texans-Cowboys on 'Monday Night Football': What We Learned from Houston's 34-10 win</a>&nbsp;&nbsp;<font color="#6f6f6f">NFL.com</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOcnFLY3VfZTZMdFozbG56RjlpRTF3d2NSc3Jybm9DZk9jTFlkam94ekJQb1d6NVhhdHVsRFpzdm9pNy1MUlFMQWlyRkFJRE5QekhkWm9fVTVSSjhmQXIyM1lwUldfVWFWSzA4OHVaNFFIN0N3bnVoOWQtZ25jNWZsZk1xMUR5ODNoazZqRTBjUm1lUldZbFpaWE9aV0w0d1lG?oc=5" target="_blank">Dak Prescott couldn’t believe the Cowboys’ failed fake punt attempt</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Post </font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=49pzJo19ZKY2G4yxaVjtSnECup5jsuVJBChkWsh5mPcTk5PyPAVynAUSQ26Poe5dHcP2mDtnjCEWgQv3bL2aDjizyVDVwtFreTJGJmsBDfBREFKKjsPe4SNyDkbR5ozo4v8CbH5mzYtuYu2KmFz2oWERC28xa3DxiFuyBThwuphENm2MhiaDX3YQ19aKoxYAneZsgq4yC4ZZDxeumkUEteFUh3MsQomyezqwhXGy5pv79cSEF8m3tbAVZdgD1PToU9zrLuaeK49oAhWPBUrBfdtQbumMPFaz7gsRPHuhLkqxADyUK9ywmBzdr8HRUso15soNkjd9eTDuEmGZd8Gwo4LVW8WT32o2sUCBwLZDkL4y9S9RFXgnMmNM8WjynUfVaau7BPCUux7LGbCgHa" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Dodgers On the Verge of Making Free Agency Pitch to Juan Soto - Sports Illustrated</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1PNkhJN1ZTaUlGNWl5WkxJa0JJMmpLWnU5N2o2RFg0YmdiY2NGT0tqU29NTFdzcWpyNVNVOEdWRnc4ZE5VVnlwejNfZFpvMTVndHdaeFFacTlkMmQ0aU9KVDJaSVFDSXMyeFN3S0RTT0UwcVU?oc=5" target="_blank">Dodgers On the Verge of Making Free Agency Pitch to Juan Soto</a>&nbsp;&nbsp;<font color="#6f6f6f">Sports Illustrated</font></li><li><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9XYjMxdGNqcDdTSmVvb2lhUGRCblR6X1ZRVkJuWmF4VU5SWXJzQmUzcWs3TzM0c0RWQmdWc19ZaDM4V081Tzdxa3o5VVNzZWc3RFZ3cFA2ZUk0QUVuYm1ueVJwMkFfMUhORUE?oc=5" target="_blank">Inside the Soto sweepstakes: December decision? And a mystery club?</a>&nbsp;&nbsp;<font color="#6f6f6f">MLB.com</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOWmdrQmVsX05yUHV0X05tSEZEZWEzU0hWc1VxQ21rSFY3elJhSlUyRURHdUU5TTJNbDVrc3FfeVVoQUt3M1JCLW5zNXVOWXpRNlVvNWczTXRlYlZ5SGtBN0ZDaEJPdVAyQ0YydUU5NVAtSkNfWjAtTUhUN0Myd19MUG4wVzhYZlZfeDk2Xw?oc=5" target="_blank">Matchmaking the top 10 MLB free agents with the team where they fit best</a>&nbsp;&nbsp;<font color="#6f6f6f">The Athletic</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNVkIwdEFVM2piRjRzanB3cjRpR1lfT3dpcy1reGhJSGVGeUg3VjlUOU5Za2JaV0VwYk8zSDVLaUNPUjBRVWtlbXJ6WlVpRmpDRkVNZnFud1gxUHhvaXVWNm9mUURtSUNST3BITG1MNGc5aTB1NWxta2VudzBuWHU0REYzcnhMTlhwUDdMZEd2U3NTc1BTeTc3Y0hYUmdneEct?oc=5" target="_blank">Yankees brass meets with Juan Soto as Dodgers expected to enter the fray</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Post </font></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQS3ZNWlRMcDRHMG9uMU9DN0ZLQmtiMXdHTWRBX05yTW9zVHF6SzhjYk5ZOHdSWlJTcWZtdDlncEowcFZsVkdkQ3Y4NlZKTmRhV1F0aGhLWGx3VXhaR2t4Y1M2NGEtS0Q3S2JjYTJhQnhRUmhBU3R4MXBTUVRBREtmcA?oc=5" target="_blank">Would the Red Sox really pay an absurd amount for Juan Soto? Unlikely, but he would be worth it.</a>&nbsp;&nbsp;<font color="#6f6f6f">The Boston Globe</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=45GhBmKYa8LQYgm36sTXq2zQyHDxjc2izQG42r3YB85qx4UfZAM8qZGk4G13NWqu615YoDQwvy5a4C2rQ8oeD7g8CbArX8YrarhMuBRXHG9n3mLrQ43QSYRu5ZkETHP5dL3Yt3g7GLByTtZhEqcdtx8YNvk4Moba7RzebgCWtvfiMGCKob8gWeZEhZn5QDtjv54pT6kDnmR8vFpkpi7mwgtCZvC8K2Na4e6Q7QXzBhrx9LpyEeP5brjRA7gGhSEXo9mvZPF5fcps5afwtRi" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Roger Federer pays tribute to Rafael Nadal ahead of Spaniard’s retirement: ‘You beat me – a lot’ - The Athletic - The Athletic</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPNnVrOG9uSTR3WUlCYW1fX3FldVZ0QUk5MlRLYWVPcmdtTzRUakVPUHhna2xzbklDUGJfTEtGUnFLVnpEZTItbWlXdXZDUlRqbjhjdVk5allZN256VHpoRmxWUktsYWhMR0xUa3dYdFpDc2xnV1UyNE9xR1FDc0FndFdRMWtIR0dkLWprNTJR?oc=5" target="_blank">Roger Federer pays tribute to Rafael Nadal ahead of Spaniard’s retirement: ‘You beat me – a lot’ - The Athletic</a>&nbsp;&nbsp;<font color="#6f6f6f">The Athletic</font></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE56Z01MaklWbmt6UW42M2Z5WTI2MnRMOWlhZlpQUmJYdHFydVotSHZmUk1OdmZmMy1oTnNUZjM3NnRoeUd0TDFmQ0Z4MlQzRVE2TnN0cnRIcGx6M3B5SWltdjJnb1pWVldDTmxSWGNSTi1pMVhSdTNV?oc=5" target="_blank">Nadal: 'Movie-script finales are for American movies'</a>&nbsp;&nbsp;<font color="#6f6f6f">ATP Tour</font></li><li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBwX2hWZ2M2X3JLTHlWSk0tVHM2SHZKaWZJTjFTYjd0c1d4aXBVdUhyWXcwem9xUnJpX2EtTG5CQ2l6VVRUTVBCWHFrOXEyMDFpekprUktUcw?oc=5" target="_blank">Preview: Netherlands v Spain</a>&nbsp;&nbsp;<font color="#6f6f6f">Davis Cup</font></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE81a1E2RGhsck1ucXlERG95aV9NVlpFb2draGN1djVxb0tIMll6eG83aW94dUJJOThiWEt3cS1QWXRXV3ZYMjlVR3c0N1pNTEJpRXpYSEt1X29EdXZDblZtYy1ZaDlrNzU2OFc5dC10a0czZDhkd1dEUllYQi3SAXxBVV95cUxPWVRNYXM5akg0LTJyYm5RbW12R0RvWlpoc0ktdF9NYXVOaENSN01SZFJySkdvZGNDTXVlRU5pcDR5eTh4bmVtc3BvNHNvd2NpZWVmaEw4dkFSaUlsX1JKb2RXRy1oQUlvS0ZfRlNKQ1BhbUhhVFVZbmlJRmt0?oc=5" target="_blank">When will Rafael Nadal play in the Davis Cup? Schedule and matches for his last tournament</a>&nbsp;&nbsp;<font color="#6f6f6f">Marca English</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=TNXt1szZ4jby6S5TAnTHz76VJsf3wukmUkUEi4UyzvieDVQkwaC6vXmSDgEBnxJsJU4RoTJKaZuR88wYJ46a6TYv2p1nEoQSozrUUed4gA9na4ijFDfvixkQyBtVfhUbFpTcuHrwYC8NJuvuvSyJ2xNaKRhLWcLY55gbvxfG3DvdCCPRz2X5KnDV4JuXZX4K1MKaiNhUPMwSu52nnEqsqo2URxCEh6EgAURoFqMSVhRQTHv1U2F4crcyVEps4481hrrQnRL7CUHmZH25GQ3Qhyj11JsLvGFVcry9EtsrzBXuTmbUV6SsfufapeqjsW46oRH5E" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">NFL Week 11 Winners and Losers: Chargers May Finally Be a Clutch Team - Sports Illustrated</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxObVpOM0Y1dlByYUVVM21iQWZYTW5UV1dMck8tM0g5SEdVSE83azE0X1Nyc3dtbDQ2TklZWVZUcHZVT3B1aFRCLUJzQWdGS3lLNWMtVTlxQ1dBT29aMG1DazBycEJUcEI4eWwxMHVwUE1FYThGR0NIdkZZTVBhTTBLV1lyWQ?oc=5" target="_blank">NFL Week 11 Winners and Losers: Chargers May Finally Be a Clutch Team</a>&nbsp;&nbsp;<font color="#6f6f6f">Sports Illustrated</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxQNEV2Nkl2cWc1X0dCVWxRVndlc0pKR3hHZnBjR2VlbEF5VHU4enlZd0M2X3hQdGFyb2NPMzB6MkhwR2IwQmZvOFhnR3BESDA4dzFkdzNXaFMtM1ZuOGRZdjlkOGl1RDlwTnEwSHRvQXRQeEJLMFVRN3JaemF2TmY2R09n?oc=5" target="_blank">5 Things to Know About the Chargers Ahead of Week 12</a>&nbsp;&nbsp;<font color="#6f6f6f">Chargers.com</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNOWFmeXczVzNIbnFVZXNsMzFGak94blNDRnRnbXRWYm44d2NpQ0RJQXpVb09wbnc3TTNfSVNmUHVLYWxOLWNUOUVjQVFWeWEwT0RhREVtNi1wMWN2N0J2bExwSkx0dWtEQ3BhdHBNeFRrSUhtVlpmWjduTVpic3BqZGRlcWRVblkyQm52bmlLUnJyXy1U?oc=5" target="_blank">Chargers crowned 'deadly' wildcard team as power rankings climb continues</a>&nbsp;&nbsp;<font color="#6f6f6f">Sports Illustrated</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPSGpIeU9pVEpGUzhYcklFQmlGR0ZTMHFnc2J4VE9fWHRoT3N5bFFJWG1Oa2ZoRWZRM2dtUm02ckZPMndwU3RuOGhTR1M3OWIxWmR3YXdyREhKVngyaUFNN1NBVThBcF9sM1RuODRpZ3BLZkU3cks4VGpXTGNEMkhrUFpISklQaUJkNEpxcjc3cnFDUmZ1Y2cwUkg3alFxT1E?oc=5" target="_blank">NFL power rankings based on Super Bowl chances: Chargers enter exclusive group</a>&nbsp;&nbsp;<font color="#6f6f6f">Bolt Beat</font></li><li><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQN2d2ZzNXbUF3ZlE3MGJiS2hJQWQ2a0JodFdIdUxPekh3SERKNm5hQlp4SXNjSDExNUZPNVJiMkNjZVo1aE9oRDNrQkFfRExOWW1CX29ZM3dpVjQ3NlBIRnB6MU1pZzg0Qm9zTVRXWEJPM2JHTmFrRW9Mcng0VnVMa3Y5UHhWRHEwejYxb2czN3RGc2t2Tl82enR2MHdjUUJubzZYSTh5VEQ3UThjYlUtNmZRNjY4d2ZHRkVWcjcxTXJXWDNZLVYw?oc=5" target="_blank">Chargers Power Rankings Roundup: Bolts keep pace with fellow contenders after 4th consecutive win</a>&nbsp;&nbsp;<font color="#6f6f6f">Bolts From The Blue</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=HFcFmHBiAeR57tWRm5CRnQtfiWRMMQSpeyueYq5X922JoVe64VTJXhjNyo3ZDr2YxZoiCfY1zPFeiaGq49pnHD8N8Lfp67UCb1PZCUwt6PVF7jx49wzEc6yoUXJkbQkuxpJQzpYEpT8FVgQRHj8zjhDByGsbtHEhECsTDSxs6tz2B1Ty3D5xJch97Q397z8ZhAaBm7du1yccF4MS4Pkfs8ZhufeDbmFgjGTCGNB1qVRbKuJgXCCYaLiv3NambRnsGaktwdDu9gm7oWhngRyr2WSybyGi68ssUZV6a3Zom3EWJDt1r4" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

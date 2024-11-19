@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616641606962436"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/11.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/13.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Ukraine fires US-made longer-range missiles into Russia for the first time - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPTU1DbkZER1c3andPR3ZfQTJ2Z0Z1MC00YnF5c2x3LWRMN21vWHROVGZ5aS1HZVJlWE9yYlk0VU03cndFSktlNGY0R0loYnFwVjVsMU1hdm9tWFFsMmdoaXV0Y2lha0kwR2Vnak5Ca1g3ajFzQ3ZWbHVlWEdMUmpSTndjV2VYQUdBUmV4aDhfNDNUd9IBiAFBVV95cUxNd18xdUllTkY0d2ZVU2ozYWtHZWhHdUZiNWVmeWhmbXg2SXo2N3MzdXd1cGFJemVqRlhBVHhub21ueEZaZWd6VjB2c0pFX2g5ZGFvbDA3XzJQT2g4SHVNMGU4RDhZQjk0aEhHLVhNNUh4MEk5LXpwX3lrUGJlSjdYYk1MWUduQlVE?oc=5" target="_blank">Ukraine fires US-made longer-range missiles into Russia for the first time</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQQnBTX3NTbHRiMDYwRDZxMVdEa1NCMGRxSnU2QktXcTYyNmw4UzZ2UE11T1RoRzJYNl9sdXpZMVVoRks1ajBSQ0U0OV9SanNoQ0xXVktLZEZCcThUVHJnVXFXYW5iM3ZNaHhKeDFabXV2Ql9mSUV0ZWFvRGtJQVYwZ1dkQi0wX204RzZMel9YdEZXenc?oc=5" target="_blank">Ukraine's US Missile Attack is Western 'Escalation' Says Russia</a>&nbsp;&nbsp;<font color="#6f6f6f">Newsweek</font></li><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOTnRvMmNvQ2dkVno4VVd3N1FDMVpqcXVvaDRZZWtpRG5JbjBTMW8tVzJHZGNPakNaZjloeHE5dFQxaHg3LXNDTnpQWFlDcEFSNW5LQWgyMENXSXNuYUZ6cWRZY2E1eG9KekxqOXZoWDNUelZTUS1vUWN1Q1BWalpfejN4UUtfN21HOFNZNHM4NjlOdXVPbGZBeGwyTW1nN3EzM3VYZ01HcVJQNEtsbUJMdmx3?oc=5" target="_blank">Ukraine Hits Russia With Western-Made Missiles for First Time: Report</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPSVh4LXZZRlBXNWk2NlFNcHZTWEZhVGVSVDBfWjJGMVI5WHBna1ZGYWg0YVFHcFVKUVlVTzhZdWFrVU56VEhBbWRQWGNQNEFESkFwcTVhX2c1SUc3T2xQRU1ycWh3YndtS044WWUtTk1xMmtJZ19CWjF1QkY2Z1JhYS1VTzYyaXpHOE9vTTB3?oc=5" target="_blank">Russia claims it shot down US-made ATACMS missiles and issues nuclear threat</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=23xt8a2utSHjycBP1x7urP5PVz91jB92gSspTZZywApQCatxHBhgtPuX5C1rViJzCcaDWcZ6JwgrSHAUnbWV2iA6jMbpNYQEw9bifeCXzbcXipv9DWVJLRZjgfYgTFHmXZUVZHFWYJFEoytWyeWiCaft7RqYzGyEfEjPFV86tr5gPLM8MmKrLVtCsXFvkS9EFSBhTjtWkNCMYFiGF6qpHv7czyXt1VjHyBqWhUftASiHph6JK5f9ZBsZcDTsA6MfQgMZGvPVbjG26BdiTr5ortnARgRgg9rCLcdrFn4cPwjpaKdpJNoBQYpJMxyNouMj8t4oJqbC8Zr7vLVsj4J5MKhWtGgFFpjeGVgFmvZzPaDwTX6opCfRPHvds1LbshgABke9QgFKaBucVqWAo8BWYX41gDd25Q77L6SR5NRwxaNYFPU3aQMSZH7F2yN2BhaGRncStCRg5RuUCJ9TydM1aYJsQTPYtbgzrqPbtx7aTrYgtnpb9sgqEpfcH9jYteHkBudAYnwfiRZ4ZLRxDeMe9qS4mFen9bZpP4agrB5uZo69SEpKtng1nW7vZtLqStkCp8nF5sKboAuS" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Lutnick and Bessent’s battle for Treasury secretary turns bitter as Trump expands field - Financial Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBvUlJwZUh5VW9fTDZwbXRQNzJwMlVIMFVONlg0bjJKSTVQMDNSblVJa3RBbE5nSFFZSHNEZ0pWUWJpRUo2ZkFTNlg4SGZRbjd1eXFQUFNUblNMT05LeU8wdC1vM0x0cUFldmV6X3ZGbjM?oc=5" target="_blank">Lutnick and Bessent’s battle for Treasury secretary turns bitter as Trump expands field</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQWFg2UHpmUkp1VXZ1SHRZOFJGU2pycGFTZVd0QkpyVWxRSTFTa2d3TURoOHo0b0g0cmVPNUVFejB6WnNENVhVaE54Z0xNMnpTQ3QyRDMxN0E2Z240b1VtTHQwSm11aHdzTVRzb2JxMHVCTWtFcTNUNUFyaW55emdFTDVCY0d2bHFYd1ljc0dsdG9rUU1tTW1HNXBiRjNWNjhSdWc?oc=5" target="_blank">Trump to pick Howard Lutnick for Commerce secretary</a>&nbsp;&nbsp;<font color="#6f6f6f">Axios</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQNUZnWlNmZFdsTnJFS0FPSUliLWdwaVZVaUt0V1AwUVFqWkVBWHE5WHI1ZWJDWGNoWVdqeXZLRXFFVjJIaWZRQ0JhVVdQUXlIbUoyRTVRREpNa2NCX3FsUFlNcUxUMnBNaTludmROd2J4a054ekxXOVVNeG42d1lSYnRaV1cyd2hFUk1ubw?oc=5" target="_blank">Trump’s Treasury Challenge: A Pick Who Loves Tariffs and Calms Markets</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPZ2JCaVZJV2w3SWdSMkItMzljMHViR2dQYjhMYW9qNkZPanBFdTZobC1EeUhiVzNjTWU3Q213VHlSZm1LRWlEYkl1MXRKY2ZieGZFaWZmbl91T2ZBUWxwUHF4ZThuRG5QcDFzTTl0V1FqMFdJd205VGpMbGlVUHNPTlFVYmJpczluLWNiNW1OMS0zSWtGWGJVVnhOY2pjU0o1ZjJSN1BVZ3NPNjZOeWNRTUVKMHUyRl9FcnZPbzZlVko1UktPdjdyWkJR?oc=5" target="_blank">If Apollo CEO Marc Rowan is tapped as Treasury Secretary, it could mean a boon for $24 trillion private equity market</a>&nbsp;&nbsp;<font color="#6f6f6f">Fortune</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQZTQ3WklDc0RvMFd3LXZfOUVpWTBBZUszN25OSHFGUktQdE80dmRvVl9zejhTUFAxOHoycDEtWjV4QUpRYzhreWppdEdlc25CX3VWRjFVZTFCeGhTYzk3azA5NVB1Z19rOG11djFYUS1kbW4zVjBkdmMyYUMtZDk3SHdEWVk4X1pqOENwTQ?oc=5" target="_blank">Musk appears to pressure Trump on Cabinet and tariffs, irking advisers</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=UF7UDccXmKiVe1CdNhV7aKmzhmBqBzJr7c17nj2KbGui8eBz8RDbAJdtZ8XdQX8nVZdVokU9eMCXybzpQc1Q5Rbx2uN1X2o5gC8FXemjtbaKgkrhdBSmA9EUhawmLw7teLKmk9mNfwzKYan8rdJ68VE3mPZTS5HPbFuRuRcQabLkgrfV3yPodhm6necVN5ET35xzMajScp8P8BbDy34dneU4EgRNGLPBpWLrh1qMjvdpzcSaGM837VANV9CoyXkSQocsZTCRWTHs2" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Putin lowers the threshold for using his nuclear arsenal after Biden&#39;s arms decision for Ukraine - The Associated Press</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxORjk5WkZVSlBNQ0w4eFA0RTJyNGFERmVHSHJNMExIbXlWN195d1RTQVFJUVFieGw0U1RGZlZxSGh5b2hmQzVQbC1VUGd0LVU2UzBDU3JvZWFPd0JKUm9zX1BNaG5TN3M1aUpSLTVfQWhRUURqaDdocnk0Y3JQWWltTV9fVExyb0hoTkwzLXBvSURfaTg?oc=5" target="_blank">Putin lowers the threshold for using his nuclear arsenal after Biden's arms decision for Ukraine</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5NdDVkN0FHcThsU0wyVkJLWU9rOGxKMms0Zl9ia3BXSXdjX1hXdG5EZjJfejNYaGJLeVI3ZXh2Z3h5Y3RDaFJkVGhmbFh2WmRuYXM5NnJVYXdiMkRW0gFiQVVfeXFMTW1YVjlxN1FzemdrUEtSZEhiUFdBamt6VW9Sc2ZfN2RMTU14dE95YUgyNWJQYy0zZ3JIbWJId1pWdzh5ZjIzeUlzS09ONVp2Y2ZubmE3cEJBeDY5S3p0dWhqRWc?oc=5" target="_blank">Wetin be di changes Russia announce to dia nuclear doctrines as di war for Ukraine clock di 1000 days</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQOWJ6WnZlUEtBbzZ5T2Q4a3lILTFfQTVfOWYtRmJSekE2d3F2dTM2MEVLeWI0eXFFOFFMTUkybDdQX3p0aWlaQ3cxRll6X3dsUFZxNnh4LWZUZWExOWVQSkE5dHBfQmNqLXFmRlRNSm5GUGptVEVoNkdLUHpiM2hXaEVFZk1VQm5HU2p5LUw5Nzl2X2hN?oc=5" target="_blank">Putin Lowers Nuclear Weapons Threshold After U.S. Allows Ukraine to Use Missiles Against Russia</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOZWZPMDNPWXhUY3dhUTJHWkUwM3MtS3pMbVNrckdDS2p4RkNfWGZPSkgzemFIR3hSN0ZIWFJmR0tWQXpHNHB6TDg1aXdjMlk3Qmw0MVVhLXl3Vk1CazZUSF9EVFpBQndjU3ZaRnJ5Sk9zVHNyODhxWnF4cEJQaDQ3YjUxelJrRnkzc2ZEbGhTcGdJdw?oc=5" target="_blank">US Signals No Response to New Russian Nuclear Doctrine</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOVTZMQVJOSzdFY294VmFTVGtHWkFpTzBUbFY0aHJDUjZ1YmtUaFMxdVY3LVUtSHVGQ0txNDN4YTgwTnZVTjFSaVI4SlJwQVVWLW8xbERiMEdYc1Y1RDZRR1pmdURfZVVoTlBjeVVtNHJQU2phY3diaXpDeGpqNDU4VUxtMA?oc=5" target="_blank">The Kremlin has revised its nuclear policy. Does that make the use of atomic weapons more likely?</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=5QqP4NVdsPNcrA2JhTpQfvLmyEDH48nc8Yrevsy2JMJ6b48dfnwDQqaWYmdBETcMyMrvNVfbCgL8SefWvsYvAWNG579ELxwrS3WSofU1xpsB8RGiRTnLYuRiT6iwE4Hgh4G9JftYUKNwGzvsJYhfSMig58tFJWsPDXLZwqt7FhRLZESuNXgs3VmZobdxX3Bvn8yo5LFDffi5KAB7a7x831R9tSbcBiNBgdFKC2QAfD1mnj9E5NJJ9yxzfxV3oUeEBjEbTyffnpTkfLAAn6fZ91yM7bZ2SGeEFEJPL7p3hjLGw8QR3WUZo7AKzTKA6ktrKM7jXargN5EYLf6" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Germany suspects sabotage over severed undersea cables in Baltic - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE8wZ0dGMGZldWZoX054TnFuN1poNW1QM0t2bXNXNEZkUWlacjEyMWUzc19iSE44VFZFSE4yTDdDTWJVdVZ0SVBBT1JRN1B1S2R3M0FreHQ1WW4yUdIBX0FVX3lxTE9NOXFvSlBhcEQ2UWhpbnBrQzlVWEpLNEVOaWJpQy1BLS1scl9NUm0wajlUc2xKNzI3TEdrUXVEMjJWTzdNUEhMU2xiVl9UZE94dVRJYWhERmFfamdvWlFF?oc=5" target="_blank">Germany suspects sabotage over severed undersea cables in Baltic</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPakVBaldzTDI4NUswQ254b2NidjJycWlGNEU4d0ZmREpBZGYxaDVVR2dyVGgyMnF2SHNSRmVOeUtMUHpNTkpJVVpzalVqc3V5c0I4VU05WVhjNVRKWllTNnZQRmxrS2Fvc1NPUDZqWHdMblQxZEpwVlRVQ1NwMFV0RzVIOVBIRUtoSmVZUTFrd2NBaWlmaTRjdmhpbnpSNjBEZm9JUk5zOUw0SnhYb2cyZlJMc3B3VXRoQ2JPTE5VX3F5OU93LWRIdklscG7SAdIBQVVfeXFMTWpidFZhSzVLSWNwaTR0Q0FyWGh0UEp4NjlDSnJnXzUxS2JvSTRVaXdJejVydTY1X0tudnNtWDdvS2tXZnc5SXBEZGxQdnlLaG9TVFNYSUdTRENFaXZOLXl4U3B2UVlpSEtKQXZGN19vdXRhb2ttVWZYRFppdW1CenMyWnpJWHZ6WXBFWm1WdXdMY1JzY3ByVmVrZWd5MnlUc1Q0dFhsb2FqcDNaRFlweDNZY2x3eEZtVUVrR05jemZ4cmJYSHVsdUNuYnRjeTYxcjd3?oc=5" target="_blank">US allies accuse Russia of 'escalating hybrid activities' against NATO, EU nations after data cables severed</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPVXBTdy0yWVFmSFRCWUlwOFFpS001STQ2SDY1ZE1JdXVwVTRaRlgzLW53cU1EcE1uaHRuS212Ynl2a2xZdjNWbk5mXzFNajN6WWNsV3BBSWFvTzVHNFBLUjcyREZ6eDRWT3NjcmFXNjFBTHRKODVsci1JZHRoQmFNRmNXeWhpQnNpallmTDRMQUs2bzZHeE1DZzdUMkk0emo3?oc=5" target="_blank">Map Shows Telecoms Cable Between Two NATO Allies Mysteriously Cut</a>&nbsp;&nbsp;<font color="#6f6f6f">Newsweek</font></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNSjBib0c3S0wwQU1tZVN4bjQ2dHZMc2lSZGV6X1d5aVNfOE1ELTdJa2tGaVNTVW1DeUpzOWYzQkRWWFNDV1l0a0J3WGNXcXl6MTVocFIzTUhZXzhLcnQ3bVNjTVVGcTNweUJUQXNkemNKRDBlY1o3TkxaeWtrVVN1N3JDbThOdjBKR2FSZUxzMlpvRWx3M3RhbdIBjwFBVV95cUxPUmRSZjVYZE01eC1vNXZJWDg1RFctRnVmVVg5SkpsUDF6YW85VVlSeHRCYXF3M0MzVENPbmtaSzBJeWJqUm9yUGhidmh3LVlScElGdWhFb1pKMUJselpvbTQ3enA0dnJqQlNndmFoWFN5VnNpNURDMHpLWndZNG5qbVhUbjBKOW4yRHpJclJxQQ?oc=5" target="_blank">European officials cry sabotage after two internet cables are cut in the Baltic Sea</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdPVjEJCBpAU9oxacsUmRyS3KZNaRXuGWPUn1Mva6cfZjFoDJo6wGzvJhvXNHR7eH63yjyjhuhR8hTKXLHhpyq2ZHGy3pQNxTFn1LTGF2sunqAgTmKDNqjDguwYnCSQcKLf7sL7n25S1gi2hEm8iYUzMZqYLMNKBjs64smGwwePXDHFFChubH4sooBytujwXKuk8Ef1QVdM3yXYAfQQJn2bATgtjSeEiwvoXXYvhNyXsAadxAE6ZLEYQ5StWixDsWSseCP5GEuQBLy7h7vR9pPU1jVk8JHT4JZ9njCdzNsAZTAv1MWixqYCNi1627GnSS2tesiXQAppvioQHPxx" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">&#39;DOGE&#39; meets Congress: GOP lawmaker launches caucus to help Musk take on &#39;Crazytown’ - Fox News</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMjB1SnRPbXdGdlJEZjMwdzBIRmR0dzl6VFc1eXhGOGxFdi04Wi14OUVOVjlibThqU3pSOVpiM05GREw5djBoWXBBZ09HZjFtZ1RoWm50UmRiemZMS05WN0NfQXluVGFEYUItOW9aMV9qZTJWQm9RcUR0MG1FTjZ6ZWFacHUydEYyOTNpWHd2ZmJIaTZhNUhlZ1gyeDdhczNqLUU2TFZrR1VTd9IBrwFBVV95cUxOT2tGRi1Xa3ZOQmFOS3AyNWxGYmp1U0hvOGxSSkNaTFpWdXRhcXNGNGdNYmJYdzBHOFQyTEFnTkxEbHFva0E4Z29aQ3hha2hsRVJqcnBNbmFsYlp5anRLZDJ5MTJkOGY3U2VqQlNJenhmcXp3QndjR01EWWFMZ1BnaHpqNW5hdmhUQU0zdklaQ09TVWFzNm1MeFUtRXgwZ3JWNFRNVVpCYmZRVU4xLTJB?oc=5" target="_blank">'DOGE' meets Congress: GOP lawmaker launches caucus to help Musk take on 'Crazytown’</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQdDZ6WnZVV2FBTnpTSWVYaEJublBlS0dXUDBPcm83MjNLaUsxMEo5MWQ2YlJjbHdzOGlSNUNZVUNjMnVMM2dxdE55TUFvQVBkekJnY25Sb2U0SlZlM3l3U2toQTh5VXFwZ3NUV3RSbHVzMk9xOXF1LWU0RmM4N0VoaU8tZWk5Z1JKUklmRmwxdHFsQWNVRXJnS2h1OGlLWkwtdGhyZEF3X0x0R1FSMkE?oc=5" target="_blank">Column | The dream of gutting government, offered with a technocratic veneer</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOc2JPV1NBY0FTS3RkQVp3MThpeW0wNGNraEdmUk1VWUtIakJxbFJRemRFTm9Tc1YxbVFmMzROdVl4WGNEaTE5TVN1RVFNOEcyYkZHbjdlOER5SXhqRUVtaTNiMktFX2VBQkZKOU5mS0xhVlA3TXhOamZFcHVsR1A1TFcwV1pIN2JfOFI2NG9BV3NBR29MRk9rRHRHQWtiRV9aeXRLenlJZ0dhSTh2Q2JZ0gG0AUFVX3lxTE1QYlRURC1jb0hHOV9naUZLS0lXZEZxVTd0VUFkZWRBZ3NtZ3VLbzVFY1pycVBhWkdBMlhnZkhKb2Utdno2VWo3QjMyU0ZoYlJ6MXA3U0hvVG1VaVFxZU1XQW5Sdy1lZkgyZEhqQmp1aFdmWGpzUzNtT1lCZW1fM3RGb0hkdHhDbFljc3RKMWVLVUh3cDdCMzRnMlN4a2dtX3FGclJuM0ZGbTlrNnVUSUc2Wm5WRg?oc=5" target="_blank">Kevin O'Leary voices support for Musk and Ramaswamy's DOGE: 'There's lots of room for efficiency'</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox Business</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNZFpwV29NanBCUDZrVVYzZzBKbmFOc3FVcWpnZV9LMjJSTTRsS1hsZVBCazNGR3lfZEZ0cTRsaDFxdTZlWjhackc1ZWxuRlJhMnZGbGEtdUNham1QQ0hleVFGdFE0ajQxQ09HTGtwNEVId21hMWhReUZvbkYzZ29Na18xdVFVbmJvV1NhNkdXZHY4cXREWUJneHdSZw?oc=5" target="_blank">Will your agency be dogged by DOGE?</a>&nbsp;&nbsp;<font color="#6f6f6f">Federal News Network</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=LBr8y2vpphiVK1X5GZCgbkfnqmE78yVdoXNoohQnR9Ja657FaZFem7BWFsfodTvks7F2vDbnShQkszkMYz8CPidKp6ZB9t4LmygU5pNCUZMxtiWZcu56uPv4QyrFodki2KNrgAghQ2SNAjRYRktYEhV7T4X4dK85bR9MeSW9cagKG8dy7eLTnob5as2ErcAaqJLGTuN7QMyGz5vhNC3eQsXj5CoLqx1VLER5CvQ3N12hgySE13WEVmiGDGByWzexcwvuFUbKi5RaAaXxNbcwaMTyJE6ZbKSpzmTD6zsuHo5b3qA5JLPBSKAWgt9XB8VJQ6qaaTkHy7BxVhQb3vWtDp2BWJFQPHy5nENrf4NUa5JM5FLgETaAjraCWyHFLXkeFuPgbSDPF59MiNbTNMaU75A7YCv7B1B9Rqg1BCYCwmNVZvFtLRHBGTgpghxpJtyZi43ybwV1pZqoNp1ZKKWJh2UEAEF2u2gTzQVN88dZ8VE1YQoXirN68RyZd7KbgHKs4LLQfFHF7Sm24wuUEkyKNppR7ipYXgMNkjG4JxrzxXVLRi5h2Pmbvtf1XKLxcQ2xNHXvmxPhKiEGueaSqHVjLUs12W1FuX6Sueq2pYY3vagMymK1npCrBRXSjAkp1YaL5Av8Ae5N2xXHpme4bpzMskq4zCC8BmfKwptzvbPJqUxQqtGpgPeGQky5cqhN5z" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Pacific &#39;Bomb Cyclone&#39; Ushering In Strong Atmospheric River To West With Heavy Rain, Snow, High Winds - The Weather Channel</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQZm80S3VXM3JGLTNiYnNPaF9PMl9NVndEbXNjOEVaaDhiWGFJcGZQYllKa2lRVDJGMGJHNmhKNXBMWFhBSHpiWW0waTEyeFdJc1hCcDViWFMtYkdrcEhzYjI4LS1TYWNPdVJGYmZfUDkxc094Mm5CMUd1VEtNMWlJYko2OHRtR0xrd3BCVkxKTEN3Ymk5X1dGMVFMdkgxelBaT01MN0N0ZENQcnRJMUt2TEJfRQ?oc=5" target="_blank">Pacific 'Bomb Cyclone' Ushering In Strong Atmospheric River To West With Heavy Rain, Snow, High Winds</a>&nbsp;&nbsp;<font color="#6f6f6f">The Weather Channel</font></li><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQzdhU1VBeVdFTWg2RlByQXJIQXM2ZlNFS0dYU09mbHhFZjlmekNMV29KSzJ3TXVsaDZPdHl6SlBPaVJFcXhXdkdmLUNNNXVLY284Q2NDSnkzQzJ6M29Wa1cxeG5SSUwyNW9TRkR1SlBSZ3BmZk9LQmlxZFlkdHc3RzBNc0pyX21xTEFac2phbEp0TTc4UjkzWFN4M3FqNUtUTnRfMkdOZndDRjRVQURNTXkzZ1RRU0g3b3dR?oc=5" target="_blank">‘Bomb cyclone’ threatens Northern California and Pacific Northwest</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPMWthMjVSZmlqMjQ2TEZjRDd5RXZHUzM5ZlZndnctYXZYejFReGFWVWxHak4wdXRVVi1aMnRJMGlId2h4TTB3ZWE0ZElhSS0zTWJyeEJKWV9ZV1dfbG1obGxDQjNoSEphcm8tdGxhOVRMTUs1RGJkcFQ2X2tVdFl3V05MNFZrSHNuRGk5dURB?oc=5" target="_blank">Snow Foreshadows Bomb Cyclone’s Arrival</a>&nbsp;&nbsp;<font color="#6f6f6f">The Weather Channel</font></li><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPY2FTem44S21pR3BYd3lqdDVvc004eGFwVnF1QVMwMHlzNnZWZWYtWlV4X0ZWWm9wQjN0ZVRvbXhkUGxxSzF0ODczRUZFM1hubDhQamhjZTQ4MThJeVk1ME1MaHJoLTJnODlNVXdRTXZqcnBaSWJLMktvVWlWZ0MwUUpMVUw1b1pRUHpXRkMybVY2bzJXaHlxRlhrRmNVcVJzbWJkUGVaOA?oc=5" target="_blank">Two major storms to create narrow travel window to Tahoe</a>&nbsp;&nbsp;<font color="#6f6f6f">SFGATE</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2SBWhBzuy88zwR4VTiT46syyxJTydQzUyYsd5Ty7GiKaqGaEApXCHzra5aqUyVsXwSNE3JwCCNCekuFGZ7d9EmCFWszRxNJKGiUTHGMsUhR5JKTWV6Y6LUWL6pGRFnuovPD3Z6hPirdDoDBhZD1QKRKBmkThXGBFYFuYG8p6B9iUYcuTBshVkf7qyKJy1GALzdTpxJFfdhFNtqgAR941b8dwUEptRT2eEUnNHEC5GvoFgjQNfDbXmh8gBmLkcta8n3CsXyPy7rRQDZ6ZkxU4ozP6e5DSrvshear2rsYV15ufnYM3F5fa1cYfbeLpZKGpzbDHqMvFFif6LNKp2ftcLmRjtBdMyX5tJEDUmMYJNWSE9bJCN2gJ3fDWw1bZzWtYvLgPjBw4Va" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Hacker Is Said to Have Gained Access to File With Damaging Testimony About Gaetz - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPX01tSXc1TUlUT0lOa0ZWcDVyWFFSeXhGV3VaVXdNb0pxSEtIUUNtUjhaRnlUbkFsdnM1WWdUTjZtSHp6U1BOcVhwQ1BvazFEQXo4cHBNX0piLTdmMV9Tb2hLMGtLSjk0Sk5oeS1heXJ5cmFYNUwtNmt2dGhvYjhRYlBVMA?oc=5" target="_blank">Hacker Is Said to Have Gained Access to File With Damaging Testimony About Gaetz</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOSGJjYndPUEluZ3Qybl9NRTRkbkFXWWUybnh2RVpYN3NrQVk2U3dQWmdkdHlmRGQ1TWZabGYwd2w1dnpoSWx6NWpTaWhBLXVQQXhORkpxam5mUG4tUks4V3IwZDdQbXJnbUc2Qkh0Y3k3ai1jbndoUWNIMko5UzFYRFJCREttX2c?oc=5" target="_blank">Gaetz Had Sex With 17-Year-Old, Witness Testified</a>&nbsp;&nbsp;<font color="#6f6f6f">The Wall Street Journal</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOTRXQUIwTWtsZHZacTM4VGhaa2RSYk9FY3VWWWExSkYxSDVOXzE1M1R6X0JOMUZycmttZzVLd2tNYmZwTlZpSTExSTVXMUNkSVdXZ1RaUkJQR3d3ckR2OWtaZzEtOG02Mkx1OUctLUt5STlwTVRBR3U1ZURqdUs3TUh3VzhZT3J5?oc=5" target="_blank">Women testified to House panel that they were paid for sexual favors by Gaetz, lawyer says</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNMERrWkJrYlNWUnhaQ0ZqZWlnWUdTZUdreXhXMGJfUnF5d1pYOF9meVo0VHV2RU5mTUR0UEdCMnZvNzBKSEJ0UGV1WjhvTXM1ckVvVjBRdEp2eDliTVF3dzVIcXlBQl9WSXNUZDV1TWhrdGotbnBQdzQ1S3BybnRDUUIzcEpPd09fdTBLMXBYejkzVHFzSTd0NC01SW41UGR6VkNwVHVzTmd6c19SYmFFMHZ5UzlxOHFfcWRwQtIBwgFBVV95cUxPVXpGX2dkZDVCY1dkR19tVlJsb2ZwWHFYXzB2Rzh2dmZ4TWFMbGRqNHZQOWhMRFNXaUFyZXU2N2x0N0pYYW44QjZyelF0NUk2bEJPaDlIZ3J1WFE2UEVuOXg1Mlk0OWlzQVUwRk5VZkVwU09hWGhGSzQ1VXdIbTBBbEMyX2V3RGtMN25CY3VGalMzdjZhLUhCeDBKTmJWNmhOWWtuRnk0a1VVR3JKV0FaQ3hPNEFFVzB5b2kzSDd2NnBxUQ?oc=5" target="_blank">Judiciary Committee senators suggest a Gaetz confirmation hearing could get fiery</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=HFcFmHBiAeR57tWRm5CRnQtfiWRMMQSpeyueYq5X922JoVe64VTJXhjNyo3ZDr2YxZoiCfY28ZgWaPnjdLEVKdZKNh6D7BxbcErHNrB6GbggQPWevhQdvniWRSpjzepkdiXi4jLjwZ2KVfQ78dAcLTxBNTaPoyQDJj6aFRGgks9sdBzGxHAR42BHjZ2XafXhsv7DAE4jUvv1UDff4APzPTYrudYNB8ggr7SrajFf2og8CAeP4UfB7rMdjW7CKpc7EHhtaWbvs5HHAEBxLQxxG13TgK5Fdfb1g6qqU3fqEX2q3b5T5e" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Senate Republicans deliver a message to Trump: Gaetz’s confirmation is in jeopardy - POLITICO</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQY0RURWI5ZWlXcmkwNDh6M19vRTdNdkljeG04MUQzQkdsTE94OURubElFT0FiaHpiYTFuMVVzMUhIdHdIbU1uRVdDemZna0RiRVFMTkpuYXd1UnhaNGx6SXJPdFBmQU5BdFR0Y2FzMGwtc09vekJGSHNKRmRDTDZWbzI4MVVyNzhsRXY0c2xWX0dnSk51dl90cnl6cTg?oc=5" target="_blank">Senate Republicans deliver a message to Trump: Gaetz’s confirmation is in jeopardy</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNaU1BU2pST0M0WWpDcjZQZGhnR1ZzanQwLVVXMjFyTjZaWlZYS19kYTBiUHdHQXM3U3JKLXJmTlRIQVd1cXhJS21fTkgyOExHM19LeWhBUXBPX0hqN2g1QVhuUnBtbXBUcnNrSmFWdm80aGFlalF6aGZ4ZE83dWNtSW5n?oc=5" target="_blank">Trump escalates test of strength over Gaetz pick</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQOHBCdk1Ia3V2UWRHcFJ3aWhEdkl4UXFvXzRRYVVxUDJTSkRqMGhfdFFLZEhkeTZGcUxjLXd1ZmFDLXI4MU1vTElCOFpDSUZNVDBrT2g1dml1NDFmWmhFT183RjZCbk1HZmE0R3lCQ25rRXdLNnNEMkhuZWJJRi1HSHZYUlhUcEtnSjFFbHJxVVBrWE1sZU9xT1ZyQW9VaVFlZDV3N1lR0gGrAUFVX3lxTFBtbGFRYmRPekNkbDUyNVVJZFh4UlJhdnhGaXd6cXlTQnVrZXlzdG5wM2k3bkc2TWVCRXF4RkJoVkYzWV9NRmZ5M1luMk9BaVJKbkM4VGRwU3ZvQl9MUE1Vek56Mng3OGFINE14MXZuWlJXbzNCTjJjTjdNekJWSmpoQUNfNHJIOXM5MjBoOWlELVd5Q0ROZ1ZpRVhXQy04LUczajkwNkluS2YwSQ?oc=5" target="_blank">Fox News’s Gowdy warns GOP against ‘absurd AG pick’ Gaetz</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE9CSDNIYm8xQzFYLTJ0dnlaakdzeGE5dWZWejBjRnBhelJYeTJ1ZWhUUDEyYTB2TmZXR25yazhKc3BENVlEN0VZcVdNR29YMkNsRTR4SjdoRlVOSGppZHAwYmowNmE5NTVmUHJ0a01WQ3dYWms?oc=5" target="_blank">Trump Admits Gaetz May Not Be Confirmed. He’s Pushing His Nominees Anyway.</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=NJvLGCZyVckvH2UdpvcRANgYhQD5SbMztiXDZB3cxPGpUBhpv97U8usSAkEac9fXipBrs873m4VNWnb2JWWp7G3dLY12CEqftVkuuC7b7ndpWZNMZ5RF8mKdfEmQ2FCStpCbQQ1xo1pd4BfzJqShdumn61QqxEYMu8bB36EdVty7UXCyGgfnMonbXQqFYxTb8bUbEvhy8kGqUS7jXM3pW72EGr2fd2DVMvyb7rtLB1PdNCYKVzem4rbE6rR6TXJvJiceKfaBFy7XpaR9UoGB7fp64T6RgNgpT4jo4qkuRYz2CRbD6nNJRpEzWhyurbhpPnDtTnerS7oQGL55JsCLoSjuyyt3Ntt" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">N.Y.C. Helped Migrant Accused of Killing Laken Riley Move to Georgia, Witness Says - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE8taGlzR0dKckprc1dzSGY5QXZMNUpfeUROcVc5eWNNRHhFZnpNOXdyLTZaNjZPSW5sR2hpMUthV3FUNkJWY3BmQjJVcG1oODVKc0R2V0NDZlVNWW0ybDZkOEN6MmdCcC1KOVQwWmlualZVVE1tRHc?oc=5" target="_blank">N.Y.C. Helped Migrant Accused of Killing Laken Riley Move to Georgia, Witness Says</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNWjZlWVZQVzNmczJnYkYxazZhOF9GV0tuNV9zakE3TFpPb1duMkZCVnJTS25BYzZ2a3dnQWZFTU43dTRhVngtRlBrLVJrNVhqc2lsOTc0WjNFSXlhQnVfcmQwQy0yaUxhOF94YlNETjd5dmxEamF6Qmt0RnJ2Y296SUlkRQ?oc=5" target="_blank">The murder trial of the man accused of killing Laken Riley continues in Georgia</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Oakx0a0VxdnJnLTVoQVkwYlA3VjFsMGJxYURTZlZGMUU3RGFaOFdRSTdmbFk2TzczdkNNMFlPVFZ1U2ozWEVFcjJNM2VobWJnZU9rVnF1a2dOWWc?oc=5" target="_blank">Biden border policies ripped amid reports that GA murder suspect took taxpayer-funded flight: 'Beyond awful'</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox Business</font></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxNdFVNYllTYnRQcm5ZdDBUUjNrNzNNSkhpNm1vNVZFa2NXRmlybHIxQnhJLWdyVE9DVlJxVXhvbmhhQ0xVSjM3akwzOV9LQVQxaENaX2lUUlM1SW5YV0JsdWFFNEd5bm0yejV0STlVeWRjX213c2c1R0tJZkJLNmFqemZhLWpZb3Rjbk5TN3RFcmpQWmt0Z0VfaU9BZm9ONzRvT0s4NkV5NEhjZVczcDQ0c2Y4LUxLUHVaTlVMWHBrZjFUdGRCSkpwRndJUTRoWDQ?oc=5" target="_blank">Prosecutors use data from cellphones, which they say places Jose Ibarra at slaying on UGA campus</a>&nbsp;&nbsp;<font color="#6f6f6f">Online Athens</font></li><li><a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxNYWgxSmFXaU0yekt1Yk1vWjVNemZxYXZwRzlYS3dWNWdzdW9INE51S1F5QmVYS3dfd19La25aN3FMQ1J0R0E2UklEcDM5QWZzZWp6dXFJVEdpR0FnR3BNZWNaX00taWtlRDhaX1hPa1pZdFo3VWstSUFDUmdoVnRhb0Q0a1RFTnF0TTBjcDBBUGFhN2FsQ2U0NGhIbVV2Mmd0VWdGQk95ckNHeC1NVVUzNDdNM3lzSVVUa1k5YmpmTkhBbHJJUE9LWENBVEstZ2xnX0gzQjlEMER3Um5EOUFKNV9kTjBnUQ?oc=5" target="_blank">Illegal migrant accused of killing Laken Riley took free Biden admin flight to Georgia — where he ‘hunted her down’</a>&nbsp;&nbsp;<font color="#6f6f6f">New York Post </font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=M7YJgYmt9DyVFSP9H7XmKMwX7CRohiKuWpLAM8S3heChDtLEDfPySAqP4gcP5ex5FmzxTgyKcA4Q54jbmMhvG7kmfnTJXzcDHffCJa9mjrvFqxeCKAfEsA4uqyYUVTWRvTzEYDiSQ3Pee8ifC6yC3cXjkemzHheXBpM44HURzEtiuZ4zo57TdZ7xRg67PTMUBuWDNKDPZPCiWFn8ceVa2PYLYyykG3cD6N4tJ1usvRFYyRZFGrmiB8x1wAcg3LzmADYT1h9qVto5TrWPBieL9Q1i" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">The industries that could be hardest hit by Trump&#39;s immigration crackdown - Axios</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRW1FLVpLNVZ6MkFieGFfWDB6TThfRlFMWnJBZzV6bW5LUzhyYnl4VC1KNk90VXctak9WSG9KcG1rSnJacDl4TjNkTEU0c2JRanlQQTZZTUNBS0lVMm1wNHlyaFJVR2E2YS10NWxJNWp1RHFFY2YxYzNWU0N3VWNRcmxFS3FleWc0TDd3?oc=5" target="_blank">The industries that could be hardest hit by Trump's immigration crackdown</a>&nbsp;&nbsp;<font color="#6f6f6f">Axios</font></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNUEF3bnQxakpETmdoZFlKeFFlamFwSVMwU1lYOHh6Ql9VczlRcmVBdnN2TGZTMHFRX0RyTHJtRWlId2VkaWJYOC03djhQc25fZlRpYVYtRVNpU2xvSDNxNWtjYTRzb29Xb0ZIRzRUOTlINWViamtDNUlxSk52SnVqdG1SaWNrbTRCUmR5RTFiUGNaQ05nbERXYQ?oc=5" target="_blank">Trump’s immigration crackdown is expected to start on Day 1</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPQ2RPMlBwLWNUWVZRZnZDWTctMFdkYWRpYW9XdWJiM2dmcDNzLU1HQkFjd3A0R3ItRVZfN0o5VTh5V3dLa3lYZ0xUZzdBZEhkcHZmQ3IyWk1ZZWFMMlg1dFhMNzloRGtZNl95dGlfTDlqNVFwWG5uaXA0M2h2enN6aTNTOGtNSEZFUHhObDJ6RVHSAZYBQVVfeXFMUGxTVVE4WmVpZEtBQlBVcWM2MVRzLWtqTEtnTVVZV0hxci1xb0dkaVZKZFp6U3EzaFphUWtKMGpUcDZHLTNTamJTVDNrVlpBWG4zeks4bU1ld3E0WDllZERvekRBajFCNGZSUU1wTmp5bTk2OS1LM3Q4ZDlUM3FSUkhJM1pzU05KYjBjZlhsdWd0LXdWa2hn?oc=5" target="_blank">ACLU sues for ICE records ahead of Trump mass deportation plans</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=52k6mffrchQiSPzS2FD2ptJZYZR9vRs1eKVufRKj94aY6M6RD93mJRiNh4Lx48qYvgzR8RwxLADreTVC1UYY8awrmToX7fKLpNd6ML97G7vNDRcadQnR9mmyMKH2xuyVfybrN3wRskaHJLiFBLCGuatErtYx8VQtsEdZ4samVtMZPB7wF1J7nLkXRJnhhSLr4xt2YVw7pvoHLfCLYTrkJEQ1a2q31Bwb5mfkJwxn2oVaWiKCJ7HVEve2XCi1N1eJfPqwQF1Ba7Wg5UAodAGn27AGQcUoM1GZBxYyq7pCTMXZeVKJHwiyNQ6xd9P7jFaL" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

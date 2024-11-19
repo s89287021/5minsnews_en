@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616641606962436"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/12.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/14.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">US envoy in Beirut for talks after Lebanon, Hezbollah approve truce draft - Reuters.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUUJQMDVQa09wc20tV2ZlUGp4ZEY1dUw3aUtXc0NYdEE2bGNFbjJqUWptWm5tSFFESThMa0dxTVZkVnhCRG5BajBxWEIzR0hyMjdQRklqV1VJX0k1cWtkOUFJeE1FR2hmUDNpMnhsZ0wwZEJrRjgxczZBeVhfWkhXSUtsTjl6R1lwS0h0TVRpUXlfYnRtOHptVU44cERHTDV3MUl1SGZXZG5nOVhfajc4MXFfX0hiYXlGYzdz?oc=5" target="_blank">US envoy in Beirut for talks after Lebanon, Hezbollah approve truce draft</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters.com</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNVXo1WlR5UEFNN09QR0k3Y283eW41NHRCTUhiY3BFcl9Hdk1aSzJXN3Y0cUQ0cTJuSXQzaGFhYWlKWlZiWmxpdXlxVFBDeXN6S3gyM2lkSHJoS2wySXFHYXUzVzhCZFA3V1NxcTRUUHJVRkpyRXc3NmdWaFBvVHpUVVduZnFxWVRrY0hhMA?oc=5" target="_blank">Live updates: The latest on war in the Middle East</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBLT3NSMjBpSlBxOV9paTJ5RkMwQkZiMDlOTVR3c0NKOC1oWGQtRlhtelNBZDJ6bUdmVVVlT1FvWEw0YUl5YVZ5ZjEzVUtwdFpvS1VXVEJScF9mVGcySzdOUUljUXh2Q1nSAWxBVV95cUxQNmJlaldic0xKV2E2VThKdzQ5TldJM1F0U0JfR2tsM1UtcVZub3BDRThIQkxnQ0JsYW9KNUk3TDZ2U2ZOcHd1ZTZ4akVCVEtqZHFkN0NwSGVJSFFaSU9WSHlqYUlON056QlNISFY?oc=5" target="_blank">In Lebanon, US envoy Hochstein says deal to end fighting is ‘within our grasp’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Times of Israel</font></li><li><a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxNdEhhSWo0emcwVmJnY1hmSjgycFNoaUpiQVcwUzItc21KcG5zVWxid0g4NFdSeDNOaUhMM2h2Yk8tSXlRTm12bzFxYXNSQzR4cFQ2dGRkR05DQk9uWVlQRVd5VlptTnBJUHB2ZGJmZzM5ZTlxWHhib1N1TXJpNEZjV3JEUV9fRjVQZFptZjJHWjB1dV91dHFocTlmbFNYTy1kMmNuN0YxWGFsRExhLUJ3NWkyNTdhMVotTlBlc3VtTUV6RDRueS0xdzVkNU1zYlk?oc=5" target="_blank">Lebanon, Hezbollah agree to US proposal for ceasefire with Israel, Lebanese official says</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAJBVV95cUxNSHNIMjd5Y01vZ3ZjQzNDQ212SjRzck1pSG5DTFRhaXNxcVFLd2JoTUpvR1RuTkY4R3czRFVXZ3NLV19zcTlZSDFTem9pRk9EaEx5R1VobVNVa0JoWTd0QV9xQkV0T0VRclFET2RWazEwWk5ZTjh1S1YwY1pDNWJJejdtcWNpYjIyekxwbEJ5MjA3UTNMU2luckhFYUZkelZuNEtnT1FYdUFzal9MV1hoNC1aUGVKUTlrNnhGSXE1MmtrSlo0YWFtRGluZzNXa2JmVEVwZWpxNW9VbXF0WEdFWmFHVWlyWW1PZG05bXRhaGI4UUY0VWE1N29BQ0NJZW5rNE5NUER6Yzc?oc=5" target="_blank">Israel and Lebanon expected to start indirect talks over land border after cease-fire</a>&nbsp;&nbsp;<font color="#6f6f6f">Haaretz</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPt4xgs5yJ1rfAecMrpooAUhAB8Yaojy8zkNczLerFQvjLo5e3HXoc3yZAoawGSLbxyaW2jPKVSV2zgFrarqDXgXfHy3wxuqigmWLGbMJa1xR4Tdt6s1oaJKiftFpgKims7mZicuohJh36Pdyauk3VtwUWP1rDg3VqGCrrrXtZ18BmKqmndm3eTyqZSFaMHgtgtENZusj9t8efKshXUHBH8f6sEpvWaoLKoyTK6TugVsWoEa3onSUQmPEd6ePq3h1WuTZbohyMkRtYAHJtkip2zgcJirHoxx6cZD2VbQpskVVLXR667tusbFBUHio431N8dzkjxwvUb3kChrK5bShLqTvxxMqKhqe" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">U.K. Farmers Protest in London Over Inheritance Tax Change - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOY1UtS0ZtNzBJYU1NT2xHamd1cDRweGpYNkJ6Zl9rV1ZKY21Zak5zNDFZdUJYMXNHcno3VHhOdlJiOU9VVFBmUk92dWVsWWEwMmpGVEc2eFhnRHhRRnRzNjNmZElPUlFOLUlZNVhWMFZCNzVvT1R1U1NGeUZsWFg0SEl1ZHhxVFctcVdDREszZzU?oc=5" target="_blank">U.K. Farmers Protest in London Over Inheritance Tax Change</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9zZFdFUkRCcDM0bFBRcG92aVZhTFpKNnBINGJBNF9tM3Q1S3lkNGs3N29yOG14azFlU2lULXpmdVlJQlgwZU04ZkNreFNBYnZIM3JGX0pPUQ?oc=5" target="_blank">Clarkson clashes with BBC over inheritance tax comment</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNVDRHZUtCbTJJVWg5X1lyNHk0bkJ6dlBNUlpsY0lhR24wN01LSjgzTnoxZVRCQ0ZSTm9wcGVoMlFWb3RKbVd2WmphR2lDNk91eTZ5emh3eFhmQkNzc1pNMllGajRWamJhTTk3Z2xTdWhkenpvVWxNM2pGZXpvOG91b1JONVhqRWVCUmdKTzJPWkt4TU5aUWNkag?oc=5" target="_blank">The Daily T: Starmer the farmer harmer - Inside the protest that’s rocked the Government</a>&nbsp;&nbsp;<font color="#6f6f6f">The Telegraph</font></li><li><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbDVYQVBremxpLWJHTUxHS1BwcVhhcmg2eTUzLUdhZG9oVkdzZDhOM2V6eDhBNmQtcU1qbjZYckZ5QWNLc1VQWnNYX1UzR0lWblUxX2lIZHVpVmI4XzdmcXpWZ3ItaXN4dzVtQ1ctQUVacTNLdzdmcFRJcmVLc29FbThsQUphOUlUdWVPVFhHNjlicnF1UzRyTTRoalE4RDcwMWVVd3pDdkUxbTE3dXpVMzdpWjV2a0RHR3hZV3FPbEN4MnRFX2NaZA?oc=5" target="_blank">Police probe tractor ram video after Clarkson joins inheritance tax protest - live</a>&nbsp;&nbsp;<font color="#6f6f6f">The Independent</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcjB2Sk9aX3NIaHM5M0VxMVN5UHVVMXR2cDZ5eTZ6T2dUVjFsci1PZXppQ25SYnlpRGNrWEt3N3NtR3VNMXBYeS1EcWtadTN6cHR4NGhQaDJZRjRzcDNvNl9zdFpndE1DTEVvZzJReEw1UHRyR1BxeDFLeDh3VU9vaFRVQVEyNTZ1dENxQmExU2MxS2lkcFdIcm1UY2JJX3BVbVVXYXFiOUI?oc=5" target="_blank">Letters: The real threat to British farmers… and it isn’t the ‘tractor tax’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Independent</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=g6br9NKHvSoCcRd1WvyveJoeFdWErLD9geLdR9dV9q2TFtY1tWb6ZnAAaZKjyKRJbHLEQcTaNE3cQqfwf64x7k5fH95KN8j39M86tx9BeAM4ZG3ufeeKWcCTBpZmb84nB8uzT9y68buzcvJA1CvXdXtKxxyvZQQzzp3vNLRmvm6N4RhmkfFQiyh2ZYjbjpNNG9qt7oN5c4FXd1G68SXX8JQYKHpu4hGcVAszisXRPgBUvXZAdahTakpEFj4oPbeETYZ1RmjNASHGP34EsPCkpmo2BeBHphJ9z4itiDXqM1YsdfZJ23VXZmvDGzmqoiF6okWev1t9A" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Hong Kong 47: Top pro-democracy leaders jailed for subversion - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OR1NrcXdTTFY1di1CbVdlcjI1SVlpYXBtOTQ3VktHVUNLVVlmaFRpc2FDRUVwbENzVldqOFdqWmI2OW5mQjFzeElfUUhjdkRmUjVPZmZ1TVpQZ9IBX0FVX3lxTE9aeWhjMXpqYzhmS2VudTNCQ3h0WmlGSENBOUQtSGJpT3ltdFdWZnJCLVFvMU1sek9yc2xTZS1fNHJ1TDVsYnYwcnRmRzJGMk41UC1DNjNsdW1rS3otbWEw?oc=5" target="_blank">Hong Kong 47: Top pro-democracy leaders jailed for subversion</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPUlFuWk80OTAyMlVBVktTR1ZxcEQycklwdXAwX0F2QmxUcWNFR2FITjRwWF8wNTIydVZpVDhNRXJDeTBFNWpMODVWeF9IM2tWQ1kzVjNtSHAwOVJqdVZWUHl0eVdyZGRtRFhRUWhCZ1VQZjBpajlNRURVNUNPT3FucE1nZUJ6TVE?oc=5" target="_blank">Dozens of Hong Kong Pro-Democracy Leaders Sentenced in Mass Trial</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQMXdhbTZ3Z0NZTm45QVpaWHZ4WlNEeW1TMHkwdTh2Zm12UFRlVkUtUldNdXd0M1NYMWhBOE5LMm1wUFZucnhodnNhamNsVXJ5VHJBT1ZOUTdJaWQ2WWRIZjlaLUJaQXdiU2Q4WnZLd0RkeUVXaENTVXRnN2QxYWJUYlFZZnJISERWWmpCbmdmZGpCa2ZhaDdreGZsMHlLWXRzWjBONVdXd3pQbjhlNkQyMGJR0gGyAUFVX3lxTE9ENzR6QVlkZW0wVGNRMk90bmRKMV9GRDVQODdzVFZ3UVRsUGNCMEt3VF9YRlp1OWpyQnNmUjhiZFBzTEZQbExnN0hBSW1xLVBrMUtyWnl1YnhiQ2lmb251eG90aXlqMnBLT0VUVUcyc0NNejZ2WUl2UTBvLXE2b0R0NkhvLTI0SDlpaU0zX2E3dVJSNDhtZU50QmpOS3ExSEpCZi1mNlo3ZWdmS1hNQ0hzbnc?oc=5" target="_blank">International outrage over sentencing of 45 pro-democracy activists in Hong Kong</a>&nbsp;&nbsp;<font color="#6f6f6f">The Guardian</font></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQRGwxQzFHbXh2MmRLaWpPbl9wZjU5TnJkT2JJSGoweU5fTk9FZll5Tllyamx6a1VmOHotR3o3N3RHX1AzM05LUVVvZndiRUlaaHBrTEh1aGhZZW9XdlRKeS1PQkU2Sjc4U3JNbVJJVWVGVHNGNFpVS0tSbG52NWV1NkJqSm9yQWVBY0xZM29pTVoza0dzdGxleXdhMExSOUtMQWhrZG9WR2lYcmJ4UFVYWllrSQ?oc=5" target="_blank">Hong Kong Court Sentences Dozens in Case That Crushed Pro-Democracy Camp</a>&nbsp;&nbsp;<font color="#6f6f6f">The Wall Street Journal</font></li><li><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQazl2UVNmQzBZbDVRaDUtWVZDUHVFd0lGMFJDMEpJTzB0czAtbGZYZld5OGdRczR4VUNpYi1ieGp1RjNsdUJndU9PcUw2T1dwTzQ5aDNjU3JNY2JNSW01ZkV6Ui1VR0J0U0dTMHQ3V2ZUS09GMHF3TGhIdDJ2WXAwRFJnUDd2WEtraXNPNy1vbEE3eUUzcnJTSEV2cnoyRjZIN0tqZVh6N2NSZmlPUEVfd2xCU2E?oc=5" target="_blank">HK Jails Benny Tai for 10 Years in Longest Security Law Sentence</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdQBywNKF2pGq4KojknqS4HtEJ3mqyf5buazV4zHy6TeSiLLfTwXdCXJPXW51n1tDrQ4fL5kJfr2zWTUWpQYo75z8Kunvbh64CuiqYsEe691hhA3CLajEH9WqVojZsrfXr56tuzWqjTpzEnEQXgXZTaMEDH5gmcR4LQmiVNnP5F2Lwp8qD5qgyXUGQUYazBwwQh9retZUu2C2NXQsLYoHyass6cSVsubMACg9hp1vt4kjfyQiGvJzSXDrrBGP1LDNbF5arNmACAZjePduKq9aBTXwQPkBVHYsE2VNYF4pNhS1n4JPh8ySFiSe9qJ2vPSbAGTmfAmPEyMvXna7sJ" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">IDF: Here&#39;s how Hezbollah rockets fell short and hit a UNIFIL base - The Jerusalem Post</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5uck1vdV9la01xZUxkalpHYUlOcUd0aGZtSDA5eU9ZdjJmSzN1N25ucWZjcFlCOHNaekZ6WUtHMEtpUWdyQkNsWVptd0NPYVI3TGp6OV9GQVNtejJna2s4?oc=5" target="_blank">IDF: Here's how Hezbollah rockets fell short and hit a UNIFIL base</a>&nbsp;&nbsp;<font color="#6f6f6f">The Jerusalem Post</font></li><li><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPanZvZUZ5dEtjbmtmVTdtYlI4TklJa1RiZUJwLVhhYmN3X1h3YnA4YWJjT3pPZHlnRzhTNTBLaFZTSWlUT2FBR1dZWnNUVlduMzFJUFlLVDZMZ0VpUnZqMV9OZmlPWmRNcnVDODR3Tm9mbDlMLXJEWUZrQXc3M1NCYXZ4TzFLYzQzS0QzVkNMR1l5My1jOHkxX1pVaFBwa3FZdGFzb09tTG9PWkRNZmkxR3NiWEVEcUFZdG5TS1R0NDFiOGFiWmhmNl9B?oc=5" target="_blank">Rockets strike Italy's UNIFIL base in Lebanon, no injuries reported, ministry says</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFAwdjVJX0VSM0dlNDRfM2lTdFBkTnZnLWNoQ3ZmOURGUjY4M25CUldiT2F0cGtMclNBYTNBZDQ4UWdrdHlxd1VNMDRqRW5PRnhzdUZqdmhGUV9uX2JabWYxRnlXUUk5WlZZQ0laeUoyQW4?oc=5" target="_blank">The peacekeepers under attack in the Israel-Hizbollah war</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxOYWRiQkdhUHEycndLWHREajFvZ1lxOXdTcFpYa1dBNk0ycmwtUDQwQkFrQ19tUFBGQndaaUw5M2ZlZG8wZDBFRUE2QUUtNV9TSTZEdWl0dVltVVlWM3ZoUC1aQmVid1g4RWd0TnRmcUN5cmpXanQtckhRbWRUVVhRSlBJcTZnenByVm8ybVRndDJPXzFfUDhqVGJVQmljUTZrak5pQk9Xck1sMUtwN2lzVVZfU1dFWk9aVlNaRUphZE12d0lSWEZGMUV1aHp1bzhYdUJYbEdnQQ?oc=5" target="_blank">UN peacekeepers have been bogged down in Lebanon since 1978</a>&nbsp;&nbsp;<font color="#6f6f6f">Le Monde </font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=69qdEu4CN8ypg3QkazWHvVjhKL8dhuTBhKAAYjwap5UHuaXX3Jw718Z4ps3LWHNRK3WfzsFEE5opkkwE7FTEftVsKioT4Zq77Jst93ycKbXf9sFWKQvSxFGTdSG93TwZkG68zfg9ixLSMwowzq9964ehrz81EYgEkJy1LxG9bSXKxfjrFYeDjkyU6bZm3XiERWDj5D3rsRRK9nZzxsx3hnTvi9R6dmFKzNaFhiue2Ye7k8" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Walmart&#39;s earnings report shows an upbeat consumer - Axios</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE50NXBGLUdpaC1aZDJsZWRNdHZBRDNDWWRmZXY0ZFlEQWJxWVQyejdVYlJtb0pmY1VyNVVKZm5ZTk0tUEdZODZuOFh4NnhiWGVrLUVkeXpDRm1TUFhzakI0VGRMVWdwbWV2LWpQdUYtT3ZIYjJWZ3liNmxzOEI?oc=5" target="_blank">Walmart's earnings report shows an upbeat consumer</a>&nbsp;&nbsp;<font color="#6f6f6f">Axios</font></li><li><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNX2pGYXVhbk1DWlFNRW1LV3kzOUVRY0dDZHkxYzdYYkhSbHF5TWl1Z2lYaVhHaDh3NmJQYThJRm9NeU90OURINWVSb3lkc0V4NTBWcjlkVWhVVzJqTUExNy1obVdIZjlQR1BXeTRRWXNTOTVuOTRidFJTcURzZno0U1JxX1hNY0QxSnF0WTg5eXA?oc=5" target="_blank">Walmart: What exactly are shoppers buying from the retailer?</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1uX2dMbXdfVzNDTG9wZF8xRzdjSDFnd2V2QXFod29CRTFockVSS3l5TE9GM2hsb2hhRy1CSFRDMmhVQ2tLNHExN1lZb2FwLURqOERDd2Rqdm9ybzMyNWxabzMtNkpJaXFGbXRmLUlmcGhjU2EyZnRreFE3U0p1NEHSAXZBVV95cUxPeUJ4XzZheEdBbzdrSzNObERkel84QWR5ek83WlpiVnFETVdMUnlOOUszTXUxcjctd3pCQjBObU9HSlVzbGVCZ1JMQ25OWWVsZkVNUW1KNXI0LTdKeW9sRGVUUVpFam9SZmxrc19oa2dsS2s5bkNB?oc=5" target="_blank">Customers with six-figure salaries are fueling Walmart’s growth</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5JVlV1OXg0akJhTXVfdjBvMVRKNGh6SldYZnF0ZWZqcTRDQXJJbEI2SUVEcEZmdWhWQ1V6MkU0YVNkMDQxdjczYVVhV3VBSERRaFE2QWcyWU9LaEhna185cjZmUHNKZTVzdWNCdzJyQ3o5LTTSAXhBVV95cUxPdjI3VTgxbE4tdmVpM3ZxR1hZc01oeWZRM1NLVmZ6NUM2aW5rVUhteFNzdHdaX1VVeEhHaGNORmIyQURrTUE2TFVYX2Z0MS1qeVZuYU1OVHYtVVVDbFh5SjdqRWowM3BwN0FyaVJiLWZ3ZGp6MExfaGE?oc=5" target="_blank">Walmart hikes its outlook again as shoppers spend more outside the grocery aisles</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=FrDSZio5ZCzWhfPJvhFpnJqNCxRQjMk8SXJ5wtqP1trMoGhFLWBztSzt8RDWxYdkpLXR8SXm14cFfMWgM9aEtpZov6cj3mQ7wGpJCcVwYuKF3KASeMtxreyfxDkGs4yA7LLqWdmipkYQkKMjok78nuxuKq3L3HrQ8STTCZ21LviD4hRUXAzycEMrdmYWDuLnCraBdwuvnwNLCHuaFv4SgwETgBnf7oyn6qSC2DVWkQbNTjK3cn2ZG38tcUUqH1uJut1tt6DF15xNbmHbuQcJTASXc4JBjCPxzkU" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Dow falls 200 points on Ukraine-Russia tensions: Live updates - CNBC</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1FMVROY2NjN2RFVFVLRXZVMmxFcDJxZ0dZdEcxZ1RTM2pOLW1keUY2ckZhNG4yNG9LRnZUcFZzTFl1cXBLSDZkUVdldnYzLUZFM0lGV0E4SnpPTVJFWFk2SXZMbUJmZVZmc0pxaVljNmVhNkZCblRr0gF8QVVfeXFMTjhxMFZWVUw5cVh4b084MkpxT3E3RktRUlFOTk05SmV5a0RxOTNObW52dkc5U091UUs4aFFpLS10YnVRSDRHX1prTC1Dckl1amo4eU5YLWdQZnI4eFNuQ1Z5dHFLaXRDYkdsWVVranc5WXA0SlFTdWp0N3NOdg?oc=5" target="_blank">Dow falls 200 points on Ukraine-Russia tensions: Live updates</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNa255cWtfMmdmQVIwRU9zdkJxNjNYc05XQ1d4Z180WXZiZ1g3UjE2Wk5GQmszQkg4STMyYXRQd20wMnpjcTI0M1Jid2diakJDaTFLdWNRbm5GMk1URzBUdndlYzlncFJrT2EwRzFoVGQ1ejdMb0dfNzhhNUEzaFdvOXlVaWdZSVZfT1dnRWN30gGEAUFVX3lxTE92SEdTSU54blloUnlzbWJydHV2bUpzSV9FaUZpTC1LLWc5RjE4RmU5Q0FqeUpEU05OSzBzWFZ4RTIzeHA3UTBaRmpybFdMU1JFVGdtU2J0QkMybl90SVI4NnJnbHc3dE16NDRleXBzbVhVcjdXMUUxekJCSFVRLUVfLW5pcg?oc=5" target="_blank">Global stocks drop amid heightened US-Russia tensions</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxQM1lpVEYxXzBqWTk1TS1Vd3ZfdXMyQmlYOTlPcFFVQ21XMTlYZmFFa3lSemtnUEsxZUtGTkVpa0lZSzlXVFpkZ0xYUjdBaWpTRHVlREJjNUJvcmVpSHIyRURLaVh5VXFveGROM01aQ3FGeW1BUFMwQXdUdURRdnZGTUZnM2xPalJjSFBMNnNLYzB2TTEyOERVUFVtOU9KWG5WSGFBWXlaSFhPUkNCV2RBLWw3U3RoTFp4am1rX2Z4aXhpQVhnWHdTb3Q5NE84QTkydWlaNU4wS1VyZzgwc3FzLUllNW5lVlRlRmswQm5seU80SFhDWE5KZ1VB?oc=5" target="_blank">Stock market today: Dow slides as S&P 500, Nasdaq bounce back from losses after Russia-Ukraine tensions rattle markets</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBtb19oT19mRm1CbWNZMnFhLUJHSC1NQkhtNTF1bUZ2NFdDM1J2LU12NlNwSlFaSnF2cjFOZjM5VkRLOUQyMVR3TTZXb2RyWlBEXzgxMnp6SzBQUXVuYlE2dzlIR21pQkl4aElucGhXaGk?oc=5" target="_blank">Live news: Robinhood buys adviser platform TradePMR in push beyond online trading</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPTnV4RkpYWG5wa1JPbWlRTXNWd0lGRkJEMFktX3dRcG1zLWc2cFVWRGxhaU1EMjlxQUVBSTZQV0dqdVM1MHRLZmNTeG91ODM2Ni02ZmNKc3V6TW81Rmh5TTRqQW12Z2ZaMzRzcDhPXy1UbElEQjdNNUxhS2tBV0s5aDhoWk5jS0NGYy1YRA?oc=5" target="_blank">Stock Market Today: Dow Stumbles Lower; Walmart, Super Micro Stocks in Focus — Live Updates</a>&nbsp;&nbsp;<font color="#6f6f6f">The Wall Street Journal</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3xJzNJpx6Gb5q1v2jFmWjVFgj6wPk7Q3AgcceB867ma7bBg8J1Uir9bp2czZpsV2gQNgwMP8Dvz6VjnnzAoN9GPDirtzwvA31Vsa99K8bKNMqSLuwy2daZPxwDJURHewdkKf5fdUbHyUBMopqSZpv7Znvi8QgUnwkMxnsCV2xUya6kUr7UWmUeiBmsReT9ok3dGvvqmha4g2nmjTYPoKhufvpe7zkowjXHEaBAjoen2k697nsV1DLVH3DnLT8mm7ZvpyrTdrvj1tonTJ9iCR1Y4f1xKM3tHQQ1KKvkvJ6tC9C7R9jA8E3U7ULxLZcHF6hSyiVCXRjEsAvHHjScgXMVPtaSuNW6EtCMmchJfUsJ1yD28UKiFxMpktCYNHmGTypGnBiPSDy6dSTtsA5QBmWa96JdJmk7eCJufrr75oyzjaJPnsGgiyeqo1HmML83uKqQEZ2Y1rGRoa9csYiLdmPL6ToQAimCq7Yf4RibbwXGadce2r89ZAUVivP4XJGTHFoJ" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Fracking Hot Rocks Could Revolutionize Clean Energy—If Trump Doesn’t Get In The Way - Forbes</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdEp2eWVjY3lWd1oxOE9CbkdsRG95c1JhMHNFam5CSGlqaE5GWFdRd1lOUU5TQ0trVDZ1WDY1TjNMamRObHdZYjQ5dWhIZXNkeDJwXzlYRXZ4dlFycU5GT0NpbmFtM21xeVQzRWhfTndqc2hudUVpM1g1a1ctMmZZQ1IxTU05a3Y0MnBxblYwdGgwdHMweVpJWUV4ZUg2TVpUTGFwbUJ5eUNsNFczenN5MHhqcjg4eGgwT0c2X3dMdHZJS0tvcTBwdnJXb25Gd252MmtoRjhEOHQ?oc=5" target="_blank">Fracking Hot Rocks Could Revolutionize Clean Energy—If Trump Doesn’t Get In The Way</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1NZmVYanoyQWxHRkhiNGdsT2ZTTlNXbmJyUEZ6SzJSbm5DUDU1SkhqMG1aOXYxOWR1QVJKQlp3ZTFlZkxVbElVV2JqTjgtbTNVMkRLSnphZXYxU0dxM3VJ?oc=5" target="_blank">Geothermal power is vying to be a major player in the world’s clean-energy future</a>&nbsp;&nbsp;<font color="#6f6f6f">Nature.com</font></li><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPSnNpX01MOGxRdmx2YUpPc0xDSS1KTTM0RVZhU2Q4bHdJVFU0LWxjMUdqV2QxMWNJOUU4ajZ1UUxJVW1sQnZ1YUVfVEVFSi02LWFmaVlOTWpRcjNWOEFvNHd6NGMzd3lHMWtOUGtXSzBxcnZtSzlWUjRtaDBiMDRjdVFGd0tJbElkTVRaTzJJc01LQlJwbkFscmZZMENoVHlzcDVjTTJ1enpMZjlnblFJUjRqSEtxWTl2cEM4OUx3?oc=5" target="_blank">More clean energy could come from underground heat with help of Clemson University-led research</a>&nbsp;&nbsp;<font color="#6f6f6f">Clemson News</font></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOTHNsMnBhUzlTTjktNWNUb2hYa0ZjVEZHdjRhc0w1TDRRQlR6LXFJcU9TekdZeUtMQ1BJUmZEUlEwd1Z6aTdXaTFVUkM4TUlJSzU4dFdpUVp3Nk5vRlV6V0ozWEZKXzBtNFlQc281VTl1ekF4NmYxR2xWNWd3U2x4Q0JGRnZIV2FSbUE?oc=5" target="_blank">Scientists make hopeful discovery deep within Earth's crust — could it be the key to limitless energy?</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBFT2tzNVBydWJPT1QxU3MzcGJkam9iSzZjNDlvQ2ZDWWNOd3loM1dSVWZhdWU5SUgwMXdRRVdfTzFsN3RUcHYxN3BTTlh5YnpZd0lSaVlYd1hPcXJOSDY4?oc=5" target="_blank">Daily briefing: Tech giants invest in next-generation geothermal energy</a>&nbsp;&nbsp;<font color="#6f6f6f">Nature.com</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=22SkfN5CchcZckddpvNvg1tckk2qAVno5JvyezEZExRfCy4p7JRq3xdL8SMBcBHjhhgbxt7U5PckaKaqUvMjspGnY9Rtju2vzMvdG4QqBUPjqjXBknc8wyusxTtpiRTPEJvtdAgy6R5sXHQj6BQ8QaZr2RnBPm42asFauXJ42vh4qPngRxJprUFAR16J43yYkzvmybNqMEWR5UhQsdzQG2Vq3EycWV7JkYXhvWG8AdDijVWuwJ6wpq5oBU5LMAjn9VqnudSPqxpU16Pd5bMm2CnZwzPMgbHc1d5gaLeTVsWkdr1V1MNwMXV8FpgXKDfE36BC5y1p6m3pj5UDiZLCGusevsdQELkLzxpb733TantuipuXHTVNt3iEtySsCFrE7cA7zLCka1GPTr4Wj47uBeH7wmUsK8TVy3a3JiiZad1awHDhPfxR3TgSeXGtsnzjx5ajBFZcYm7fJ" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Super Micro Stock Soars 40% on Hiring New Auditor and Averting Delisting - TipRanks</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPUURQa1JWTFFHMkpDSUtYN0dJUnBnbEVIbmVHdTd4dG1leVdjR3F6UTMzQ1NXcmZUUndiOV82c2dReTJhQUF2d1J4N3BGYTFKbm1ZRUtxRkVhUVB1akFKRXo4RFVidjU4V3hnOVVzY3dxUFB3TXB4d1NDUHBIUFhuUDFxRTR1X09CSVZHVFlhSC1jWHdTc3RnWDhUY1I0d0hPUnlz?oc=5" target="_blank">Super Micro Stock Soars 40% on Hiring New Auditor and Averting Delisting</a>&nbsp;&nbsp;<font color="#6f6f6f">TipRanks</font></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOZGZIRWxpTDFrMU1hTXJUbGstb1dGd24xS2lxUU5oaUhoX3NzRnhNMDFJR3lpVEZOSElPdEhXYW5yQ0tPd1BGbEpEWnZLZTlSMjE2N2JDRlI0UzBYWmhBMzVrckhJVVVvNHlFTmFHTGF4UUhMS2FTRnZVTDVKZUJGcUpIOVA?oc=5" target="_blank">Super Micro stock jumps as company looks to avoid NASDAQ delisting</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQR0FMM3dZclNSdjdVVDdheGEwZF9xVndHQ1lPd3VOZ0FVWEZza2ZoaWVmVUdKd2pxM0dMT2hQOUNPZDFhYVptMHl0YWhManptc1IxaXR0RTVMeldhMFN4YUUzamw5ZFFfczFZNlZyMEpGeVk1ckJVYWlsNHRLd2V0VlZTS1VTUnZ5c1hrYkR0T2xXdVFaMzJQeGt2SmlpdGJjWjJ3blVkc9IBrAFBVV95cUxNS0NMaEIwVHQ3dHZFaEdMR3cwLTgyc3VyMDJ5X2Ezc2NITkVvQ1NDS1ZmVzJxci03cXVqNTF1akdKSGtlNmY2Y0tPVVpuTm0zb0I0dDNyMGxxd1pkV2ZXNTJPNTlRa3pvN0R6VkEwSEt1WHZYWlBLQVd6MU1kcFl0cU14YjYyei10eWJVTHZiT01QdTJzbENqdFNtT3lzQ2V5N2Jlb0dNMDBaWmpf?oc=5" target="_blank">Super Micro hires new auditor to maintain Nasdaq listing; shares pop 37%</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQckQ0VkVEVURQWlAtaUhDdnVlS0Z3T0ZSeThqOXZoLWZibDg1Vzk0V3V6WVBELThQYm94aGdxVWNKRmVUQzF3T3NKb01uN2RrdktjYVNvLXk0eUJJbG5MVHZCc3k3ZHNCNGg2OUdXM1hDSXRVQ0oxNTFScHo0SC1rYV95WnNKeUxSaWJYX1FXQ0hvY3Jmd2tjSDhWaHl6WklZSG54aFNHc3piR3NuWWxNdldzYTJQRkVnWFE?oc=5" target="_blank">Supermicro Price Levels to Watch As Stock Soars Following Plan to Avoid Delisting</a>&nbsp;&nbsp;<font color="#6f6f6f">Investopedia</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2CSJPPmCMrkXJP3thBc2JQ5oN1AQEjgMVfxNt3mapnHBkqG4HWHunu3WReyBFwhFKoYuaWQys9xJWgD6JXTkxLXV1q9YYk7Ezzz1p3fU36fWDGhxsCvyEiYcsQyKDSTfiJtk83zauiz4tQzvxpsvzaT8dLrXP1RR8EEah1LHDj7ZhhYJZ94xjyVCPrkV1w6jQcZMEy24VM6istrUggRPvYeB5EyD1R5Cio4eexPm4kgL7u3A2nqHsFmHkr5skaBGAzPPv56i11Hen9zdMUUTcpVqp8KjCcEBPjXeKRu4wAgBKbSiUWrcwk4D67nTnLpvSNMkhDQ6wkUw62LN4VfinWPzDB9ESY3WRPDUPC7qbj3A" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Microsoft pitches AI &#39;agents&#39; that can perform tasks on their own at Ignite 2024 - Yahoo Finance</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMS0wNkw1M0N3Q04xcDZUZnZSS2c4N3JmYlRRTUowTWM3VGRBajdxMkhvZGxEQ0hmeHAyZG1PenprRUxQcmd5NTYwMjBzRWhoRzZzLW9WeVNJQ2ZpQklfZ2hoRWViU1hWMXBKelFVdVQwV3VIWGwxcEtEQWFOSXhEUXBWNGo1MmZI?oc=5" target="_blank">Microsoft pitches AI 'agents' that can perform tasks on their own at Ignite 2024</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFBHVW5Idk51dEhibFM4SnpNNmViZXJSdWREVFk2eTJsYjYwRW44NDVqR2RORkRoc243TXVUSnJFWC1EVVItZlM3R0xhbkdvZHlBdS1wUUd0a3VnQlJKMlZxSUd3?oc=5" target="_blank">BOOK OF NEWS</a>&nbsp;&nbsp;<font color="#6f6f6f">Microsoft</font></li><li><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQVEp6LTZUYUdVQ2Qyd3BGcXZTQlgtZ2lfdHZlRWxXTXNWM2RSY0ZMNkFBZm1MRTBSMU9iMllBWi1feVB1OG9uQk9SMHFUWnE5elRLa0U2S2owVEVzRHlxa2kwSVRETzVydmd3WTdZZDZnOG05NnVaYzdtOEl5MDZxUWdJUHZCMkpqYXJGazcwWTd3N1YyamxsYzVrMjdJN2hXbnpwb29xSzQ0LXN1X24tNm5MQjFkYTlyQkhVOQ?oc=5" target="_blank">Microsoft debuts new Copilot software, touts AI growth at Ignite Conference</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li><li><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUjNENkFZaW1ETndTSGtHTEFwRXFNNHEwMGVySXJqRlczQmZtSW5nVm5CTnhnY1FkN1JoS1hzYjZKZEVQenB4eUNuMUNzTDNMeUNBa1pFTjJkcy1tOEFaNXJRcmg5Q2VBeWNPNWZpdjV1UWR5SlZka0N0eGtEdGlfMXA5NmpDWGpkZlBqSGJ5NFRSWEhFWHBjLVQ4V1luT0ticGtyeml0aWp0MlFiTzV4aTFwN1RmUUZP?oc=5" target="_blank">Microsoft Ignite 2024: Embracing the future of Windows at work</a>&nbsp;&nbsp;<font color="#6f6f6f">Windows Blog</font></li><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNjY1ZFNQMFRRbHBtYWp2alh2V1JNSG5SOFlvWnhvSGJDdXBDSlVhaGdLX3NhQmFoWnNZZ1NfRGRjdGpWTk01bEtqTjNzYWQ2RnRiWnRsV0gzUGUwV3JjeWd4MmJFNU5KeDdLM0FhLUpubUZyTngxaGNuTjRRaGlNcE9mTjlyN2lWbUlPNXVELVdjYi0tdkNJTEQ3UHJIRXhuLUFwRV9hTUU?oc=5" target="_blank">Microsoft’s new Copilot Actions use AI to automate repetitive tasks</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=cio98SvSTP7R3bACfaw3xMcKBMh1BQ9a6Pg7CxWpoFUvvTg2dLsoQZ2iZkevAhnMuPFN7eETVESfoyaQTscpwaqDkQsVSzh76nnE6D9E3nbFws8qqu1t7aZquTSdJ2dBb8ayAAUPvbWCf5q5WnsU7VDrPvQfE2mtxCTabwJjEgswhoMhJU5XvpHJseJaD5N5nbLGdAnETo6cCfHfKw4N6ZGjfsjvVEsM2evoLxBy33LPSdQUZhRKAHipQ4zRtnKML9Gn47xsswwhFuJua99YZ3V3bUoufPA6gUr9134qYuDNg8X7qFwBimEVdv" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">The expensive iPhone 17 Air may have a lot in common with Apple’s cheapest iPhone - 9to5Mac</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQTUpEd3l2eFR5ODFsUjJ0aVpGYjc2VlBkY0dKbm9MaHBrQlZXbUFHSGNsbG5UeWZfdlhpaVNuRXdVNXNtR2d4bm5nRWk0Zkx3WlZmeXA5bWtTYWN6ckFqRmVLQUZkbVo0Um53NlJjUU5MdEczb01nd3Q4VWl5VDhoUUw4bWlqSHZOSUhUcDAtR1NkWGZPbWZ3Z1FHcWVlNnZobnZseGVDcEpVMExxckU5dkVn?oc=5" target="_blank">The expensive iPhone 17 Air may have a lot in common with Apple’s cheapest iPhone</a>&nbsp;&nbsp;<font color="#6f6f6f">9to5Mac</font></li><li><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9fTl9Hd09tOFhKaFcwV1YyU1E0anR5S3JhTzlyWWdYZ0k1ak1kTUttMTJ0UWhrUUF3WDVScGlqNXg2MUN5SVlyWXJlZzhQZGFvaDVxbVFrQ3Zsa242M3drTmJwMFduTWtfREJ6WGUxWTVLcVAzeFJfWg?oc=5" target="_blank">It looks like the iPhone 17 will get another big performance boost</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeUZzY19DQmdvellTYmhjRFRVTzFkbmlkVDJvT1AyenpzLUVaNld1a0pyVVFEQlpfYXo5S2VOUmhSV210cGhzQlFxT3J2RF9BMUs2UXJYbjNnamZsS1ZEWkU2am5vdzlSRjJJMERTTFFTQ2RzMUU5UGFLTFVONHdDeUlabDZGYUZ0?oc=5" target="_blank">'iPhone 17 Air' Rumored to Surpass iPhone 6 as Thinnest iPhone Ever</a>&nbsp;&nbsp;<font color="#6f6f6f">MacRumors</font></li><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9xeWhWQXNzVGhYR0lrOXNOdHBqUlI5MDFtYzFuQ3VTcXVxeTl4ZkNGc0F0NENwRlJBay03T0ZuMk9ZZ242Tk5DZTdNMUR3Vi1KZXY2OWUyRkh2UHIxRHJtM3JsVzlWTEJ6bDdkUmFmNVVSaWtYMlY0dFZR0gF_QVVfeXFMTWV6RHA4b05jYnh1QWNkRmJzZk43R2NqbVVUejhzY2JWcEltWTd2dE9Gb2dDRmszY2tUSmphSUM1QkRONEJaLTZ1ME9JamZEdnJQR0l5aFFUZ1ZMUW5SVkVETmphZFBHWW5tZl9mUVBGUWVqSzBkeUJ2RnFWZi1kNA?oc=5" target="_blank">A19 And A19 Pro Chips, Set To Power The iPhone 17 Lineup, Will Leverage TSMC’s 3nm ‘N3P’ Technology, Promising Significant Performance And Efficiency Gains</a>&nbsp;&nbsp;<font color="#6f6f6f">Wccftech</font></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQdHlZZENTcldfd2dQb2F6dUF4SVllZEI3YWJxdmh3OGVJVkZfaGc5VktlMEN0OXVVdHNYcWlKdlRweUxZMGNxTUYzWm5WME5rOEY5ZUtXM0JUdXI5emRIODNST241b0VuMXVRUHprM3pfYlBfWmdLTEV3RzJXSHNHcjkxbUtwckItRzFkTnJVaTRDUlloekxia3Vn?oc=5" target="_blank">Why the iPhone 17 will succeed where the iPhone 16 failed</a>&nbsp;&nbsp;<font color="#6f6f6f">Macworld</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=5GeQYkdkTVXgxgVHsSEHZxbqkG67iHrSFZKPg36ToFmhWthgxxkB4R7cGJnhDmkfj4WzE6JajcTe99UJzZoappNoNJ9WvpSX698PzUxhLfmXwZBC7Syggkv8WqL4t5jaXNTwq5Pug3Yuo54VkQZip3UQ7peLU4MZg2sGsR4gXQa1AbUH3D87KoVTCd9Ng8hwuFdHam2wTYpJ4Nbg1KSG2BcUvj8UtvWDBiKtJqiL9gAiCnWvZVAUXvLpUvbJLt9VEbgdPA7iNYLmzyq8xQ6HxyNRdCUiFHx1ihE9iVxBVPGm569qERvgvtbuWMzEJTWt2GGwf7uLP6v2EEQEr9YVcjZHXXm8nTfw5yuF6eWL1A1KKmc96KDHQ5ak1BgGutV35KDpFT2" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

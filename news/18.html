@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616641606962436"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/17.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/19.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">US shuts Kyiv embassy due to &#39;potential significant air attack&#39; - Reuters</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNVEtpMTdEa3pSNWZvRlZzMEloQ1Z2V3IzZXVaTHJjeWMzeks5dmhNNldyNWVycE5EWkNPMmh2d1VPMzBYR21pMzFEWTRmSVFHVjFkSTBlYmFOSjFxUmJsRHFtal9GV2k2Mm44Qms5UkIwX1NxMm9iMnR3aUthckEyelNXVkdObDBHN2FNWkJMd2ZuUkdzUHFUNlZLNmFBblptWnc5TVZn?oc=5" target="_blank">US shuts Kyiv embassy due to 'potential significant air attack'</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9XczMtQjdWbV9QdTZVWV9kdTJWNWNKbHJwRmFCSnJJREFJTE5DWFRwOTBRU3hhcUFYdHhPcmRISDFueUpFN185djJBS1JROTFVWHNVeExsWTE0WG9ocmgzNzhneFNfdXVKX2p4c0F4UnJyR0tGUkU3bWJyYnJxcGM?oc=5" target="_blank">Live updates: Ukraine-Russia war, Kyiv launches US-made missiles into Russia’s Bryansk region</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOdEstME9ESE9RVFJjTnBQUTB2dTU4NnI4RG8tVS1Va2ZKeEhlc0tGblcyUVlTV0d2a0FPVVYxSXVObXB4eUF5aHhqTnAwRkp6Nkkwcm9JYlJLZ3U5dkx6NmQyWWdjQ3F6Q0J5T0xrR2ZUQ0NnZ3E2MUppYUtTMEozdzZvZko0UUV2X1JtZ0Z0c1cwb3RvVVlsamQ3TzluSU5f0gGmAUFVX3lxTFBEUWJoU2xqTWM5NHBRUXBVS0I3bXlXeDJ2eWhtYm05R01tVE53Qk9CRHpFQnk0b2FLN2ZwTExtVzNMdHltYlNJTDVlN0ZDb2J3N2xyVm1wZGJJU1FnQTVhcHFnMkNscjJsYTVFR2hlMU5sQjJWSEdjYkNaeEZYSDFoOVA5TkpPV0t6Z3VLWG1IVVZ0MDR2RDB4RlNYT3BBOXhQWm1PV2c?oc=5" target="_blank">US Embassy in Kyiv warns of ‘significant air attack,’ closes</a>&nbsp;&nbsp;<font color="#6f6f6f">WKBN.com</font></li><li><a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE85ZU5rY3BNbm51eUl6Zm90TURHdmFHZlNmR3FsemVQX3REclpLemN5YzJMQV9TOEVfekx2Qm1aMzFuTVlsWnRqRlpjS1loX1hjMFhINA?oc=5" target="_blank">Ukraine-Russia latest: Ukraine warns people not to panic over 'Russian psychological attack' as embassies close</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNYXVJbHlDMkdiWnllS0pVOEgtb0VQcFpESFZrZFprLXFaZ09SbU9CZkp5WEhJRGotcFA4anhUeTFtRWZGRFVJZ1NRZDd4QjFyTE5uM0QzYTVOR29IMXpPc3ZVQ1c1ak95ZzViWmpzcmxzWWt6T3N1cXVlLVNvWF8tVW1pRzdQNXR3MndudzFBdGFIc3V0NTB3UWNB0gGfAUFVX3lxTE9BdlJ3M1VXdThHcU5laFFaRnhzR3VncUQwVXEtQTlQMlZmVFpNbmF4WjNEZUJaaVlBNzZYT3hFWm1DenU2S19PY00waUtEalRHaVVsYXJnSG1RdXR0STd1cHdkSXZtcGstVXByRkppTWpJU0ExVXRqemZRcmM0eDQ4Wk9hZ3JNRkNVOGlUNi1TOGVfdEw2cWlrbEg1TEJvbw?oc=5" target="_blank">U.S. closes embassy in Kyiv over potential 'significant' air attack as tensions with Russia soar</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=8qNELAMUp4f9gsssHYLXBtfYJBKcXNZPuCYRTzzJT5Vh3oeaCm3v8ovEYK8E6fkxMQ6fGj3t3RQiQqQoBinM85nPnsUJvLTAPcDB9WXv8rTNAK7dFkGoY1THUxNFkC683fdbZsbTfARp6sA3oLyxjPUo8Uv4KVUTkVuCJ97smA56YgzdgrH3UTPmkcKrRQwaxGugHg7AbsoEuFC626M2bFdDrvsqtHVJPnZgWDUUhxGXuyD5xkLGoQiz6ryFR4t2Eiaj3e6KUPGsvUqw1ppkh7vAdTN3Rh8BoF6Jjbg1YrkGGhuvKB1XAze9ibmRda7fE3cGN6f29qjiz1TUwKdcrkjLeYjPmKsCMwnQBzXzkabfk5ZMW" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Trump selects financier Howard Lutnick as commerce secretary - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9HSGJBdnd4djBnaHNUbkFvWkRCMGpaM0J1Wk1QTVRBQ1EwR2NUTTNiRjV4bnZHWHRQdE9Bc3MwV0pwdS1xVTNuX2lqR3ZOeFlTRXpSNFNHazdyZ9IBX0FVX3lxTE5uY0tCYnRHZ2dUTHNZam52aDZQdHVIblU0clJzOVc4RW52enp0VXdQNm1JR1hfQWRrTEo2Qlh3QWV2czlseFZDQU10WDJSSTJIaFJ2MlN4V2h5VTd3TmhR?oc=5" target="_blank">Trump selects financier Howard Lutnick as commerce secretary</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxOM1VyRWlvRm44dVptTGhJQnl0OUVCc2ZiSndIbk5TcnEwU3oyQmdjZnBhSkZhdjMyUnNUUkFiUXVvbTlOeEZuekRhbHFod2l2eEY0YVJlVVI0WE5DUmJldTBrRUpZTlNKY3FJREVMNTNMOC1rTzE1M3A5Q0doNUEwNU1HcHd5YXlEOHVCcWNZUkpkUE9PX05iVW85Z2FVbUU0TmFSQTZPMEZkcThxOUMyR2xVUEZDX2k1WmU0YjlZc0xHMkJfQXR2eS1OaEo3SEFsUkNRUmVKenZ4bmY1MWItRUVXZUtseV9HVzJhb29KWkw4OFhZQ1E?oc=5" target="_blank">‘The Most Hated Guy On Wall Street’: The Unspoken Story Around Howard Lutnick, Trump’s Pick For Commerce Secretary</a>&nbsp;&nbsp;<font color="#6f6f6f">Forbes</font></li><li><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNN1I4RlI5TUJUeGRXNExtY2pzV2ZmVm9CZlhBejFldUVRU0lDVy1WYnV3VGlUTjYtWTNIdTFqWkZvSU1xa0JqTTlNekZyS0lBZXloajdhUTlDRktLX2V1S2V2SV9JazdqeC1GdGc1QndRemxFdWYyRDFId09NQndfeDZoM2kxZ19xck50dTI5NVU4NDdBZmNNclh30gGQAUFVX3lxTE1weWtqRVp6dXBkLVFock1Db0lEOVB3OTNNQkpqQ2pOajBTd2pkVkl0dEY0NWtpT0JaUjJlQnNsbWpEdWRudjRSeGxDcjFvbUtHV2ZSamUyb0lPNGpidFp6N09Yb1h6dGdqcG9LQXZHcDgtOE85UEZNNzhBblVZbGVmOFJjZmN5X1J5TWdaMndfQw?oc=5" target="_blank">3 urgent tasks awaiting Trump’s pick for Treasury secretary</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQSUdiRWwxbnFoaG93OHBCZGtWcWpOYUw1ZnkxWFJJYm8wdDRqeEI0UG9wNUFsckhUOTk5dm80dU92LXhITkpuemhiZUl2UVAwVDNYSS1Jbmo3bV9FUnRWemxLQW50Z25ud3VvTGctVFpldm9EVmllZ0RyVWdVY3BoYVFMUXAwa1dQTmZmMEM2Nk1ucldYdFd6djRsbHNnQQ?oc=5" target="_blank">How Howard Lutnick Could Shake Up Global Trade</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJgdQAgK1LTBG4icX25jjpoiiKx2wzuY9WCypyWbcRnAP5k8n4oHnsnqYZQWGVxoet9MynQLpKobhi7VFmUDBAKuFga1B2QSRpEpXYhDjEim2xu4iCAEYT75uSxH3iws8qU6C8ySxHj4ojKDB83pZwBLz2gcz6NPgQa9qmxBBi42ANzuhFGkE4o6gGTuxinZcFZHait3a7ifQwS4b6rT677diajhT33ck9crm4pFGidsjP5b6tqhC5R5uqMHTj6HP26TnAWVMzvB8mNNDfG2HCVVwRPUddAnsE8p48i9RZ3MpWpCvSaFyLv5QfC7ZbEwP2z63ZnNsvn98j3UKkmpg" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Republican moves to bar trans colleague from women&#39;s bathrooms - BBC.com</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBwSDBUUGwxTGJtYzFFLVBlNDNqOTBpOEdpcjZTU3k3NjhmNzYzOGpXNlk5S3VVNTBBeDdWTy1oaVlwa1NPSGFUR0lxX05zeXRrRmFqWnpBWXhFQdIBX0FVX3lxTE93eEFFcmZXbjBfZ085V1VPYUJGbWgyWjJNbnlaZkVOZWZnbGpFNUZnOWZ3bWpQQUQ0NzZCQWk4UDhlZExET3JGY1ZYQ3VCV1RJOU5zVTFDUWJkUjF6MmxR?oc=5" target="_blank">Republican moves to bar trans colleague from women's bathrooms</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaGxGQnRqT2pucElUeUkwSll6dUhWRGZsRktsN0NMTklfVU5PWXFpdmdpblhNOTJQMmNTR0UydkZ3YUYyWWtNamxLbE1UejNFUlVBbUdWdHpfWFNlYTh0RUJpQmdmSVM5bWtGZTZibWVJa25NNzdQakFRbDRRS1lkZmJqX2ttVHB3THN1UVpiVXkzbWdSLVMyWkZaQmt6OE02SDYzVTNxamJfbXV4Wl81bWlzaEp4UDBJQXk40gHAAUFVX3lxTE4zdWNuZF9na1dOa05hcVlhdHZqSTdaTGRVODNHTkN5REtUbUo0MVViVmhjbEVQQzFvMHRCMjRzRG9qcW8tNXhaa3FLLTF2TVA2RFl5b0thdks5emNwVW1ySGdQd1I3MFhDejE4WGdmX2hnUXR5Tkpfd1RKb2tpVXJPb2FiVHppa1FGSjNuT0FBU1N4bXNxMVdNSW9EdVhzMUxkUERlT1BvODJsSlZNYXhMVUprYlNUaTF2R01LNTIxQg?oc=5" target="_blank">Speaker Johnson makes clarification after statement regarding transgender House member</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPdWdJTjREWnJ4WU5mVWlXUmNZMWY3NGZ4V0N5cEdpRWpxYVdFbDhCazJhRkZweTVaU2FTWG13bWV2Um1Lb2dXeWtSMVVVT3ZCQTZhN1BkU2lpTThCSzRGOGI5RGNXWVlORmpVdF9PQTAzWHE2dVZKLXZSZGE2VG95bXZUNGlBc2VZdndQRERWY1dXQWZIR3kxMVlvMlRTRjA?oc=5" target="_blank">House Republicans Target McBride With Capitol Bathroom Bill</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE12cGZESFdwV09qSVEwd2VIdEVWM2NjemJiY0I3eDdUanZhUXBoOEt3eU9VZ2NqUXJzRF9xZFhPTWtyVUxBOE1GQTZlZmVqenhJTWRlOEgwYmhqclRfZ0hkYVUxbGliMDZ4UE1MNl9KejBmdGlfamdwX1o4Skd5X1U?oc=5" target="_blank">First trans Congress member from Delaware hit with proposed bathroom ban</a>&nbsp;&nbsp;<font color="#6f6f6f">WHYY</font></li><li><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNcm4yWU43VVVmazhoak1OTGlLSTNhYU1YdVE5eVZvc2lmbHNHTjBCLTJVRTk4Z2hNYi1YYlZkV3MxelBHcEFSMTZSNWdqMXNaMXBzYmtrdWlYRk9VZUdxNEFERzQ3VlVtZy1EM2x1QnRxalhRSHVZNFhsMlBad0FfSm5lOHoybDNkS3RfNi1penBsQdIBiAFBVV95cUxQbkI0X3FnN0RRdW9ULW1NeGUydEJITVl2YkRYU0d5eHNIVktXcU5kaHlmMkRLemVLUVNkbGpENUlMUDlzRTVubWpzSjlWcVJDSy1XUzBXcHY5MDh3TDJ1MkFSbUN4eVRhbTU1NUM0MnU4c1c0MmpDZlRxVUFtMzltNXRfN2l4ZWk2?oc=5" target="_blank">Republican’s effort to block first transgender House member from using women’s bathrooms brings campaign issue to the Capitol</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=MdMm3iHdKzdGSGFTMU5D5mHwqY8KAoSQAFLxFsZ6wwAsF2GWGVajUtsPmwSgtN4kXjEJghAKskCg58FW1gZochiQraYVExZpswFEzageRGRibJt67xfhZK1Q2q9GHt5mCi6nhySpmbXpCP5x2MEJz9TXqcrn9wN63VqQkr9RNAQnQVAuz9Z7G6Pyq6ivkR7ikieBsykU68UhygdaUKMLBWgBgD8NRe4RpAGxaBTbWc5mZHCrwX1vz8FD2oX8NTKA7Ghpt7TLZGm4sk7HwTiomasKTzzSsJd4h566sVNswy5jvMf5XsubFPA9QekRPNxTBkFp3RT9dxNo8LTBctg3JbPxiVQVyHUcGG9kwoToEH3T7oJyg3NdrU18awh38ndqhjLMrbY3wV1onDh7Kk9Dr7v" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">What to know about Linda McMahon, Trump’s pick for Education secretary - The Associated Press</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxPNE41SXlNUjNsU20xVXM4aW12ektkMXhUM2tyVWpzdW5JcmUySWdQT013VmhGMTNOWnFGRmY2WFRnVE0tSXFJRVdwQ0pYMjdKakR2T0xMR3g5RjN1aFVwbkJ4NDN2M080U2lJaEZTSjVwWWJnMy01aWRWZE9XM005N1FlMEpHQmVOZGwwOVNJSWMxRzQ2Q0FPVEdpcTdRQlY3UGdycFJn?oc=5" target="_blank">What to know about Linda McMahon, Trump’s pick for Education secretary</a>&nbsp;&nbsp;<font color="#6f6f6f">The Associated Press</font></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOS1FPOUdOeWZIZmJ1T2xxd25UalhsVHZDOWdwVHJ3VlktdldwMnNHVTk3Z2hKcWQ4a2NIT3cyT3BPQU9RbzlGZ0pMZk1LZUp0NjZJUl9VRXpRNDZ4NjdfcFE1elR0dEFxYlhZTHJfR2E2Sk5tWmJWa1BnMzVRMUZzODlZZ29zLW1KbUE?oc=5" target="_blank">Trump’s Education pick once incorrectly claimed to have education degree</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxQWlRSQkJNcGdlM1FVTS1rbS1waWZaNUxIWTJTS1dvQmxNZ3ZtX1gxSnpGdER5S08wUGF5TDVsQ3hRY21yLVVXMnB5eXZkZDdTVE9nWUZRUFZwOFlzVnd4QnRzdjlIVFpyVW03MUVBNXZMLVpTaF9FWEVjX1d4SHVPOU1TbzVuai1YWGl2WmtOZTdFTzVRSVZYYlBrWHBRS1HSAaQBQVVfeXFMTlJRZmVEa3BQYUhFbXdRdlBPblg0Sm1DZGZJUXQxTlI5TXNlbnVIZW1TM0NiSUI0MHlnQ0RxbV92ZElfTlh2MzlUMmt6M1dLU2NGR1JlLTk1eWhRc0lxSXZsSHVjMHRteFFkb1VZQ2VSZGFhemlYV2dXNXozUHgxMWJCQV9rSUdwQXgxRTJodzFtU1dyams3Yy12Q2tUWlNGR2o5SzM?oc=5" target="_blank">Trump taps former WWE CEO Linda McMahon to serve as education secretary</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li><li><a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE44WUNkVmZ0eEN4Y01DWWU2Tjc3RjFJV2UtbmJWU1dlVWxJZDJPRTBzaU9GSV94dHR3M1RWcTZqZnFzRks2WUFXSUEzeExMVGdhbC1qSWVLSmF4RWZP0gFiQVVfeXFMUHNYMGlvTjVNdm9naFFmVEZxOU1ueGNMMjVqclk4R0tnWHFKMFJ5SktLd1RSUnlid3NFZWxQckRLTU0wZkR3M3F6bmdicEpqVEp3UGsyZXlUSUREcDlkenk5UlE?oc=5" target="_blank">Trump latest picks for top roles na former WWE CEO and TV Dr Oz</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=8qNELAMUp4f9gsssHYLXBtfYJBKcXNZPuCYRTzzJT5Vh3oeaCm3v8ovEYK8E6fkxMQ6fGj3tBWE9WaVpMnc3Ng1vDAjcN4TokRRrRsvekJfrBCBVcJDiBGYTxJV5CRLBeg4j27ovSNXtfevYqe3tYS7yfHWuXiXbmgJFXZ8LqqwHLcVXHEYGr4M2n11Wu5bRCWjDP3gEbS2HdwJBxcpfk549QuuKfQeiGdSytd6bYcdXBnNzCocv7fjHxXTZ342QjUoczjrwA4K92dywXishCtdYH7La26R4MNuGN7X3Cwe3TuuRCewqcP6S25P514pYMnspdjzbH6kuQuB8e4nY96z81poBsMmsfXHd6F3AFw6PcWBcg" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Bomb cyclone impacts West Coast, 1 dead in Washington state - ABC News</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOdTE3M05LU3NRM1VMRUYxX1FVX1Y2aGx6MnNWaW1JWEFEeHBJbllSTHQ1Zjl4T2I5YVZiVC13WnhhME5NR3ZmdFNBWmV4X2ZmZFFuOGtnZGZvanpvOGNGYnI3TzZ3REZ2YjdRcEVnbEtlWF9qWDZWWVE3THB4eVlWb2xfRXVLSHprXzRBdnRKLVFacXVmOV9teDRMQdIBoAFBVV95cUxQUFFDcThwWGRtQU0xNnlqYXRDckxrUFRVbFZLR0R5SFJWYVpmVDlfWHQ5N1FwWEZJaldNc3NwbC1aOEVVM29RNFA1VnBmeDNadjF3bGphQ1Q0VVozTlFMUkI0SkxQUDA4Q0NaXzdpOFEtU0JRRFJYQlg5U2N1Qkp5SFNSVDl6bWJ1b1gyLXpkVklUWkhIVEFHeTRvckdJcnV5?oc=5" target="_blank">Bomb cyclone impacts West Coast, 1 dead in Washington state</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ1ltUEl1a2IxeHBCdVRtaUE3bUt4YUtabWxDR1ZwLVl3UXZNNW43c1lsc0QxNV9Tam85ZjdrX21TRFZNQ0dDYlgwR1VfYi1ndTFjVGgyZWo3Z3UzdWR6d2dOQlRkQklRcXpsWHRuUXBRU2dCRXAwX1ZYQUF2eUExM0d1YmViZmlSblVzTEVHdkR0WWRFRUHSAYwBQVVfeXFMTXladHlJQmg1dWxWLVdaeUtwTjBkR3hpRFRKUmJub2JxTFo4N2YxdDNsQkZtVk95UzZLY0hBaEJhcF8wdTN3VE9MRHkzOUxSVWVKT0w2M2JNQ29Tc1dwLUdGdDdQS3RlR2dxcG52cGF1dVBBMWpwYVdXQndiQjJlMjNlcUs4aHcydVlNUlE?oc=5" target="_blank">A new threat arrives from a deadly bomb cyclone that just blasted the Northwest with hurricane-force gusts</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1ESHYxVVJPYU1Qb04xbjZRVEpUa1JNOFlHWDByX1NJWl9oVkhrSHQ0X185OU1pSTlKSmJ3b3VlREFYdUpYNnpMaFR0SFgzOXZDRDdFWWs0MUp4UGFaZFN6a3ZlMHFFY2lBRGFKRDIzNUVsNUgyaTNB?oc=5" target="_blank">At least one person has died and over half a million remain without power following ‘bomb cyclone’</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxQZm80S3VXM3JGLTNiYnNPaF9PMl9NVndEbXNjOEVaaDhiWGFJcGZQYllKa2lRVDJGMGJHNmhKNXBMWFhBSHpiWW0waTEyeFdJc1hCcDViWFMtYkdrcEhzYjI4LS1TYWNPdVJGYmZfUDkxc094Mm5CMUd1VEtNMWlJYko2OHRtR0xrd3BCVkxKTEN3Ymk5X1dGMVFMdkgxelBaT01MN0N0ZENQcnRJMUt2TEJfRQ?oc=5" target="_blank">'Bomb Cyclone' Becomes One Of The Northeast Pacific's Strongest On Record As It Hammers West Coast</a>&nbsp;&nbsp;<font color="#6f6f6f">The Weather Channel</font></li><li><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1iRFJPQV9TSlV1UE11dWxHQnhYN0tqYmEzc2Z0RVJhQkV5YkxWcHpfTURlNVlhUncyUHo1Vm5KVldpQm1pT21kMkhVSU9iSG8tejA5ZTExLVVYbUVncXJTLWc2cnY3LXBtaTFqZE10ZS1sY0lLVmFoMTRVSUU?oc=5" target="_blank">Nearly 600,000 Without Power in Washington State as Storm Topples Trees</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2WVJh5ayZSnvdCxbumUrJZ8N6pnmarYaerg46vQ3MG3fBPDLxe6JFPzKzLz1nbBW6bXb668H8bcnvjmYNhXbnbvtMsE6gvdj2Ci51MXC8jryz27dLMDemgRcU43RS9LWFjTn8wHf2Vr5odWRZFG1B7r2BqwWirxQtEMHzxPZbd5QeVU5DAqYvzJzXYHVx4GRzzcCSpcXub4bX3k7iw18qXvACr5nqABcdCdqkoNvcxuWUZAZiHmVXvssCXfNKUcGnE2wxY2YwFgEwXbWaxXUdpm9szULi9pJDbTDJxSpyatYFRiXnXfUZdWvy52mCatP9wNKLDauygm9BgZajtpaeRVx4HHLcu8QBgUXoUTvuz6AREtXDGiK5Wz6HqB76chsXbZNVLJfdQCT3mzJroR9iQPdFZDC2Szmp42WttAwVyccCvsAVoGpehXm2H3uMrdWpuMyNksafreToaSqgfuZ6husGhXfjegVzK5RCJwBsj6XTAyfqir1LDTC1NVxdEtLYbTRiXFdZacfKcopph8VKHvqLjqKb8iBptLBcyXVxW66L6pMR8bqey1hh1DPhNfWC3wuAajrHVjecwtN9RAM8YpiHx9z7R3ZwxzjC3DVvdXkYdTajpo8LiBXYrxsrPewhTf8m9RN" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Ethics Committee meets amid mounting Gaetz pressure - POLITICO</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOc3hUdm1ETWJTNFJWTWx0VERYYWhtQnBLQ0U3ZGhCaXdtaFpqS0dBN1ZnWVlMcTFuSEVsZ28yRUszRTljc0h5bGZEQTZuV3NoM1J6UEJkbWswX195MGpWUzFGc0JHOHo2NDZObkxXa3NYejY3dFI4U1d4TjI0Ty1KQzJBcUVHbE1xekVQc0VlRXNuTzF1MmFBQk1RMTFqZw?oc=5" target="_blank">Ethics Committee meets amid mounting Gaetz pressure</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPcFRGNENlSVNSc1I3bDJfc2c4ZjNDZ0kyM2w4ZmZwUGY0YzRqUHp6OHlTRzYzLS1PMi11UWFHbTVSLUNqUVJ2U2twZTZsX1FFSHF2dTRWbEhlc0VZNURTT3dxTmRLbkhSeXlZelQ3c1JVbk81c3FqemYtdVlXbVVrSkNn?oc=5" target="_blank">Marjorie Taylor Greene: GOP Covered Up ‘Sexual Harassment and Assault’ Claims</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQV1FmS0RKSHpiUmg5RUtVTndpeTM5QUthWkhTQ1lVcllNQVlWMHlnMlZuMUNQdXY0cnZxVGlxR3pKdWpuUk5iUXliMTg5Zmk0WW9mbmI2aXItZXN5MlE5MTZQOG95Ym9FRU1kMGFYQ3JIZnk1cW42WWthWkxIbHE1ejlBLTMxNFRPNDlvRUpDVjBiNHg50gGaAUFVX3lxTFA2QXlhM2tXX0F2a2tqcGlJNFJVaFVnMzc4RU4yYTZudHE4NThkMENmcmI0TXZQOEtWSVVlaERXNFdsY3dId0NfMWZoSVF6Z3dKZTNpN3l5RnIzM202SnZRcVoxTUdHNnE3WHlDcjg4cWFGWklkdENYZ3dKTHd2UGVpR2xlU3hFSTJ0a1JDei1kcDhqMEg5SEZSdlE?oc=5" target="_blank">Watchdog group asks court to release Gaetz investigation documents</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=YbJmw6bXdYUsyHkk4ZMWXjsBXk6aiCu8nKtKP9Dv8gtkMXxDfvQdgqyQmCxmq2Z4PCM2Nkgb16MTJxbpuNs3dncoWxHvpUrryCFJyUFu4qgBBuy7X8LcaTX13J2nJvfRxoucwLWhC3DEvMiaYvvewHvHdNqrcr5cs1zHPHJ8VL6W9g6SAw77a1DWhUxmZEEGbauRUvBVB3nTFZKfWsKF47EwRZGo4D9WXurAiP8RRikxouVrASwWi13uwUuAzM8LM5pWLM3W61MM5R7JsmcWoDXKbd3DmV4QJZSimXG2oKXraH4eAi1VttoBQAJKaJ9DRZryMxUtryZ3pYrRWeFyzAsQwYqK5yzZztL" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">The Onion wins auction to take control of Alex Jones’s Infowars - The Washington Post</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPRnlwcUd0Z0M4S2tPM0kyMEI2Nks2MVdoYmNQMERHOS02YXRBWjZ3YU5ZZjJBUjJicmVPZDFDNXJnSEhsZWlFWlJ5M3BHcExHLWFzaDZaZFNmbm9SRkgwbDBwcWprLUFTNFd2SDN5Sk5oNmNUWW1ZdVpac1dGVTZveU9PZDMzWE53c0hQRzZ6NlJudTc3QVR6QWJNOXNLb00?oc=5" target="_blank">The Onion wins auction to take control of Alex Jones’s Infowars</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxPRFZCbjRPSVZFWmhoQTJBYzBFZmgtVWpyUDJFYUNZWExTQTJUd2x6eEk1Ni1aUmpBQlRzSW16X1lRS3V0SnBCZnpva1pjQUtnbkFRTzl3WkV3YlROTHowcWFndVdUTUtyd1kzSWJVWnN5MVhDQ1RUc3NwbVVLYWZYVnFpRXFkSkVSa0ktOA?oc=5" target="_blank">The Onion’s Bid to Buy Infowars, Alex Jones’s Site, Is Being Contested</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQbGlaVGM1a0xhUmtpeUJaN2dpR2czVWhHZjV5NXVobWw1eUN3TXJ0Z0NsS1dHQ0U1S0NHT3pYMXZtUXlsaVM0VXM1Zzc4SkxBWF9jZzZMUnQxSHF2ZWZ6MVd0YkFOTUFkX1duNjdKT0E1RWhFYWRUaVFPcUJXcW9EN2NEWXYxSG1aMWJ4cjkxLXBySWZm0gGaAUFVX3lxTE55ald4TUpPRU9LQTVvc01pMHRlbXNUZGRLd1RmMS1UeERIdWp1REg1X1o4b3NaOUdIVC0yLWs0WEQ5Njl1WDlXVFJ2NGlQNXdKOVd3cG5BWHdzMkp6WkVLSlhpNi1ual8xT0JGcUlranJ3bHBiQjZMaThGSWNtMEh2ODZCN3Q0SGlZVDhBTkROeXlEOHpNbklhalE?oc=5" target="_blank">Alex Jones asks judge to halt sale of Infowars site to The Onion</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3QSRTKmhQCHx3ySx54hoXLgCVUhDdnsX7M4MW8jJ1Ww5QMdcivnjJvs9ytCo7n3Wps6rZCsfqfCQdF6j9qwD86mV1nyo7rng5TTruQHykUMLbYnGom19R13b5D2EQ86bmxeG4e81a5iaWuj3kD3zcUAwr1cvQ9RgydJyJUxtmYU4nqERW63HcH7gYWVeW8KGgwEjr4jo4hvCgc3g5GWtMQzUFMdqza6KDMnW33hvmHKwy2yRNccKxeLaHBBYs2HRXYsNxc4aKMAhxx4dyeMAaLKeecYPx6s7LCvGA5GjzEcqFzmhN23F2n1MuhZAzyfEFZo8X6Z7pSetP4p8LDbtUq4JRhqE8gBhh9h96" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">&#39;Ultimate betrayal&#39;: Susan Smith killed her sons 30 years ago. She seeks parole today - USA TODAY</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOOXFzUFQxVjlaVEwtSVZsRjlkYjhrczB2ajFuYVpZYlM1cjdnZkRQenlReTl3b1hPM1BUQUlKZWVnZFI0eXU4b3lGTUY5cWZjT2sybVZYZkRpLTUzdnI0RTl3dDY1VFJnS3h2VTN6cW5KZ2hwaUVCWnFMU3Y3VHgzRDVnRXg1Y0xIV1RRclJQTU91S2MtcFBVWA?oc=5" target="_blank">'Ultimate betrayal': Susan Smith killed her sons 30 years ago. She seeks parole today</a>&nbsp;&nbsp;<font color="#6f6f6f">USA TODAY</font></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFpFZ1Q0Q3ZGUXdkR1lJY3d4dFBIQ0tvaGp2ZlBJbU1fRnQ3anA0bFdjWFBaWVRnQmxSdFFiRHhfa0dlLTJEWVhRTHprUTFnLUY4blhhMlpHWUxfejJ4MFhMRHdadWhMWXNLUkZmOWVreFhYb21mMFhJT3l3Y0pEZ2RPV3g0QlJzeVHSAYABQVVfeXFMUDlTa3FiUEtkSGhCaFd3WHRtOEkyNDVlaWd4UW9kZ1BoQjJSOVExQ0JvSmFvYWNMZ3dEN2hnWmtKQXhDUU5RREhJUzdiZDJjNE5xSTJNTFBoaXFwQVp4Tzh0S0RHaWZIRUp5TnNZVy16VzJSUkt5X095NmE2dmM1U1o?oc=5" target="_blank">Susan Smith killed her 2 young children by pushing her car into a lake. 30 years later, she’s up for parole</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiogJBVV95cUxQZDdWWk5GVUVQMWZjblBTaV9scUFlLVdQYlhoNGg5TldleWMxZl8telRwZUY1amhyRk1oSE14WDNXRm5sdW54X0J1UldsYV80c0NoRWZOMkhBSjV4dWlKT3EtaFh5ZWwyWTU5OVE5Q2dfcHNqTVVwYnA1T0RCYVN6VG4tRmJYajB4R2c5YTA2ZWd1aF9PX0NUTGR6dGFrbTNLdEtVNmZQcVpielBvV2RaYWVvc3lwY3BjOXktTWRXYWY3Q3BRWXVqUUtxLVlmcDFOZ0NCZTJOdFJ0dUJJbGRJaGE1RnBZT2UwYjE0MXhMcTVMVEhRTzdzbEE2dmZTYXY4NFpEVGFVYVFGaFJHcWNoV3lEUW53MWxFLVRZdmNMdWo0QdIBpwJBVV95cUxNZFpQa0lEcGNHd3M1UTBtS2Y3VUlZaWRwcTJNdm02SlIxaHFQY3RTX1pWSDZGYlBqYi1QZ2UtSFpFbkIxcmdPT1l6czB6dlBaQWZmdVF1bWJFVzhRWVp3UW5lUV96T1VFZEFZdGxrcjdxRUU4Mk11bUwtbDZKRHRIcXdwYzlkNUZaanFtSUhlbVFQWXRMaUdWS3FNYUg5QlZVOUtrV190WDkyaW5vc3JTVWlCZkd4UDJyNDZQWlFYb0V5LVRGZmdndmZhUDNhTjhtVzZaSDh0cFhaMHBpMnVXZXNYbEQtb3ZBZUxlVXVpQWFsSUxsbC1HcU5kcGFsbExpNzhlbW9aWVloQnZNcjRqZ2FHTUowNjQ2Z0hsRUQ3Ui04bzJBX0Zr?oc=5" target="_blank">Former prosecutor argues against parole for Susan Smith, convicted in 1994 child murders</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC NEWS 4</font></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPM1NoMzZXMVdVclpYRXd6VWFiYUR0TW1aTmhQTXJ0andnZGlhLUl6MmtKVE10UGdyRXFVdGJRcnFiTjIyb3IwQ2psOVZPejNleldUZ3ZNYWIzSHdiU2Zldmh6aFFubzdiNHZaWk5veHlVXzBUaFdnbGtfOG95LWFyWjZRejk0b1hEOEdPMHhLWDM1MmYtM2hwazhMNk9CeEtETlliUl9tVmp4OGRmbHFBVVRsd9IBuAFBVV95cUxQUTd1MnVoU0x0MkkyOVJGVDZfVVdJeVZaZ080MnV2dHFqOXBFTHI1eTJWYXV4YVlrR21uTHVnYllDT0sxc1BIVlFFM1dFM0xTTjAzZmNELVVTNXFzRUc5c0wybVBZTk40TlQ5MWxkTDlJLXBXb1RoVWM0dHduSTNyb0plQ1pMNklDU0hEdWtRamtWR2lkcGt1eEJ1X21oN2NrNk9IQVpXOFhFVUJBclRnTmF1QzNqZkJj?oc=5" target="_blank">Susan Smith prosecutor says she was meant to serve life in prison as killer mom gets parole hearing</a>&nbsp;&nbsp;<font color="#6f6f6f">Fox News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=jnusq1Poy5a6oMrDS9vy1BaHmowQtmyzG9SXC4w33VGLoNFvdrVpTvQ9hxPHU9cJ1b1dwDbSdSG2Kk5fp7VrP69obYg3JhegZoe3SivJcfNkP2qYRMndHJvyfjAiWNRVCKsnuuPTA17HYS72M5iaS5NWWomnUZQJj6RayJ4tgE7eEjuBMAzcueprnD4RhQ5L9negoGyfmTAgPkj5rBcoDdZPWYJ6Z4upcprS6MAoU4ub4MrcVjSAjZYcUtqr3oYrsdG9YvmeGgAdqafDse1zuD7brC9P6rqjGUVix9VGeAJ5j3MnBCZeB7QyizEzdHDqugoLEnnYmQU98sZ6dhJadY3N" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">What will be the US military&#39;s role in Trump&#39;s mass deportation plan? - ABC News</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNUzliQW9WVGQ1aHNzRENKOHg4X2RjclprNk85SVJhOUdTWno0WDhaVVBBZmNBdVZUbm9EUDFlQWJjbWFhT2NuNnl3dThYdDRpY2JKNk43RGVadzdhUWZ5b2dSYXNSR2RMdjdSM0ZKRnhKdV83aDk4NmtrVVhibGNVRnZJRGczRTlzdGZZSFRsbFRZX0I5TFZXRmRSSE1rd9IBowFBVV95cUxPMjdQUlhKb0RFaENYdmxTRFJ5Z01hNHYyV0tWbHpDcTlPaGc0NjVWR0VGcEZXc1djaVFxemNKajE5U0hPal90c1doUkV5LW90WXRvYjlmdldFaE5rWlBZWWZUQmFDWlVLM3NJd3JZOTFLQm1kZkVUOEJpOVRBVHFEYkx4djNTQ0RrTWtMbkhHV043cHRabXdYOUVfb0RZbmczcC0w?oc=5" target="_blank">What will be the US military's role in Trump's mass deportation plan?</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li><li><a href="https://news.google.com/rss/articles/CBMi9wFBVV95cUxNN09LX3V4UnlQVWM2V1ptcnpVel8zR3dUbXRHODNVZ1BpbjMwVGI0bnk0TEhoQTNqM283MFNNdmxFOVhxZVJxdHN0Q2Zyak9UQl9UQV93VXc2RHBsZVlfR0xVS3ZZeUlzdXRRMi1ORE40am1FV09qZi00ckNiTFhUa0UtQWE4bXVFWXdjVUx5blBzOUN1RVE2dDVMRTAyTWlTWnoxYUtXQlBmU2pVbWgzcTBMMUVJU1FEYzdmS3JPVFl2Z3Q2dWJSazk4RkpjZmtWc1p2cXNDaWd4eGZfcVVqMzRVbjB3Sl84a0J5X1B6UFlTM2ZqZF9v0gH8AUFVX3lxTE5NM3NUSS1jU3l2cVJsTlhoUXRHUjBQY1JodDBiV1NIVEc0X0FvMWlGZ3pPSDVtNzNzN19SSWI1VURrM3NiSGo1bW1pY2xQa3NlMFI3aHMzaW8tdDR3SzVkNGFCbkcwWmk5cE9FbTFLQUdMTHZhQk1NRjlJTDFJejU4dkhUX0Jaa1NfWXZZRmlfZ1NxblFSSWR5S010akJPeXQ0V1cyQmV3dWRRcnhkTjlvQ001c09aN3RRVW9nZmNpbXc0NHZ5UC1WbGlPMEFpaDBKLVpHNzV0cEd4T1VhbllWSDBTMlFzdlZCdVdJa0pGc1V2OGZuc2NkR0RBTA?oc=5" target="_blank">Trump's immigrant deportation plan hinges on a 226-year-old law last used during World War 2</a>&nbsp;&nbsp;<font color="#6f6f6f">The Economic Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcFNmTkVhYTcwM2pOQ1pDMGlBSGVTcVZvRC12Vl9ZS1NYOU1XalVJaVBOUk45VzFraU13eVBiOGlRZWxxWl9yT2FBdXRHWXlRb0h2NkVpWllxLUhybFF2R1o5ampNeVhRd09KR1o2ZDRvOUlwYWVNVExIVVJRdU5ZUlN4YlY2S2VOcC1j?oc=5" target="_blank">Trump Confirms Plans to Use the Military to Assist in Mass Deportations</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRW1FLVpLNVZ6MkFieGFfWDB6TThfRlFMWnJBZzV6bW5LUzhyYnl4VC1KNk90VXctak9WSG9KcG1rSnJacDl4TjNkTEU0c2JRanlQQTZZTUNBS0lVMm1wNHlyaFJVR2E2YS10NWxJNWp1RHFFY2YxYzNWU0N3VWNRcmxFS3FleWc0TDd3?oc=5" target="_blank">The industries that could be hardest hit by Trump's immigration crackdown</a>&nbsp;&nbsp;<font color="#6f6f6f">Axios</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=27bBJSZmzN8C65wU2WPjn72W5aReAm4PeMLY4qLfA4uXY1X81dV9QM9FMxbZphhVfHF98v6z5fCQhByjBsVV1FowsfYHrXmW4Lk6VN4byg1i45c6WT3HL8WHh5YEhtMFqjwytyqhqWovwTsAnyVAV4uTqRJHTJiTjypL9KXaWG3n91nPz1fy7qCTbaScK54ixsn7YbAiSSHiuvkPv2MNmGk1gsK5G2rSTHRhb3PAAbzoT4bCGWveXnbwVn7ohP5MjuhTb7u6RvTq4LgXecbcfjmjKTJXYuMjo12GDXXzhNxs9cViwceF5V4JVwwqrnuVG98U4GyM9oW2i4XEr4CrCtoXCNnRQEhonoeabKyY5vjqavtB2FjZhjvtynJjwQ3ebmqTwT8Mhs3jgWuuXPN1Bh9BwmZf1ZQSDN6jN3sDDeZVf2rvW3gSSJeuAoA9B8FpmrKgoH8fFW8xXa9vxgVouHKFexE9pV61WUk34MU9rX65GwhvUpELvxKCD6eEsjquXkvLyHiAbjAcF9S4cyetVJ4PDRQbSM2KTt1D191yA1agn6UPEYvxebn8CabJ8v3s2mfMC9fHz5nnLp5aFtnX8Spzfj2cVpWcTp3kEXExvUdcqXxYN1t3jvK4ZYp6mULS3AuMQ77j3G4jS8v2WJp" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">A mother’s agony: What Allyson Phillips has endured during the trial of the man accused of killing her daughter, Laken Riley - Yahoo! Voices</h2>
+        <div class="news-details">
+            
+            <p><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNeG81MGxocS1URjZra2FpaGZiVGo0SXBkTzRGSFc2R1NhbGMtdWczSjRlWHRTY3FXUjg1VGNfcDRJRGdNSHVvMW1sSWI5eGl4MGk2WmtzNmpKa1I4Ymk4d2c3WXZwNDRpRmVXSGRyNmpwem9nN2pDVFBEVHpUS3d6UjNYOWZLdw?oc=5" target="_blank">A mother’s agony: What Allyson Phillips has endured during the trial of the man accused of killing her daughter, Laken Riley</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font><strong><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2kybDVmWkRCSFNRTnV1OGRkYnhpZ0FQAQ?hl=en-US&gl=US&ceid=US:en&oc=5" target="_blank">View Full Coverage on Google News</a></strong></p>
+            <div class="read-more">
+                <a href="/redr.html?target=2qM6R7emm7dVG1tBqj9yrEkr8aqUHLX5Gb4yb5JfSp8f7GTPTGtwQaM25LdiH5ZZc7NCc6ieEg6BjfT5KGFH4FVj9Dp2P1K8p6jFDXcs2bkfh6No7Z2tUs8Su8yaX83RKZo9axYjCvNxkBGCW3SyoARBQXiU56oAYnoR2FJePA8GuRPqstCZQK5jw1nZrFikd6v9QR8i3bAJeu6GwSjaY1782dZhXj8q1FUTwsoPXahFNyUgCrZugcRF2wVp56MfL1yUyF8BpYtohM6B7VNAP5bHG7tbFQMLJ6TsvB3jt7MAqom7sD4T76vG" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>

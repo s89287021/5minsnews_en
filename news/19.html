@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3 Minutes News - Stay updated with the latest news in just 3 minutes.">
+    <meta name="keywords" content="news, latest news, 3 minutes news, quick news, daily news">
+    <title>3 Minutes News</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616641606962436"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            flex: 1;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            cursor: pointer;
+        }
+        .news-item .news-details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item .news-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .news-item .news-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .news-item .news-details .read-more {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .news-item .news-details .read-more a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+        }
+        .footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .action-button {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .share-options {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+        }
+        .share-options a {
+            margin: 5px 0;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-options i {
+            font-size: 24px;
+        }
+        .share-options span {
+            display: none;
+        }
+        .share-options a:nth-child(1) i { color: #3b5998; }  
+        .share-options a:nth-child(2) i { color: #25D366; }  
+        .share-options a:nth-child(3) i { color: #0088cc; }  
+        .share-options a:nth-child(4) i { color: #333; }  
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        
+        <a href="/news/18.html"><i class="fas fa-chevron-left"></i></a>
+        
+        3 Minutes News
+        <a href="/news/20.html"><i class="fas fa-chevron-right"></i></a>
+    </h1>
+
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">U.S. Envoy Will Head to Israel, Citing Progress on Lebanon Cease-Fire - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQeThiS1Frc2JYVWdINlNJWkI5ZXVVblFyTnVfbmpIMjRCN1ZtbG9HNmpIeF9WeHhSbkl1aDFVbWxWdXJ1UDk5QmpHS1dMMDJvZFFRZDZUN3lNVFloTUdjZG90NnEyWXJYLWVlLVdJMVJXbDBRQktiVGVBOWh4OWtLVlVjc3ViaEhhY0MybVJhMlpXaGJR?oc=5" target="_blank">U.S. Envoy Will Head to Israel, Citing Progress on Lebanon Cease-Fire</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxQeVdmVlNsV0tfeUthRWFkeGN4LUlRbGcyUkVlaWd0RnBmZF9NbTdmLUxZRHJzT2o4U1I3S2N0ZU9fSE9WSmV3V3JiUW5mVHFrcEVpREhHZzJPMlFyNnRKeDN1UGpQX0FPQ1lYSUJMQWR4b1VvRDVqSEg1YTFRTDIzSnplc3lvOXM1dmN2UEJvMHZPWFNqT0FKakg2MjdMMWxYVDN3MHVYQ0VpSnlNTWlkT2t2a2t4c1ZLODI4RjFZNXpQT0NDMHV1cFE1UjhEdWFYdEtZeHdkcw?oc=5" target="_blank">'Interest on all sides' for Lebanon ceasefire, foreign diplomat says, hailing significant progress</a>&nbsp;&nbsp;<font color="#6f6f6f">The Times of Israel</font></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbEE3M2hSSHF0YktFUEVBeXlGUUh1Y3BBUW85UC1fZVlIY0o0cGpmTTdFd093bDNYemNRSkJBMzB1RWFnM0pObWQ4WWFTRVJhS0d6Q19rV3lzRTU5RDBWem5kVWkxSHlDeEtmUktHdzdZTm1oSzBsR2RPLW5NSVFDbUpVUU9MMlk4aHFWU1IxbmRuaVBoSmNnVFF2a0VoNms5SWEwOVI4dzFzbzUwNVhkR1Q1NXZSZUhVbE9tSjJyajk?oc=5" target="_blank">US Envoy Heading From Lebanon to Israel in Bid to Clinch Truce</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWHBXeTRmNl9sWHVhdUdMTDFIYzM2ZU5JUkdWcTRKdXd6VVdyV29ucnNtelpCY3puUTJiU3JfSm9MSW9GUkFocVdsLWd1aXRwUDM3ckFvVmZKNExzTW9WZXFPdlF6Yl82UmRzN05qTzZRU2dPb2pRVXBpSTVmaXpXd0ZBeERaZFNZdXNQRS1xT2RxZXBKOFo1Ym43bnF0aVg3RmtoYmNKVlJrQQ?oc=5" target="_blank">US envoy says Israel-Hezbollah truce is ‘within our grasp’</a>&nbsp;&nbsp;<font color="#6f6f6f">POLITICO</font></li><li><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNVXo1WlR5UEFNN09QR0k3Y283eW41NHRCTUhiY3BFcl9Hdk1aSzJXN3Y0cUQ0cTJuSXQzaGFhYWlKWlZiWmxpdXlxVFBDeXN6S3gyM2lkSHJoS2wySXFHYXUzVzhCZFA3V1NxcTRUUHJVRkpyRXc3NmdWaFBvVHpUVVduZnFxWVRrY0hhMA?oc=5" target="_blank">Live updates: The latest on war in the Middle East</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=LUCYMssPjPkRDxpm7bNFUnSHVBKBrqNJ4KcAQoxGjaaTfJpgrDkHnDQuRNmnFYuZce7azKzKcyGiDhNjfgVHHVGDKpTn8bNqoKYErrkZ2XHz5C6GEcqA4KsaroG9P6YFtUcYM4FEsGLaDoiFrWXXrzfKD1F1nGLPhHyE7SiLBYnWLHapTJ3eMTPUP56YRDKQq9v5XmHoh4gbeQqcpumyaQeS517YzobGDfStYuLWMyWyNbzq4GD2JoeNeYbg2CBfWC1fbtPTUPC6cXMCXkq3oKFJyenxJkUbcBYdL5qGeyE5KmAHfAcc4UUeSJrDkjZ8sLvFKfBnSkbcACxU" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Hong Kong hears from jailed media tycoon Jimmy Lai for the first time in four years at his trial - CNN</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPajdIYV9HVE9GT0l4YllJMUxwMVh4ZF81VDNlaWxtdmU5ZTlaekxabmVUQTEtenJ5cWtzN1pzNnJoN0x6VS00V3BfMW5FeFZXbzMtS3BHSXB5UjZRN3FncGpLWUJCYVRncC01VzRyYWxZbWUxVVlOY19RWVhnRmFYOW0zMUNEdVRKV2lpUktZcDJEZmNFX1Zv0gGOAUFVX3lxTE9EU3M4OXBXTmRoZm9VbzM0SEZuelduMWVCSWpoTGhydlhYTktDZHdlOTI2enB4dmZWaXR3eHdOSWFaSXhiSURaR2g1ZmVscFFPSVNjTlJxM050ZjN2UEJQNm5RbXJQSlFjalcwQ0l2QW5tLWZ6TjNvdThNTTY3Q2s5QUhGTU40ZENKekpLdFE?oc=5" target="_blank">Hong Kong hears from jailed media tycoon Jimmy Lai for the first time in four years at his trial</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNSXVrR0piQ1RnLTN1VWZPOUZ1TGF4T0RhSkU1aGRSWXdERTluSkJPQURuaXBXdXU1VWdDRnBQUkZSTnIybS15dGQwZ0pwaG9xMTFKNV9fdDQ5eFpHVXFqMlB4MlpLRl90X0k5OGotMGVtdE1HTUR4QUJxbjhaR3dRc2Rn?oc=5" target="_blank">Jimmy Lai, Hong Kong Media Mogul, Takes Stand in National Security Trial</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbkJfTWFSUGR4TEFIbFZWa3E0d0lyMDg5OHZVc0JKR3VSb0VDaTR5bFlCcjY2MjJ6b0JSMGF4d1pUYXhnSlozVzd3NGN5bUo3QXpnbjVnMTR6OW0wNVFFaU5OZEI3bGNSaHlxU3RxaERRNklQR0tVSkZwQkVTM19CMVdRblFId05LWk5IVzgwS3kxa0tFekRpOWNaelJoSFRVdjRaMHhNZi1SOHJLNE5VeWZoZlhqZ3UwZW44UzdKbzg?oc=5" target="_blank">Tycoon Jimmy Lai denies asking US to act against HK, China in landmark trial</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPMFpLZFlrOFJ2MXZqcHZldmZDak8tS1J6clAwZEpwUktLUTlRUHRkYWtLOGNxUlp3NXBuSW05OVExMFlKTFptMnM2VmQxdEF3U0h0VkRUNXAyRDhMeDVjZzh6RmYtN28tS1FNeFJUNlQtcXM1dHUtRVJoeml4LWFweVN1T2lwTW9qYzFlUDBqM0QtcTRO?oc=5" target="_blank">Media publisher Jimmy Lai defiant as he takes the stand in Hong Kong</a>&nbsp;&nbsp;<font color="#6f6f6f">The Washington Post</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=8XdHxJqVZNYkcdVBmUkag7sTEQaA73r2YvuHQmF65ZJYYjWGnZnHq9UvELaLxiToGZtXifiuv54o5C5niQsYQWUTbPdsG33LuknUdEG9AMibfWYqa96sqH2TFASzNzVk5hoadsoW5ubZMb4MZg12v2YyCz1KNwMdMUnRmvVVaT2v4aW41wAGFn68A4b6UUoFqpnWKAPqy9X3nroHSSBhPaHmJ2JFup5iUhqLEQLcKXPkHgAKhMd1UZGMDAwgypWTVTUTT4S8ufqz2Mi3b1UDYRr4qTX7CtkeiYqtLkgo1gjXjghJWZb5gbQU92pB4WpAdMEzoVLwgHoDk1WUQJ4eLNJPTiEDiddGYjXVdy9QSzb3zKuHHcHbKTM4x3xGA8Mjwiw8zc1yH6xQ8ixoRb9wbRgd8unKR83P82KcJo3ZrTAgEPx4r22fx6Aaw4LeV7RJBAATx26eTnobNcngrMBbSvf7QNKzm5ofVoMF6xmLgwhUNUCQC5uXRRHusm6qbZh8cYfPwgdu8LMyd6DrCvMZiKdWxo7ttCHQDLa52gYZk2nvp7yxj2zm1evz888bJ4kc4UsCgfLKEtVDGtAdwJ2VcyF8jcYcN7DE" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Putin&#39;s spy chief warns West against direct military conflict with Russia - Reuters</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOYnN3YUtwVXlVNlBPVTVISEJXTjRmMVNZVUJyRWZKNE5zVUVHTHJwclRRbWJaV3VEZW5jcEJYOThOS2l0QWR2aEhKYjljaDRaZHJBR0FCT0RNaVlBTzVJc3hQejlMTldmc0dZY01ONlB2aVcxUHFaU0RObXE1VXZacUt2MFZsNDZrY3MxWXp0c19jR08yYmw3THlSMUlYTi13MkZxNFRPcDVISGRwREFwdkVJOUVGMEJVakx6ZU1n?oc=5" target="_blank">Putin's spy chief warns West against direct military conflict with Russia</a>&nbsp;&nbsp;<font color="#6f6f6f">Reuters</font></li><li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOX1psMFZURlNiRmlyZmlBak5TYlZrU1NuUnluaUtxSUhZY0FPZkxQSFAzYUYzUGNoVTlUeURkYmRZNkhzUU9qd0tUdE1yVWNVQUR5YnpFNHhZTnZmMGM3SmpVUVoxeGJTX19SZGZVUVJCZVFKRzg5YXllOXdqQjk5Xy1oWnlPd0ZYY0E?oc=5" target="_blank">For Russia, Nuclear Weapons Are the Ultimate Bargaining Chip</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQT0s5clJrZDV2SUxxS3lzRzhvUWE0dEthRGhmLVlVWU0ySnE4ZlgtSlhaa01nWVFucm84NmlTMWJrYm5US19lUFRVYk9WTHlCXzg5Xzg5ZjhxdWlBMkdtRERlLWVIOENpcGN0SGV1RUZldHlFaTBFWFkxU2ZsRGlncW1tV1Exem1X0gGOAUFVX3lxTFBHR2JwdGVZbG9INU5GcjJtd2V5OWZzZGFSN3Nid056MHdMeVNBVmlIajNJMElzNWlfNkxCLW9ZNFAybG9iV2ZfcDh2a0s5V2Z2Yjh6TC1CaG9fRmNEOGhSamEwbVdZdVJHcklYekNFUkFQMF8tTzhQYWE5cGxPS2JOQ0Zzc3RmaXp4R2c4a1E?oc=5" target="_blank">Putin just approved a new nuclear weapons doctrine for Russia. Here's what it means.</a>&nbsp;&nbsp;<font color="#6f6f6f">CBS News</font></li><li><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxOVGtMN3RmQXpQYUtxR1NRUGpqXzdYdFFWVTRGZEZVSkZBT09oSmpsV0t3ZUdzSmEzUEFia2pqM1dSRVVjUVVpd1hocjVxMGJ0YmV6LU53dnpTX21uQm1OeTNKbzdweDNIU2JCWW9KVVNMbEw5aHBnRVpYRVlCdVk5OFdBa1ZZd9IBiwFBVV95cUxPUEtUSl9kdVNvS0VZUnlmZ1VlN3FSV1I5VExLZGRyNTBHMWdaSG9NRTVmX0J6MnBKRHdHMUwycTJWZFVCQlB2NzM4MUUta0xWVGZUOUNwSU95ZS10RjBBSmRVM2R4b0l1M1lGOExXYXlxWm95WW5SNHMyMnpfVTVxV0REeXhnUkp6WGtv?oc=5" target="_blank">Ukraine foreign minister: ‘The United States cannot afford to look weak’</a>&nbsp;&nbsp;<font color="#6f6f6f">The Hill</font></li><li><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxONWJIMm1UcFUtWV8tVnRFaDdvYVBSOFZMbXlLcVFlWlAzazFqd1JCS2NEbmo0bkFkb25jRUt6S1k1OW1pQkNQQmJQM2U5bGhfcjJ5UnBFQnVxS2JGa01waU9RM2QyRHkwd0R0OGlKSTBRTHVHYjA3b1BKamZXYzdDVWxQWjlOcS1WcWY5VnUtUmYzTm9QdVF4VWcydHk?oc=5" target="_blank">China Reacts As Putin Approves Russia's New Nuclear Weapons Doctrine</a>&nbsp;&nbsp;<font color="#6f6f6f">Newsweek</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=3KyYabPY3g786xGPP3QW4dEwQjySJ6B9dGXzevoUMbggdTQRE7FVLuP4P6M5F3Z6iTYKs811y73UnrkU2AYfNVPS15XMSTaSCiem2ZmqJBHXDvzE8BjSmm5uoye9u1Kv2G1hHug587WTvnPbhB2P9vtJaCfcvX72o5CqF6p92BqX6iDhVtT5JhA74uV4KQtr5QBdu3CRV3eA4ccjKYoQNqcMhUKtzkmRkvvmAFhFG6SNNjpn5qzkY5g21rCTdXMdLsc9fdmijXSoipheo1jk5ZcPKA9CXDiq7cLnSEh5z7cP4CLqSsnndySoYnDf7m8iHeASxLPhbrJguEmB3JyLtGG8XqxwwJRm8TT26M2ywZ4ZMbkYWamuvES9sg3ZG4UkW2YA3ETJ7f5mx4TNKoMm8TznM2xjn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Chinese vessel spotted where Baltic Sea cables were severed - Financial Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9wZzE1dldMZzVJWTJUaFE1SGVNa2M1WEZoVDdOV1dEaF9HRnJRbzN3aTU2OVU2MUptZFhOU2VDTHRQcHVaTkNTRGJTWnJJZFRKVENvTUNNbEpkSlU5UExQcDNsMlNtUm5BNHEwZzBOR28?oc=5" target="_blank">Chinese vessel spotted where Baltic Sea cables were severed</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxOTXYzQlRlYzhCZjgxZFpTbVhWUXVteVkzVnRZLXRwZThnQm9mTUk1eVZKSW5KZFRJanROb3V6aVpQT3B1dHZtR2ozNGt4OXo2ZTItU01JSmMtRHF1QmZBY2VFZGpvVUl3SFV4Rk9jdEJDdm1QZjFtalVmOGQxWE52VXVEWVg3ZkZsXzlod0FBY1pNcXfSAYoBQVVfeXFMT2MzUWtMdlVXYXhqd0JIaDA0NFNtYjZlWlUwSVF2UDkwcnBNWDVyVmdFT0taTTlsTTVsS3hkTGc5eF9CbWhyQmRXaElhOV9oS2ZySDdUYlVmOWxIUkJxbXlhdkczZjUtN3AtY0hxXzhHNnNweUxvR0c4V2RmNjV5UWlQZWg3aUdYbkdB?oc=5" target="_blank">Accident or sabotage? American and European officials disagree as key undersea cables are cut</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNTm16M091WV9TS2ZLYlBvbm05RzVHVk1UYnFBWUkxa1ZjWVlGRlFpTHNJTGRZb2xXNXNkXzRDdXBNNHhCcUszV2pkVmt0Rm5FeWk0cGFaUUNSNHVCcERzb09NVjFKUTVOUk1fS0RJaHM5UnZYYlA1NFNZT0g4WlQzbktYNTNWVHlCM2taQS12VFFvbm1VMjFSVEc5cmRPSlJDemRxdnpqdXZ5TVVpNDRDS3lPeEVrbDNPMTZUSTVUOGlBU1hvd3ZJOWpTZXFhV1hFTk1lS9IB2gFBVV95cUxPRnd0VS1nbHlkaE9tQXZoS0NnMjRBT2VmVUd1ZGE4eUVpaEJKWW1YSzEwcXdvMVlrTnlpQ1I1d1Q1WGpJUTdQUFgxUWo1OW15TUdFTjJ2dkcwQWg2WWdHMG94VVRQNDVLUTZvd2QyQ3NwdW4xSUJlZ2x2dnNOUk9HRVRUeExaemRQd3lqYV9TZVRTRS1ReXY3aHAtRGpzX1N1Nmdhc0RJOXlvREtsY3dRZ0hlWjBYX1JJZy1QVEZmQmI4RHE2dkw1T01NWnFOTXl4WGNlalJIRVVVUQ?oc=5" target="_blank">China ship stirs suspicions after key Baltic Sea cables damaged</a>&nbsp;&nbsp;<font color="#6f6f6f">The Times of India</font></li><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBLOUpyblpZallTdEowWHVnZ0NENktoU1RpcWIyLUtSMmlUc1pGMzN3QTlWeXQtcko0THVIWG1lTWFtTFdNU0x6a2xXSm9qM2h6VFdTQzNNYldiUUNuMy1mcWNYYUE5aGZmOFQ0?oc=5" target="_blank">Chinese Ship Suspected of Undersea Cable Sabotage Detained in 'NATO Lake'</a>&nbsp;&nbsp;<font color="#6f6f6f">Newsweek</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=UF7UDccXmKiVe1CdNhV7aKmzhmBqBzJr7c17nj2KbGui8eBz8RDbAJdtZ8XdQX8nVZdVofWDXQXGjnhX7e9SbJqmWfj5dSs6J4kvXC5CnLGhuso9ZJsBdWDyUC7TMhnetXkpYN9rxsKQwwZ7FQjt5oKcWLEV6BwpLH4yCQzP8wuKeS7PshQepgFh1ywNsKMUaKKegJpZbbNizMEgCZ8VkxBQApM9Gtp4HL4DEEAYLLEjUm8kaZsCmYSdRiCYp5nSsm4eZcF7hLUdA" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Target’s Stock Sinks on Weak Sales Ahead of Holiday Shopping Season - The New York Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaC1jUmxibkhuSnpCY21lUUNabmtsSURLRDJIQ0p4OS1kcDVyQjBkc1pJRTZlalJLMkdNMFNfeUtHWGEteWRCTVJqZjZNcXJQdW5jRkJ1UEZXVVdaeEc4ak9DaERybU1YY3J1YzBzWGRYMHlUNHk1dk9MX0hHS1JVczhyMmtmOVNv?oc=5" target="_blank">Target’s Stock Sinks on Weak Sales Ahead of Holiday Shopping Season</a>&nbsp;&nbsp;<font color="#6f6f6f">The New York Times</font></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUEJvSWlBRDRidnVIb2Z4VXJxSm12VVU4a05BQzRnT3pYZDBrbGNCNzNacl9jbks1YVlBaVVxSnRzQTEzcFY3SHRLUmRBOVZJbVlFXzdFZnlxVzAzUlk4UjUxWWtfNERhWW1FYjctVHgyUDRpbXo4NlZsRmdyTW5GZEdMVGU1bTRY0gF_QVVfeXFMTXBKSnFkVVdDZmJIekJGLTgxUmFwWmRQUVU5NmdwemlXRzktLTN5Z1h4VDhDS1ItaFNIVXZMRTNSU2FsRnNRZWl3LVBiWS1tdlZodHBUR1lhdUxFdzVmYTBWX2J3VHFlSDhQY1dFY212UmktSkdTQ0xvWlFJbUl3VQ?oc=5" target="_blank">Target sounds the alarm bell on holiday shopping</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5Qanh2Xy1QUldJTEFjMWF1Z2phWTRHVEdnNVRBZXVMVWZrZ3ZNbE9OdDJNUUFJbUlwUks1V1F4TUpMbUlxSnlCa3ZVWS1pTXNrVURJRWszWVNTOTh0aE04NFhiZUo5amRvUEhSeGtRZTdiQdIBd0FVX3lxTFB4WXFRNjF6X1R0eS1JLUJjbGtTWjctOGZYWXNXTWFaNmkwajZ6Q2lSZE9qcUdwcEJPR2FPNW9lTGZDaTVlQ0RwNm5pcjhVNHNKYzN5R0dnb1hVUDJnbnVRc3VrYlhvLUQyT3BLLUx1OWdjbkx0eUlF?oc=5" target="_blank">Target shares plunge 15% after discounter cuts forecast, posts biggest earnings miss in two years</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxOYkp2OHIyZmV6WnE1Z3AyWFZqNEVaY1pldjl2LTZVSUVIT2RSeWZlVjBzT3RXZmpUT2tSWTJOSFlOZGtGaTJhenZNZWliamw3WHJTRkw1em9NUW9QWWNVUWN6QUxZUlZNWTBxd1B2czRSZGQwRWU3THhPVy1BTG9PaUZGWVFhTUlKckFLaV9VMDZ0QVZKSTdaTFB5TmdOZV9ZT2cxaXVFMlpza29TRHpuTDV0cVpQNVh1R0VVUk1qM2ZKVy1zTzFjYW9vWG44elJGRXRvVnBpYUlqNmdNZEp5aGNkV2w?oc=5" target="_blank">Target CEO 'guiding for some conservatism' as the retailer misses earnings estimates ahead of the holidays</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo Finance</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=cio98SvSTP7R3bACfaw3xMcKBMh1BQ9a6Pg7CxWpoFUvvTg2dLsoQZ2iZkevAhnMuPFN7eESsFNyfY4mv2LCa8koktTzn8LnnPNZKVREmaRaZ4vc69uiNBHPsEZhXejUwhTQmbAPKfpDntXyfYpWjYY45FMXFUgLWGFhJTYGX7Yi4YKXZKtgBmFwktrp24CkHBAiU5Ni2aovqHeeZgBZhsZWSBpqNPmyPXAJ2Kyhx8BcC8N681RdEYYG513BozJA1sNkySycu7ZkwwU8sj4mP5R3z248pmsEuWnUoxZ3kgAfgMNR9cp7SifxV2" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Comcast to spin off cable networks as subscribers flee the bundle - CNBC</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOOWVhdUx3Z0o3V3NNOXd1Y1lUeWs1cTNjVmcxWmJoQWVBMVhacWl0cWR4Vk1OZzgxQ19FdUd0QXpMTnFyWGl5djUxNUhHbFVHTXFINHV6RkQwek1KX2lDaHF3cmVMVExkZ3hCLVpYWlBERXNGOFl2bUJXZDhXMzlyS1ZXTWNGLXlUb18weHZzQzhWV0tWczRyZWpuUzNzNHFoRTBDOVBkaFoxQWtWN2JfTFJWcGFEUdIBuwFBVV95cUxOZG9RWWNZMnp6QTV6dkd5eU5wQ3VYV1AzN0dMbk5oa2NtdDZZSjExOVhSY2NWWFkycDhFSWN0SDg3ZHFSTjRyX2ZuVi1tdDlIMmowaFNPcEhBUHpjRkhRWjFKeTduX2d6RDlhT3dST0hXVGdXR0dfRVIxaWZSYWpjRkJ1SjB6bzFYM3k5OVlZYTR0b2ZtUE13dlpiN2FtTnpEMERmQ01nME5ZRHhSYmF1UUtzLWhmQzdSaU04?oc=5" target="_blank">Comcast to spin off cable networks as subscribers flee the bundle</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBwTE5GT01zRGFybGV1WW41S1luNzJrRmpVcEdYUXdqUUtrdld5V0ZrZGVYQjNDVFNLcVU5UElBVHh2X3p1Y0lISHdqRjdyQndkLVVtY1d0SXI1UWRVUFBEaDlmZDVjbldGbXBj?oc=5" target="_blank">MSNBC to Split From NBC News Following Comcast Cable Break-Up</a>&nbsp;&nbsp;<font color="#6f6f6f">Adweek</font></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHWmFWN0ZpWC12MzJNSTZqelBGQU4ya1hZUVpISXU0Q2Q3T2hIV1lsdVc1cXNoazZLalIyc2tPNEpWX2VWdjg3RkNfVy0xNTVtR1JDZmxDWFBSZw?oc=5" target="_blank">Cable TV networks MSNBC and CNBC to be spun off by Comcast</a>&nbsp;&nbsp;<font color="#6f6f6f">BBC.com</font></li><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcURYVmM0V1hVRXZaZkxwbEwxcHZ5Qk9SM3dIc1lwSUlpbURUQmdfS0I5TTJXMlFMX3Fkc1o2Q0pYcDZJTUhZeUpxNmR3bEtlRVFQMi1STmlYVlNVQ3ZTa2hFbXNrSlkxYm9STnhFdFduNTgwd0FZbjh4ckE3YVhMS2tsQmh2N3pNU21pTGtqd0FWdld3ZzA5MFFnQklNQk40WUM5MEQ5NE1QUQ?oc=5" target="_blank">Comcast moving forward with spinoff from MSNBC and other cable channels</a>&nbsp;&nbsp;<font color="#6f6f6f">Washington Examiner</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=6haupum3VMabEsvtieLqAFWtEnDxMmvrmyGbo2ivaTfoC77KJgKMDCsDwrjoYFqNHhPWWoL8qE3aQRwRGaMGwtKPbrFnmsghBQpoMhKGVEkpkiHvJJpkSSA5krRxQpEYkjhFDxLHAVZFeo9WLS4vscMNmuEzSNkyr57y8FQjdMc75PuKm7Z8aSq8G7BoYBV5if6QxnKzfoyGaYu47v1HiqH1wybXnA9C9WawdJSvjhEj2hQdHLbegdbqFs9h7En2uRXzuRNvLXWqkitU1SUp8VuYZt7Heg6SEFAXBddMNCh3T4aatWmGTtTMX9ot4myRx1uMjF1BthhjJgtLUBVFujdxVR9kJq6nDFgnotAcvGHfeX8uvZKQMrNqkscwUvJT6PtsVwuFBUd6HfV4EnoWSP1qAmHhNDYcjKfsTHXACBen7u1cnYG3UM62hurcR3ojWXcBYwmvoQvz8HLce7yF5d9m2uyHMrvRQTeuTJmfSuoCsVHcdESSf9DUMG6rcpX53ZXFnHBoCXoPZs9g5iyp1UBe4pEi7QzSyDkofvZ56xghXmRbMveRZk4EVhDrXhbLwbbAd45nqbykycMQxffVNKZyfFw8QxCpyM8Jo9s5JKYGjPgvoNZsYsE3S2rX8cguuuDAuXvntWjPsj1P6xhu874PVUaoREiwh9f36YPx4wsJnV9R2wdHgcELfTSSQH5nAYPzAHJ5rKtw4BfKCEceexPJH7bK8eXCr9V9u6K5Ta" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">FDA finds bacteria, ‘black mold-like substance’ while inspecting Tom’s of Maine facility - WJW FOX 8 News Cleveland</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVEZSNS1wMUxQN1JYaWN2Z3NyM1l6MGRqWTBLSm9TeWVzNThmZ0Z6X0dISlBweXhOMzZOTHJWN2VaTU5Yc1F3dUowZXc5alY1NVZ3eXpReE1TNEdVbHlUblFvakdWc2Y5ZnVVUEc3R2pxMWhBS3k3c3B4U1lkRWE1OElEQy1rTVRxMUFUTl9FcFZmbVU5ZWcta2FGSk83TXhhX3NmUi11cU1NY0HSAbABQVVfeXFMTmVEWDVFeWVHNzMyRy1UYnktRG9fY0VCMTd1YVdJcmpWazZySnlLS2tIZG8tRGgyY2RJVUdnOWJhZVQtTEpTM1ZnQzVIM0RpUmMyY3MyeWZmT1ROZUVrSHdTdWNPdWpRbExfSDEtRDczMmJPSkw0NnhUMkNCTkRycWxIUVBqMFdjQWNrcDlzTkRIVEdCNFcxM2ctc1gtdGh2RnBWT1FOUEhZcHVPNHBjSzE?oc=5" target="_blank">FDA finds bacteria, ‘black mold-like substance’ while inspecting Tom’s of Maine facility</a>&nbsp;&nbsp;<font color="#6f6f6f">WJW FOX 8 News Cleveland</font></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPNndfa2gyemFQMGMySXZoTTR4NXE0YUthNHdkdkVzeVBoYlhzQVlTaERQcVNrV3h4Y2c4TVhmM1pjaENsU3lzYmZOX3BVaEtPM2kzc2t0RTBUcE5lRGVkTXUwQ2dDdmxhb3JfQ21UQWZxUE1rS3hVb01xV19IMjJDRDg0a01CbjFxeGxqSmVPbWZDT3lHQVHSAYwBQVVfeXFMUEJhMl9MM3B6enp6cVVlejYyVmtvYkxkNzlhVDU1RkJQcEFVODFsQnFVOTI4NFBLb3B4cTU2Y3hsRUNYT2FHSE1tYUYwb1lBYjhPUFBSNzlDMXVERDUtR1Q2TTd6N1cwMmVOdlZXdXpTVXZNbUxTVkJLVWhKaHZTdTR6YlFBQmFyc3NIYzI?oc=5" target="_blank">Bacteria and mold found during inspection of Tom’s of Maine facility, FDA says</a>&nbsp;&nbsp;<font color="#6f6f6f">CNN</font></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxObFNsWHFPZEQzRno0V19UQ3FUWVJQd3RvdjZSMDlZdnlpREVYY0NTLXk5aHJ6WmNVQkFxaUdwX2FmZEZWZVdvUW1PQmJqbGZxVUQ3QUFqN09adW1SQ2ZBOGg3Vm5fNFR2VHVrRnpoSVBBU0ZEZTNhNTc5RlNocHh1U2RnYXZNNWpUcURQbEFoTTFITkU0NWFONlpGd0FON3Z3RGpGc1lR0gGrAUFVX3lxTE05WlN4Ni1Yb3h3Rjl6MDNzbVBiY3d5Uy11WFhtQXJTN2RmcnhrdGVYWU13MjZpUXpxeVI3QVlCN0hBalp1SElUa3VOWmQtT1RTUmcwejR2eENLNkVXcl9wY0dBOTdGQ0hCWHRoUDI5Xzdab1lhYTVQdUtWcGtweGd1dlB4VUVUUnFjbFhNQjhacDZqUEVBaHB1WXBFSTQ1Nk1PWnBqV2N5SUVmUQ?oc=5" target="_blank">Tom's of Maine toothpaste made with bacteria-contaminated water, says FDA</a>&nbsp;&nbsp;<font color="#6f6f6f">ABC News</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=VSr5aF2yqRJTwhaKAU2XmB71LGkvtaqoQjGLSvYbBWdENfC1PeRTCusf7bb1FeTaRdv6iV9C2scc3i9q4wn8Pot2avCiuafRamE6UzzAtPiEhGu9hYtFT5WJ8m44uSAbVYdsywazR6fCBwc9ghkyniKFtooFNFJeuaSQzXjQFBWtY9dJCcwwxdWFX7MTyZAfP6EGj3qBoCyCJFqrZaVULwt1yz9TVUvUcPSQnPq6JFJh22yQS9ipuGndzaDBd1TKgZN1trZe93WUoN9JE9BMncd9hJFLWaNHgoCVXC6MAWjujEQ6smKHiaLSb6KsW4nhxh5MKJiREqBio5LSqduyVjbwTPD46Khz2K9LuNL679rgCqJY5qCVawWPoboY7XcJgabUXGGMthzgqez6dpCaw1V5VwXhr52kiG8yMLZoGAueZYbzNg3X6F8Lkx1sNE8c562iMSG6TyTbD89aFnUL11nYntNcecjdJHcNEJR8GaMdCMA4ptSY7QfH3nbAP1xragxpCpCJgtFtZ1UXbYAsVHnaDHVL7C96T82E6U7SAvT7nDjo3qAMyoEFXAH5ABgv2c5UFWQEUNgC4EwDvzhqetSxsnSGxzcj6R6ALJGrtuKme3exr53JzQsHB54ucWEgaSJ2EfUDy3uSCJxJZBnuEzQ2eQoq3FoxLZKsCDGACT4rUHfvA9n38ag9SkuR8AH5Ka" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Ford to cut 4,000 jobs in Europe - Financial Times</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9INEZLVC1vUm9aQ3JJSU1pZWdxM3FrZ3NSRDVxRy1qUFJtUU05a3FvejlHeEdmcDdpT0V0SFRxVTJHZVIwalZjWUNTMVF4RlRtaFRqVUJfWFl3ZUZrUXplYjVQMEVseFJQek5ycGx5SmY?oc=5" target="_blank">Ford to cut 4,000 jobs in Europe</a>&nbsp;&nbsp;<font color="#6f6f6f">Financial Times</font></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPM0I4TXllUlJMTlVrZUhxTDc5bEZBRmNfbkRram5qWVpMMURYUmVJVG9UTTJ2TDRIb1VzdGpGRGVJSnJDcmM5MTUzMnAybHVwZkMzRTVOWlVrSmY3NWZ1QVpmazcwUXZyZGlFMVV5QTlKNkowQ3JBTXAta0RFUWFGeUVvekliWlhJVGR0QUxXOW1pMnFiN2lVM1FMRnRUcXZkbGRwM3B0UFR6UHV5blVOTS1nYW1fUQ?oc=5" target="_blank">Ford to cut 14% of European jobs, blaming EV shift and rising competition</a>&nbsp;&nbsp;<font color="#6f6f6f">CNBC</font></li><li><a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOQmktS3ZkeDlFZUpwaEZ0a1ZOcHFVd0o1b0xQcXg4UDdFV3pjZjJLNHd0dmgyTzN1ZGlobmRBMkp6S0FOZjAycVJxUHNOaHFacEUwamFzeEpoY251Rk9ncThpUllJLUtiVzhZUXRwcDE3YmJWOGpRbG04X25jZDB2ekY3UEtTdURuU0pxR3FXUDBfS0lnbm54TVYxb0lhbU1CYUZUVzM1d2YyTm5DcXV1S29R?oc=5" target="_blank">Ford Plans 4,000 More Job Cuts in Europe as EVs Lose Momentum</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font></li><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE5yUlJNa0g5X0VHN1VmUXlpZVJiZjdmaHVmdlFOcGUyWTJHNjN5M1dseWRFa2FaTW8yR3F2N3p1Q1NIV0dNcHRWckNibk9QWkIyYml3Ymk0TUEzbURGTFA3b3RGdC0zMEttSEpaNzRMaTZmTnExbVBZcWNR?oc=5" target="_blank">Ford to cut 800 UK jobs as electric car sales stall</a>&nbsp;&nbsp;<font color="#6f6f6f">Yahoo! Voices</font></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNWGh0TnVaYTFIQS1zVnMxRXQzUlBHZW1UY1FKNWhyV2Vfd2VyRnNtRVNEMjdocXZwVlJuMTdRQjd1U2ozSkdWTkRYWFVwcjg4YlEzRGM3aEpBZ0VpRnltS29YMGdfMXhWd3lLd3RRa0dJMmtrTFdJX1BBaU9HUGFLZWJwMkV1MlZjSDhIRWZnT3hqU2hOMlHSAZYBQVVfeXFMTWlrTjlCcTNqTm0tM29uTmxQTDd0Sld0OG44VlB6bm1zeUhZZm1SaVNDdXhuR3NNOEFyXzNwNFdHYl9paG95OWtZZXdvUHk2SFFpNEtlTFlMekxlblFJSmdMTmdUeWN1MnZnR2FzRnRULXdFQl8zLTFzZkVfdnZwZzdVX3QwOUxreGVyNUlVbUZYTW5LeDVn?oc=5" target="_blank">Ford cuts 4,000 jobs in Europe, including 800 in UK, after slowdown in EV sales</a>&nbsp;&nbsp;<font color="#6f6f6f">The Guardian</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=UF7UDccXmKiVe1CdNhV7aKmzhmBqBzJr7c17nj2KbGui8eBz8RDbAJdtZ8XdQX8nVZdVofW2BwFfgW61gzveqPf3qn32vuacbCfSZZoEJfVWDCb5QEKdefUGxVc8m7rZYV9RH12r94MFnDQ2LMpEDqcBoqvAwKxahub6n5QgC7zDzPE5egdQ6EvdQAtS52NyAjTC4WCQdXZMKE5jPWtyqEDrGWpFG51ikuA9dd3gXHDmJ9xsFvMFw1hKcqoDkcTvCaaU6p1nD7p2G" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">S.T.A.L.K.E.R. 2: Heart of Chornobyl is a glorious and beautiful pain in the ass - The Verge</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPTVVQRGNQMkY2a2haejlVN0F6MVBSbWl0LWFyXzhLcS1TU2R5X05CaXpoWkRqR0JMSFd3Um5Dd0VRb3NrVkZRZDhudUJwRnpZbXlRdlNJWFR5dW1memwtTjlncDBnX0RHcDZKZ2xSdWxnZXVndWJORWhZaTNvYVppSkp0NjU0MGM?oc=5" target="_blank">S.T.A.L.K.E.R. 2: Heart of Chornobyl is a glorious and beautiful pain in the ass</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li><li><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE03Qy05RFJUNVVGOWphQkhQVU52ZmxZT01NX0dsV1cwazcxaGtBZ1ZnTGFOSlVEMTlIUV9sWF8yM0luOU0zUFdxeE02MTNQTDNYaVY3eFRyazRIdDI5LWE5ZDZ2aHdFYkd4MHByVTJxNHlpZw?oc=5" target="_blank">STALKER 2: Heart of Chornobyl Review in Progress</a>&nbsp;&nbsp;<font color="#6f6f6f">IGN</font></li><li><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1CUXBrckFGZGVNdmw5emJFNkc4V0dQNFJjVDNJQnhMaHZtc2FZMWJMR0tFb0FxaDNreG5JcDZ0UXpNcmJ3eWNfNVVjUF84d3pRSmVEbllsOW5CY1pUcF9oazdfUzNvUXFYQ09fc3VBWUdleWdOVTZiUzF3?oc=5" target="_blank">Stalker 2 release time – the countdown to the horror-soaked FPS is finally on after 14 years</a>&nbsp;&nbsp;<font color="#6f6f6f">Gamesradar</font></li><li><a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbnBQWXM3UTNUbVdoUlV4dlBYMjVOeXNCNWp0QVdIRWc3NTluSF9GalBTSzJ0QUduYUxIVDlpazJac0pheDZOdFZndmpVdHFZUEVXLWQzV2t3MVF2TVZ2S0NaaF9FbEY4V3k4c3RJYmk4ZVNZQVllY2JBZWxpNW5YdjZmQVlPSGZsbkRNNDVPbVVXTm9GbW9HQ1FYTFVmbnN6M2ltUEltby1LVEpiRWJyelZEUWYxQXFGc3d6a19ONGFyNVREU3VLX0pPQ1BxYjdt?oc=5" target="_blank">Stalker 2: Heart of Chornobyl performance analysis—Everyone gets ray tracing but the entry fee is high</a>&nbsp;&nbsp;<font color="#6f6f6f">PC Gamer</font></li><li><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNNU1JN3ZYaXVza3FHMTZBdlRiZTJXeVNkSzJUV21rdWJRTHFQSE1sQjg0bV9CYTRjRHg1bkRmSE9YeXRCNldpOXJqdjdwM2RxZnBHY2M5bDRZcWppRUVzMHJ2YnBEME80eEhiWmh6aXNyd1Q4NDRyRHR6elFVNURjNWRJelpvbXBJbGJqT1BnZEd4SFhBX0tZcXRwZw?oc=5" target="_blank">STALKER 2 Benchmarks & PC Performance Analysis</a>&nbsp;&nbsp;<font color="#6f6f6f">DSOGaming</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=96PguSMiZiG3jGtvr54dvKiXrULwR79jqoNYmPzxgw2oCfDU6yAF94BMk9wsEkUoGZfKxt1opACKkAJuenCqhRgCkfEAyeUX5zfPrvA2K3S2HqH9YMKUvtZJoP5ojBW4YbLP2dN5UopcCmoAvXyLPMZZvqkax4XDPVdPFyjnqKvjXenMhxbLunfgiWb7PcPcH2nnt4h7rQFJfPM3nMstSqVsZwKAHhCVHkRewyAcYZAcZy1DLxVBGZQH3LbA8tveghK8VYufsT2oTBFQ46nVboKHcKXQFuwEKQe29peAyFZSmiYcZEKZyozC4" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news-item">
+        <h2 onclick="toggleDetails(this)">Android 16 DP1: Wi-Fi QR code sharing gets a cute Material You makeover - 9to5Google</h2>
+        <div class="news-details">
+            
+            <p><ol><li><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPc1Z6MEtBMTFncVFFdm5yNTZ3dUhEWDB4Z21VLUZLMjI4RmtKNHpOcVViZzdQMVl6VGU0X0EyWHlJRklFbEdsblNvYl9KYURCdU9JM3hLRkRnaEtoUW1uS0hLOGdnZFB6QlhtYkZDMlNUaWlnT2N0dHRMRWt1bzlYQVpNcGxNRHVNT2VEUGRtZWhkUEVzZXIteDlhV013QU1mcEd0NkRGZmg?oc=5" target="_blank">Android 16 DP1: Wi-Fi QR code sharing gets a cute Material You makeover</a>&nbsp;&nbsp;<font color="#6f6f6f">9to5Google</font></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNWWVpU1g1TGlMdUd5Ull4U3gtRTROajVVZUt1TUxLTXp0RE9DMzltRWxqVG1jZnFIeWtaUzBCQUNOQVdkdl8yb1dvcWZTVUl4Y3o0eUdUV0k1MlVQMldZdDNFQ1JZU0JSbS1aOGZfS2NYaTRiWVdnWkhHZWU0WXNqNlQ0QlY0ZzFjUms3VWIzTk0zVmp5RjdGNktUeDBJZ0RnQUtsVjZ3?oc=5" target="_blank">Android 16 is now available for early testers</a>&nbsp;&nbsp;<font color="#6f6f6f">The Verge</font></li><li><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxObmFYVmdzNWI1dDZEZ18yMTVEQjlXb0o0dXYyY2tqOWUxZDJZZ2tIRkpWZ3RTb1JwZjBDVUxiaHUxYUtUeE90cFN1SjlKTFlKRVo0OFpKdmtVNVVoNUZYX05sQ2hwNzFNQUtua2lFeGJkSnJVeFk2b3lLVGo5RTR0bTFrbV9SdXJqVXZyalVaeEc2V0dKN1Q4dU5zUG84ZjhENDNleUg3U1NhU2xscThHQ2R3REJMbl9xbE1Dd3E2U3JyMHc?oc=5" target="_blank">Android 16 launches in developer preview – here are the most exciting rumored features</a>&nbsp;&nbsp;<font color="#6f6f6f">TechRadar</font></li><li><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNaF9XYTRyU2RzV3lhUF9FTlFOS2FvbnVRNks5UFNmWElMN1JwWDM2ZTloUmRUajBRR0F4ckJvUG5MY3hXYm1yLXZGdElLdUhIV2toaHFQY1gyVXBkeXVoLUI5enBMUW9LWVJ1WFZ1dnowSWZ1MXV3aEdCdHk4YkFwNnJybHhjZG5ha2t2VVVrZkhSTEg5Tlc3VHNZUzdsRVc4VFdXN2dPWGVQS0pUV1Brd0FNcFByakVpMTU3NGl3ZFpDZV9s0gHKAUFVX3lxTFBBY2IyR0llczFpb2Yxd1RGWF9QVDVqUEtSUFZqeEVNOE5ILWxqX1I3ckxNQnZoSldvOUgyeW1CTklBWjdNVGVnejdzYm9FTHBPdHpmVVJRX0dkNkxMM0UwaS1zN09YSTh0SWpYS3ZqSk4yZnh5OFZOWnp5M1lUOUNocWhJOGdSOGhSUXk4dmdYQzJZc0hJZ0pWZkpQTElob2FJejhhRU5oS0dET29KbEhWUGxsTlIxSTJuSjB6b1VmdTktZVByR3h2Rmc?oc=5" target="_blank">Google Just Launched The First Android 16 Developer Preview As It Pushes For An Earlier Release Schedule</a>&nbsp;&nbsp;<font color="#6f6f6f">Wccftech</font></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1pZEJMbENQVS1wWFhRblFnSjNmUllWTDRuUTdUckxJZ2FMZGdSajQ2X2t1bF8zeEIwV0NPVVptOHRRVWFYRnB5czk4ZVRxdkV1M0o3YXAwMlhZTlNxUkdkcWdCclByRGRRc0RKYzJhSGdvbWloekww0gF8QVVfeXFMTWU4OHo1eS1XbnloT1RQX0NtTk94UWZYZGswdFdibmg0RGlsSW5kZjh5ak1FbXI3MmJ3cHRDMWhKMW9CWnM0SUFIZVN4MmpudzYwSmZ4bmVOcDRxam5CZFNQWGdRZzUwaWstOWh4TTZjQm1CTzlnaGhtRWdnTQ?oc=5" target="_blank">Google changes Android release cycle so new versions arrive in Q2</a>&nbsp;&nbsp;<font color="#6f6f6f">The Register</font></li></ol></p>
+            <div class="read-more">
+                <a href="/redr.html?target=CccrSiY65BM5TmJYUEbJmpUfkNvx87fHpNhgvG6rCAng7w4VRKEFwf6boA6kr4ajHbLxazM1ABwsfRDyWFFi3ak6UKwnWa9RRssgJQ5n7xW2voQoxpMASTuUUE9qyMH2TJMwzUaBctdYohmGKHcd3HNgfAvZAr2NEGVrnYhfotHj9c1fcpGdiEP4ryeiyzjZJNwRnG9mk6BULtoX9o38uerXe1dowxh98hhhR5SvXeEcEE5a3Tdy1vja14r6uYpfeenF3u6p8MhdeqHLbZ7r6XdQryjcv45SSjXV4BEvbkJvXMu1jpzETA1qEWxs4cvCe5FvxrDiHHU1JSGxiaUX8oFJUB9S7zT2rpsHgd7tXQAuz3G6DagNp" target="_blank">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<div class="footer">
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact Us</a>
+    <a href="/privacy.html">Privacy Policy</a>
+</div>
+
+<div class="action-buttons">
+    <div class="action-button" id="shareButton" onclick="toggleShareOptions()">
+        <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="action-button" id="playButton" onclick="playNews()">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="action-button" id="pauseButton" onclick="pauseNews()" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20news%20site%20https://www.3minutesnews.com" target="_blank">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/share/url?url=https://www.3minutesnews.com&text=Check%20out%20this%20news%20site" target="_blank">
+            <i class="fab fa-telegram-plane"></i><span>Telegram</span>
+        </a>
+        <a href="#" onclick="copyLink()">
+            <i class="fas fa-link"></i><span>Copy Link</span>
+        </a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const newsItems = document.querySelectorAll('.news-item');
+    const newsText = Array.from(newsItems).map(item => item.querySelector('h2').innerText).join(' ');
+
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(newsText);
+
+    function playNews() {
+        if (synth.speaking) {
+            synth.resume();
+        } else {
+            synth.speak(utterance);
+        }
+        document.getElementById('playButton').style.display = 'none';
+        document.getElementById('pauseButton').style.display = 'flex';
+    }
+
+    function pauseNews() {
+        synth.pause();
+        document.getElementById('playButton').style.display = 'flex';
+        document.getElementById('pauseButton').style.display = 'none';
+    }
+
+    function toggleShareOptions() {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        if (shareOptions.style.display === 'none' || shareOptions.style.display === '') {
+            shareOptions.style.display = 'flex';
+            shareButton.style.display = 'none';
+        } else {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    }
+
+    function copyLink() {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = window.location.href;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert('Link copied to clipboard!');
+    }
+
+    function toggleDetails(element) {
+        const newsDetails = element.nextElementSibling;
+        const allNewsDetails = document.querySelectorAll('.news-details');
+
+        allNewsDetails.forEach(detail => {
+            if (detail !== newsDetails) {
+                detail.style.display = 'none';
+            }
+        });
+
+        if (newsDetails.style.display === 'none' || newsDetails.style.display === '') {
+            newsDetails.style.display = 'block';
+        } else {
+            newsDetails.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButton = document.getElementById('shareButton');
+        const isClickInside = shareOptions.contains(event.target) || shareButton.contains(event.target);
+        if (!isClickInside && shareOptions.style.display === 'flex') {
+            shareOptions.style.display = 'none';
+            shareButton.style.display = 'flex';
+        }
+    });
+</script>
+</body>
+</html>
